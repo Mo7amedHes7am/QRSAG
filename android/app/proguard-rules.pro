@@ -1,0 +1,4 @@
+-keep class com.pichillilorenzo.flutter_inappwebview.** { *; }
+-keep class io.flutter.plugins.** { *; }
+-keep class com.pierfrancescosoffritti.** { *; }
+-keep class com.google.android.youtube.** { *; }

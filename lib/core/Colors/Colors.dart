@@ -1,0 +1,97 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+import 'package:flutter/material.dart';
+import 'package:qr_scanner_and_generator/core/Colors/AppTheme.dart';
+
+class QRSAGLightTheme extends AppColors {
+  const QRSAGLightTheme()
+    : super(
+        primary: const Color(0xffFDB623), // Gold as primary
+        background: const Color(0xffffffff),
+        bgoverlay: const Color(0xfffdf8ed), // Light gold-tinted overlay
+        primaryLight: const Color(0xffFFE082), // Lighter gold
+        button: const Color(0xffFDB623), // Gold for buttons
+        activeColor: const Color(0xffFFD60A), // Yellow as active color
+        border: const Color(0xffE9EAEB),
+        borderText2: const Color(0xff696F8C),
+        moveLight: const Color(0xffFDB623), // Gold for move light
+        buttonGrey: const Color(0xffF9FAFB),
+        shadow: const Color(0x14000000),
+        thirdText: const Color(0xff0A0117),
+        grey2: const Color(0xffF9F9FD),
+        grey3: const Color(0xff4B5563),
+        border3: const Color(0xffE6E8F0),
+        divider: const Color(0xffF4F4F4),
+        arrow: const Color(0xff48484A),
+        chart1: const Color(0xffFDB623), // Gold for chart 1
+        chart2: const Color(0xff23C55E),
+        chart3: const Color(0xff9CA3AF),
+        border2: const Color(0xffF5F5F5),
+        delete: const Color(0xffFFEFEB),
+        textGrey2: const Color(0xff696F8C),
+        date: const Color(0xff696F8C),
+        chartText: const Color(0xff353945),
+        textfield: const Color(0xffF9FAFB),
+        primaryTextColor: const Color(0xff1F2937),
+        grey: const Color(0xff9CA3AF),
+        secondaryTextColor: const Color(0xff111827),
+        lightTextColor: const Color(0xff9CA3AF),
+        buttonTextColor: const Color(0xffFDB623), // Gold for button text
+        waitingBg: const Color(0xfffffae7),
+        waiting: const Color(0xffff9701),
+        doneBg: const Color(0xffe7fbef),
+        done: const Color(0xff3acb70),
+        failedBg: const Color(0xfffbe7ef),
+        failed: const Color(0xffd70015),
+        workshopText: const Color(0xff1C1C1E),
+        navGrey: const Color(0xff9CA3AF),
+        textGrey: const Color(0xff636366),
+      );
+}
+
+class QRSAGDarkTheme extends AppColors {
+  const QRSAGDarkTheme()
+    : super(
+        primary: const Color(0xffFDB623),
+        background: const Color(0xff000814),
+        bgoverlay: const Color(0xff1a1400),
+        primaryLight: const Color(0xffFFE082),
+        button: const Color(0xffFDB623),
+        activeColor: const Color(0xffFFD60A),
+        border: const Color(0xff2F2F2F),
+        borderText2: const Color(0xff9CA3AF),
+        moveLight: const Color(0xffFDB623),
+        buttonGrey: const Color(0xff1F2937),
+        shadow: const Color(0x22000000),
+        thirdText: const Color(0xffE5E7EB),
+        grey2: const Color(0xff1C1C1E),
+        grey3: const Color(0xff9CA3AF),
+        border3: const Color(0xff374151),
+        divider: const Color(0xff2A2A2A),
+        arrow: const Color(0xffD1D5DB),
+        chart1: const Color(0xffFDB623),
+        chart2: const Color(0xff34D399),
+        chart3: const Color(0xff9CA3AF),
+        border2: const Color(0xff2E2E2E),
+        delete: const Color(0xff3F0D12),
+        textGrey2: const Color(0xff9CA3AF),
+        date: const Color(0xff9CA3AF),
+        chartText: const Color(0xffE5E7EB),
+        textfield: const Color(0xff1F2937),
+        primaryTextColor: const Color(0xffF9FAFB),
+        grey: const Color(0xff6B7280),
+        secondaryTextColor: const Color(0xff9CA3AF),
+        lightTextColor: const Color(0xffD1D5DB),
+        buttonTextColor: const Color(0xffFDB623),
+        waitingBg: const Color(0xff332B00),
+        waiting: const Color(0xffffc107),
+        doneBg: const Color(0xff062E17),
+        done: const Color(0xff22c55e),
+        failedBg: const Color(0xff3B0D0C),
+        failed: const Color(0xfff87171),
+        workshopText: const Color(0xffE5E5E5),
+        navGrey: const Color(0xff6B7280),
+        textGrey: const Color(0xff9CA3AF),
+      );
+}

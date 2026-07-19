@@ -1,0 +1,80 @@
+// DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
+
+// ignore_for_file: constant_identifier_names
+
+abstract class  LocaleKeys {
+  static const hint_phone_number = 'hint.phone_number';
+  static const hint_number = 'hint.number';
+  static const hint_plain_text = 'hint.plain_text';
+  static const hint_url = 'hint.url';
+  static const hint_date_time = 'hint.date_time';
+  static const hint_email = 'hint.email';
+  static const hint_address = 'hint.address';
+  static const hint_card_number = 'hint.card_number';
+  static const hint_password = 'hint.password';
+  static const hint_expiry_date = 'hint.expiry_date';
+  static const hint_username = 'hint.username';
+  static const hint_client_name = 'hint.client_name';
+  static const hint_date = 'hint.date';
+  static const hint_multiline = 'hint.multiline';
+  static const hint_text = 'hint.text';
+  static const hint_cvv = 'hint.cvv';
+  static const hint_card_holder_name = 'hint.card_holder_name';
+  static const hint_zip_code = 'hint.zip_code';
+  static const hint_city = 'hint.city';
+  static const hint_country = 'hint.country';
+  static const hint_company = 'hint.company';
+  static const hint_notes = 'hint.notes';
+  static const hint = 'hint';
+  static const validation_email_invalid = 'validation.email_invalid';
+  static const validation_url_invalid = 'validation.url_invalid';
+  static const validation_card_invalid = 'validation.card_invalid';
+  static const validation_expiry_invalid = 'validation.expiry_invalid';
+  static const validation_expiry_expired = 'validation.expiry_expired';
+  static const validation_phone_invalid = 'validation.phone_invalid';
+  static const validation_required = 'validation.required';
+  static const validation_username_invalid = 'validation.username_invalid';
+  static const validation_password_weak = 'validation.password_weak';
+  static const validation_password_mismatch = 'validation.password_mismatch';
+  static const validation_confirm_password = 'validation.confirm_password';
+  static const validation_date_invalid = 'validation.date_invalid';
+  static const validation_card_name_invalid = 'validation.card_name_invalid';
+  static const validation_cvv_invalid = 'validation.cvv_invalid';
+  static const validation_address_invalid = 'validation.address_invalid';
+  static const validation = 'validation';
+  static const field_full_name = 'field.full_name';
+  static const field_email = 'field.email';
+  static const field_phone = 'field.phone';
+  static const field_password = 'field.password';
+  static const field_confirm_password = 'field.confirm_password';
+  static const field_card_number = 'field.card_number';
+  static const field_card_name = 'field.card_name';
+  static const field_expiry_date = 'field.expiry_date';
+  static const field_cvv = 'field.cvv';
+  static const field_address = 'field.address';
+  static const field_city = 'field.city';
+  static const field_country = 'field.country';
+  static const field_zip_code = 'field.zip_code';
+  static const field_company = 'field.company';
+  static const field_website = 'field.website';
+  static const field_description = 'field.description';
+  static const field_notes = 'field.notes';
+  static const field_username = 'field.username';
+  static const field = 'field';
+  static const common_optional = 'common.optional';
+  static const common_required = 'common.required';
+  static const common_continue = 'common.continue';
+  static const common_next = 'common.next';
+  static const common_skip = 'common.skip';
+  static const common_ok = 'common.ok';
+  static const common_search = 'common.search';
+  static const common_close = 'common.close';
+  static const common_cancel = 'common.cancel';
+  static const common_apply = 'common.apply';
+  static const common_reset = 'common.reset';
+  static const common_back = 'common.back';
+  static const common_save = 'common.save';
+  static const common_remove = 'common.remove';
+  static const common = 'common';
+
+}

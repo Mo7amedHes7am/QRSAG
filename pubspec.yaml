@@ -1,0 +1,104 @@
+name: qr_scanner_and_generator
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 0.0.1+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.9
+  flutter_svg: ^2.3.0
+  intl: ^0.20.2
+  image_picker: ^1.2.3
+  permission_handler: ^12.0.3
+  cached_network_image: ^3.4.1
+  easy_date_timeline: ^2.0.9
+  get_it: ^9.2.1
+  injectable: ^3.0.0
+  flutter_bloc: ^9.1.1
+  hive_flutter: ^1.1.0
+  easy_localization: ^3.0.8
+  country_code_picker: ^3.4.1
+  connectivity_plus: ^7.3.0
+  gif: ^2.3.0
+  phone_numbers_parser: ^9.0.24
+  dio: ^5.10.0
+  path_provider: ^2.1.6
+  auto_size_text: ^3.0.0
+  internet_connection_checker_plus: ^3.1.1
+  intl_phone_field: ^3.2.0
+  shimmer: ^3.0.0
+  toastification: ^3.2.0
+
+  hive: ^2.2.3
+  get: ^4.7.3
+  flutter_screenutil: ^5.9.3
+  flutter_custom_clippers: ^2.1.0
+  flutter_zxing: ^2.3.0
+  shared_preferences: ^2.5.5
+  pretty_qr_code: ^3.6.0
+  uuid: ^4.6.0
+  url_launcher: ^6.3.2
+  fluttertoast: ^9.1.0
+  share_plus: ^13.2.1
+  omni_datetime_picker: ^2.3.2
+  flutter_credit_card: ^4.1.0
+  encrypt_decrypt_plus: ^2.0.0
+  audioplayers: ^6.8.1
+  vibration: ^3.2.0
+  in_app_review: ^2.0.12
+
+dev_dependencies:
+  injectable_generator: ^3.1.0
+  build_runner: ^2.15.1
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/Images/
+    - assets/Svgs/
+    - assets/Gifs/
+    - assets/translations/
+
+  fonts:
+    - family: Zain
+      fonts:
+        - asset: fonts/Zain-Regular.ttf
+          style: normal
+        - asset: fonts/Zain-Italic.ttf
+          style: italic
+        - asset: fonts/Zain-Light.ttf
+          weight: 300
+        - asset: fonts/Zain-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: fonts/Zain-ExtraLight.ttf
+          weight: 100
+        - asset: fonts/Zain-ExtraBold.ttf
+          weight: 800
+        - asset: fonts/Zain-Bold.ttf
+          weight: 700
+        - asset: fonts/Zain-Black.ttf
+          weight: 900
+
+    - family: Helvetica
+      fonts:
+        - asset: fonts/Helvetica.ttf
+          style: normal
+        - asset: fonts/helvetica-light.ttf
+          weight: 300
+        - asset: fonts/Helvetica-Bold.ttf
+          weight: 700
