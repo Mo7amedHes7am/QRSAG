@@ -7,15 +7,15 @@ import 'package:qr_scanner_and_generator/core/Colors/AppTheme.dart';
 class QRSAGLightTheme extends AppColors {
   const QRSAGLightTheme()
     : super(
-        primary: const Color(0xffFDB623), // Gold as primary
+        primary: const Color(0xffFDB623),
         background: const Color(0xffffffff),
-        bgoverlay: const Color(0xfffdf8ed), // Light gold-tinted overlay
-        primaryLight: const Color(0xffFFE082), // Lighter gold
-        button: const Color(0xffFDB623), // Gold for buttons
-        activeColor: const Color(0xffFFD60A), // Yellow as active color
+        bgoverlay: const Color(0xfffdf8ed),
+        primaryLight: const Color(0xffFFE082),
+        button: const Color(0xffFDB623),
+        activeColor: const Color(0xffFFD60A),
         border: const Color(0xffE9EAEB),
         borderText2: const Color(0xff696F8C),
-        moveLight: const Color(0xffFDB623), // Gold for move light
+        moveLight: const Color(0xffFDB623),
         buttonGrey: const Color(0xffF9FAFB),
         shadow: const Color(0x14000000),
         thirdText: const Color(0xff0A0117),
@@ -24,7 +24,7 @@ class QRSAGLightTheme extends AppColors {
         border3: const Color(0xffE6E8F0),
         divider: const Color(0xffF4F4F4),
         arrow: const Color(0xff48484A),
-        chart1: const Color(0xffFDB623), // Gold for chart 1
+        chart1: const Color(0xffFDB623),
         chart2: const Color(0xff23C55E),
         chart3: const Color(0xff9CA3AF),
         border2: const Color(0xffF5F5F5),
@@ -37,7 +37,7 @@ class QRSAGLightTheme extends AppColors {
         grey: const Color(0xff9CA3AF),
         secondaryTextColor: const Color(0xff111827),
         lightTextColor: const Color(0xff9CA3AF),
-        buttonTextColor: const Color(0xffFDB623), // Gold for button text
+        buttonTextColor: const Color(0xffFDB623),
         waitingBg: const Color(0xfffffae7),
         waiting: const Color(0xffff9701),
         doneBg: const Color(0xffe7fbef),
