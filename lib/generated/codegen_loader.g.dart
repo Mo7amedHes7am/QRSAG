@@ -104,6 +104,11 @@ class CodegenLoader extends AssetLoader{
     "subtitle": "اختر سمتك المفضلة أدناه. هذا يُساعدنا على خدمتك بشكل أفضل.",
     "lightMode": "الوضع الفاتح",
     "darkMode": "الوضع الداكن"
+  },
+  "welcome": {
+    "get": "ابدأ ",
+    "started": "الآن",
+    "description": "انطلق واستمتع بميزاتنا مجانًا واجعل حياتك سهلة معنا."
   }
 };
 static const Map<String,dynamic> _en = {
@@ -196,6 +201,11 @@ static const Map<String,dynamic> _en = {
     "subtitle": "Select your preferred theme below. This helps us serve you better.",
     "lightMode": "Light Mode",
     "darkMode": "Dark Mode"
+  },
+  "welcome": {
+    "get": "Get ",
+    "started": "Started",
+    "description": "Go and enjoy our features for free and make your life easy with us."
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "en": _en};

@@ -29,7 +29,7 @@ mixin LanguageMixin on SplashCubitBase {
           .toList();
     }
 
-    emit(LanguageFilteredState(List.from(filteredLanguages)));
+    if (!isClosed) emit(LanguageFilteredState(List.from(filteredLanguages)));
   }
 
   Future<void> changeLanguage({
@@ -39,6 +39,6 @@ mixin LanguageMixin on SplashCubitBase {
     await context.setLocale(Locale(lang.code));
     await CacheManager.setGlobalData(language: lang.code);
     selectedLanguage = lang;
-    emit(LanguageChangedState(lang));
+    if (!isClosed) emit(LanguageChangedState(lang));
   }
 }

@@ -88,5 +88,10 @@
     "subtitle": "Select your preferred theme below. This helps us serve you better.",
     "lightMode": "Light Mode",
     "darkMode": "Dark Mode"
+  },
+  "welcome": {
+    "get": "Get ",
+    "started": "Started",
+    "description": "Go and enjoy our features for free and make your life easy with us."
   }
 }

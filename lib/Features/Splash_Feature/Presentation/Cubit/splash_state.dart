@@ -26,3 +26,5 @@ class LanguageChangedState extends SplashState {
 
   LanguageChangedState(this.language);
 }
+
+class ThemeChangedState extends SplashState {}

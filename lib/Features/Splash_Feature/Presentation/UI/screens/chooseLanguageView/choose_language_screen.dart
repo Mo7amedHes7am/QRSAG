@@ -10,14 +10,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ChooseLanguageScreen extends StatefulWidget {
+class ChooseLanguageScreen extends StatelessWidget {
   const ChooseLanguageScreen({super.key});
 
-  @override
-  State<ChooseLanguageScreen> createState() => _ChooseLanguageScreenState();
-}
-
-class _ChooseLanguageScreenState extends State<ChooseLanguageScreen> {
   @override
   Widget build(BuildContext context) {
     final isWeb =
@@ -26,9 +21,8 @@ class _ChooseLanguageScreenState extends State<ChooseLanguageScreen> {
         ? false
         : true;
 
-    return systemWrapper(
-      context,
-      WillPopScope(
+    return SystemWrapper(
+      child: WillPopScope(
         onWillPop: () async {
           return false;
         },

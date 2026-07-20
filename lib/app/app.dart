@@ -46,6 +46,7 @@ class QRSAGApp extends StatelessWidget {
       builder: (context, child) => ColoredBox(
         color: backgroundColor,
         child: SafeArea(
+          top: false,
           child: ResponsiveBuilder(
             designSize: const Size(428, 926),
             contentMaxWidth: 1200,

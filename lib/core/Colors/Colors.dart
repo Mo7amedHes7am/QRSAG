@@ -47,6 +47,7 @@ class QRSAGLightTheme extends AppColors {
         workshopText: const Color(0xff1C1C1E),
         navGrey: const Color(0xff9CA3AF),
         textGrey: const Color(0xff636366),
+        link: const Color(0xff4D81E7),
       );
 }
 
@@ -93,5 +94,6 @@ class QRSAGDarkTheme extends AppColors {
         workshopText: const Color(0xffE5E5E5),
         navGrey: const Color(0xff6B7280),
         textGrey: const Color(0xff9CA3AF),
+        link: const Color(0xff4D81E7),
       );
 }

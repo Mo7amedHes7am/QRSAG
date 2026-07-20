@@ -9,7 +9,6 @@ class CustomText {
 
   static final x8 = TextSize(AppSizes.space.x8);
   static final x10 = TextSize(AppSizes.space.x10);
-  static final x11 = TextSize(AppSizes.space.custom(11));
   static final x12 = TextSize(AppSizes.space.x12);
   static final x13 = TextSize(AppSizes.space.x13);
   static final x14 = TextSize(AppSizes.space.x14);
@@ -22,7 +21,6 @@ class CustomText {
   static final x28 = TextSize(AppSizes.space.custom(28));
   static final x30 = TextSize(AppSizes.space.x30);
   static final x32 = TextSize(AppSizes.space.x32);
-  static final x34 = TextSize(AppSizes.space.custom(34));
   static final x36 = TextSize(AppSizes.space.custom(36));
   static final x40 = TextSize(AppSizes.space.custom(40));
 }
@@ -56,7 +54,6 @@ class TextBuilder {
   final double? customWidth;
   final TextDecoration? decoration;
   final double? customFontSize;
-  final int? fontStyle;
 
   const TextBuilder(
     this.text,
@@ -67,7 +64,6 @@ class TextBuilder {
     this.maxLines,
     this.customWidth,
     this.customFontSize,
-    this.fontStyle,
   });
 
   TextBuilder get center => TextBuilder(
@@ -209,7 +205,6 @@ class TextBuilder {
     double? customWidth,
     TextDecoration? decoration,
     double? customFontSize,
-    int? fontStyle,
   }) {
     return TextBuilder(
       text ?? this.text,
@@ -220,7 +215,6 @@ class TextBuilder {
       customWidth: customWidth ?? this.customWidth,
       decoration: decoration ?? this.decoration,
       customFontSize: customFontSize ?? this.customFontSize,
-      fontStyle: fontStyle ?? this.fontStyle,
     );
   }
 
@@ -245,12 +239,11 @@ class TextBuilder {
 
   Text get background => _build(appColors.background);
 
+  Text get link => _build(appColors.link);
+
   Text get formfield => _build(appColors.textfield);
 
   Text get success => _build(appColors.done);
-  TextBuilder get firstStyle => copyWith(fontStyle: 1);
-  TextBuilder get secondStyle => copyWith(fontStyle: 2);
-  TextBuilder get thirdStyle => copyWith(fontStyle: 3);
 
   Text color(Color c) => _build(c);
 

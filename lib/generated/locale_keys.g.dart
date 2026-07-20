@@ -87,5 +87,9 @@ abstract class  LocaleKeys {
   static const chooseTheme_lightMode = 'chooseTheme.lightMode';
   static const chooseTheme_darkMode = 'chooseTheme.darkMode';
   static const chooseTheme = 'chooseTheme';
+  static const welcome_get = 'welcome.get';
+  static const welcome_started = 'welcome.started';
+  static const welcome_description = 'welcome.description';
+  static const welcome = 'welcome';
 
 }

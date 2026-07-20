@@ -41,6 +41,7 @@ class AppColors extends ThemeExtension<AppColors> {
   final Color textGrey2;
   final Color date;
   final Color chartText;
+  final Color link;
 
   const AppColors({
     required this.primary,
@@ -83,6 +84,7 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.textGrey2,
     required this.date,
     required this.chartText,
+    required this.link,
   });
 
   @override
@@ -126,6 +128,7 @@ class AppColors extends ThemeExtension<AppColors> {
     Color? textGrey2,
     Color? date,
     Color? chartText,
+    Color? link,
   }) {
     return AppColors(
       primary: primary ?? this.primary,
@@ -168,6 +171,7 @@ class AppColors extends ThemeExtension<AppColors> {
       textGrey2: textGrey2 ?? this.textGrey2,
       date: date ?? this.date,
       chartText: chartText ?? this.chartText,
+      link: link ?? this.link,
     );
   }
 
@@ -181,11 +185,17 @@ class AppColors extends ThemeExtension<AppColors> {
       button: Color.lerp(button, other.button, t)!,
       textfield: Color.lerp(textfield, other.textfield, t)!,
       background: Color.lerp(background, other.background, t)!,
-      primaryTextColor:
-          Color.lerp(primaryTextColor, other.primaryTextColor, t)!,
+      primaryTextColor: Color.lerp(
+        primaryTextColor,
+        other.primaryTextColor,
+        t,
+      )!,
       grey: Color.lerp(grey, other.grey, t)!,
-      secondaryTextColor:
-          Color.lerp(secondaryTextColor, other.secondaryTextColor, t)!,
+      secondaryTextColor: Color.lerp(
+        secondaryTextColor,
+        other.secondaryTextColor,
+        t,
+      )!,
       lightTextColor: Color.lerp(lightTextColor, other.lightTextColor, t)!,
       primaryLight: Color.lerp(primaryLight, other.primaryLight, t)!,
       doneBg: Color.lerp(doneBg, other.doneBg, t)!,
@@ -218,6 +228,7 @@ class AppColors extends ThemeExtension<AppColors> {
       textGrey2: Color.lerp(textGrey2, other.textGrey2, t)!,
       date: Color.lerp(date, other.date, t)!,
       chartText: Color.lerp(chartText, other.chartText, t)!,
+      link: Color.lerp(link, other.link, t)!,
     );
   }
 }
