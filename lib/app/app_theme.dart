@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart'
-    show
-        ThemeData,
-        TextTheme,
-        FontWeight,
-        TextStyle,
-        BottomAppBarThemeData,
-        BuildContext,
-        ColorScheme,
-        Theme,
-        Color,
-        Colors,
-        Brightness;
+    show ThemeData, TextTheme, FontWeight, TextStyle, BottomAppBarThemeData;
 import 'package:qr_scanner_and_generator/app/app_variables.dart';
 import 'package:qr_scanner_and_generator/core/Methods/Global_Methods.dart';
 import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';

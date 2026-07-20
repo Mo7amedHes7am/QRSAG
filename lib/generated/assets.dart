@@ -2,14 +2,39 @@
 // ignore_for_file: dangling_library_doc_comments, implementation_imports
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lottie/lottie.dart';
+import 'package:lottie/src/lottie_builder.dart';
+import 'package:lottie/src/composition.dart';
 
 class Assets {
   Assets._();
 
-  static const $AssetsGifsGen gifs = $AssetsGifsGen();
-  static const $AssetsImagesGen images = $AssetsImagesGen();
-  static const $AssetsSvgsGen svgs = $AssetsSvgsGen();
-  static const $AssetsTranslationsGen translations = $AssetsTranslationsGen();
+  static const $AssetsAssetsGen assets = $AssetsAssetsGen();
+  static const $AssetsFontsGen fonts = $AssetsFontsGen();
+}
+
+class $AssetsAssetsGen {
+  const $AssetsAssetsGen();
+
+  final $AssetsAudiosGen audios = const $AssetsAudiosGen();
+  final $AssetsGifsGen gifs = const $AssetsGifsGen();
+  final $AssetsImagesGen images = const $AssetsImagesGen();
+  final $AssetsJsonsGen jsons = const $AssetsJsonsGen();
+  final $AssetsSvgsGen svgs = const $AssetsSvgsGen();
+  final $AssetsTranslationsGen translations = const $AssetsTranslationsGen();
+}
+
+class $AssetsAudiosGen {
+  const $AssetsAudiosGen();
+
+  final String beep = 'assets/Audios/beep.mp3';
+}
+
+class $AssetsGifsGen {
+  const $AssetsGifsGen();
+
+  final AssetGenImage error = const AssetGenImage('assets/Gifs/error.gif');
+  final AssetGenImage loading = const AssetGenImage('assets/Gifs/loading.gif');
 }
 
 class $AssetsImagesGen {
@@ -43,10 +68,19 @@ class $AssetsImagesGen {
   );
 }
 
+class $AssetsJsonsGen {
+  const $AssetsJsonsGen();
+
+  final LottieGenImage dark = const LottieGenImage('assets/Jsons/dark.json');
+  final LottieGenImage light = const LottieGenImage('assets/Jsons/light.json');
+}
+
 class $AssetsSvgsGen {
   const $AssetsSvgsGen();
 
+  final SvgGenImage ar = const SvgGenImage('assets/Svgs/ar.svg');
   final SvgGenImage bepp = const SvgGenImage('assets/Svgs/bepp.svg');
+  final SvgGenImage en = const SvgGenImage('assets/Svgs/en.svg');
   final SvgGenImage g1 = const SvgGenImage('assets/Svgs/g1.svg');
   final SvgGenImage g10 = const SvgGenImage('assets/Svgs/g10.svg');
   final SvgGenImage g11 = const SvgGenImage('assets/Svgs/g11.svg');
@@ -69,18 +103,27 @@ class $AssetsSvgsGen {
   final SvgGenImage vibrates = const SvgGenImage('assets/Svgs/vibrates.svg');
 }
 
-class $AssetsGifsGen {
-  const $AssetsGifsGen();
-
-  final AssetGenImage error = const AssetGenImage('assets/Gifs/error.gif');
-  final AssetGenImage loading = const AssetGenImage('assets/Gifs/loading.gif');
-}
-
 class $AssetsTranslationsGen {
   const $AssetsTranslationsGen();
 
   final String ar = 'assets/translations/ar.json';
   final String en = 'assets/translations/en.json';
+}
+
+class $AssetsFontsGen {
+  const $AssetsFontsGen();
+
+  final String helvetica = 'fonts/Helvetica.ttf';
+  final String helveticaBold = 'fonts/Helvetica-Bold.ttf';
+  final String zainBlack = 'fonts/Zain-Black.ttf';
+  final String zainBold = 'fonts/Zain-Bold.ttf';
+  final String zainExtraBold = 'fonts/Zain-ExtraBold.ttf';
+  final String zainExtraLight = 'fonts/Zain-ExtraLight.ttf';
+  final String zainItalic = 'fonts/Zain-Italic.ttf';
+  final String zainLight = 'fonts/Zain-Light.ttf';
+  final String zainLightItalic = 'fonts/Zain-LightItalic.ttf';
+  final String zainRegular = 'fonts/Zain-Regular.ttf';
+  final String helveticaLight = 'fonts/helvetica-light.ttf';
 }
 
 class AssetGenImage {
@@ -206,6 +249,75 @@ class SvgGenImage {
       colorBlendMode: colorBlendMode,
       clipBehavior: clipBehavior,
       cacheColorFilter: cacheColorFilter,
+    );
+  }
+
+  Widget custom({
+    Key? key,
+    required Widget Function(BuildContext context, String assetPath) builder,
+  }) {
+    return Builder(
+      key: key,
+      builder: (context) => builder(context, _assetName),
+    );
+  }
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
+}
+
+class LottieGenImage {
+  const LottieGenImage(this._assetName);
+
+  final String _assetName;
+
+  LottieBuilder lottie({
+    Animation<double>? controller,
+    bool? animate,
+    FrameRate? frameRate,
+    bool? repeat,
+    bool? reverse,
+    LottieDelegates? delegates,
+    LottieOptions? options,
+    void Function(LottieComposition)? onLoaded,
+    LottieImageProviderFactory? imageProviderFactory,
+    Key? key,
+    AssetBundle? bundle,
+    LottieFrameBuilder? frameBuilder,
+    ImageErrorWidgetBuilder? errorBuilder,
+    double? width,
+    double? height,
+    BoxFit? fit,
+    AlignmentGeometry? alignment,
+    String? package,
+    bool? addRepaintBoundary,
+    FilterQuality? filterQuality,
+    WarningCallback? onWarning,
+  }) {
+    return Lottie.asset(
+      _assetName,
+      controller: controller,
+      animate: animate,
+      frameRate: frameRate,
+      repeat: repeat,
+      reverse: reverse,
+      delegates: delegates,
+      options: options,
+      onLoaded: onLoaded,
+      imageProviderFactory: imageProviderFactory,
+      key: key,
+      bundle: bundle,
+      frameBuilder: frameBuilder,
+      errorBuilder: errorBuilder,
+      width: width,
+      height: height,
+      fit: fit,
+      alignment: alignment,
+      package: package,
+      addRepaintBoundary: addRepaintBoundary,
+      filterQuality: filterQuality,
+      onWarning: onWarning,
     );
   }
 

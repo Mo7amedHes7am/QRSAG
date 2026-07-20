@@ -1,15 +1,11 @@
-part of 'splash_cubit.dart';
+part of 'splash_cubit_base.dart';
 
 @immutable
 abstract class SplashState {}
 
 class SplashInitialState extends SplashState {}
 
-class SplashLoadingState extends SplashState {
-  final int activeIndex;
-
-  SplashLoadingState(this.activeIndex);
-}
+class SplashLoadingState extends SplashState {}
 
 class SplashErrorState extends SplashState {
   final String error;
@@ -17,42 +13,16 @@ class SplashErrorState extends SplashState {
   SplashErrorState(this.error);
 }
 
-class SplashWelcomeState extends SplashState {
-  final int step;
+class SplashLoadedState extends SplashState {}
 
-  SplashWelcomeState(this.step);
+class LanguageFilteredState extends SplashState {
+  final List<LanguageModel> filteredLanguages;
+
+  LanguageFilteredState(this.filteredLanguages);
 }
 
-class SplashNavigateToLoginState extends SplashState {}
+class LanguageChangedState extends SplashState {
+  final LanguageModel language;
 
-class SplashNavigateToHomeState extends SplashState {}
-
-class SplashUserLoadedState extends SplashState {
-  List<CategoryModel> categories;
-
-  SplashUserLoadedState(this.categories);
-}
-
-class GetUserDataErrorState extends SplashState {}
-
-class GetUserDataSuccessState extends SplashState {
-  GetUserDataSuccessState();
-}
-
-class GetTeacherListErrorState extends SplashState {}
-
-class GetTeacherListSuccessState extends SplashState {
-  GetTeacherListSuccessState();
-}
-
-class GetSessionListErrorState extends SplashState {}
-
-class GetSessionListSuccessList extends SplashState {
-  GetSessionListSuccessList();
-}
-
-class GetPackageListErrorState extends SplashState {}
-
-class GetPackageListSuccessList extends SplashState {
-  GetPackageListSuccessList();
+  LanguageChangedState(this.language);
 }

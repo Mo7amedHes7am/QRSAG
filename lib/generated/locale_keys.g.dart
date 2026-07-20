@@ -76,5 +76,16 @@ abstract class  LocaleKeys {
   static const common_save = 'common.save';
   static const common_remove = 'common.remove';
   static const common = 'common';
+  static const chooseLanguage_title = 'chooseLanguage.title';
+  static const chooseLanguage_subtitle = 'chooseLanguage.subtitle';
+  static const chooseLanguage_selected = 'chooseLanguage.selected';
+  static const chooseLanguage_all = 'chooseLanguage.all';
+  static const chooseLanguage_nodata = 'chooseLanguage.nodata';
+  static const chooseLanguage = 'chooseLanguage';
+  static const chooseTheme_title = 'chooseTheme.title';
+  static const chooseTheme_subtitle = 'chooseTheme.subtitle';
+  static const chooseTheme_lightMode = 'chooseTheme.lightMode';
+  static const chooseTheme_darkMode = 'chooseTheme.darkMode';
+  static const chooseTheme = 'chooseTheme';
 
 }

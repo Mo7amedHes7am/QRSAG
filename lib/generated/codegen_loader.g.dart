@@ -91,6 +91,19 @@ class CodegenLoader extends AssetLoader{
     "back": "العودة",
     "save": "حفظ",
     "remove": "إزالة"
+  },
+  "chooseLanguage": {
+    "title": "اختر اللغة",
+    "subtitle": "اختر لغتك المفضلة أدناه، هذا يُساعدنا على خدمتك بشكل أفضل",
+    "selected": "لقد اخترت",
+    "all": "جميع اللغات",
+    "nodata": "لا توجد لغات"
+  },
+  "chooseTheme": {
+    "title": "اختر السمة",
+    "subtitle": "اختر سمتك المفضلة أدناه. هذا يُساعدنا على خدمتك بشكل أفضل.",
+    "lightMode": "الوضع الفاتح",
+    "darkMode": "الوضع الداكن"
   }
 };
 static const Map<String,dynamic> _en = {
@@ -170,6 +183,19 @@ static const Map<String,dynamic> _en = {
     "back": "Back",
     "save": "Save",
     "remove": "Remove"
+  },
+  "chooseLanguage": {
+    "title": "Choose the language",
+    "subtitle": "Select your preferred language below. This helps us serve you better.",
+    "selected": "You Selected",
+    "all": "All Languages",
+    "nodata": "No Languages Found"
+  },
+  "chooseTheme": {
+    "title": "Choose the theme",
+    "subtitle": "Select your preferred theme below. This helps us serve you better.",
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "en": _en};

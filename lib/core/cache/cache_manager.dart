@@ -60,6 +60,7 @@ class CacheManager {
 
   static Future<void> reset() async {
     await globalBox.clear();
+    await historyBox.clear();
   }
 
   static Future<void> clearhistory() async {

@@ -34,10 +34,9 @@ dependencies:
   intl_phone_field: ^3.2.0
   shimmer: ^3.0.0
   toastification: ^3.2.0
+  lottie: ^3.5.1
 
   hive: ^2.2.3
-  get: ^4.7.3
-  flutter_screenutil: ^5.9.3
   flutter_custom_clippers: ^2.1.0
   flutter_zxing: ^2.3.0
   shared_preferences: ^2.5.5
@@ -68,10 +67,13 @@ flutter:
 
   assets:
     - assets/
-    - assets/Images/
-    - assets/Svgs/
+    - assets/Audios/
     - assets/Gifs/
+    - assets/Images/
+    - assets/Jsons/
+    - assets/Svgs/
     - assets/translations/
+    - fonts/
 
   fonts:
     - family: Zain

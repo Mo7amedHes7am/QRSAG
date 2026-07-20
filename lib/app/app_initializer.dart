@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qr_scanner_and_generator/core/cache/cache_manager.dart';
 import 'package:qr_scanner_and_generator/core/utils/DI/di.dart';
@@ -10,13 +9,8 @@ class AppInitializer {
   static Future<void> initialize() async {
     WidgetsFlutterBinding.ensureInitialized();
     await _initializeDependencies();
-    await _initializeSharedPreferences();
+    await _initializeCache();
     await EasyLocalization.ensureInitialized();
-
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
   }
 
   static Future<void> _initializeDependencies() async {
@@ -24,8 +18,7 @@ class AppInitializer {
     Bloc.observer = MyBlocObserver();
   }
 
-  static Future<void> _initializeSharedPreferences() async {
+  static Future<void> _initializeCache() async {
     await CacheManager.init();
-    final cache = CacheManager.getGlobalData();
   }
 }

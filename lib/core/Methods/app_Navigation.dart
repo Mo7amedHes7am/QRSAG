@@ -12,10 +12,16 @@ enum Transition {
 }
 
 class AppNavigator {
-  static Future<T?> topage<T>(BuildContext context, Widget screen) {
+  static Future<T?> topage<T>(
+    BuildContext context,
+    Widget screen, {
+    Transition transition = Transition.defaultTransition,
+    Curve curve = Curves.easeInOut,
+    Duration duration = const Duration(milliseconds: 300),
+  }) {
     return Navigator.push<T>(
       context,
-      MaterialPageRoute(builder: (context) => screen),
+      _buildRoute(screen, transition, curve, duration) as Route<T>,
     );
   }
 
@@ -23,19 +29,32 @@ class AppNavigator {
     required BuildContext context,
     required C cubit,
     required Widget screen,
+    Transition transition = Transition.defaultTransition,
+    Curve curve = Curves.easeInOut,
+    Duration duration = const Duration(milliseconds: 300),
   }) {
     return Navigator.push<T>(
       context,
-      MaterialPageRoute(
-        builder: (_) => BlocProvider.value(value: cubit, child: screen),
-      ),
+      _buildRoute(
+            BlocProvider.value(value: cubit, child: screen),
+            transition,
+            curve,
+            duration,
+          )
+          as Route<T>,
     );
   }
 
-  static Future<T?> offpage<T>(BuildContext context, Widget screen) {
+  static Future<T?> offpage<T>(
+    BuildContext context,
+    Widget screen, {
+    Transition transition = Transition.defaultTransition,
+    Curve curve = Curves.easeInOut,
+    Duration duration = const Duration(milliseconds: 300),
+  }) {
     return Navigator.pushReplacement<T, T>(
       context,
-      MaterialPageRoute(builder: (context) => screen),
+      _buildRoute(screen, transition, curve, duration) as Route<T>,
     );
   }
 
@@ -43,12 +62,19 @@ class AppNavigator {
     required BuildContext context,
     required C cubit,
     required Widget screen,
+    Transition transition = Transition.defaultTransition,
+    Curve curve = Curves.easeInOut,
+    Duration duration = const Duration(milliseconds: 300),
   }) {
     return Navigator.pushReplacement<T, T>(
       context,
-      MaterialPageRoute(
-        builder: (_) => BlocProvider.value(value: cubit, child: screen),
-      ),
+      _buildRoute(
+            BlocProvider.value(value: cubit, child: screen),
+            transition,
+            curve,
+            duration,
+          )
+          as Route<T>,
     );
   }
 
@@ -61,13 +87,7 @@ class AppNavigator {
   }) async {
     return Navigator.pushAndRemoveUntil<T>(
       context,
-      PageRouteBuilder(
-        pageBuilder: (context, animation, secondaryAnimation) => screen,
-        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-          return _buildTransition(animation, child, transition, curve);
-        },
-        transitionDuration: duration,
-      ),
+      _buildRoute(screen, transition, curve, duration) as Route<T>,
       (route) => false,
     );
   }
@@ -94,6 +114,22 @@ class AppNavigator {
 
   static dynamic getargs(BuildContext context) {
     return ModalRoute.of(context)?.settings.arguments;
+  }
+
+  static PageRouteBuilder _buildRoute(
+    Widget screen,
+    Transition transition,
+    Curve curve,
+    Duration duration,
+  ) {
+    return PageRouteBuilder(
+      pageBuilder: (_, __, ___) => screen,
+      transitionDuration: duration,
+      reverseTransitionDuration: duration,
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        return _buildTransition(animation, child, transition, curve);
+      },
+    );
   }
 
   static Widget _buildTransition(
@@ -146,7 +182,7 @@ class CircularRevealAnimation extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: animation,
-      builder: (context, child) {
+      builder: (_, child) {
         return ClipPath(
           clipper: CircularRevealClipper(fraction: animation.value),
           child: child,
@@ -164,15 +200,14 @@ class CircularRevealClipper extends CustomClipper<Path> {
 
   @override
   Path getClip(Size size) {
-    final path = Path();
     final radius = fraction * size.longestSide;
-    path.addOval(
+
+    return Path()..addOval(
       Rect.fromCircle(
         center: Offset(size.width / 2, size.height / 2),
         radius: radius,
       ),
     );
-    return path;
   }
 
   @override

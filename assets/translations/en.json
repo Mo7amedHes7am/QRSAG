@@ -75,5 +75,18 @@
     "back": "Back",
     "save": "Save",
     "remove": "Remove"
+  },
+  "chooseLanguage": {
+    "title": "Choose the language",
+    "subtitle": "Select your preferred language below. This helps us serve you better.",
+    "selected": "You Selected",
+    "all": "All Languages",
+    "nodata": "No Languages Found"
+  },
+  "chooseTheme": {
+    "title": "Choose the theme",
+    "subtitle": "Select your preferred theme below. This helps us serve you better.",
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode"
   }
 }

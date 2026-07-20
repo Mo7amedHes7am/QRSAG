@@ -22,7 +22,7 @@ extension GetItInjectableX on _i174.GetIt {
     _i526.EnvironmentFilter? environmentFilter,
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
-    gh.factory<_i884.SplashCubit>(() => _i884.SplashCubit());
+    gh.lazySingleton<_i884.SplashCubit>(() => _i884.SplashCubit());
     return this;
   }
 }

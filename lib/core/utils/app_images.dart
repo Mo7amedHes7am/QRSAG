@@ -9,6 +9,8 @@ class AppImages {
 
 class _Json {
   const _Json();
+  final String dark = 'assets/Jsons/dark.json';
+  final String light = 'assets/Jsons/light.json';
 }
 
 class _Logos {
@@ -23,6 +25,9 @@ class _Svgs {
   const _Svgs();
 
   final String nodata = 'assets/Svgs/nodata.svg';
+  final String qrlogogold = 'assets/Svgs/qrlogogold.svg';
+  final String ar = 'assets/Svgs/ar.svg';
+  final String en = 'assets/Svgs/en.svg';
 }
 
 class _Gifs {
