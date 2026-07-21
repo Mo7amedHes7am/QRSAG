@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_scanner_and_generator/app/app_variables.dart';
 import 'package:qr_scanner_and_generator/core/components/widgets/CustomText.dart';
 import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
+import 'package:qr_scanner_and_generator/generated/locale_keys.g.dart';
 
 int b = 1;
 
@@ -41,7 +43,9 @@ StatefulBuilder CustomTabBar({
                     color: b == 1 ? appColors.primary : Colors.transparent,
                   ),
                   child: Center(
-                    child: CustomText.x18.medium("Scan").primaryTextColor,
+                    child: CustomText.x18
+                        .medium(LocaleKeys.history_scanned.tr())
+                        .primaryTextColor,
                   ),
                 ),
               ),
@@ -59,7 +63,9 @@ StatefulBuilder CustomTabBar({
                     color: b == 2 ? appColors.primary : Colors.transparent,
                   ),
                   child: Center(
-                    child: CustomText.x18.medium("Generate").primaryTextColor,
+                    child: CustomText.x18
+                        .medium(LocaleKeys.history_generated.tr())
+                        .primaryTextColor,
                   ),
                 ),
               ),

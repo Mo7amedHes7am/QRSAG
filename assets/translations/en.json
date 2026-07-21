@@ -138,6 +138,8 @@
     "no_scan_history": "No scan history found",
     "no_generate_history": "No generate history found",
     "delete_confirm": "Are You Sure To Delete?",
-    "delete_warning": "This Result Will be deleted Permanently"
+    "delete_warning": "This Result Will be deleted Permanently",
+    "generated": "Generated",
+    "scanned": "Scanned"
   }
 }

@@ -138,6 +138,8 @@
     "no_scan_history": "لا يوجد سجل مسح",
     "no_generate_history": "لا يوجد سجل إنشاء",
     "delete_confirm": "هل أنت متأكد من الحذف؟",
-    "delete_warning": "سيتم حذف هذه النتيجة بشكل دائم"
+    "delete_warning": "سيتم حذف هذه النتيجة بشكل دائم",
+    "generated": "مولّد",
+    "scanned": "ممسوح"
   }
 }

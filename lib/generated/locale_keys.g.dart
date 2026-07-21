@@ -132,6 +132,8 @@ abstract class  LocaleKeys {
   static const history_no_generate_history = 'history.no_generate_history';
   static const history_delete_confirm = 'history.delete_confirm';
   static const history_delete_warning = 'history.delete_warning';
+  static const history_generated = 'history.generated';
+  static const history_scanned = 'history.scanned';
   static const history = 'history';
 
 }

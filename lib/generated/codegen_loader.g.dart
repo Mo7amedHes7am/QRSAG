@@ -154,7 +154,9 @@ class CodegenLoader extends AssetLoader{
     "no_scan_history": "لا يوجد سجل مسح",
     "no_generate_history": "لا يوجد سجل إنشاء",
     "delete_confirm": "هل أنت متأكد من الحذف؟",
-    "delete_warning": "سيتم حذف هذه النتيجة بشكل دائم"
+    "delete_warning": "سيتم حذف هذه النتيجة بشكل دائم",
+    "generated": "مولّد",
+    "scanned": "ممسوح"
   }
 };
 static const Map<String,dynamic> _en = {
@@ -297,7 +299,9 @@ static const Map<String,dynamic> _en = {
     "no_scan_history": "No scan history found",
     "no_generate_history": "No generate history found",
     "delete_confirm": "Are You Sure To Delete?",
-    "delete_warning": "This Result Will be deleted Permanently"
+    "delete_warning": "This Result Will be deleted Permanently",
+    "generated": "Generated",
+    "scanned": "Scanned"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "en": _en};
