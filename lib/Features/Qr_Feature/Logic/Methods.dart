@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:encrypt_decrypt_plus/encrypt_decrypt/xor.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
+import 'package:qr_scanner_and_generator/core/cache/cache_manager.dart';
 import 'package:qr_scanner_and_generator/generated/locale_keys.g.dart';
 
 QrType detectQrType(String qr) {
@@ -98,4 +99,12 @@ String parseQrData(String data) {
 String? extractVisaSecret(String scannedQrCode) {
   final parts = scannedQrCode.split("-VssEnc-");
   return parts.length == 2 ? parts[1] : null;
+}
+
+String formatDate(int timestamp) {
+  final formatter = DateFormat(
+    'dd MMM yyyy, h.mm aa',
+    CacheManager.getGlobalData().language,
+  );
+  return formatter.format(DateTime.fromMillisecondsSinceEpoch(timestamp));
 }

@@ -20,7 +20,8 @@ class CacheManager {
     // await Hive.deleteBoxFromDisk('globalCache');
     // await Hive.deleteBoxFromDisk('historyCache');
     globalBox = await Hive.openBox<GlobalCacheModel>('globalCache');
-    historyBox = await Hive.openBox<HistoryModel>('historyCache');
+    scanhistoryBox = await Hive.openBox<HistoryModel>('historyCache');
+    generatehistoryBox = await Hive.openBox<HistoryModel>('generateCache');
     debugPrint('Global Box Initialized');
   }
 
@@ -61,14 +62,24 @@ class CacheManager {
 
   static Future<void> reset() async {
     await globalBox.clear();
-    await historyBox.clear();
+    await generatehistoryBox.clear();
+    await scanhistoryBox.clear();
   }
 
   static Future<void> clearhistory() async {
-    await historyBox.clear();
+    await generatehistoryBox.clear();
+    await scanhistoryBox.clear();
   }
 
   static Future<void> close() async {
     await globalBox.close();
+  }
+
+  static List<HistoryModel> getScanHistory() {
+    return scanhistoryBox.values.toList();
+  }
+
+  static List<HistoryModel> getGenerateHistory() {
+    return generatehistoryBox.values.toList();
   }
 }

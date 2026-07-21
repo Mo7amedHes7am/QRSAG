@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pretty_qr_code/pretty_qr_code.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Logic/Methods.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/Cubit/qr_cubit.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/widgets/URLMessage.dart';
@@ -10,33 +9,18 @@ import 'package:qr_scanner_and_generator/app/app_variables.dart';
 import 'package:qr_scanner_and_generator/core/Methods/Global_Methods.dart';
 import 'package:qr_scanner_and_generator/core/cache/Models/HistoryModel.dart';
 import 'package:qr_scanner_and_generator/core/components/global/back_button.dart';
+import 'package:qr_scanner_and_generator/core/components/global/qr_code.dart';
 import 'package:qr_scanner_and_generator/core/components/widgets/CustomText.dart';
 import 'package:qr_scanner_and_generator/core/components/widgets/loading.dart';
 import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
 import 'package:qr_scanner_and_generator/generated/locale_keys.g.dart';
 
-class ResultView extends StatefulWidget {
+class ResultView extends StatelessWidget {
   final HistoryModel result;
 
-  const ResultView({super.key, required this.result});
+  ResultView({super.key, required this.result});
 
-  @override
-  State<ResultView> createState() => _ResultViewState();
-}
-
-class _ResultViewState extends State<ResultView> {
   final GlobalKey repaintKey = GlobalKey();
-  late Future<MemoryImage> _imageFuture;
-
-  @override
-  void initState() {
-    super.initState();
-    _imageFuture = svgToImageProvider(
-      widget.result.img,
-      color: appColors.primary,
-      size: 181.sp,
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +38,7 @@ class _ResultViewState extends State<ResultView> {
       },
       builder: (context, state) {
         final isLoading = state is QrActionLoadingState;
-        final bool hasUrls = hasURLs(widget.result.data);
+        final bool hasUrls = hasURLs(result.data);
         final isArabic = context.locale.languageCode == 'ar';
         return LoadingScaffold(
           loading: isLoading,
@@ -112,11 +96,7 @@ class _ResultViewState extends State<ResultView> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         CustomText.x20
-                            .medium(
-                              isArabic
-                                  ? widget.result.arlabel
-                                  : widget.result.enlabel,
-                            )
+                            .medium(isArabic ? result.arlabel : result.enlabel)
                             .start
                             .primary,
                         SizedBox(height: 9.h),
@@ -124,12 +104,12 @@ class _ResultViewState extends State<ResultView> {
                           width: 336.w - 28.w,
                           child: hasUrls
                               ? UrlMessage(
-                                  textContent: widget.result.data,
+                                  textContent: result.data,
                                   textColor: appColors.primary,
                                   isMyMessage: true,
                                 )
                               : CustomText.x14
-                                    .medium(parseQrData(widget.result.data))
+                                    .medium(parseQrData(result.data))
                                     .primary,
                         ),
                       ],
@@ -138,51 +118,11 @@ class _ResultViewState extends State<ResultView> {
 
                   SizedBox(height: 57.h),
 
-                  FutureBuilder<MemoryImage>(
-                    future: _imageFuture,
-                    builder: (context, snapshot) {
-                      if (!snapshot.hasData) {
-                        return SizedBox(
-                          width: 181.sp,
-                          height: 181.sp,
-                          child: Center(
-                            child: CircularProgressIndicator(
-                              color: appColors.primary,
-                            ),
-                          ),
-                        );
-                      }
-
-                      return RepaintBoundary(
-                        key: repaintKey,
-                        child: Container(
-                          width: 181.sp,
-                          height: 181.sp,
-                          padding: EdgeInsets.all(10.sp),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(6.sp),
-                            color: Colors.white,
-                            border: Border.all(
-                              color: appColors.primary,
-                              width: 4.sp,
-                            ),
-                          ),
-                          child: PrettyQrView.data(
-                            data: widget.result.data,
-                            decoration: PrettyQrDecoration(
-                              image: PrettyQrDecorationImage(
-                                image: snapshot.data!,
-                                fit: BoxFit.cover,
-                                colorFilter: ColorFilter.mode(
-                                  appColors.primary,
-                                  BlendMode.srcIn,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      );
-                    },
+                  QRCodeBox(
+                    imgurl: result.img,
+                    data: result.data,
+                    size: 181,
+                    repaintKey: repaintKey,
                   ),
 
                   SizedBox(height: 40.h),
@@ -196,7 +136,7 @@ class _ResultViewState extends State<ResultView> {
                             ? null
                             : () => context.read<QrCubit>().shareQrCode(
                                 repaintKey: repaintKey,
-                                qrData: widget.result.data,
+                                qrData: result.data,
                               ),
                       ),
                       SizedBox(width: 23.w),

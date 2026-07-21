@@ -133,5 +133,11 @@
     "qr_code": "QR Code",
     "saved_to": "QR Code saved to",
     "error": "Error:"
+  },
+  "history": {
+    "no_scan_history": "No scan history found",
+    "no_generate_history": "No generate history found",
+    "delete_confirm": "Are You Sure To Delete?",
+    "delete_warning": "This Result Will be deleted Permanently"
   }
 }

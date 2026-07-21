@@ -149,6 +149,12 @@ class CodegenLoader extends AssetLoader{
     "qr_code": "رمز QR",
     "saved_to": "تم حفظ رمز QR في",
     "error": "خطأ:"
+  },
+  "history": {
+    "no_scan_history": "لا يوجد سجل مسح",
+    "no_generate_history": "لا يوجد سجل إنشاء",
+    "delete_confirm": "هل أنت متأكد من الحذف؟",
+    "delete_warning": "سيتم حذف هذه النتيجة بشكل دائم"
   }
 };
 static const Map<String,dynamic> _en = {
@@ -286,6 +292,12 @@ static const Map<String,dynamic> _en = {
     "qr_code": "QR Code",
     "saved_to": "QR Code saved to",
     "error": "Error:"
+  },
+  "history": {
+    "no_scan_history": "No scan history found",
+    "no_generate_history": "No generate history found",
+    "delete_confirm": "Are You Sure To Delete?",
+    "delete_warning": "This Result Will be deleted Permanently"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "en": _en};

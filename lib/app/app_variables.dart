@@ -12,7 +12,8 @@ AppColors get appColors =>
     Theme.of(navigatorKey.currentContext!).extension<AppColors>()!;
 ThemeMode themeMode = ThemeMode.system;
 late Box<GlobalCacheModel> globalBox;
-late Box<HistoryModel> historyBox;
+late Box<HistoryModel> scanhistoryBox;
+late Box<HistoryModel> generatehistoryBox;
 bool splash = false;
 late Function(BuildContext) changeTheme;
 

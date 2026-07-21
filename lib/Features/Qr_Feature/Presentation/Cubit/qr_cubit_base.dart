@@ -49,4 +49,11 @@ class QrCubitBase extends Cubit<QrState> {
   }) async {}
 
   Future<void> saveQrCode({required GlobalKey repaintKey}) async {}
+
+  Future<void> deleteHistoryItem({
+    required int index,
+    required bool isScan,
+  }) async {}
+
+  loadHistory() {}
 }

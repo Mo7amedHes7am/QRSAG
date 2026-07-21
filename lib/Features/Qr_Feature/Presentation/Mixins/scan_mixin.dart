@@ -56,7 +56,7 @@ mixin ScanMixin on QrCubitBase {
         wifi: type == QrType.visa ? scannedQrCode.split("-VssEnc-")[1] : "",
       );
       debugPrint(scannedQrCode.toString());
-      await historyBox.add(historyData);
+      await scanhistoryBox.add(historyData);
       scanLocked = false;
       if (!isClosed) emit(QrScannedState(historyData: historyData));
     } catch (e) {

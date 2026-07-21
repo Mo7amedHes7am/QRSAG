@@ -40,8 +40,9 @@ class _NavbarScreenState extends State<NavbarScreen> {
                     child: Container(
                       height: 67.h,
                       decoration: BoxDecoration(
-                        color: appColors.background,
+                        color: appColors.textfield,
                         borderRadius: BorderRadius.circular(6.sp),
+                        border: Border.all(color: appColors.primary),
                       ),
                       child: Center(
                         child: Row(

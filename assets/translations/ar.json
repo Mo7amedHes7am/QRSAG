@@ -133,5 +133,11 @@
     "qr_code": "رمز QR",
     "saved_to": "تم حفظ رمز QR في",
     "error": "خطأ:"
+  },
+  "history": {
+    "no_scan_history": "لا يوجد سجل مسح",
+    "no_generate_history": "لا يوجد سجل إنشاء",
+    "delete_confirm": "هل أنت متأكد من الحذف؟",
+    "delete_warning": "سيتم حذف هذه النتيجة بشكل دائم"
   }
 }

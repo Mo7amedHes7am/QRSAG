@@ -38,3 +38,5 @@ class QrActionErrorState extends QrResultActionState {
 }
 
 class QrActionIdleState extends QrResultActionState {}
+
+class QrHistoryLoaded extends QrState {}

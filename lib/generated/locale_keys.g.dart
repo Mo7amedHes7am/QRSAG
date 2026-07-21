@@ -128,5 +128,10 @@ abstract class  LocaleKeys {
   static const result_saved_to = 'result.saved_to';
   static const result_error = 'result.error';
   static const result = 'result';
+  static const history_no_scan_history = 'history.no_scan_history';
+  static const history_no_generate_history = 'history.no_generate_history';
+  static const history_delete_confirm = 'history.delete_confirm';
+  static const history_delete_warning = 'history.delete_warning';
+  static const history = 'history';
 
 }
