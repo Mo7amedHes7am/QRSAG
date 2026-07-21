@@ -109,6 +109,10 @@ class CodegenLoader extends AssetLoader{
     "get": "ابدأ ",
     "started": "الآن",
     "description": "انطلق واستمتع بميزاتنا مجانًا واجعل حياتك سهلة معنا."
+  },
+  "navbar": {
+    "generate": "إنشاء",
+    "history": "السجل"
   }
 };
 static const Map<String,dynamic> _en = {
@@ -206,6 +210,10 @@ static const Map<String,dynamic> _en = {
     "get": "Get ",
     "started": "Started",
     "description": "Go and enjoy our features for free and make your life easy with us."
+  },
+  "navbar": {
+    "generate": "Generate",
+    "history": "History"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "en": _en};

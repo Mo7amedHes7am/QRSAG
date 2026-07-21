@@ -91,5 +91,8 @@ abstract class  LocaleKeys {
   static const welcome_started = 'welcome.started';
   static const welcome_description = 'welcome.description';
   static const welcome = 'welcome';
+  static const navbar_generate = 'navbar.generate';
+  static const navbar_history = 'navbar.history';
+  static const navbar = 'navbar';
 
 }

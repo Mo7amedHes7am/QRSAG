@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' hide Transition;
+import 'package:qr_scanner_and_generator/Features/Home_Feature/Presentation/UI/screens/navbar_screen.dart';
 import 'package:qr_scanner_and_generator/Features/Splash_Feature/Presentation/Cubit/splash_cubit.dart';
 import 'package:qr_scanner_and_generator/Features/Splash_Feature/Presentation/UI/screens/ChooseThemeView/choose_theme_screen.dart';
 import 'package:qr_scanner_and_generator/Features/Splash_Feature/Presentation/UI/screens/chooseLanguageView/choose_language_screen.dart';
@@ -37,6 +38,12 @@ Future<void> CheckWhereToGo({required BuildContext context}) async {
       duration: Duration(seconds: 3),
     );
   } else {
-    // AppNavigator.offallpages(context, NavbarScreen());
+    AppNavigator.offallpages(
+      context,
+      NavbarScreen(),
+      transition: Transition.circularReveal,
+      curve: Curves.fastOutSlowIn,
+      duration: Duration(seconds: 3),
+    );
   }
 }

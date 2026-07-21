@@ -8,7 +8,6 @@ import 'package:qr_scanner_and_generator/core/theme/theme_state.dart';
 
 part 'splash_state.dart';
 
-@lazySingleton
 abstract class SplashCubitBase extends Cubit<SplashState> {
   SplashCubitBase() : super(SplashInitialState());
 

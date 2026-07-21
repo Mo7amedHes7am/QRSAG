@@ -93,5 +93,9 @@
     "get": "Get ",
     "started": "Started",
     "description": "Go and enjoy our features for free and make your life easy with us."
+  },
+  "navbar": {
+    "generate": "Generate",
+    "history": "History"
   }
 }
