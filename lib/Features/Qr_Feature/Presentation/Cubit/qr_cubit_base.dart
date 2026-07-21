@@ -1,0 +1,52 @@
+import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
+import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:qr_scanner_and_generator/core/cache/Models/HistoryModel.dart';
+
+part 'qr_state.dart';
+
+class QrCubitBase extends Cubit<QrState> {
+  late bool scanLocked;
+  MobileScannerController? cameraController;
+
+  @factoryMethod
+  QrCubitBase() : super(QrInitialState());
+
+  init() {
+    scanLocked = false;
+    try {
+      cameraController = MobileScannerController(
+        torchEnabled: false,
+        formats: [BarcodeFormat.qrCode],
+        autoStart: true,
+        facing: CameraFacing.back,
+        detectionSpeed: DetectionSpeed.normal,
+        detectionTimeoutMs: 1000,
+      );
+    } catch (e) {
+      debugPrint('Camera controller init failed: $e');
+      cameraController = null;
+    }
+    if (!isClosed) emit(QrInitialState());
+  }
+
+  @override
+  Future<void> close() async {
+    try {
+      await cameraController?.dispose();
+    } catch (e) {
+      debugPrint('Camera controller dispose failed: $e');
+    }
+    return super.close();
+  }
+
+  Future<void> scanQrCode({required String scannedQrCode}) async {}
+
+  Future<void> shareQrCode({
+    required GlobalKey repaintKey,
+    required String qrData,
+  }) async {}
+
+  Future<void> saveQrCode({required GlobalKey repaintKey}) async {}
+}

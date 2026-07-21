@@ -18,6 +18,7 @@ class CacheManager {
       Hive.registerAdapter(HistoryAdapter());
     }
     // await Hive.deleteBoxFromDisk('globalCache');
+    // await Hive.deleteBoxFromDisk('historyCache');
     globalBox = await Hive.openBox<GlobalCacheModel>('globalCache');
     historyBox = await Hive.openBox<HistoryModel>('historyCache');
     debugPrint('Global Box Initialized');

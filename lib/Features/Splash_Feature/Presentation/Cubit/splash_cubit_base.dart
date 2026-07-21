@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:injectable/injectable.dart';
 import 'package:qr_scanner_and_generator/Features/Splash_Feature/Data/Models/language_model.dart';
 import 'package:qr_scanner_and_generator/core/cache/cache_manager.dart';
 import 'package:qr_scanner_and_generator/core/theme/theme_state.dart';

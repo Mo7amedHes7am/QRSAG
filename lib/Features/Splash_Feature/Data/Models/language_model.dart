@@ -22,11 +22,11 @@ class LanguageModel {
   static List<LanguageModel> languages() {
     return [
       LanguageModel(
-        flag: AppImages.Svgs.ar,
+        flag: AppSvgs.ar,
         label: "اللغة العربية",
         code: "ar",
       ),
-      LanguageModel(flag: AppImages.Svgs.en, label: "English", code: "en"),
+      LanguageModel(flag: AppSvgs.en, label: "English", code: "en"),
     ];
   }
 }

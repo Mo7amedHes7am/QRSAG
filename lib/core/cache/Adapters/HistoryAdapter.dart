@@ -1,4 +1,4 @@
-import 'package:hive/hive.dart';
+import 'package:hive/hive.dart' show BinaryWriter, BinaryReader, TypeAdapter;
 import 'package:qr_scanner_and_generator/core/cache/Models/HistoryModel.dart';
 
 class HistoryAdapter extends TypeAdapter<HistoryModel> {
@@ -7,27 +7,44 @@ class HistoryAdapter extends TypeAdapter<HistoryModel> {
 
   @override
   HistoryModel read(BinaryReader reader) {
-    final data = reader.readString();
-    final id = reader.readString();
-    final type = reader.readString();
-    final datesubmitted = reader.readInt();
-    final img = reader.readString();
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{};
+
+    for (var i = 0; i < numOfFields; i++) {
+      final key = reader.readByte();
+      fields[key] = reader.read();
+    }
 
     return HistoryModel(
-      data: data,
-      id: id,
-      type: type,
-      datesubmitted: datesubmitted,
-      img: img,
+      data: fields[0] as String,
+      id: fields[1] as String,
+      type: fields[2] as String,
+      img: fields[3] as String,
+      arlabel: fields[4] as String,
+      enlabel: fields[5] as String,
+      datesubmitted: fields[6] as int,
+      wifi: fields[7] as String,
     );
   }
 
   @override
   void write(BinaryWriter writer, HistoryModel obj) {
-    writer.writeString(obj.data);
-    writer.writeString(obj.id);
-    writer.writeString(obj.type);
-    writer.writeInt(obj.datesubmitted);
-    writer.writeString(obj.img);
+    final fields = <int, dynamic>{
+      0: obj.data,
+      1: obj.id,
+      2: obj.type,
+      3: obj.img,
+      4: obj.arlabel,
+      5: obj.enlabel,
+      6: obj.datesubmitted,
+      7: obj.wifi,
+    };
+
+    writer.writeByte(fields.length);
+    fields.forEach((key, value) {
+      writer
+        ..writeByte(key)
+        ..write(value);
+    });
   }
 }

@@ -46,7 +46,7 @@ class _LoadingScaffoldState extends State<LoadingScaffold> {
         child: Center(
           child: Gif(
             autostart: Autostart.loop,
-            image: AssetImage(AppImages.Gifs.loading),
+            image: AssetImage(AppGifs.loading),
             width: widget.isTablet ? 400.sp : 250.sp,
             height: widget.isTablet ? 400.sp : 250.sp,
             useCache: true,

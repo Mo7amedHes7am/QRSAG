@@ -1,0 +1,221 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pretty_qr_code/pretty_qr_code.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Logic/Methods.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/Cubit/qr_cubit.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/widgets/URLMessage.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/widgets/action_button.dart';
+import 'package:qr_scanner_and_generator/app/app_variables.dart';
+import 'package:qr_scanner_and_generator/core/Methods/Global_Methods.dart';
+import 'package:qr_scanner_and_generator/core/cache/Models/HistoryModel.dart';
+import 'package:qr_scanner_and_generator/core/components/global/back_button.dart';
+import 'package:qr_scanner_and_generator/core/components/widgets/CustomText.dart';
+import 'package:qr_scanner_and_generator/core/components/widgets/loading.dart';
+import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
+import 'package:qr_scanner_and_generator/generated/locale_keys.g.dart';
+
+class ResultView extends StatefulWidget {
+  final HistoryModel result;
+
+  const ResultView({super.key, required this.result});
+
+  @override
+  State<ResultView> createState() => _ResultViewState();
+}
+
+class _ResultViewState extends State<ResultView> {
+  final GlobalKey repaintKey = GlobalKey();
+  late Future<MemoryImage> _imageFuture;
+
+  @override
+  void initState() {
+    super.initState();
+    _imageFuture = svgToImageProvider(
+      widget.result.img,
+      color: appColors.primary,
+      size: 181.sp,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocConsumer<QrCubit, QrState>(
+      listenWhen: (_, state) => state is QrResultActionState,
+      listener: (context, state) {
+        if (state is QrSaveSuccessState) {
+          showToast('${LocaleKeys.result_saved_to.tr()} ${state.path}');
+        } else if (state is QrActionErrorState) {
+          showToast(
+            '${LocaleKeys.result_error.tr()} ${state.message}',
+            isError: true,
+          );
+        }
+      },
+      builder: (context, state) {
+        final isLoading = state is QrActionLoadingState;
+        final bool hasUrls = hasURLs(widget.result.data);
+        final isArabic = context.locale.languageCode == 'ar';
+        return LoadingScaffold(
+          loading: isLoading,
+          child: Scaffold(
+            backgroundColor: appColors.background,
+            appBar: AppBar(
+              backgroundColor: Colors.transparent,
+              shadowColor: Colors.transparent,
+              surfaceTintColor: Colors.transparent,
+              foregroundColor: Colors.transparent,
+              leadingWidth: 100.w,
+              title: CustomText.x28
+                  .medium(LocaleKeys.result_qr_code.tr())
+                  .primaryTextColor,
+              leading: Row(
+                children: [
+                  SizedBox(width: 46.w),
+                  Container(
+                    width: 40.sp,
+                    height: 40.sp,
+                    decoration: BoxDecoration(
+                      color: appColors.background,
+                      borderRadius: BorderRadius.circular(6.sp),
+                      boxShadow: [
+                        BoxShadow(
+                          color: appColors.primary.withValues(alpha: 0.3),
+                          spreadRadius: 5.sp,
+                          blurRadius: 7.sp,
+                          offset: const Offset(-2, -1),
+                        ),
+                      ],
+                    ),
+                    child: Center(
+                      child: Back_Button(context: context, style: 1, size: 40),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            body: SingleChildScrollView(
+              padding: EdgeInsets.only(top: 29.h, right: 46.w, left: 46.w),
+              child: Column(
+                children: [
+                  Container(
+                    width: 336.w,
+                    padding: EdgeInsets.symmetric(
+                      vertical: 14.h,
+                      horizontal: 14.w,
+                    ),
+                    decoration: BoxDecoration(
+                      color: appColors.primaryTextColor.withValues(alpha: 0.3),
+                      borderRadius: BorderRadius.circular(6.sp),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CustomText.x20
+                            .medium(
+                              isArabic
+                                  ? widget.result.arlabel
+                                  : widget.result.enlabel,
+                            )
+                            .start
+                            .primary,
+                        SizedBox(height: 9.h),
+                        SizedBox(
+                          width: 336.w - 28.w,
+                          child: hasUrls
+                              ? UrlMessage(
+                                  textContent: widget.result.data,
+                                  textColor: appColors.primary,
+                                  isMyMessage: true,
+                                )
+                              : CustomText.x14
+                                    .medium(parseQrData(widget.result.data))
+                                    .primary,
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  SizedBox(height: 57.h),
+
+                  FutureBuilder<MemoryImage>(
+                    future: _imageFuture,
+                    builder: (context, snapshot) {
+                      if (!snapshot.hasData) {
+                        return SizedBox(
+                          width: 181.sp,
+                          height: 181.sp,
+                          child: Center(
+                            child: CircularProgressIndicator(
+                              color: appColors.primary,
+                            ),
+                          ),
+                        );
+                      }
+
+                      return RepaintBoundary(
+                        key: repaintKey,
+                        child: Container(
+                          width: 181.sp,
+                          height: 181.sp,
+                          padding: EdgeInsets.all(10.sp),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(6.sp),
+                            color: Colors.white,
+                            border: Border.all(
+                              color: appColors.primary,
+                              width: 4.sp,
+                            ),
+                          ),
+                          child: PrettyQrView.data(
+                            data: widget.result.data,
+                            decoration: PrettyQrDecoration(
+                              image: PrettyQrDecorationImage(
+                                image: snapshot.data!,
+                                fit: BoxFit.cover,
+                                colorFilter: ColorFilter.mode(
+                                  appColors.primary,
+                                  BlendMode.srcIn,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+
+                  SizedBox(height: 40.h),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ActionButton(
+                        icon: Icons.share,
+                        onTap: isLoading
+                            ? null
+                            : () => context.read<QrCubit>().shareQrCode(
+                                repaintKey: repaintKey,
+                                qrData: widget.result.data,
+                              ),
+                      ),
+                      SizedBox(width: 23.w),
+                      ActionButton(
+                        icon: Icons.save,
+                        onTap: isLoading
+                            ? null
+                            : () => context.read<QrCubit>().saveQrCode(
+                                repaintKey: repaintKey,
+                              ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+}

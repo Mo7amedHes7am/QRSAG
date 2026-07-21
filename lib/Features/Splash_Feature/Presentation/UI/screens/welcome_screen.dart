@@ -31,7 +31,7 @@ class WelcomeScreen extends StatelessWidget {
                 SvgPicture.asset(
                   width: 200.sp,
                   height: 200.sp,
-                  AppImages.Svgs.qrlogogold,
+                  AppSvgs.qrlogogold,
                   color: appColors.background,
                   fit: BoxFit.cover,
                 ),

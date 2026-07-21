@@ -94,6 +94,7 @@ class $AssetsSvgsGen {
   final SvgGenImage g8 = const SvgGenImage('assets/Svgs/g8.svg');
   final SvgGenImage g9 = const SvgGenImage('assets/Svgs/g9.svg');
   final SvgGenImage icon = const SvgGenImage('assets/Svgs/icon.svg');
+  final SvgGenImage logo = const SvgGenImage('assets/Svgs/logo.svg');
   final SvgGenImage nodata = const SvgGenImage('assets/Svgs/nodata.svg');
   final SvgGenImage privacy = const SvgGenImage('assets/Svgs/privacy.svg');
   final SvgGenImage qrlogogold = const SvgGenImage(

@@ -123,6 +123,7 @@ class AppNavigator {
     Duration duration,
   ) {
     return PageRouteBuilder(
+      maintainState: true,
       pageBuilder: (_, __, ___) => screen,
       transitionDuration: duration,
       reverseTransitionDuration: duration,

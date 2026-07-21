@@ -41,7 +41,7 @@ class NoDataScreen extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             SvgPicture.asset(
-              image ?? AppImages.Svgs.nodata,
+              image ?? AppSvgs.nodata,
               width: customWidth ?? (tablet ? 240.w : 120.w),
               height: customHeight ?? (tablet ? 240.w : 120.w),
               fit: BoxFit.cover,

@@ -97,5 +97,41 @@
   "navbar": {
     "generate": "Generate",
     "history": "History"
+  },
+  "qr": {
+    "network_name": "Network Name",
+    "network_password": "Network Password",
+    "hidden": "Hidden",
+    "encryption": "Encryption",
+    "event_name": "Event Name",
+    "starts_at": "Starts At",
+    "ends_at": "Ends At",
+    "location": "Location",
+    "description": "Description",
+    "name": "Name",
+    "phone_number": "Phone Number",
+    "email": "Email",
+    "website": "Website",
+    "works_as": "Works As",
+    "at": "At",
+    "address": "Address",
+    "city": "City",
+    "country": "Country",
+    "industry": "Industry",
+    "holder_name": "Holder Name",
+    "card_number": "Card Number",
+    "expiry_date": "Expiry Date",
+    "cvv": "CVV",
+    "no_vibration_support": "This device does not support vibration.",
+    "error_try_again": "Something Went Error: Please Try Again",
+    "nothing_to_capture": "Nothing to capture — QR code is not on screen.",
+    "failed_to_encode": "Failed to encode QR code image.",
+    "share_qr_text": "Check out this QR code! :",
+    "storage_permission_denied": "Storage permission denied."
+  },
+  "result": {
+    "qr_code": "QR Code",
+    "saved_to": "QR Code saved to",
+    "error": "Error:"
   }
 }

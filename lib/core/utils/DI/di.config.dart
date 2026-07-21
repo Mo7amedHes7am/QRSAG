@@ -27,9 +27,9 @@ extension GetItInjectableX on _i174.GetIt {
     _i526.EnvironmentFilter? environmentFilter,
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
+    gh.factory<_i304.QrCubit>(() => _i304.QrCubit());
     gh.lazySingleton<_i631.HomeCubit>(() => _i631.HomeCubit());
     gh.lazySingleton<_i536.MoreCubit>(() => _i536.MoreCubit());
-    gh.lazySingleton<_i304.QrCubit>(() => _i304.QrCubit());
     gh.lazySingleton<_i884.SplashCubit>(() => _i884.SplashCubit());
     return this;
   }

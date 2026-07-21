@@ -34,7 +34,7 @@ class QRBackgroundPattern extends StatelessWidget {
                   children: List.generate(
                     cols * rows,
                     (index) => SvgPicture.asset(
-                      AppImages.Svgs.qrlogogold,
+                      AppSvgs.qrlogogold,
                       width: patternSize.sp,
                       height: patternSize.sp,
                       color: appColors.grey,

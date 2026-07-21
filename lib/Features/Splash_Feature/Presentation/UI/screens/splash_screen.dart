@@ -39,10 +39,10 @@ class SplashPage extends StatelessWidget {
                     SvgPicture.asset(
                       width: 200.sp,
                       height: 200.sp,
-                      AppImages.Svgs.qrlogogold,
+                      AppSvgs.qrlogogold,
                     ),
                     Image(
-                      image: AssetImage(AppImages.Gifs.loading),
+                      image: AssetImage(AppGifs.loading),
                       color: appColors.primary,
                       width: 125.sp,
                       height: 125.sp,

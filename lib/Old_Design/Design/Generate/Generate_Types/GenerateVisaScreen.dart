@@ -4,7 +4,7 @@
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:get/get.dart';
 // import 'package:hive/hive.dart';
-// import 'package:qr_scanner_and_generator/Design/Result/ResultScreen.dart';
+// import 'package:qr_scanner_and_generator/Design/Result/result_screen.dart';
 // import 'package:qr_scanner_and_generator/Methods/Models/HistoryModel.dart';
 // import 'package:qr_scanner_and_generator/main.dart';
 // import 'package:uuid/uuid.dart';

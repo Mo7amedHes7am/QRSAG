@@ -42,7 +42,7 @@ class ErrorScreen extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
-              AppImages.Gifs.error,
+              AppGifs.error,
               width: customWidth ?? (tablet ? 240.w : 120.w),
               height: customHeight ?? (tablet ? 240.w : 120.w),
               fit: BoxFit.cover,

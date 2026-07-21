@@ -113,6 +113,42 @@ class CodegenLoader extends AssetLoader{
   "navbar": {
     "generate": "إنشاء",
     "history": "السجل"
+  },
+  "qr": {
+    "network_name": "اسم الشبكة",
+    "network_password": "كلمة مرور الشبكة",
+    "hidden": "مخفي",
+    "encryption": "نوع التشفير",
+    "event_name": "اسم الفعالية",
+    "starts_at": "تبدأ في",
+    "ends_at": "تنتهي في",
+    "location": "الموقع",
+    "description": "الوصف",
+    "name": "الاسم",
+    "phone_number": "رقم الهاتف",
+    "email": "البريد الإلكتروني",
+    "website": "الموقع الإلكتروني",
+    "works_as": "يعمل كـ",
+    "at": "في",
+    "address": "العنوان",
+    "city": "المدينة",
+    "country": "الدولة",
+    "industry": "المجال",
+    "holder_name": "اسم حامل البطاقة",
+    "card_number": "رقم البطاقة",
+    "expiry_date": "تاريخ الانتهاء",
+    "cvv": "رمز CVV",
+    "no_vibration_support": "هذا الجهاز لا يدعم الاهتزاز.",
+    "error_try_again": "حدث خطأ: يرجى المحاولة مرة أخرى",
+    "nothing_to_capture": "لا يوجد شيء لالتقاطه - رمز QR ليس على الشاشة.",
+    "failed_to_encode": "فشل في ترميز صورة رمز QR.",
+    "share_qr_text": "تحقق من رمز QR هذا! :",
+    "storage_permission_denied": "تم رفض إذن التخزين."
+  },
+  "result": {
+    "qr_code": "رمز QR",
+    "saved_to": "تم حفظ رمز QR في",
+    "error": "خطأ:"
   }
 };
 static const Map<String,dynamic> _en = {
@@ -214,6 +250,42 @@ static const Map<String,dynamic> _en = {
   "navbar": {
     "generate": "Generate",
     "history": "History"
+  },
+  "qr": {
+    "network_name": "Network Name",
+    "network_password": "Network Password",
+    "hidden": "Hidden",
+    "encryption": "Encryption",
+    "event_name": "Event Name",
+    "starts_at": "Starts At",
+    "ends_at": "Ends At",
+    "location": "Location",
+    "description": "Description",
+    "name": "Name",
+    "phone_number": "Phone Number",
+    "email": "Email",
+    "website": "Website",
+    "works_as": "Works As",
+    "at": "At",
+    "address": "Address",
+    "city": "City",
+    "country": "Country",
+    "industry": "Industry",
+    "holder_name": "Holder Name",
+    "card_number": "Card Number",
+    "expiry_date": "Expiry Date",
+    "cvv": "CVV",
+    "no_vibration_support": "This device does not support vibration.",
+    "error_try_again": "Something Went Error: Please Try Again",
+    "nothing_to_capture": "Nothing to capture — QR code is not on screen.",
+    "failed_to_encode": "Failed to encode QR code image.",
+    "share_qr_text": "Check out this QR code! :",
+    "storage_permission_denied": "Storage permission denied."
+  },
+  "result": {
+    "qr_code": "QR Code",
+    "saved_to": "QR Code saved to",
+    "error": "Error:"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "en": _en};

@@ -8,7 +8,7 @@
 // import 'package:intl/intl.dart';
 // import 'package:pretty_qr_code/pretty_qr_code.dart';
 // import 'package:qr_scanner_and_generator/Design/Components/CustomTabBar.dart';
-// import 'package:qr_scanner_and_generator/Design/Result/ResultScreen.dart';
+// import 'package:qr_scanner_and_generator/Design/Result/result_screen.dart';
 // import 'package:qr_scanner_and_generator/Design/Settings/SettingsScreen.dart';
 // import 'package:qr_scanner_and_generator/Methods/Models/HistoryModel.dart';
 // import 'package:qr_scanner_and_generator/main.dart';

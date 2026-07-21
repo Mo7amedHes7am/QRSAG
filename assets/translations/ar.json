@@ -97,5 +97,41 @@
   "navbar": {
     "generate": "إنشاء",
     "history": "السجل"
+  },
+  "qr": {
+    "network_name": "اسم الشبكة",
+    "network_password": "كلمة مرور الشبكة",
+    "hidden": "مخفي",
+    "encryption": "نوع التشفير",
+    "event_name": "اسم الفعالية",
+    "starts_at": "تبدأ في",
+    "ends_at": "تنتهي في",
+    "location": "الموقع",
+    "description": "الوصف",
+    "name": "الاسم",
+    "phone_number": "رقم الهاتف",
+    "email": "البريد الإلكتروني",
+    "website": "الموقع الإلكتروني",
+    "works_as": "يعمل كـ",
+    "at": "في",
+    "address": "العنوان",
+    "city": "المدينة",
+    "country": "الدولة",
+    "industry": "المجال",
+    "holder_name": "اسم حامل البطاقة",
+    "card_number": "رقم البطاقة",
+    "expiry_date": "تاريخ الانتهاء",
+    "cvv": "رمز CVV",
+    "no_vibration_support": "هذا الجهاز لا يدعم الاهتزاز.",
+    "error_try_again": "حدث خطأ: يرجى المحاولة مرة أخرى",
+    "nothing_to_capture": "لا يوجد شيء لالتقاطه - رمز QR ليس على الشاشة.",
+    "failed_to_encode": "فشل في ترميز صورة رمز QR.",
+    "share_qr_text": "تحقق من رمز QR هذا! :",
+    "storage_permission_denied": "تم رفض إذن التخزين."
+  },
+  "result": {
+    "qr_code": "رمز QR",
+    "saved_to": "تم حفظ رمز QR في",
+    "error": "خطأ:"
   }
 }

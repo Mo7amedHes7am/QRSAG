@@ -86,9 +86,7 @@ class _ChooseThemeScreenState extends State<ChooseThemeScreen> {
 
                               Center(
                                 child: Lottie.asset(
-                                  _cubit.isDark
-                                      ? AppImages.Json.dark
-                                      : AppImages.Json.light,
+                                  _cubit.isDark ? AppJson.dark : AppJson.light,
                                   width: isTablet
                                       ? (isLandscape ? 280.sp : 400.sp)
                                       : (isLandscape ? 150.sp : 200.sp),

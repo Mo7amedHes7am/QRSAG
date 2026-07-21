@@ -7,6 +7,7 @@ Widget Back_Button({
   required BuildContext context,
   int style = 1,
   bool isTablet = false,
+  int size = 40,
   GestureTapCallback? onTap,
 }) {
   final double scale = isTablet ? 1.45 : 1.0;
@@ -17,19 +18,21 @@ Widget Back_Button({
       InkWell(
         onTap: onTap ?? () => AppNavigator.back(context),
         child: Container(
-          height: isTablet ? (80.sp * scale) : 42.sp,
-          width: isTablet ? (80.sp * scale) : 42.sp,
+          height: isTablet ? ((2 * size).sp * scale) : size.sp,
+          width: isTablet ? ((2 * size) * scale) : size.sp,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(isTablet ? 20.r : 12.r),
             color: style == 1
-                ? Colors.white.withValues(alpha: 0.2)
+                ? appColors.background.withValues(alpha: 0.2)
                 : appColors.primary.withValues(alpha: 0.2),
           ),
           child: Center(
             child: Icon(
               Icons.arrow_back_ios_new_outlined,
-              color: style == 1 ? Colors.white : appColors.primaryTextColor,
-              size: isTablet ? (32.sp * scale) : 22.sp,
+              color: style == 1
+                  ? appColors.primary
+                  : appColors.primaryTextColor,
+              size: isTablet ? ((size / 2).sp * scale) : (size / 2).sp,
             ),
           ),
         ),
