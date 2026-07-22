@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
 import 'package:qr_scanner_and_generator/core/cache/Models/HistoryModel.dart';
 
 part 'qr_state.dart';
@@ -9,6 +10,10 @@ part 'qr_state.dart';
 class QrCubitBase extends Cubit<QrState> {
   late bool scanLocked;
   MobileScannerController? cameraController;
+  late List<QrType> qrs;
+  late TextEditingController generateController;
+  late String countryCode;
+  late QrType currentType;
 
   @factoryMethod
   QrCubitBase() : super(QrInitialState());
@@ -56,4 +61,10 @@ class QrCubitBase extends Cubit<QrState> {
   }) async {}
 
   loadHistory() {}
+
+  initGeneratePage() {}
+
+  initGenerateTypePage(QrType type) {}
+
+  Future<dynamic> generateQr() async {}
 }

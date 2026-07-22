@@ -8,11 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:gal/gal.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
-import 'package:qr_scanner_and_generator/Features/Qr_Feature/Logic/Methods.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/Cubit/qr_cubit_base.dart';
-import 'package:qr_scanner_and_generator/app/app_variables.dart';
-import 'package:qr_scanner_and_generator/core/cache/Models/HistoryModel.dart';
 import 'package:qr_scanner_and_generator/core/cache/cache_manager.dart';
 import 'package:qr_scanner_and_generator/generated/locale_keys.g.dart';
 import 'package:share_plus/share_plus.dart';
@@ -43,20 +39,10 @@ mixin ScanMixin on QrCubitBase {
 
       if (!isClosed) emit(QrLoadingState());
 
-      var uuid = Uuid();
-      final type = detectQrType(scannedQrCode.toLowerCase());
-      final historyData = HistoryModel(
+      final historyData = await CacheManager.saveToHistoryCache(
         data: scannedQrCode,
-        id: uuid.v1().replaceAll("-", ""),
-        datesubmitted: DateTime.now().millisecondsSinceEpoch,
-        type: type.name,
-        arlabel: type.arlabel,
-        enlabel: type.enlabel,
-        img: type.image,
-        wifi: type == QrType.visa ? scannedQrCode.split("-VssEnc-")[1] : "",
+        isScanned: true,
       );
-      debugPrint(scannedQrCode.toString());
-      await scanhistoryBox.add(historyData);
       scanLocked = false;
       if (!isClosed) emit(QrScannedState(historyData: historyData));
     } catch (e) {

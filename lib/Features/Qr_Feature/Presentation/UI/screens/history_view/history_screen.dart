@@ -1,13 +1,15 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/Cubit/qr_cubit.dart';
-import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/widgets/history/history_app_bar.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/widgets/main_app_bar.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/widgets/history/history_list.dart';
 import 'package:qr_scanner_and_generator/app/app_variables.dart';
 import 'package:qr_scanner_and_generator/core/components/global/system_wrapper.dart';
 import 'package:qr_scanner_and_generator/core/components/widgets/custom_tab_bar.dart';
 import 'package:qr_scanner_and_generator/core/utils/DI/di.dart';
+import 'package:qr_scanner_and_generator/generated/locale_keys.g.dart';
 
 class HistoryScreen extends StatelessWidget {
   const HistoryScreen({super.key});
@@ -24,7 +26,10 @@ class HistoryScreen extends StatelessWidget {
             child: SafeArea(
               child: Scaffold(
                 backgroundColor: appColors.background,
-                appBar: const HistoryAppBar(),
+                appBar: MainAppBar(
+                  title: LocaleKeys.navbar_history.tr(),
+                  hasBack: false,
+                ),
                 body: CustomTabBar(
                   context: context,
                   Screen1: SingleChildScrollView(

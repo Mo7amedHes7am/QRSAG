@@ -58,7 +58,8 @@
     "website": "Website",
     "description": "Description",
     "notes": "Notes",
-    "username": "Username"
+    "username": "Username",
+    "plain_text": "Text"
   },
   "common": {
     "optional": "optional",
@@ -141,5 +142,16 @@
     "delete_warning": "This Result Will be deleted Permanently",
     "generated": "Generated",
     "scanned": "Scanned"
+  },
+  "generate": {
+    "title": "Generate QR Code",
+    "success": "QR Generated Successfully",
+    "validation": {
+      "empty": "Field can't be empty",
+      "invalid_website": "Invalid website URL",
+      "invalid_email": "Invalid email address",
+      "invalid_phone": "Invalid phone number",
+      "invalid_username": "Username must not contain spaces"
+    }
   }
 }

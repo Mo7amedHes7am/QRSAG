@@ -22,9 +22,15 @@ Widget Back_Button({
           width: isTablet ? ((2 * size) * scale) : size.sp,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(isTablet ? 20.r : 12.r),
-            color: style == 1
-                ? appColors.background.withValues(alpha: 0.2)
-                : appColors.primary.withValues(alpha: 0.2),
+            color: style == 1 ? appColors.background : appColors.primary,
+            boxShadow: [
+              BoxShadow(
+                color: appColors.primary.withValues(alpha: 0.3),
+                spreadRadius: 5.sp,
+                blurRadius: 7.sp,
+                offset: const Offset(-2, -1),
+              ),
+            ],
           ),
           child: Center(
             child: Icon(

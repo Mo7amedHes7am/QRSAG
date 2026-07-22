@@ -40,3 +40,10 @@ class QrActionErrorState extends QrResultActionState {
 class QrActionIdleState extends QrResultActionState {}
 
 class QrHistoryLoaded extends QrState {}
+
+class QrGenerateLoaded extends QrState {}
+
+class QrGenerateError extends QrState {
+  final String message;
+  QrGenerateError(this.message);
+}

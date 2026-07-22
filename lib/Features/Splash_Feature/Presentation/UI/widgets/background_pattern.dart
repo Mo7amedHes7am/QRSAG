@@ -12,7 +12,7 @@ class QRBackgroundPattern extends StatelessWidget {
   const QRBackgroundPattern({
     Key? key,
     required this.child,
-    this.patternSize = 60,
+    this.patternSize = 50,
     this.opacity = 0.08,
   }) : super(key: key);
 

@@ -74,7 +74,8 @@ class CodegenLoader extends AssetLoader{
     "website": "الموقع الإلكتروني",
     "description": "الوصف",
     "notes": "ملاحظات",
-    "username": "اسم المستخدم"
+    "username": "اسم المستخدم",
+    "plain_text": "النص"
   },
   "common": {
     "optional": "اختياري",
@@ -157,6 +158,17 @@ class CodegenLoader extends AssetLoader{
     "delete_warning": "سيتم حذف هذه النتيجة بشكل دائم",
     "generated": "مولّد",
     "scanned": "ممسوح"
+  },
+  "generate": {
+    "title": "إنشاء رمز Qr",
+    "success": "تم إنشاء الرمز بنجاح",
+    "validation": {
+      "empty": "الحقل لا يمكن أن يكون فارغًا",
+      "invalid_website": "رابط غير صالح",
+      "invalid_email": "بريد إلكتروني غير صالح",
+      "invalid_phone": "رقم هاتف غير صالح",
+      "invalid_username": "اسم المستخدم لا يجب أن يحتوي على مسافات"
+    }
   }
 };
 static const Map<String,dynamic> _en = {
@@ -219,7 +231,8 @@ static const Map<String,dynamic> _en = {
     "website": "Website",
     "description": "Description",
     "notes": "Notes",
-    "username": "Username"
+    "username": "Username",
+    "plain_text": "Text"
   },
   "common": {
     "optional": "optional",
@@ -302,6 +315,17 @@ static const Map<String,dynamic> _en = {
     "delete_warning": "This Result Will be deleted Permanently",
     "generated": "Generated",
     "scanned": "Scanned"
+  },
+  "generate": {
+    "title": "Generate QR Code",
+    "success": "QR Generated Successfully",
+    "validation": {
+      "empty": "Field can't be empty",
+      "invalid_website": "Invalid website URL",
+      "invalid_email": "Invalid email address",
+      "invalid_phone": "Invalid phone number",
+      "invalid_username": "Username must not contain spaces"
+    }
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "en": _en};

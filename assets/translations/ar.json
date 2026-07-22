@@ -58,7 +58,8 @@
     "website": "الموقع الإلكتروني",
     "description": "الوصف",
     "notes": "ملاحظات",
-    "username": "اسم المستخدم"
+    "username": "اسم المستخدم",
+    "plain_text": "النص"
   },
   "common": {
     "optional": "اختياري",
@@ -141,5 +142,16 @@
     "delete_warning": "سيتم حذف هذه النتيجة بشكل دائم",
     "generated": "مولّد",
     "scanned": "ممسوح"
+  },
+  "generate": {
+    "title": "إنشاء رمز Qr",
+    "success": "تم إنشاء الرمز بنجاح",
+    "validation": {
+      "empty": "الحقل لا يمكن أن يكون فارغًا",
+      "invalid_website": "رابط غير صالح",
+      "invalid_email": "بريد إلكتروني غير صالح",
+      "invalid_phone": "رقم هاتف غير صالح",
+      "invalid_username": "اسم المستخدم لا يجب أن يحتوي على مسافات"
+    }
   }
 }

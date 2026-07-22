@@ -473,6 +473,7 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isMultiline) return LocaleKeys.field_description.tr();
     if (widget.isNotes) return LocaleKeys.field_notes.tr();
     if (widget.isUserName) return LocaleKeys.field_username.tr();
+    if (widget.isPlainText) return LocaleKeys.field_plain_text.tr();
 
     return null;
   }

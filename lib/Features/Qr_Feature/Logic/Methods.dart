@@ -1,6 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:encrypt_decrypt_plus/encrypt_decrypt/xor.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/Cubit/qr_cubit.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_text_screen.dart';
+import 'package:qr_scanner_and_generator/core/Methods/app_Navigation.dart';
+import 'package:qr_scanner_and_generator/core/Methods/app_validators.dart';
 import 'package:qr_scanner_and_generator/core/cache/cache_manager.dart';
 import 'package:qr_scanner_and_generator/generated/locale_keys.g.dart';
 
@@ -9,10 +15,10 @@ QrType detectQrType(String qr) {
 
   final matchers = <(bool Function(String), QrType)>[
     ((v) => v.startsWith('wifi:'), QrType.wifi),
-    ((v) => v.startsWith('http') || v.startsWith('www'), QrType.website),
     ((v) => v.contains('wa.me') || v.contains('whatsapp.com'), QrType.whatsapp),
     ((v) => v.contains('x.com') || v.contains('twitter.com'), QrType.x),
     ((v) => v.contains('instagram.com'), QrType.instagram),
+    ((v) => v.startsWith('http') || v.startsWith('www'), QrType.website),
     ((v) => v.startsWith('mailto:'), QrType.email),
     ((v) => v.startsWith('tel:'), QrType.phone),
     ((v) => v.startsWith('begin:vevent'), QrType.event),
@@ -107,4 +113,70 @@ String formatDate(int timestamp) {
     CacheManager.getGlobalData().language,
   );
   return formatter.format(DateTime.fromMillisecondsSinceEpoch(timestamp));
+}
+
+void handle_navigation({required QrType type, required BuildContext context}) {
+  switch (type) {
+    case QrType.text:
+    case QrType.website:
+    case QrType.whatsapp:
+    case QrType.x:
+    case QrType.email:
+    case QrType.instagram:
+    case QrType.phone:
+    case QrType.data:
+      AppNavigator.toPageWithCubit(
+        context: context,
+        cubit: context.read<QrCubit>(),
+        screen: GenerateTextScreen(type: type),
+      );
+      break;
+    case QrType.wifi:
+      // Get.to(GenerateWifiScreen());
+      break;
+    case QrType.event:
+      // Get.to(GenerateEventScreen());
+      break;
+    case QrType.contact:
+      // Get.to(GenerateContactScreen());
+      break;
+    case QrType.business:
+      // Get.to(GenerateBusinessScreen());
+      break;
+    case QrType.visa:
+      // Get.to(GenerateVisaScreen());
+      break;
+  }
+}
+
+String? validateInput({
+  required TextEditingController controller,
+  required QrType type,
+}) {
+  final text = controller.text.trim();
+
+  final requiredError = AppValidators.validateRequired(text);
+  if (requiredError != null) return requiredError;
+
+  switch (type) {
+    case QrType.text:
+      return null;
+
+    case QrType.website:
+      return AppValidators.validateWebsite(text);
+
+    case QrType.whatsapp:
+    case QrType.phone:
+      return AppValidators.validatePhone(text);
+
+    case QrType.email:
+      return AppValidators.validateEmail(text);
+
+    case QrType.x:
+    case QrType.instagram:
+      return AppValidators.validateUsername(text);
+
+    default:
+      return null;
+  }
 }

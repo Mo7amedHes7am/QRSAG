@@ -32,8 +32,8 @@ class AppSvgs {
   static const String business = 'assets/Svgs/g6.svg';
   static const String visa = 'assets/Svgs/g7.svg';
   static const String whatsapp = 'assets/Svgs/g8.svg';
-  static const String twitter = 'assets/Svgs/g9.svg';
-  static const String email = 'assets/Svgs/g10.svg';
+  static const String email = 'assets/Svgs/g9.svg';
+  static const String twitter = 'assets/Svgs/g10.svg';
   static const String instagram = 'assets/Svgs/g11.svg';
   static const String phone = 'assets/Svgs/g12.svg';
   static const String data = 'assets/Svgs/logo.svg';

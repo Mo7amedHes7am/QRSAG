@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Logic/Methods.dart';
 import 'package:qr_scanner_and_generator/app/app_variables.dart';
 import 'package:qr_scanner_and_generator/core/cache/Adapters/GlobalCacheAdapter.dart';
 import 'package:qr_scanner_and_generator/core/cache/Models/GlobalCacheModel.dart';
 import 'package:qr_scanner_and_generator/core/cache/Models/HistoryModel.dart';
+import 'package:uuid/uuid.dart';
 
 import 'Adapters/HistoryAdapter.dart';
 
@@ -81,5 +84,27 @@ class CacheManager {
 
   static List<HistoryModel> getGenerateHistory() {
     return generatehistoryBox.values.toList();
+  }
+
+  static Future<HistoryModel> saveToHistoryCache({
+    required bool isScanned,
+    required String data,
+  }) async {
+    var uuid = Uuid();
+    final type = detectQrType(data.toLowerCase());
+    final historyData = HistoryModel(
+      data: data,
+      id: uuid.v1().replaceAll("-", ""),
+      datesubmitted: DateTime.now().millisecondsSinceEpoch,
+      type: type.name,
+      arlabel: type.arlabel,
+      enlabel: type.enlabel,
+      img: type.image,
+      wifi: type == QrType.visa ? data.split("-VssEnc-")[1] : "",
+    );
+    isScanned
+        ? await scanhistoryBox.add(historyData)
+        : await generatehistoryBox.add(historyData);
+    return historyData;
   }
 }

@@ -47,10 +47,10 @@ dependencies:
   url_launcher: ^6.3.2
   fluttertoast: ^9.1.0
   encrypt_decrypt_plus: ^2.0.0
-  gal: ^2.3.0
+  gal: ^2.3.2
 
 dev_dependencies:
-  injectable_generator: ^3.1.0
+  injectable_generator: ^3.1.1
   build_runner: ^2.15.1
   flutter_test:
     sdk: flutter

@@ -20,4 +20,19 @@ enum QrType {
   final String image;
 
   const QrType(this.arlabel, this.enlabel, this.image);
+
+  static List<QrType> get all => [
+    QrType.text,
+    QrType.website,
+    QrType.wifi,
+    QrType.event,
+    QrType.contact,
+    QrType.business,
+    QrType.visa,
+    QrType.whatsapp,
+    QrType.x,
+    QrType.email,
+    QrType.instagram,
+    QrType.phone,
+  ];
 }

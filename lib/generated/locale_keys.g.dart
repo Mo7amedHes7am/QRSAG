@@ -60,6 +60,7 @@ abstract class  LocaleKeys {
   static const field_description = 'field.description';
   static const field_notes = 'field.notes';
   static const field_username = 'field.username';
+  static const field_plain_text = 'field.plain_text';
   static const field = 'field';
   static const common_optional = 'common.optional';
   static const common_required = 'common.required';
@@ -135,5 +136,14 @@ abstract class  LocaleKeys {
   static const history_generated = 'history.generated';
   static const history_scanned = 'history.scanned';
   static const history = 'history';
+  static const generate_title = 'generate.title';
+  static const generate_success = 'generate.success';
+  static const generate_validation_empty = 'generate.validation.empty';
+  static const generate_validation_invalid_website = 'generate.validation.invalid_website';
+  static const generate_validation_invalid_email = 'generate.validation.invalid_email';
+  static const generate_validation_invalid_phone = 'generate.validation.invalid_phone';
+  static const generate_validation_invalid_username = 'generate.validation.invalid_username';
+  static const generate_validation = 'generate.validation';
+  static const generate = 'generate';
 
 }
