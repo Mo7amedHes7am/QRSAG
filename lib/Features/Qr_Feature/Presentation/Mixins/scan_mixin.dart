@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:gal/gal.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/Cubit/qr_cubit_base.dart';
 import 'package:qr_scanner_and_generator/core/cache/cache_manager.dart';
 import 'package:qr_scanner_and_generator/generated/locale_keys.g.dart';
@@ -42,6 +43,7 @@ mixin ScanMixin on QrCubitBase {
       final historyData = await CacheManager.saveToHistoryCache(
         data: scannedQrCode,
         isScanned: true,
+        type: QrType.data,
       );
       scanLocked = false;
       if (!isClosed) emit(QrScannedState(historyData: historyData));

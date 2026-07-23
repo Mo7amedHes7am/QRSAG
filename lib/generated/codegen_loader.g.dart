@@ -37,7 +37,12 @@ class CodegenLoader extends AssetLoader{
     "city": "أدخل المدينة",
     "country": "أدخل الدولة",
     "company": "أدخل اسم الشركة",
-    "notes": "أضف ملاحظات"
+    "notes": "أضف ملاحظات",
+    "first_name": "أدخل اسمك الأول",
+    "last_name": "أدخل اسم العائلة",
+    "job_title": "أدخل المسمى الوظيفي",
+    "web": "أدخل رابط موقعك الإلكتروني",
+    "website": "أدخل عنوان موقعك الإلكتروني"
   },
   "validation": {
     "email_invalid": "يرجى إدخال بريد إلكتروني صحيح",
@@ -54,7 +59,17 @@ class CodegenLoader extends AssetLoader{
     "date_invalid": "يرجى إدخال تاريخ صحيح",
     "card_name_invalid": "يرجى إدخال اسم صحيح لحامل البطاقة",
     "cvv_invalid": "يرجى إدخال رمز تحقق صحيح (٣-٤ أرقام)",
-    "address_invalid": "يرجى إدخال عنوان صحيح (على الأقل ٥ أحرف)"
+    "address_invalid": "يرجى إدخال عنوان صحيح (على الأقل ٥ أحرف)",
+    "first_name_required": "يرجى إدخال الاسم الأول",
+    "last_name_required": "يرجى إدخال اسم العائلة",
+    "first_name_invalid": "يجب أن يكون الاسم الأول حرفين على الأقل",
+    "last_name_invalid": "يجب أن يكون اسم العائلة حرفين على الأقل",
+    "company_required": "يرجى إدخال اسم الشركة",
+    "job_title_required": "يرجى إدخال المسمى الوظيفي",
+    "company_invalid": "يجب أن يكون اسم الشركة حرفين على الأقل",
+    "job_title_invalid": "يجب أن يكون المسمى الوظيفي حرفين على الأقل",
+    "web_required": "يرجى إدخال رابط الموقع الإلكتروني",
+    "web_invalid": "يرجى إدخال رابط موقع إلكتروني صحيح"
   },
   "field": {
     "full_name": "الاسم الكامل",
@@ -75,7 +90,11 @@ class CodegenLoader extends AssetLoader{
     "description": "الوصف",
     "notes": "ملاحظات",
     "username": "اسم المستخدم",
-    "plain_text": "النص"
+    "plain_text": "النص",
+    "first_name": "الاسم الأول",
+    "last_name": "اسم العائلة",
+    "job_title": "المسمى الوظيفي",
+    "web": "الموقع الإلكتروني"
   },
   "common": {
     "optional": "اختياري",
@@ -167,7 +186,8 @@ class CodegenLoader extends AssetLoader{
       "invalid_website": "رابط غير صالح",
       "invalid_email": "بريد إلكتروني غير صالح",
       "invalid_phone": "رقم هاتف غير صالح",
-      "invalid_username": "اسم المستخدم لا يجب أن يحتوي على مسافات"
+      "invalid_username": "اسم المستخدم لا يجب أن يحتوي على مسافات",
+      "max_length": "لا يمكن أن يتجاوز الحقل {0} أحرف"
     }
   }
 };
@@ -194,7 +214,12 @@ static const Map<String,dynamic> _en = {
     "city": "Enter city",
     "country": "Enter country",
     "company": "Enter company name",
-    "notes": "Add notes"
+    "notes": "Add notes",
+    "first_name": "Enter your first name",
+    "last_name": "Enter your last name",
+    "job_title": "Enter your job title",
+    "web": "Enter your website URL",
+    "website": "Enter your website address"
   },
   "validation": {
     "email_invalid": "Please enter a valid email address",
@@ -211,7 +236,17 @@ static const Map<String,dynamic> _en = {
     "date_invalid": "Please enter a valid date",
     "card_name_invalid": "Please enter a valid card holder name",
     "cvv_invalid": "Please enter a valid CVV (3-4 digits)",
-    "address_invalid": "Please enter a valid address (at least 5 characters)"
+    "address_invalid": "Please enter a valid address (at least 5 characters)",
+    "first_name_required": "Please enter your first name",
+    "last_name_required": "Please enter your last name",
+    "first_name_invalid": "First name must be at least 2 characters",
+    "last_name_invalid": "Last name must be at least 2 characters",
+    "company_required": "Please enter your company name",
+    "job_title_required": "Please enter your job title",
+    "company_invalid": "Company name must be at least 2 characters",
+    "job_title_invalid": "Job title must be at least 2 characters",
+    "web_required": "Please enter your website URL",
+    "web_invalid": "Please enter a valid website URL"
   },
   "field": {
     "full_name": "Full Name",
@@ -232,7 +267,11 @@ static const Map<String,dynamic> _en = {
     "description": "Description",
     "notes": "Notes",
     "username": "Username",
-    "plain_text": "Text"
+    "plain_text": "Text",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "job_title": "Job Title",
+    "web": "Website"
   },
   "common": {
     "optional": "optional",
@@ -324,7 +363,8 @@ static const Map<String,dynamic> _en = {
       "invalid_website": "Invalid website URL",
       "invalid_email": "Invalid email address",
       "invalid_phone": "Invalid phone number",
-      "invalid_username": "Username must not contain spaces"
+      "invalid_username": "Username must not contain spaces",
+      "max_length": "Field cannot exceed {0} characters"
     }
   }
 };

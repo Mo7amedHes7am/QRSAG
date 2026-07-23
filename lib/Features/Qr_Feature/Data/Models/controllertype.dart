@@ -1,0 +1,13 @@
+enum ControllerType {
+  generate,
+  firstname,
+  lastname,
+  company,
+  job,
+  phone,
+  email,
+  website,
+  address,
+  city,
+  country,
+}

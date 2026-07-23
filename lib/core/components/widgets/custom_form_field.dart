@@ -49,9 +49,13 @@ class CustomFormField extends StatefulWidget {
   final bool isCountry;
   final bool isCompany;
   final bool isNotes;
+  final bool isWeb;
+  final bool isDate;
+  final bool isFirstName;
+  final bool isLastName;
+  final bool isJobTitle;
 
   final String? clientNameExample;
-  final bool isDate;
   final double? width;
   final double? height;
   final double? iconSize;
@@ -127,6 +131,10 @@ class CustomFormField extends StatefulWidget {
     this.minLines,
     this.showRequiredStar = false,
     this.showOptionalLabel = false,
+    this.isFirstName = false,
+    this.isLastName = false,
+    this.isJobTitle = false,
+    this.isWeb = false,
   });
 
   final bool? noborder;
@@ -214,25 +222,35 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isNumber) return TextInputType.number;
     if (widget.isDateTime || widget.isDate) return TextInputType.datetime;
     if (widget.isUrl) return TextInputType.url;
+    if (widget.isWeb) return TextInputType.url;
     if (widget.isAddress) return TextInputType.streetAddress;
     if (widget.isMultiline) return TextInputType.multiline;
-    if (widget.isUserName || widget.isClientName || widget.isCardHolderName) {
+    if (widget.isUserName ||
+        widget.isClientName ||
+        widget.isCardHolderName ||
+        widget.isFirstName ||
+        widget.isLastName ||
+        widget.isCompany ||
+        widget.isJobTitle) {
       return TextInputType.name;
     }
     if (widget.isPlainText) return TextInputType.text;
     if (widget.isVisaCardNumber || widget.isCvv) return TextInputType.number;
     if (widget.isZipCode) return TextInputType.number;
     if (widget.isExpiryDate) return TextInputType.datetime;
-    if (widget.isCity ||
-        widget.isCountry ||
-        widget.isCompany ||
-        widget.isNotes) {
+    if (widget.isCity || widget.isCountry || widget.isNotes) {
       return TextInputType.text;
     }
     return widget.keyboardType ?? TextInputType.text;
   }
 
   List<TextInputFormatter>? get _inputFormatters {
+    if (widget.isUrl || widget.isWeb) {
+      return [
+        FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z0-9\-_.:/?&=#%@+]')),
+      ];
+    }
+
     if (widget.isPhoneNumber) {
       return [
         TextInputFormatter.withFunction((oldValue, newValue) {
@@ -317,21 +335,60 @@ class _CustomFormFeildState extends State<CustomFormField> {
   String? _validateFieldType(String? value) {
     if (value == null || value.isEmpty) {
       if (widget.showRequiredStar) {
+        if (widget.isFirstName)
+          return LocaleKeys.validation_first_name_required.tr();
+        if (widget.isLastName)
+          return LocaleKeys.validation_last_name_required.tr();
+        if (widget.isCompany)
+          return LocaleKeys.validation_company_required.tr();
+        if (widget.isJobTitle)
+          return LocaleKeys.validation_job_title_required.tr();
+        if (widget.isWeb)
+          return LocaleKeys.validation_web_required.tr(); // Add this
         return LocaleKeys.validation_required.tr();
       }
       return null;
     }
 
-    if (widget.isEmail) {
-      final emailRegex = RegExp(
-        r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
+    if (widget.isWeb && value.isNotEmpty) {
+      final webRegex = RegExp(
+        r'^(https?:\/\/)?'
+        r'(([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+'
+        r'[a-zA-Z]{2,})'
+        r'(:\d+)?'
+        r'(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?$',
+        caseSensitive: false,
       );
-      if (!emailRegex.hasMatch(value)) {
-        return LocaleKeys.validation_email_invalid.tr();
+      if (!webRegex.hasMatch(value)) {
+        return LocaleKeys.validation_web_invalid.tr();
       }
     }
 
-    if (widget.isUrl) {
+    if (widget.isFirstName && value.isNotEmpty) {
+      if (value.length < 2) {
+        return LocaleKeys.validation_first_name_invalid.tr();
+      }
+    }
+
+    if (widget.isLastName && value.isNotEmpty) {
+      if (value.length < 2) {
+        return LocaleKeys.validation_last_name_invalid.tr();
+      }
+    }
+
+    if (widget.isCompany && value.isNotEmpty) {
+      if (value.length < 2) {
+        return LocaleKeys.validation_company_invalid.tr();
+      }
+    }
+
+    if (widget.isJobTitle && value.isNotEmpty) {
+      if (value.length < 2) {
+        return LocaleKeys.validation_job_title_invalid.tr();
+      }
+    }
+
+    if (widget.isUrl && value.isNotEmpty) {
       final urlRegex = RegExp(
         r'^(https?:\/\/)?([\w\-]+\.)+[\w\-]+(\/[\w\- .\/?%&=]*)?$',
         caseSensitive: false,
@@ -433,6 +490,7 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isNumber) return LocaleKeys.hint_number.tr();
     if (widget.isPlainText) return LocaleKeys.hint_plain_text.tr();
     if (widget.isUrl) return LocaleKeys.hint_url.tr();
+    if (widget.isWeb) return LocaleKeys.hint_web.tr();
     if (widget.isDateTime) return LocaleKeys.hint_date_time.tr();
     if (widget.isEmail) return LocaleKeys.hint_email.tr();
     if (widget.isAddress) return LocaleKeys.hint_address.tr();
@@ -449,7 +507,10 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isCity) return LocaleKeys.hint_city.tr();
     if (widget.isCountry) return LocaleKeys.hint_country.tr();
     if (widget.isCompany) return LocaleKeys.hint_company.tr();
+    if (widget.isJobTitle) return LocaleKeys.hint_job_title.tr();
     if (widget.isNotes) return LocaleKeys.hint_notes.tr();
+    if (widget.isFirstName) return LocaleKeys.hint_first_name.tr();
+    if (widget.isLastName) return LocaleKeys.hint_last_name.tr();
 
     return LocaleKeys.hint_text.tr();
   }
@@ -469,11 +530,15 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isCountry) return LocaleKeys.field_country.tr();
     if (widget.isZipCode) return LocaleKeys.field_zip_code.tr();
     if (widget.isCompany) return LocaleKeys.field_company.tr();
+    if (widget.isJobTitle) return LocaleKeys.field_job_title.tr();
     if (widget.isUrl) return LocaleKeys.field_website.tr();
+    if (widget.isWeb) return LocaleKeys.field_web.tr();
     if (widget.isMultiline) return LocaleKeys.field_description.tr();
     if (widget.isNotes) return LocaleKeys.field_notes.tr();
     if (widget.isUserName) return LocaleKeys.field_username.tr();
     if (widget.isPlainText) return LocaleKeys.field_plain_text.tr();
+    if (widget.isFirstName) return LocaleKeys.field_first_name.tr();
+    if (widget.isLastName) return LocaleKeys.field_last_name.tr();
 
     return null;
   }
@@ -866,6 +931,22 @@ class _CustomFormFeildState extends State<CustomFormField> {
       );
     }
 
+    if (widget.isUrl || widget.isWeb) {
+      return Padding(
+        padding: EdgeInsets.fromLTRB(
+          isTablet ? (35.w * scale) : 16.w,
+          isTablet ? (28.h * scale) : 16.h,
+          isTablet ? (20.w * scale) : 8.w,
+          isTablet ? (28.h * scale) : 16.h,
+        ),
+        child: Icon(
+          widget.isWeb ? Icons.language : Icons.link,
+          color: appColors.grey,
+          size: isTablet ? (38.sp * scale) : 20.sp,
+        ),
+      );
+    }
+
     return null;
   }
 
@@ -913,98 +994,125 @@ class _CustomFormFeildState extends State<CustomFormField> {
       );
     }
 
+    EdgeInsets _getIconPadding() {
+      final double horizontalPadding = isTablet ? (20.w * scale) : 8.w;
+      final double verticalPadding = isTablet ? (20.h * scale) : 12.h;
+      return EdgeInsets.symmetric(
+        horizontal: horizontalPadding,
+        vertical: verticalPadding,
+      );
+    }
+
+    double _getIconSize() {
+      return isTablet ? (38.sp * scale) : 22.sp;
+    }
+
     if (widget.isPassword) {
       return Padding(
-        padding: EdgeInsets.fromLTRB(
-          isTablet ? (20.w * scale) : 8.w,
-          isTablet ? (30.h * scale) : 18.h,
-          isTablet ? (35.w * scale) : 16.w,
-          isTablet ? (30.h * scale) : 18.h,
-        ),
+        padding: _getIconPadding(),
         child: Icon(
           Icons.lock_outline,
           color: appColors.grey,
-          size: isTablet ? (38.sp * scale) : 20.sp,
+          size: _getIconSize(),
         ),
       );
     }
 
     if (widget.isEmail) {
       return Padding(
-        padding: EdgeInsets.fromLTRB(
-          isTablet ? (20.w * scale) : 8.w,
-          isTablet ? (30.h * scale) : 18.h,
-          isTablet ? (35.w * scale) : 16.w,
-          isTablet ? (30.h * scale) : 18.h,
-        ),
+        padding: _getIconPadding(),
         child: Icon(
           Icons.email_outlined,
           color: appColors.grey,
-          size: isTablet ? (38.sp * scale) : 20.sp,
+          size: _getIconSize(),
         ),
       );
     }
 
     if (widget.isVisaCardNumber) {
       return Padding(
-        padding: EdgeInsets.fromLTRB(
-          isTablet ? (20.w * scale) : 8.w,
-          isTablet ? (30.h * scale) : 18.h,
-          isTablet ? (35.w * scale) : 16.w,
-          isTablet ? (30.h * scale) : 18.h,
-        ),
+        padding: _getIconPadding(),
         child: Icon(
           Icons.credit_card_outlined,
           color: appColors.grey,
-          size: isTablet ? (38.sp * scale) : 20.sp,
+          size: _getIconSize(),
         ),
       );
     }
 
     if (widget.isAddress) {
       return Padding(
-        padding: EdgeInsets.fromLTRB(
-          isTablet ? (20.w * scale) : 8.w,
-          isTablet ? (30.h * scale) : 18.h,
-          isTablet ? (35.w * scale) : 16.w,
-          isTablet ? (30.h * scale) : 18.h,
-        ),
+        padding: _getIconPadding(),
         child: Icon(
           Icons.location_on_outlined,
           color: appColors.grey,
-          size: isTablet ? (38.sp * scale) : 20.sp,
+          size: _getIconSize(),
         ),
       );
     }
 
     if (widget.isCardHolderName) {
       return Padding(
-        padding: EdgeInsets.fromLTRB(
-          isTablet ? (20.w * scale) : 8.w,
-          isTablet ? (30.h * scale) : 18.h,
-          isTablet ? (35.w * scale) : 16.w,
-          isTablet ? (30.h * scale) : 18.h,
-        ),
+        padding: _getIconPadding(),
         child: Icon(
           Icons.person_outline,
           color: appColors.grey,
-          size: isTablet ? (38.sp * scale) : 20.sp,
+          size: _getIconSize(),
         ),
       );
     }
 
     if (widget.isCompany) {
       return Padding(
-        padding: EdgeInsets.fromLTRB(
-          isTablet ? (20.w * scale) : 8.w,
-          isTablet ? (30.h * scale) : 18.h,
-          isTablet ? (35.w * scale) : 16.w,
-          isTablet ? (30.h * scale) : 18.h,
-        ),
+        padding: _getIconPadding(),
         child: Icon(
           Icons.business_outlined,
           color: appColors.grey,
-          size: isTablet ? (38.sp * scale) : 20.sp,
+          size: _getIconSize(),
+        ),
+      );
+    }
+
+    if (widget.isJobTitle) {
+      return Padding(
+        padding: _getIconPadding(),
+        child: Icon(
+          Icons.work_outline,
+          color: appColors.grey,
+          size: _getIconSize(),
+        ),
+      );
+    }
+
+    if (widget.isWeb) {
+      return Padding(
+        padding: _getIconPadding(),
+        child: Icon(
+          Icons.public_outlined,
+          color: appColors.grey,
+          size: _getIconSize(),
+        ),
+      );
+    }
+
+    if (widget.isFirstName || widget.isLastName || widget.isUserName) {
+      return Padding(
+        padding: _getIconPadding(),
+        child: Icon(
+          Icons.person_outline,
+          color: appColors.grey,
+          size: _getIconSize(),
+        ),
+      );
+    }
+
+    if (widget.isCity || widget.isCountry) {
+      return Padding(
+        padding: _getIconPadding(),
+        child: Icon(
+          widget.isCity ? Icons.location_city_outlined : Icons.public_outlined,
+          color: appColors.grey,
+          size: _getIconSize(),
         ),
       );
     }

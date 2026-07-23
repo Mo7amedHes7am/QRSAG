@@ -25,6 +25,11 @@ abstract class  LocaleKeys {
   static const hint_country = 'hint.country';
   static const hint_company = 'hint.company';
   static const hint_notes = 'hint.notes';
+  static const hint_first_name = 'hint.first_name';
+  static const hint_last_name = 'hint.last_name';
+  static const hint_job_title = 'hint.job_title';
+  static const hint_web = 'hint.web';
+  static const hint_website = 'hint.website';
   static const hint = 'hint';
   static const validation_email_invalid = 'validation.email_invalid';
   static const validation_url_invalid = 'validation.url_invalid';
@@ -41,6 +46,16 @@ abstract class  LocaleKeys {
   static const validation_card_name_invalid = 'validation.card_name_invalid';
   static const validation_cvv_invalid = 'validation.cvv_invalid';
   static const validation_address_invalid = 'validation.address_invalid';
+  static const validation_first_name_required = 'validation.first_name_required';
+  static const validation_last_name_required = 'validation.last_name_required';
+  static const validation_first_name_invalid = 'validation.first_name_invalid';
+  static const validation_last_name_invalid = 'validation.last_name_invalid';
+  static const validation_company_required = 'validation.company_required';
+  static const validation_job_title_required = 'validation.job_title_required';
+  static const validation_company_invalid = 'validation.company_invalid';
+  static const validation_job_title_invalid = 'validation.job_title_invalid';
+  static const validation_web_required = 'validation.web_required';
+  static const validation_web_invalid = 'validation.web_invalid';
   static const validation = 'validation';
   static const field_full_name = 'field.full_name';
   static const field_email = 'field.email';
@@ -61,6 +76,10 @@ abstract class  LocaleKeys {
   static const field_notes = 'field.notes';
   static const field_username = 'field.username';
   static const field_plain_text = 'field.plain_text';
+  static const field_first_name = 'field.first_name';
+  static const field_last_name = 'field.last_name';
+  static const field_job_title = 'field.job_title';
+  static const field_web = 'field.web';
   static const field = 'field';
   static const common_optional = 'common.optional';
   static const common_required = 'common.required';
@@ -143,6 +162,7 @@ abstract class  LocaleKeys {
   static const generate_validation_invalid_email = 'generate.validation.invalid_email';
   static const generate_validation_invalid_phone = 'generate.validation.invalid_phone';
   static const generate_validation_invalid_username = 'generate.validation.invalid_username';
+  static const generate_validation_max_length = 'generate.validation.max_length';
   static const generate_validation = 'generate.validation';
   static const generate = 'generate';
 

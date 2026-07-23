@@ -21,7 +21,12 @@
     "city": "Enter city",
     "country": "Enter country",
     "company": "Enter company name",
-    "notes": "Add notes"
+    "notes": "Add notes",
+    "first_name": "Enter your first name",
+    "last_name": "Enter your last name",
+    "job_title": "Enter your job title",
+    "web": "Enter your website URL",
+    "website": "Enter your website address"
   },
   "validation": {
     "email_invalid": "Please enter a valid email address",
@@ -38,7 +43,17 @@
     "date_invalid": "Please enter a valid date",
     "card_name_invalid": "Please enter a valid card holder name",
     "cvv_invalid": "Please enter a valid CVV (3-4 digits)",
-    "address_invalid": "Please enter a valid address (at least 5 characters)"
+    "address_invalid": "Please enter a valid address (at least 5 characters)",
+    "first_name_required": "Please enter your first name",
+    "last_name_required": "Please enter your last name",
+    "first_name_invalid": "First name must be at least 2 characters",
+    "last_name_invalid": "Last name must be at least 2 characters",
+    "company_required": "Please enter your company name",
+    "job_title_required": "Please enter your job title",
+    "company_invalid": "Company name must be at least 2 characters",
+    "job_title_invalid": "Job title must be at least 2 characters",
+    "web_required": "Please enter your website URL",
+    "web_invalid": "Please enter a valid website URL"
   },
   "field": {
     "full_name": "Full Name",
@@ -59,7 +74,11 @@
     "description": "Description",
     "notes": "Notes",
     "username": "Username",
-    "plain_text": "Text"
+    "plain_text": "Text",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "job_title": "Job Title",
+    "web": "Website"
   },
   "common": {
     "optional": "optional",
@@ -151,7 +170,8 @@
       "invalid_website": "Invalid website URL",
       "invalid_email": "Invalid email address",
       "invalid_phone": "Invalid phone number",
-      "invalid_username": "Username must not contain spaces"
+      "invalid_username": "Username must not contain spaces",
+      "max_length": "Field cannot exceed {0} characters"
     }
   }
 }

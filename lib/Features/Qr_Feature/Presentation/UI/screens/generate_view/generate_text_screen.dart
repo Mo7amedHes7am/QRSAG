@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/controllertype.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/Cubit/qr_cubit.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/widgets/generate/generate_background.dart';
@@ -37,26 +38,28 @@ class GenerateTextScreen extends StatelessWidget {
                 backstyle: 2,
               ),
               body: QRBackgroundPattern(
-                child: SingleChildScrollView(
-                  padding: EdgeInsets.only(top: 151.h, right: 46.w, left: 46.w),
-                  child: GenerateBackground(
-                    type: type,
-                    child: Column(
-                      children: [
-                        SizedBox(height: 18.h),
-                        InputField(
-                          type: type,
-                          cubit: cubit,
-                          controller: controller,
-                          state: state,
-                        ),
-                        SizedBox(height: 52.h),
-                        SubmitButton(
-                          controller: controller,
-                          cubit: cubit,
-                          context: context,
-                        ),
-                      ],
+                child: Center(
+                  child: SingleChildScrollView(
+                    child: GenerateBackground(
+                      type: type,
+                      child: Column(
+                        children: [
+                          SizedBox(height: 18.h),
+                          InputField(
+                            type: type,
+                            cubit: cubit,
+                            controller: controller,
+                            state: state,
+                            controllertype: ControllerType.generate,
+                          ),
+                          SizedBox(height: 52.h),
+                          SubmitButton(
+                            controllers: [controller],
+                            cubit: cubit,
+                            context: context,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

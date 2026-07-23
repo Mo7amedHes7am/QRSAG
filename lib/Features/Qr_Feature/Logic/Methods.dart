@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/Cubit/qr_cubit.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_contact_screen.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_text_screen.dart';
 import 'package:qr_scanner_and_generator/core/Methods/app_Navigation.dart';
 import 'package:qr_scanner_and_generator/core/Methods/app_validators.dart';
@@ -24,6 +25,7 @@ QrType detectQrType(String qr) {
     ((v) => v.startsWith('begin:vevent'), QrType.event),
     ((v) => v.startsWith('begin:vcard'), QrType.contact),
     ((v) => v.startsWith('business:'), QrType.business),
+    ((v) => v.startsWith('contact:'), QrType.contact),
     ((v) => v.startsWith('visa:'), QrType.visa),
   ];
 
@@ -138,7 +140,11 @@ void handle_navigation({required QrType type, required BuildContext context}) {
       // Get.to(GenerateEventScreen());
       break;
     case QrType.contact:
-      // Get.to(GenerateContactScreen());
+      AppNavigator.toPageWithCubit(
+        context: context,
+        cubit: context.read<QrCubit>(),
+        screen: GenerateContactScreen(),
+      );
       break;
     case QrType.business:
       // Get.to(GenerateBusinessScreen());

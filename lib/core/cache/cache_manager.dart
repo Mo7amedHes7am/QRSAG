@@ -89,19 +89,39 @@ class CacheManager {
   static Future<HistoryModel> saveToHistoryCache({
     required bool isScanned,
     required String data,
+    required QrType type,
   }) async {
     var uuid = Uuid();
     final type = detectQrType(data.toLowerCase());
-    final historyData = HistoryModel(
-      data: data,
-      id: uuid.v1().replaceAll("-", ""),
-      datesubmitted: DateTime.now().millisecondsSinceEpoch,
-      type: type.name,
-      arlabel: type.arlabel,
-      enlabel: type.enlabel,
-      img: type.image,
-      wifi: type == QrType.visa ? data.split("-VssEnc-")[1] : "",
-    );
+    late HistoryModel historyData;
+
+    switch (type) {
+      case QrType.contact:
+        historyData = HistoryModel(
+          data: data,
+          id: uuid.v1().replaceAll("-", ""),
+          datesubmitted: DateTime.now().millisecondsSinceEpoch,
+          type: type.name,
+          img: type.image,
+          arlabel: type.arlabel,
+          enlabel: type.enlabel,
+          wifi: type == QrType.visa ? data.split("-VssEnc-")[1] : "",
+        );
+        break;
+      default:
+        historyData = HistoryModel(
+          data: data,
+          id: uuid.v1().replaceAll("-", ""),
+          datesubmitted: DateTime.now().millisecondsSinceEpoch,
+          type: type.name,
+          arlabel: type.arlabel,
+          enlabel: type.enlabel,
+          img: type.image,
+          wifi: type == QrType.visa ? data.split("-VssEnc-")[1] : "",
+        );
+        break;
+    }
+
     isScanned
         ? await scanhistoryBox.add(historyData)
         : await generatehistoryBox.add(historyData);

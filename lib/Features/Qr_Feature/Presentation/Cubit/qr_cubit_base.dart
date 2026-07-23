@@ -12,6 +12,17 @@ class QrCubitBase extends Cubit<QrState> {
   MobileScannerController? cameraController;
   late List<QrType> qrs;
   late TextEditingController generateController;
+  late TextEditingController firstnameController,
+      lastnameController,
+      companyController,
+      jobController,
+      phoneController,
+      emailController,
+      websiteController,
+      addressController,
+      cityController,
+      countryController;
+
   late String countryCode;
   late QrType currentType;
 

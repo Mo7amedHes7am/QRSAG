@@ -10,12 +10,13 @@ import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
 import 'package:qr_scanner_and_generator/generated/locale_keys.g.dart';
 
 Widget SubmitButton({
-  required TextEditingController controller,
+  required List<TextEditingController> controllers,
   required QrCubit cubit,
   required BuildContext context,
 }) {
+  final isEmpty = controllers.any((element) => element.text.trim().isEmpty);
   return InkWell(
-    onTap: controller.text.trim().isEmpty
+    onTap: isEmpty
         ? null
         : () async {
             final result = await cubit.generateQr();
@@ -33,7 +34,7 @@ Widget SubmitButton({
     child: Container(
       padding: EdgeInsets.all(14.sp),
       decoration: BoxDecoration(
-        color: controller.text.trim().isEmpty ? Colors.grey : appColors.primary,
+        color: isEmpty ? Colors.grey : appColors.primary,
         borderRadius: BorderRadius.circular(6.sp),
       ),
       child: Center(
