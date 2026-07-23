@@ -35,12 +35,12 @@ Widget Generatetype({required QrType type, required BuildContext context}) {
               width: 37.sp,
               height: 37.sp,
               type.image,
-              color: appColors.primaryTextColor,
+              color: appColors.background,
               fit: BoxFit.cover,
             ),
             CustomText.x12
                 .medium(isArabic ? type.arlabel : type.enlabel)
-                .primaryTextColor,
+                .background,
           ],
         ),
       ),

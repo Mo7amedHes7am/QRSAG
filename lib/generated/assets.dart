@@ -78,7 +78,6 @@ class $AssetsJsonsGen {
 class $AssetsSvgsGen {
   const $AssetsSvgsGen();
 
-  final SvgGenImage ar = const SvgGenImage('assets/Svgs/ar.svg');
   final SvgGenImage bepp = const SvgGenImage('assets/Svgs/bepp.svg');
   final SvgGenImage en = const SvgGenImage('assets/Svgs/en.svg');
   final SvgGenImage g1 = const SvgGenImage('assets/Svgs/g1.svg');
@@ -108,7 +107,35 @@ class $AssetsTranslationsGen {
   const $AssetsTranslationsGen();
 
   final String ar = 'assets/translations/ar.json';
+  final String bn = 'assets/translations/bn.json';
+  final String de = 'assets/translations/de.json';
+  final String el = 'assets/translations/el.json';
   final String en = 'assets/translations/en.json';
+  final String es = 'assets/translations/es.json';
+  final String fa = 'assets/translations/fa.json';
+  final String fr = 'assets/translations/fr.json';
+  final String hi = 'assets/translations/hi.json';
+  final String id = 'assets/translations/id.json';
+  final String it = 'assets/translations/it.json';
+  final String ja = 'assets/translations/ja.json';
+  final String ko = 'assets/translations/ko.json';
+  final String mr = 'assets/translations/mr.json';
+  final String ms = 'assets/translations/ms.json';
+  final String nl = 'assets/translations/nl.json';
+  final String pa = 'assets/translations/pa.json';
+  final String pl = 'assets/translations/pl.json';
+  final String pt = 'assets/translations/pt.json';
+  final String ro = 'assets/translations/ro.json';
+  final String ru = 'assets/translations/ru.json';
+  final String sw = 'assets/translations/sw.json';
+  final String ta = 'assets/translations/ta.json';
+  final String te = 'assets/translations/te.json';
+  final String th = 'assets/translations/th.json';
+  final String tr = 'assets/translations/tr.json';
+  final String uk = 'assets/translations/uk.json';
+  final String ur = 'assets/translations/ur.json';
+  final String vi = 'assets/translations/vi.json';
+  final String zh = 'assets/translations/zh.json';
 }
 
 class $AssetsFontsGen {

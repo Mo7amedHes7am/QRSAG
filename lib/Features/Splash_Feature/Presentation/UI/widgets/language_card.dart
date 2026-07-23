@@ -2,6 +2,7 @@ import 'package:qr_scanner_and_generator/Features/Splash_Feature/Data/Models/lan
 import 'package:qr_scanner_and_generator/app/app_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:qr_scanner_and_generator/core/components/widgets/CustomText.dart';
 import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
 
 class LanguageCard extends StatelessWidget {
@@ -51,17 +52,12 @@ class LanguageCard extends StatelessWidget {
             SizedBox(width: 12.w),
 
             Expanded(
-              child: Text(
-                lang.label,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  fontSize: isTablet ? 22.sp : 16.sp,
-                  fontWeight: FontWeight.w600,
-                  color: isSelected
-                      ? appColors.grey
-                      : appColors.primaryTextColor,
-                ),
-              ),
+              child: CustomText.x22
+                  .bold(lang.label)
+                  .fontSize(isTablet ? 22.sp : 16.sp)
+                  .color(
+                    isSelected ? appColors.grey : appColors.primaryTextColor,
+                  ),
             ),
 
             Container(

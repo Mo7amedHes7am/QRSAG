@@ -54,8 +54,9 @@ List<Widget> CLContent(
 
     SizedBox(height: 12.h),
 
-    ConstrainedBox(
-      constraints: BoxConstraints(maxHeight: isWeb ? 400.h : double.infinity),
+    SizedBox(
+      width: MediaQuery.widthOf(context),
+      height: MediaQuery.heightOf(context),
       child: cubit.filteredLanguages.isEmpty
           ? NoDataScreen(
               text: LocaleKeys.chooseLanguage_nodata.tr(),

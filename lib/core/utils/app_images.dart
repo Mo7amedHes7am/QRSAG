@@ -23,6 +23,36 @@ class AppSvgs {
   static const String qrlogogold = 'assets/Svgs/qrlogogold.svg';
   static const String ar = 'assets/Svgs/ar.svg';
   static const String en = 'assets/Svgs/en.svg';
+  static const String es = 'assets/Svgs/es.svg';
+  static const String pt = 'assets/Svgs/pt.svg';
+  static const String zh = 'assets/Svgs/zh.svg';
+  static const String hi = 'assets/Svgs/hi.svg';
+
+  static const String pa = 'assets/Svgs/hi.svg';
+  static const String mr = 'assets/Svgs/hi.svg';
+  static const String te = 'assets/Svgs/hi.svg';
+  static const String ta = 'assets/Svgs/hi.svg';
+
+  static const String bn = 'assets/Svgs/bn.svg';
+  static const String ru = 'assets/Svgs/ru.svg';
+  static const String ja = 'assets/Svgs/ja.svg';
+  static const String de = 'assets/Svgs/de.svg';
+  static const String ko = 'assets/Svgs/ko.svg';
+  static const String fr = 'assets/Svgs/fr.svg';
+  static const String tr = 'assets/Svgs/tr.svg';
+  static const String vi = 'assets/Svgs/vi.svg';
+  static const String ur = 'assets/Svgs/ur.svg';
+  static const String fa = 'assets/Svgs/fa.svg';
+  static const String pl = 'assets/Svgs/pl.svg';
+  static const String uk = 'assets/Svgs/uk.svg';
+  static const String ro = 'assets/Svgs/ro.svg';
+  static const String nl = 'assets/Svgs/nl.svg';
+  static const String th = 'assets/Svgs/th.svg';
+  static const String id = 'assets/Svgs/id.svg';
+  static const String ms = 'assets/Svgs/ms.svg';
+  static const String sw = 'assets/Svgs/sw.svg';
+  static const String it = 'assets/Svgs/it.svg';
+  static const String el = 'assets/Svgs/el.svg';
 
   static const String text = 'assets/Svgs/g1.svg';
   static const String website = 'assets/Svgs/g2.svg';
