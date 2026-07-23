@@ -10,7 +10,8 @@ import '../../Cubit/home_cubit.dart';
 import 'package:qr_scanner_and_generator/core/utils/DI/di.dart';
 
 class NavbarScreen extends StatefulWidget {
-  const NavbarScreen({super.key});
+  final int index;
+  NavbarScreen({required this.index});
 
   @override
   State<NavbarScreen> createState() => _NavbarScreenState();
@@ -20,7 +21,7 @@ class _NavbarScreenState extends State<NavbarScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<HomeCubit>(),
+      create: (context) => getIt<HomeCubit>()..init(index: widget.index),
       child: BlocConsumer<HomeCubit, HomeState>(
         listener: (context, state) {
           if (state is HomeErrorState) {}

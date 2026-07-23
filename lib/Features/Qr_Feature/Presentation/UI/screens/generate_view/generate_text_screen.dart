@@ -29,37 +29,36 @@ class GenerateTextScreen extends StatelessWidget {
         final controller = cubit.generateController;
 
         return SystemWrapper(
-          child: SafeArea(
-            child: Scaffold(
-              backgroundColor: appColors.background,
-              appBar: MainAppBar(
-                title: isArabic ? type.arlabel : type.enlabel,
-                hasBack: true,
-                backstyle: 1,
-              ),
-              body: QRBackgroundPattern(
-                child: Center(
-                  child: SingleChildScrollView(
-                    child: GenerateBackground(
-                      type: type,
-                      child: Column(
-                        children: [
-                          SizedBox(height: 18.h),
-                          InputField(
-                            type: type,
-                            cubit: cubit,
-                            controller: controller,
-                            state: state,
-                            controllertype: ControllerType.generate,
-                          ),
-                          SizedBox(height: 52.h),
-                          SubmitButton(
-                            controllers: [controller],
-                            cubit: cubit,
-                            context: context,
-                          ),
-                        ],
-                      ),
+          child: Scaffold(
+            backgroundColor: appColors.background,
+            appBar: MainAppBar(
+              context: context,
+              title: isArabic ? type.arlabel : type.enlabel,
+              hasBack: true,
+              backstyle: 1,
+            ),
+            body: QRBackgroundPattern(
+              child: Center(
+                child: SingleChildScrollView(
+                  child: GenerateBackground(
+                    type: type,
+                    child: Column(
+                      children: [
+                        SizedBox(height: 18.h),
+                        InputField(
+                          type: type,
+                          cubit: cubit,
+                          controller: controller,
+                          state: state,
+                          controllertype: ControllerType.generate,
+                        ),
+                        SizedBox(height: 52.h),
+                        SubmitButton(
+                          controllers: [controller],
+                          cubit: cubit,
+                          context: context,
+                        ),
+                      ],
                     ),
                   ),
                 ),

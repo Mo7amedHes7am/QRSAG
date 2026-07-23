@@ -14,6 +14,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' show WatchContext;
 import 'package:qr_scanner_and_generator/Features/Splash_Feature/Presentation/UI/screens/splash_screen.dart';
 import 'package:qr_scanner_and_generator/core/Colors/Colors.dart';
+import 'package:qr_scanner_and_generator/core/Methods/app_Navigation.dart';
 import 'package:qr_scanner_and_generator/core/responsive/responsive_builder.dart';
 import 'package:qr_scanner_and_generator/core/theme/theme_state.dart';
 import 'app_Methods.dart';
@@ -43,6 +44,7 @@ class QRSAGApp extends StatelessWidget {
     );
 
     return MaterialApp(
+      navigatorObservers: [AppNavigator.observer],
       builder: (context, child) => ColoredBox(
         color: backgroundColor,
         child: SafeArea(

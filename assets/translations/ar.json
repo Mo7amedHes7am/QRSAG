@@ -189,5 +189,22 @@
       "encryption_wpa": "WPA/WPA2",
       "encryption_wep": "WEP"
     }
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "main_settings": "الإعدادات الرئيسية",
+    "vibrate_title": "الاهتزاز",
+    "vibrate_subtitle": "الاهتزاز عند الانتهاء من المسح.",
+    "beep_title": "الصوت",
+    "beep_subtitle": "إصدار صوت عند الانتهاء من المسح.",
+    "contact_customization": "الاتصال والتخصيص",
+    "contact_us_title": "اتصل بنا",
+    "contact_us_subtitle": "أخبرنا بأي تعديلات أو تحسينات يمكننا القيام بها.",
+    "privacy_policy_title": "سياسة الخصوصية",
+    "privacy_policy_subtitle": "اتبع سياساتنا التي تفيدك.",
+    "change_language_title": "تغيير اللغة",
+    "change_language_subtitle": "اختر لغتك المفضلة أدناه، هذا يُساعدنا على خدمتك بشكل أفضل",
+    "change_theme_title": "تغيير السمة",
+    "change_theme_subtitle": "اختر سمتك المفضلة أدناه. هذا يُساعدنا على خدمتك بشكل أفضل."
   }
 }

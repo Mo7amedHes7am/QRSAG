@@ -7,12 +7,18 @@ import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
 class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final bool hasBack;
+  final BuildContext context;
   final int? backstyle;
+  final int? pageIndex;
+  final VoidCallback? customback;
   const MainAppBar({
     super.key,
     required this.title,
     required this.hasBack,
+    required this.context,
     this.backstyle,
+    this.pageIndex,
+    this.customback,
   });
 
   @override
@@ -31,6 +37,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
                 SizedBox(width: 46.w),
                 Center(
                   child: Back_Button(
+                    onTap: customback,
                     context: context,
                     style: backstyle!,
                     size: 40,
@@ -39,7 +46,12 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
               ],
             )
           : null,
-      actions: hasBack ? null : [SettingsButton(), SizedBox(width: 20.w)],
+      actions: hasBack
+          ? null
+          : [
+              SettingsButton(context: context, pageIndex: pageIndex),
+              SizedBox(width: 20.w),
+            ],
     );
   }
 

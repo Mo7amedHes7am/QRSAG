@@ -38,10 +38,14 @@ class _ChooseThemeScreenState extends State<ChooseThemeScreen> {
             builder: (context, state) {
               final _cubit = context.read<SplashCubit>();
               return DirectionalityWidget(
-                child: Scaffold(
-                  backgroundColor: appColors.background,
-                  body: SafeArea(
-                    child: SingleChildScrollView(
+                child: SafeArea(
+                  child: Scaffold(
+                    backgroundColor: appColors.background,
+                    bottomNavigationBar: ContinueButton(
+                      context,
+                      () async => await _cubit.changeTheme(context: context),
+                    ),
+                    body: SingleChildScrollView(
                       padding: EdgeInsets.symmetric(
                         vertical: 16.h * vFactor,
                         horizontal: isTablet ? 60.w : 20.w,
@@ -190,11 +194,6 @@ class _ChooseThemeScreenState extends State<ChooseThemeScreen> {
                         ),
                       ),
                     ),
-                  ),
-
-                  bottomNavigationBar: ContinueButton(
-                    context,
-                    () async => await _cubit.changeTheme(context: context),
                   ),
                 ),
               );

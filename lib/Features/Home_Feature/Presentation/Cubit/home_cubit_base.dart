@@ -13,4 +13,9 @@ abstract class HomeCubitBase extends Cubit<HomeState> {
   int selected = 1;
 
   void changeTab(int index) {}
+
+  void init({required int index}) {
+    selected = index;
+    if (!isClosed) emit(HomeInitialState());
+  }
 }

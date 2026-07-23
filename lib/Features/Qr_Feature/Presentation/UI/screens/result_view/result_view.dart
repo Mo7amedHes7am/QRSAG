@@ -42,98 +42,93 @@ class ResultView extends StatelessWidget {
         final bool hasUrls = hasURLs(result.data);
         final isArabic = context.locale.languageCode == 'ar';
         return SystemWrapper(
-          child: SafeArea(
-            bottom: false,
-            left: false,
-            right: false,
-            top: true,
-            child: LoadingScaffold(
-              loading: isLoading,
-              child: Scaffold(
-                backgroundColor: appColors.background,
-                appBar: MainAppBar(
-                  title: LocaleKeys.result_qr_code.tr(),
-                  hasBack: true,
-                  backstyle: 1,
-                ),
-                body: SingleChildScrollView(
-                  padding: EdgeInsets.only(top: 29.h, right: 46.w, left: 46.w),
-                  child: Column(
-                    children: [
-                      Container(
-                        width: 336.w,
-                        padding: EdgeInsets.symmetric(
-                          vertical: 14.h,
-                          horizontal: 14.w,
-                        ),
-                        decoration: BoxDecoration(
-                          color: appColors.primaryTextColor.withValues(
-                            alpha: 0.3,
-                          ),
-                          borderRadius: BorderRadius.circular(6.sp),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            CustomText.x20
-                                .medium(
-                                  isArabic ? result.arlabel : result.enlabel,
-                                )
-                                .start
-                                .primaryTextColor,
-                            SizedBox(height: 9.h),
-                            SizedBox(
-                              width: 336.w - 28.w,
-                              child: hasUrls
-                                  ? UrlMessage(
-                                      textContent: result.data,
-                                      textColor: appColors.primary,
-                                      isMyMessage: true,
-                                    )
-                                  : CustomText.x14
-                                        .medium(parseQrData(result.data))
-                                        .primaryTextColor,
-                            ),
-                          ],
-                        ),
+          child: LoadingScaffold(
+            loading: isLoading,
+            child: Scaffold(
+              backgroundColor: appColors.background,
+              appBar: MainAppBar(
+                context: context,
+                title: LocaleKeys.result_qr_code.tr(),
+                hasBack: true,
+                backstyle: 1,
+              ),
+              body: SingleChildScrollView(
+                padding: EdgeInsets.only(top: 29.h, right: 46.w, left: 46.w),
+                child: Column(
+                  children: [
+                    Container(
+                      width: 336.w,
+                      padding: EdgeInsets.symmetric(
+                        vertical: 14.h,
+                        horizontal: 14.w,
                       ),
-
-                      SizedBox(height: 57.h),
-
-                      QRCodeBox(
-                        imgurl: result.img,
-                        data: result.data,
-                        size: 181,
-                        repaintKey: repaintKey,
+                      decoration: BoxDecoration(
+                        color: appColors.primaryTextColor.withValues(
+                          alpha: 0.3,
+                        ),
+                        borderRadius: BorderRadius.circular(6.sp),
                       ),
-
-                      SizedBox(height: 40.h),
-
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          ActionButton(
-                            icon: Icons.share,
-                            onTap: isLoading
-                                ? null
-                                : () => context.read<QrCubit>().shareQrCode(
-                                    repaintKey: repaintKey,
-                                    qrData: result.data,
-                                  ),
-                          ),
-                          SizedBox(width: 23.w),
-                          ActionButton(
-                            icon: Icons.save,
-                            onTap: isLoading
-                                ? null
-                                : () => context.read<QrCubit>().saveQrCode(
-                                    repaintKey: repaintKey,
-                                  ),
+                          CustomText.x20
+                              .medium(
+                                isArabic ? result.arlabel : result.enlabel,
+                              )
+                              .start
+                              .primaryTextColor,
+                          SizedBox(height: 9.h),
+                          SizedBox(
+                            width: 336.w - 28.w,
+                            child: hasUrls
+                                ? UrlMessage(
+                                    textContent: result.data,
+                                    textColor: appColors.primary,
+                                    isMyMessage: true,
+                                  )
+                                : CustomText.x14
+                                      .medium(parseQrData(result.data))
+                                      .primaryTextColor,
                           ),
                         ],
                       ),
-                    ],
-                  ),
+                    ),
+
+                    SizedBox(height: 57.h),
+
+                    QRCodeBox(
+                      imgurl: result.img,
+                      data: result.data,
+                      size: 181,
+                      repaintKey: repaintKey,
+                    ),
+
+                    SizedBox(height: 40.h),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ActionButton(
+                          icon: Icons.share,
+                          onTap: isLoading
+                              ? null
+                              : () => context.read<QrCubit>().shareQrCode(
+                                  repaintKey: repaintKey,
+                                  qrData: result.data,
+                                ),
+                        ),
+                        SizedBox(width: 23.w),
+                        ActionButton(
+                          icon: Icons.save,
+                          onTap: isLoading
+                              ? null
+                              : () => context.read<QrCubit>().saveQrCode(
+                                  repaintKey: repaintKey,
+                                ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
             ),

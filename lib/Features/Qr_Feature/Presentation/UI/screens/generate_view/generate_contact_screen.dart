@@ -38,126 +38,125 @@ class GenerateContactScreen extends StatelessWidget {
         final countryController = cubit.countryController;
 
         return SystemWrapper(
-          child: SafeArea(
-            child: Scaffold(
-              backgroundColor: appColors.background,
-              appBar: MainAppBar(
-                title: isArabic ? type.arlabel : type.enlabel,
-                hasBack: true,
-                backstyle: 1,
-              ),
-              body: QRBackgroundPattern(
-                child: Center(
-                  child: SingleChildScrollView(
-                    child: GenerateBackground(
-                      type: type,
-                      child: Column(
-                        children: [
-                          SizedBox(height: 18.h),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              InputField(
-                                type: type,
-                                cubit: cubit,
-                                controller: firstnameController,
-                                state: state,
-                                width: 128,
-                                controllertype: ControllerType.firstname,
-                              ),
-                              InputField(
-                                type: type,
-                                cubit: cubit,
-                                controller: lastnameController,
-                                state: state,
-                                width: 128,
-                                controllertype: ControllerType.lastname,
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              InputField(
-                                type: type,
-                                cubit: cubit,
-                                controller: companyController,
-                                state: state,
-                                width: 128,
-                                controllertype: ControllerType.company,
-                              ),
-                              InputField(
-                                type: type,
-                                cubit: cubit,
-                                controller: jobController,
-                                state: state,
-                                width: 128,
-                                controllertype: ControllerType.job,
-                              ),
-                            ],
-                          ),
-                          InputField(
-                            type: type,
-                            cubit: cubit,
-                            controller: phoneController,
-                            state: state,
-                            controllertype: ControllerType.phone,
-                          ),
-                          InputField(
-                            type: type,
-                            cubit: cubit,
-                            controller: emailController,
-                            state: state,
-                            controllertype: ControllerType.email,
-                          ),
-                          InputField(
-                            type: type,
-                            cubit: cubit,
-                            controller: websiteController,
-                            state: state,
-                            controllertype: ControllerType.website,
-                          ),
-                          InputField(
-                            type: type,
-                            cubit: cubit,
-                            controller: addressController,
-                            state: state,
-                            controllertype: ControllerType.address,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              InputField(
-                                type: type,
-                                cubit: cubit,
-                                controller: cityController,
-                                state: state,
-                                width: 128,
-                                controllertype: ControllerType.city,
-                              ),
-                              InputField(
-                                type: type,
-                                cubit: cubit,
-                                controller: countryController,
-                                state: state,
-                                width: 128,
-                                controllertype: ControllerType.country,
-                              ),
-                            ],
-                          ),
+          child: Scaffold(
+            backgroundColor: appColors.background,
+            appBar: MainAppBar(
+              context: context,
+              title: isArabic ? type.arlabel : type.enlabel,
+              hasBack: true,
+              backstyle: 1,
+            ),
+            body: QRBackgroundPattern(
+              child: Center(
+                child: SingleChildScrollView(
+                  child: GenerateBackground(
+                    type: type,
+                    child: Column(
+                      children: [
+                        SizedBox(height: 18.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            InputField(
+                              type: type,
+                              cubit: cubit,
+                              controller: firstnameController,
+                              state: state,
+                              width: 128,
+                              controllertype: ControllerType.firstname,
+                            ),
+                            InputField(
+                              type: type,
+                              cubit: cubit,
+                              controller: lastnameController,
+                              state: state,
+                              width: 128,
+                              controllertype: ControllerType.lastname,
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            InputField(
+                              type: type,
+                              cubit: cubit,
+                              controller: companyController,
+                              state: state,
+                              width: 128,
+                              controllertype: ControllerType.company,
+                            ),
+                            InputField(
+                              type: type,
+                              cubit: cubit,
+                              controller: jobController,
+                              state: state,
+                              width: 128,
+                              controllertype: ControllerType.job,
+                            ),
+                          ],
+                        ),
+                        InputField(
+                          type: type,
+                          cubit: cubit,
+                          controller: phoneController,
+                          state: state,
+                          controllertype: ControllerType.phone,
+                        ),
+                        InputField(
+                          type: type,
+                          cubit: cubit,
+                          controller: emailController,
+                          state: state,
+                          controllertype: ControllerType.email,
+                        ),
+                        InputField(
+                          type: type,
+                          cubit: cubit,
+                          controller: websiteController,
+                          state: state,
+                          controllertype: ControllerType.website,
+                        ),
+                        InputField(
+                          type: type,
+                          cubit: cubit,
+                          controller: addressController,
+                          state: state,
+                          controllertype: ControllerType.address,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            InputField(
+                              type: type,
+                              cubit: cubit,
+                              controller: cityController,
+                              state: state,
+                              width: 128,
+                              controllertype: ControllerType.city,
+                            ),
+                            InputField(
+                              type: type,
+                              cubit: cubit,
+                              controller: countryController,
+                              state: state,
+                              width: 128,
+                              controllertype: ControllerType.country,
+                            ),
+                          ],
+                        ),
 
-                          SizedBox(height: 52.h),
-                          SubmitButton(
-                            controllers: [
-                              firstnameController,
-                              lastnameController,
-                              phoneController,
-                            ],
-                            cubit: cubit,
-                            context: context,
-                          ),
-                        ],
-                      ),
+                        SizedBox(height: 52.h),
+                        SubmitButton(
+                          controllers: [
+                            firstnameController,
+                            lastnameController,
+                            phoneController,
+                          ],
+                          cubit: cubit,
+                          context: context,
+                        ),
+                      ],
                     ),
                   ),
                 ),

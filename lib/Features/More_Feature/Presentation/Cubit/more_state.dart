@@ -14,4 +14,16 @@ class MoreErrorState extends MoreState {
   MoreErrorState(this.error);
 }
 
-class MoreSuccessState extends MoreState {}
+class MoreSuccessState extends MoreState {
+  final bool beep;
+  final bool vibrate;
+
+  MoreSuccessState({required this.beep, required this.vibrate});
+
+  MoreSuccessState copyWith({bool? beep, bool? vibrate}) {
+    return MoreSuccessState(
+      beep: beep ?? this.beep,
+      vibrate: vibrate ?? this.vibrate,
+    );
+  }
+}

@@ -189,5 +189,22 @@
       "encryption_wpa": "WPA/WPA2",
       "encryption_wep": "WEP"
     }
+  },
+  "settings": {
+    "title": "Settings",
+    "main_settings": "Main Settings",
+    "vibrate_title": "Vibrate",
+    "vibrate_subtitle": "Vibration when scan is done.",
+    "beep_title": "Beep",
+    "beep_subtitle": "Beep when scan is done.",
+    "contact_customization": "Contact & Customization",
+    "contact_us_title": "Contact Us",
+    "contact_us_subtitle": "Recommend to us any modifications or improvements we can do.",
+    "privacy_policy_title": "Privacy Policy",
+    "privacy_policy_subtitle": "Follow our policies that benefits you.",
+    "change_language_title": "Change Language",
+    "change_language_subtitle": "Select your preferred language below. This helps us serve you better.",
+    "change_theme_title": "Change Theme",
+    "change_theme_subtitle": "Select your preferred theme below. This helps us serve you better."
   }
 }

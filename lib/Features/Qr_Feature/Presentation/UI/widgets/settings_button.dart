@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:qr_scanner_and_generator/Features/More_Feature/Presentation/UI/screens/settings_screen.dart';
 import 'package:qr_scanner_and_generator/app/app_variables.dart';
+import 'package:qr_scanner_and_generator/core/Methods/app_Navigation.dart';
 import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
 
-Widget SettingsButton() {
+Widget SettingsButton({required BuildContext context, required pageIndex}) {
   return InkWell(
-    onTap: () {
-      //Settings in Next Update
-    },
+    onTap: () =>
+        AppNavigator.topage(context, SettingsScreen(pageIndex: pageIndex)),
     child: Container(
       width: 40.sp,
       height: 40.sp,

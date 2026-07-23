@@ -40,7 +40,7 @@ Future<void> CheckWhereToGo({required BuildContext context}) async {
   } else {
     AppNavigator.offallpages(
       context,
-      NavbarScreen(),
+      NavbarScreen(index: 1),
       transition: Transition.circularReveal,
       curve: Curves.fastOutSlowIn,
       duration: Duration(seconds: 3),

@@ -6,7 +6,9 @@ import 'package:qr_scanner_and_generator/core/cache/cache_manager.dart';
 
 mixin LanguageMixin on SplashCubitBase {
   void initLang(BuildContext context) {
-    searchController = TextEditingController();
+    try {
+      searchController = TextEditingController();
+    } catch (e) {}
     allLanguages = LanguageModel.languages();
     filteredLanguages = List.from(allLanguages);
     final Loc = context.locale.languageCode;

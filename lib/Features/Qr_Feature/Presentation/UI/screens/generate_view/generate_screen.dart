@@ -22,40 +22,36 @@ class GenerateScreen extends StatelessWidget {
           final bool isArabic = context.locale.languageCode == 'ar';
           final qrs = context.read<QrCubit>().qrs;
           return SystemWrapper(
-            child: SafeArea(
-              top: true,
-              bottom: false,
-              left: false,
-              right: false,
-              child: Scaffold(
-                backgroundColor: appColors.background,
-                appBar: MainAppBar(
-                  title: LocaleKeys.generate_title.tr(),
-                  hasBack: false,
-                ),
-                extendBody: false,
-                body: SingleChildScrollView(
-                  child: SizedBox(
-                    width: MediaQuery.sizeOf(context).width,
-                    child: GridView.builder(
-                      padding: EdgeInsets.only(
-                        left: 42.w,
-                        right: 42.w,
-                        bottom: 20.h,
-                        top: 52.h,
-                      ),
-                      itemCount: qrs.length,
-                      physics: NeverScrollableScrollPhysics(),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        mainAxisExtent: 86.sp,
-                        crossAxisSpacing: 43.sp,
-                        mainAxisSpacing: 43.sp,
-                      ),
-                      shrinkWrap: true,
-                      itemBuilder: (_, index) =>
-                          Generatetype(type: qrs[index], context: context),
+            child: Scaffold(
+              backgroundColor: appColors.background,
+              appBar: MainAppBar(
+                context: context,
+                title: LocaleKeys.generate_title.tr(),
+                hasBack: false,
+                pageIndex: 0,
+              ),
+              extendBody: false,
+              body: SingleChildScrollView(
+                child: SizedBox(
+                  width: MediaQuery.sizeOf(context).width,
+                  child: GridView.builder(
+                    padding: EdgeInsets.only(
+                      left: 42.w,
+                      right: 42.w,
+                      bottom: 20.h,
+                      top: 52.h,
                     ),
+                    itemCount: qrs.length,
+                    physics: NeverScrollableScrollPhysics(),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      mainAxisExtent: 86.sp,
+                      crossAxisSpacing: 43.sp,
+                      mainAxisSpacing: 43.sp,
+                    ),
+                    shrinkWrap: true,
+                    itemBuilder: (_, index) =>
+                        Generatetype(type: qrs[index], context: context),
                   ),
                 ),
               ),

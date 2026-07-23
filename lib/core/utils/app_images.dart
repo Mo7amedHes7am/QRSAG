@@ -37,6 +37,9 @@ class AppSvgs {
   static const String instagram = 'assets/Svgs/g11.svg';
   static const String phone = 'assets/Svgs/g12.svg';
   static const String data = 'assets/Svgs/logo.svg';
+  static const String vibrates = 'assets/Svgs/vibrates.svg';
+  static const String bepp = 'assets/Svgs/bepp.svg';
+  static const String privacy = 'assets/Svgs/privacy.svg';
 }
 
 class AppGifs {

@@ -205,6 +205,23 @@ class CodegenLoader extends AssetLoader{
       "encryption_wpa": "WPA/WPA2",
       "encryption_wep": "WEP"
     }
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "main_settings": "الإعدادات الرئيسية",
+    "vibrate_title": "الاهتزاز",
+    "vibrate_subtitle": "الاهتزاز عند الانتهاء من المسح.",
+    "beep_title": "الصوت",
+    "beep_subtitle": "إصدار صوت عند الانتهاء من المسح.",
+    "contact_customization": "الاتصال والتخصيص",
+    "contact_us_title": "اتصل بنا",
+    "contact_us_subtitle": "أخبرنا بأي تعديلات أو تحسينات يمكننا القيام بها.",
+    "privacy_policy_title": "سياسة الخصوصية",
+    "privacy_policy_subtitle": "اتبع سياساتنا التي تفيدك.",
+    "change_language_title": "تغيير اللغة",
+    "change_language_subtitle": "اختر لغتك المفضلة أدناه، هذا يُساعدنا على خدمتك بشكل أفضل",
+    "change_theme_title": "تغيير السمة",
+    "change_theme_subtitle": "اختر سمتك المفضلة أدناه. هذا يُساعدنا على خدمتك بشكل أفضل."
   }
 };
 static const Map<String,dynamic> _en = {
@@ -398,6 +415,23 @@ static const Map<String,dynamic> _en = {
       "encryption_wpa": "WPA/WPA2",
       "encryption_wep": "WEP"
     }
+  },
+  "settings": {
+    "title": "Settings",
+    "main_settings": "Main Settings",
+    "vibrate_title": "Vibrate",
+    "vibrate_subtitle": "Vibration when scan is done.",
+    "beep_title": "Beep",
+    "beep_subtitle": "Beep when scan is done.",
+    "contact_customization": "Contact & Customization",
+    "contact_us_title": "Contact Us",
+    "contact_us_subtitle": "Recommend to us any modifications or improvements we can do.",
+    "privacy_policy_title": "Privacy Policy",
+    "privacy_policy_subtitle": "Follow our policies that benefits you.",
+    "change_language_title": "Change Language",
+    "change_language_subtitle": "Select your preferred language below. This helps us serve you better.",
+    "change_theme_title": "Change Theme",
+    "change_theme_subtitle": "Select your preferred theme below. This helps us serve you better."
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "en": _en};

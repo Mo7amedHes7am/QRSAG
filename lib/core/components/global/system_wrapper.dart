@@ -23,7 +23,13 @@ class SystemWrapper extends StatelessWidget {
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: isDark ? Brightness.light : Brightness.dark,
       ),
-      child: child,
+      child: SafeArea(
+        top: true,
+        right: false,
+        left: false,
+        bottom: false,
+        child: child,
+      ),
     );
   }
 }

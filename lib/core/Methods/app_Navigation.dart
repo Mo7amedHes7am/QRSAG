@@ -12,6 +12,28 @@ enum Transition {
 }
 
 class AppNavigator {
+  static final List<Route<dynamic>> _routeStack = [];
+  static final Map<Route<dynamic>, Widget> _routeScreens = {};
+
+  static final NavigatorObserver observer = _AppNavigatorObserver();
+
+  static Widget? getLastPage() {
+    if (_routeStack.length < 2) return null;
+    final previousRoute = _routeStack[_routeStack.length - 2];
+    return _routeScreens[previousRoute];
+  }
+
+  static Route<dynamic>? getLastRoute() {
+    if (_routeStack.length < 2) return null;
+    return _routeStack[_routeStack.length - 2];
+  }
+
+  static Widget? getPageAt(int indexFromTop) {
+    final index = _routeStack.length - 1 - indexFromTop;
+    if (index < 0 || index >= _routeStack.length) return null;
+    return _routeScreens[_routeStack[index]];
+  }
+
   static Future<T?> topage<T>(
     BuildContext context,
     Widget screen, {
@@ -122,7 +144,7 @@ class AppNavigator {
     Curve curve,
     Duration duration,
   ) {
-    return PageRouteBuilder(
+    final route = PageRouteBuilder(
       maintainState: true,
       pageBuilder: (_, __, ___) => screen,
       transitionDuration: duration,
@@ -131,6 +153,9 @@ class AppNavigator {
         return _buildTransition(animation, child, transition, curve);
       },
     );
+
+    _routeScreens[route] = screen;
+    return route;
   }
 
   static Widget _buildTransition(
@@ -165,6 +190,36 @@ class AppNavigator {
         return SizeTransition(sizeFactor: curvedAnimation, child: child);
       default:
         return FadeTransition(opacity: curvedAnimation, child: child);
+    }
+  }
+}
+
+class _AppNavigatorObserver extends NavigatorObserver {
+  @override
+  void didPush(Route route, Route? previousRoute) {
+    AppNavigator._routeStack.add(route);
+  }
+
+  @override
+  void didPop(Route route, Route? previousRoute) {
+    AppNavigator._routeStack.remove(route);
+    AppNavigator._routeScreens.remove(route);
+  }
+
+  @override
+  void didRemove(Route route, Route? previousRoute) {
+    AppNavigator._routeStack.remove(route);
+    AppNavigator._routeScreens.remove(route);
+  }
+
+  @override
+  void didReplace({Route? newRoute, Route? oldRoute}) {
+    if (oldRoute != null && newRoute != null) {
+      final index = AppNavigator._routeStack.indexOf(oldRoute);
+      if (index != -1) {
+        AppNavigator._routeStack[index] = newRoute;
+      }
+      AppNavigator._routeScreens.remove(oldRoute);
     }
   }
 }

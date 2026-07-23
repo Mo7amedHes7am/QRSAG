@@ -180,5 +180,21 @@ abstract class  LocaleKeys {
   static const generate_wifi_encryption_wep = 'generate.wifi.encryption_wep';
   static const generate_wifi = 'generate.wifi';
   static const generate = 'generate';
+  static const settings_title = 'settings.title';
+  static const settings_main_settings = 'settings.main_settings';
+  static const settings_vibrate_title = 'settings.vibrate_title';
+  static const settings_vibrate_subtitle = 'settings.vibrate_subtitle';
+  static const settings_beep_title = 'settings.beep_title';
+  static const settings_beep_subtitle = 'settings.beep_subtitle';
+  static const settings_contact_customization = 'settings.contact_customization';
+  static const settings_contact_us_title = 'settings.contact_us_title';
+  static const settings_contact_us_subtitle = 'settings.contact_us_subtitle';
+  static const settings_privacy_policy_title = 'settings.privacy_policy_title';
+  static const settings_privacy_policy_subtitle = 'settings.privacy_policy_subtitle';
+  static const settings_change_language_title = 'settings.change_language_title';
+  static const settings_change_language_subtitle = 'settings.change_language_subtitle';
+  static const settings_change_theme_title = 'settings.change_theme_title';
+  static const settings_change_theme_subtitle = 'settings.change_theme_subtitle';
+  static const settings = 'settings';
 
 }

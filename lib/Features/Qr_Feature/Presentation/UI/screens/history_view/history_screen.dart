@@ -23,25 +23,25 @@ class HistoryScreen extends StatelessWidget {
           final cubit = context.read<QrCubit>();
 
           return SystemWrapper(
-            child: SafeArea(
-              child: Scaffold(
-                backgroundColor: appColors.background,
-                appBar: MainAppBar(
-                  title: LocaleKeys.navbar_history.tr(),
-                  hasBack: false,
+            child: Scaffold(
+              backgroundColor: appColors.background,
+              appBar: MainAppBar(
+                context: context,
+                title: LocaleKeys.navbar_history.tr(),
+                hasBack: false,
+                pageIndex: 2,
+              ),
+              body: CustomTabBar(
+                context: context,
+                Screen1: SingleChildScrollView(
+                  child: HistoryList(
+                    historyList: cubit.scanHistory,
+                    isScan: true,
+                  ),
                 ),
-                body: CustomTabBar(
-                  context: context,
-                  Screen1: SingleChildScrollView(
-                    child: HistoryList(
-                      historyList: cubit.scanHistory,
-                      isScan: true,
-                    ),
-                  ),
-                  Screen2: HistoryList(
-                    historyList: cubit.generateHistory,
-                    isScan: false,
-                  ),
+                Screen2: HistoryList(
+                  historyList: cubit.generateHistory,
+                  isScan: false,
                 ),
               ),
             ),
