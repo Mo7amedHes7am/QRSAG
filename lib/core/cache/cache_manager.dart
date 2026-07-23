@@ -105,7 +105,8 @@ class CacheManager {
           img: type.image,
           arlabel: type.arlabel,
           enlabel: type.enlabel,
-          wifi: type == QrType.visa ? data.split("-VssEnc-")[1] : "",
+          wifi: "",
+          // wifi: type == QrType.visa ? data.split("-VssEnc-")[1] : "",
         );
         break;
       default:
@@ -117,7 +118,8 @@ class CacheManager {
           arlabel: type.arlabel,
           enlabel: type.enlabel,
           img: type.image,
-          wifi: type == QrType.visa ? data.split("-VssEnc-")[1] : "",
+          wifi: "",
+          // wifi: type == QrType.visa ? data.split("-VssEnc-")[1] : "",
         );
         break;
     }
