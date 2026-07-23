@@ -44,7 +44,7 @@ class GenerateContactScreen extends StatelessWidget {
               appBar: MainAppBar(
                 title: isArabic ? type.arlabel : type.enlabel,
                 hasBack: true,
-                backstyle: 2,
+                backstyle: 1,
               ),
               body: QRBackgroundPattern(
                 child: Center(

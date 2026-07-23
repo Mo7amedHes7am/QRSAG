@@ -42,7 +42,9 @@ class CodegenLoader extends AssetLoader{
     "last_name": "أدخل اسم العائلة",
     "job_title": "أدخل المسمى الوظيفي",
     "web": "أدخل رابط موقعك الإلكتروني",
-    "website": "أدخل عنوان موقعك الإلكتروني"
+    "website": "أدخل عنوان موقعك الإلكتروني",
+    "wifi_name": "أدخل اسم شبكة الواي فاي (SSID)",
+    "wifi_password": "أدخل كلمة مرور الواي فاي"
   },
   "validation": {
     "email_invalid": "يرجى إدخال بريد إلكتروني صحيح",
@@ -69,7 +71,11 @@ class CodegenLoader extends AssetLoader{
     "company_invalid": "يجب أن يكون اسم الشركة حرفين على الأقل",
     "job_title_invalid": "يجب أن يكون المسمى الوظيفي حرفين على الأقل",
     "web_required": "يرجى إدخال رابط الموقع الإلكتروني",
-    "web_invalid": "يرجى إدخال رابط موقع إلكتروني صحيح"
+    "web_invalid": "يرجى إدخال رابط موقع إلكتروني صحيح",
+    "wifi_name_required": "يرجى إدخال اسم شبكة الواي فاي",
+    "wifi_password_required": "يرجى إدخال كلمة مرور الواي فاي",
+    "wifi_name_invalid": "يجب أن يكون اسم الواي فاي حرفين على الأقل",
+    "wifi_password_invalid": "يجب أن تكون كلمة المرور 8 أحرف على الأقل"
   },
   "field": {
     "full_name": "الاسم الكامل",
@@ -94,7 +100,10 @@ class CodegenLoader extends AssetLoader{
     "first_name": "الاسم الأول",
     "last_name": "اسم العائلة",
     "job_title": "المسمى الوظيفي",
-    "web": "الموقع الإلكتروني"
+    "web": "الموقع الإلكتروني",
+    "wifi_name": "اسم شبكة الواي فاي",
+    "wifi_password": "كلمة مرور الواي فاي",
+    "wifi_ssid": "معرف شبكة الواي فاي"
   },
   "common": {
     "optional": "اختياري",
@@ -188,6 +197,13 @@ class CodegenLoader extends AssetLoader{
       "invalid_phone": "رقم هاتف غير صالح",
       "invalid_username": "اسم المستخدم لا يجب أن يحتوي على مسافات",
       "max_length": "لا يمكن أن يتجاوز الحقل {0} أحرف"
+    },
+    "wifi": {
+      "hidden": "مخفي",
+      "encryption": "نوع التشفير",
+      "encryption_none": "بدون",
+      "encryption_wpa": "WPA/WPA2",
+      "encryption_wep": "WEP"
     }
   }
 };
@@ -219,7 +235,9 @@ static const Map<String,dynamic> _en = {
     "last_name": "Enter your last name",
     "job_title": "Enter your job title",
     "web": "Enter your website URL",
-    "website": "Enter your website address"
+    "website": "Enter your website address",
+    "wifi_name": "Enter WiFi network name (SSID)",
+    "wifi_password": "Enter WiFi password"
   },
   "validation": {
     "email_invalid": "Please enter a valid email address",
@@ -246,7 +264,11 @@ static const Map<String,dynamic> _en = {
     "company_invalid": "Company name must be at least 2 characters",
     "job_title_invalid": "Job title must be at least 2 characters",
     "web_required": "Please enter your website URL",
-    "web_invalid": "Please enter a valid website URL"
+    "web_invalid": "Please enter a valid website URL",
+    "wifi_name_required": "Please enter WiFi network name",
+    "wifi_password_required": "Please enter WiFi password",
+    "wifi_name_invalid": "WiFi name must be at least 2 characters",
+    "wifi_password_invalid": "WiFi password must be at least 8 characters"
   },
   "field": {
     "full_name": "Full Name",
@@ -271,7 +293,10 @@ static const Map<String,dynamic> _en = {
     "first_name": "First Name",
     "last_name": "Last Name",
     "job_title": "Job Title",
-    "web": "Website"
+    "web": "Website",
+    "wifi_name": "WiFi Name",
+    "wifi_password": "WiFi Password",
+    "wifi_ssid": "WiFi SSID"
   },
   "common": {
     "optional": "optional",
@@ -365,6 +390,13 @@ static const Map<String,dynamic> _en = {
       "invalid_phone": "Invalid phone number",
       "invalid_username": "Username must not contain spaces",
       "max_length": "Field cannot exceed {0} characters"
+    },
+    "wifi": {
+      "hidden": "Hidden",
+      "encryption": "Encryption",
+      "encryption_none": "None",
+      "encryption_wpa": "WPA/WPA2",
+      "encryption_wep": "WEP"
     }
   }
 };

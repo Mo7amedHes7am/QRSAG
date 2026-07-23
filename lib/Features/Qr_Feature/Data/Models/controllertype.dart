@@ -10,4 +10,6 @@ enum ControllerType {
   address,
   city,
   country,
+  wifiName,
+  wifiPassword,
 }

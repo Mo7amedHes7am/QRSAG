@@ -23,6 +23,11 @@ class QrCubitBase extends Cubit<QrState> {
       cityController,
       countryController;
 
+  late TextEditingController wifiNameController, wifiPasswordController;
+  late bool hidden;
+  late int encryption;
+  late bool showPassword;
+
   late String countryCode;
   late QrType currentType;
 

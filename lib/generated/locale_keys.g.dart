@@ -30,6 +30,8 @@ abstract class  LocaleKeys {
   static const hint_job_title = 'hint.job_title';
   static const hint_web = 'hint.web';
   static const hint_website = 'hint.website';
+  static const hint_wifi_name = 'hint.wifi_name';
+  static const hint_wifi_password = 'hint.wifi_password';
   static const hint = 'hint';
   static const validation_email_invalid = 'validation.email_invalid';
   static const validation_url_invalid = 'validation.url_invalid';
@@ -56,6 +58,10 @@ abstract class  LocaleKeys {
   static const validation_job_title_invalid = 'validation.job_title_invalid';
   static const validation_web_required = 'validation.web_required';
   static const validation_web_invalid = 'validation.web_invalid';
+  static const validation_wifi_name_required = 'validation.wifi_name_required';
+  static const validation_wifi_password_required = 'validation.wifi_password_required';
+  static const validation_wifi_name_invalid = 'validation.wifi_name_invalid';
+  static const validation_wifi_password_invalid = 'validation.wifi_password_invalid';
   static const validation = 'validation';
   static const field_full_name = 'field.full_name';
   static const field_email = 'field.email';
@@ -80,6 +86,9 @@ abstract class  LocaleKeys {
   static const field_last_name = 'field.last_name';
   static const field_job_title = 'field.job_title';
   static const field_web = 'field.web';
+  static const field_wifi_name = 'field.wifi_name';
+  static const field_wifi_password = 'field.wifi_password';
+  static const field_wifi_ssid = 'field.wifi_ssid';
   static const field = 'field';
   static const common_optional = 'common.optional';
   static const common_required = 'common.required';
@@ -164,6 +173,12 @@ abstract class  LocaleKeys {
   static const generate_validation_invalid_username = 'generate.validation.invalid_username';
   static const generate_validation_max_length = 'generate.validation.max_length';
   static const generate_validation = 'generate.validation';
+  static const generate_wifi_hidden = 'generate.wifi.hidden';
+  static const generate_wifi_encryption = 'generate.wifi.encryption';
+  static const generate_wifi_encryption_none = 'generate.wifi.encryption_none';
+  static const generate_wifi_encryption_wpa = 'generate.wifi.encryption_wpa';
+  static const generate_wifi_encryption_wep = 'generate.wifi.encryption_wep';
+  static const generate_wifi = 'generate.wifi';
   static const generate = 'generate';
 
 }

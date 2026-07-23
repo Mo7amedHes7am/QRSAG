@@ -37,6 +37,12 @@ mixin GenerateMixin on QrCubitBase {
         cityController = TextEditingController();
         countryController = TextEditingController();
         break;
+      case QrType.wifi:
+        wifiNameController = TextEditingController();
+        wifiPasswordController = TextEditingController();
+        hidden = false;
+        encryption = 0;
+        showPassword = false;
       default:
     }
     countryCode = "+20";
@@ -44,8 +50,19 @@ mixin GenerateMixin on QrCubitBase {
     if (!isClosed) emit(QrGenerateLoaded());
   }
 
+  void toggleHidden() {
+    hidden = !hidden;
+    emit(QrGenerateLoaded());
+  }
+
+  void setEncryption(int value) {
+    encryption = value;
+    showPassword = value != 0;
+    emit(QrGenerateLoaded());
+  }
+
   Future<dynamic> generateQr() async {
-    late final data;
+    late String data;
 
     switch (currentType) {
       case QrType.contact:
@@ -102,6 +119,35 @@ mixin GenerateMixin on QrCubitBase {
             "A:${addressController.text.trim().isNotEmpty ? addressController.text.trim() : "No Address"};"
             "Ci:${cityController.text.trim().isNotEmpty ? cityController.text.trim() : "No City"};"
             "Co:${countryController.text.trim().isNotEmpty ? countryController.text.trim() : "No Country"};;";
+        break;
+
+      case QrType.wifi:
+        data = 'WIFI:';
+
+        String encryptionType = '';
+        switch (encryption) {
+          case 0:
+            encryptionType = 'nopass';
+            break;
+          case 1:
+            encryptionType = 'WPA';
+            break;
+          case 2:
+            encryptionType = 'WEP';
+            break;
+        }
+
+        data += 'T:$encryptionType;';
+        data += 'S:${wifiNameController.text};';
+        if (encryption != 0 && wifiPasswordController.text.isNotEmpty) {
+          data += 'P:${wifiPasswordController.text};';
+        }
+
+        if (hidden) {
+          data += 'H:true;';
+        }
+
+        data += ';';
         break;
 
       default:
@@ -174,7 +220,12 @@ mixin GenerateMixin on QrCubitBase {
       case ControllerType.country:
         countryController.clear();
         break;
-      default:
+      case ControllerType.wifiName:
+        wifiNameController.clear();
+        break;
+      case ControllerType.wifiPassword:
+        wifiPasswordController.clear();
+        break;
     }
     emit(QrGenerateLoaded());
   }

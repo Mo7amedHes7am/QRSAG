@@ -35,6 +35,8 @@ Widget InputField({
     isAddress: controllertype == ControllerType.address,
     isCity: controllertype == ControllerType.city,
     isCountry: controllertype == ControllerType.country,
+    isWifiName: controllertype == ControllerType.wifiName,
+    isWifiPassword: controllertype == ControllerType.wifiPassword,
     showRequiredStar: [
       ControllerType.firstname,
       ControllerType.lastname,

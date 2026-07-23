@@ -6,6 +6,7 @@ import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/Cubit/qr_cubit.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_contact_screen.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_text_screen.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_wifi_screen.dart';
 import 'package:qr_scanner_and_generator/core/Methods/app_Navigation.dart';
 import 'package:qr_scanner_and_generator/core/Methods/app_validators.dart';
 import 'package:qr_scanner_and_generator/core/cache/cache_manager.dart';
@@ -134,7 +135,11 @@ void handle_navigation({required QrType type, required BuildContext context}) {
       );
       break;
     case QrType.wifi:
-      // Get.to(GenerateWifiScreen());
+      AppNavigator.toPageWithCubit(
+        context: context,
+        cubit: context.read<QrCubit>(),
+        screen: GenerateWifiScreen(),
+      );
       break;
     case QrType.event:
       // Get.to(GenerateEventScreen());

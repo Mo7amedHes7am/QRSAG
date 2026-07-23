@@ -26,7 +26,9 @@
     "last_name": "Enter your last name",
     "job_title": "Enter your job title",
     "web": "Enter your website URL",
-    "website": "Enter your website address"
+    "website": "Enter your website address",
+    "wifi_name": "Enter WiFi network name (SSID)",
+    "wifi_password": "Enter WiFi password"
   },
   "validation": {
     "email_invalid": "Please enter a valid email address",
@@ -53,7 +55,11 @@
     "company_invalid": "Company name must be at least 2 characters",
     "job_title_invalid": "Job title must be at least 2 characters",
     "web_required": "Please enter your website URL",
-    "web_invalid": "Please enter a valid website URL"
+    "web_invalid": "Please enter a valid website URL",
+    "wifi_name_required": "Please enter WiFi network name",
+    "wifi_password_required": "Please enter WiFi password",
+    "wifi_name_invalid": "WiFi name must be at least 2 characters",
+    "wifi_password_invalid": "WiFi password must be at least 8 characters"
   },
   "field": {
     "full_name": "Full Name",
@@ -78,7 +84,10 @@
     "first_name": "First Name",
     "last_name": "Last Name",
     "job_title": "Job Title",
-    "web": "Website"
+    "web": "Website",
+    "wifi_name": "WiFi Name",
+    "wifi_password": "WiFi Password",
+    "wifi_ssid": "WiFi SSID"
   },
   "common": {
     "optional": "optional",
@@ -172,6 +181,13 @@
       "invalid_phone": "Invalid phone number",
       "invalid_username": "Username must not contain spaces",
       "max_length": "Field cannot exceed {0} characters"
+    },
+    "wifi": {
+      "hidden": "Hidden",
+      "encryption": "Encryption",
+      "encryption_none": "None",
+      "encryption_wpa": "WPA/WPA2",
+      "encryption_wep": "WEP"
     }
   }
 }

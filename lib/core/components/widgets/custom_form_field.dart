@@ -54,6 +54,8 @@ class CustomFormField extends StatefulWidget {
   final bool isFirstName;
   final bool isLastName;
   final bool isJobTitle;
+  final bool isWifiName;
+  final bool isWifiPassword;
 
   final String? clientNameExample;
   final double? width;
@@ -135,6 +137,8 @@ class CustomFormField extends StatefulWidget {
     this.isLastName = false,
     this.isJobTitle = false,
     this.isWeb = false,
+    this.isWifiName = false,
+    this.isWifiPassword = false,
   });
 
   final bool? noborder;
@@ -231,7 +235,8 @@ class _CustomFormFeildState extends State<CustomFormField> {
         widget.isFirstName ||
         widget.isLastName ||
         widget.isCompany ||
-        widget.isJobTitle) {
+        widget.isJobTitle ||
+        widget.isWifiName) {
       return TextInputType.name;
     }
     if (widget.isPlainText) return TextInputType.text;
@@ -248,6 +253,22 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isUrl || widget.isWeb) {
       return [
         FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z0-9\-_.:/?&=#%@+]')),
+      ];
+    }
+
+    if (widget.isWifiName) {
+      return [
+        FilteringTextInputFormatter.allow(
+          RegExp(r'[a-zA-Z0-9 \-_.!@#$%^&*()+=]'),
+        ),
+      ];
+    }
+
+    if (widget.isWifiPassword) {
+      return [
+        FilteringTextInputFormatter.allow(
+          RegExp(r'[a-zA-Z0-9 \-_.!@#$%^&*()+=]'),
+        ),
       ];
     }
 
@@ -343,11 +364,26 @@ class _CustomFormFeildState extends State<CustomFormField> {
           return LocaleKeys.validation_company_required.tr();
         if (widget.isJobTitle)
           return LocaleKeys.validation_job_title_required.tr();
-        if (widget.isWeb)
-          return LocaleKeys.validation_web_required.tr(); // Add this
+        if (widget.isWeb) return LocaleKeys.validation_web_required.tr();
+        if (widget.isWifiName)
+          return LocaleKeys.validation_wifi_name_required.tr();
+        if (widget.isWifiPassword)
+          return LocaleKeys.validation_wifi_password_required.tr();
         return LocaleKeys.validation_required.tr();
       }
       return null;
+    }
+
+    if (widget.isWifiName && value.isNotEmpty) {
+      if (value.length < 2) {
+        return LocaleKeys.validation_wifi_name_invalid.tr();
+      }
+    }
+
+    if (widget.isWifiPassword && value.isNotEmpty) {
+      if (value.length < 8) {
+        return LocaleKeys.validation_wifi_password_invalid.tr();
+      }
     }
 
     if (widget.isWeb && value.isNotEmpty) {
@@ -491,6 +527,8 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isPlainText) return LocaleKeys.hint_plain_text.tr();
     if (widget.isUrl) return LocaleKeys.hint_url.tr();
     if (widget.isWeb) return LocaleKeys.hint_web.tr();
+    if (widget.isWifiName) return LocaleKeys.hint_wifi_name.tr();
+    if (widget.isWifiPassword) return LocaleKeys.hint_wifi_password.tr();
     if (widget.isDateTime) return LocaleKeys.hint_date_time.tr();
     if (widget.isEmail) return LocaleKeys.hint_email.tr();
     if (widget.isAddress) return LocaleKeys.hint_address.tr();
@@ -533,6 +571,8 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isJobTitle) return LocaleKeys.field_job_title.tr();
     if (widget.isUrl) return LocaleKeys.field_website.tr();
     if (widget.isWeb) return LocaleKeys.field_web.tr();
+    if (widget.isWifiName) return LocaleKeys.field_wifi_name.tr();
+    if (widget.isWifiPassword) return LocaleKeys.field_wifi_password.tr();
     if (widget.isMultiline) return LocaleKeys.field_description.tr();
     if (widget.isNotes) return LocaleKeys.field_notes.tr();
     if (widget.isUserName) return LocaleKeys.field_username.tr();
