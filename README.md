@@ -70,7 +70,7 @@ English (en), Chinese (zh), Spanish (es), Arabic (ar), Hindi (hi), Bengali (bn),
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/your-username/qr-scanner-generator.git
+git clone https://github.com/Mo7amedHes7am/qr-scanner-generator.git
 cd qr-scanner-generator
 flutter pub get
 flutter run
