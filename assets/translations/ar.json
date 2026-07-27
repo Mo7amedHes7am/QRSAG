@@ -25,7 +25,11 @@
     "website": "أدخل عنوان موقعك",
     "wifi_name": "أدخل اسم شبكة WiFi (SSID)",
     "wifi_password": "أدخل كلمة مرور WiFi",
-    "industry_name": "اسم القطاع"
+    "industry_name": "أدخل اسم القطاع",
+    "event_name": "أدخل اسم الفعالية",
+    "event_description": "أدخل وصف الفعالية",
+    "event_start_date": "اختر تاريخ البداية",
+    "event_end_date": "اختر تاريخ النهاية"
   },
   "validation": {
     "email_invalid": "الرجاء إدخال بريد إلكتروني صحيح",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "اسم WiFi يجب أن يكون حرفين على الأقل",
     "wifi_password_invalid": "كلمة مرور WiFi يجب أن تكون 8 أحرف على الأقل",
     "industry_name_required": "الرجاء إدخال اسم القطاع",
-    "industry_name_invalid": "اسم القطاع يجب أن يكون حرفين على الأقل"
+    "industry_name_invalid": "اسم القطاع يجب أن يكون حرفين على الأقل",
+    "event_name_required": "الرجاء إدخال اسم الفعالية",
+    "event_name_invalid": "اسم الفعالية يجب أن يكون حرفين على الأقل",
+    "event_description_required": "الرجاء إدخال وصف الفعالية",
+    "event_description_invalid": "الوصف يجب أن يكون 10 أحرف على الأقل",
+    "event_start_date_required": "الرجاء اختيار تاريخ البداية",
+    "event_end_date_required": "الرجاء اختيار تاريخ النهاية",
+    "event_end_date_invalid": "تاريخ النهاية يجب أن يكون بعد تاريخ البداية"
   },
   "field": {
     "full_name": "الاسم الكامل",
@@ -78,7 +89,11 @@
     "wifi_name": "اسم WiFi",
     "wifi_password": "كلمة مرور WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "اسم القطاع"
+    "industry_name": "اسم القطاع",
+    "event_name": "اسم الفعالية",
+    "event_description": "وصف الفعالية",
+    "event_start_date": "تاريخ البداية",
+    "event_end_date": "تاريخ النهاية"
   },
   "common": {
     "optional": "اختياري",

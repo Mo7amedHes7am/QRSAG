@@ -25,7 +25,11 @@
     "website": "Entrez l'adresse de votre site web",
     "wifi_name": "Entrez le nom du réseau WiFi (SSID)",
     "wifi_password": "Entrez le mot de passe WiFi",
-    "industry_name": "Nom du secteur"
+    "industry_name": "Entrez le nom du secteur",
+    "event_name": "Entrez le nom de l'événement",
+    "event_description": "Entrez la description de l'événement",
+    "event_start_date": "Sélectionnez la date de début",
+    "event_end_date": "Sélectionnez la date de fin"
   },
   "validation": {
     "email_invalid": "Veuillez entrer une adresse email valide",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "Le nom WiFi doit comporter au moins 2 caractères",
     "wifi_password_invalid": "Le mot de passe WiFi doit comporter au moins 8 caractères",
     "industry_name_required": "Veuillez entrer le nom du secteur",
-    "industry_name_invalid": "Le nom du secteur doit comporter au moins 2 caractères"
+    "industry_name_invalid": "Le nom du secteur doit comporter au moins 2 caractères",
+    "event_name_required": "Veuillez entrer le nom de l'événement",
+    "event_name_invalid": "Le nom de l'événement doit comporter au moins 2 caractères",
+    "event_description_required": "Veuillez entrer la description de l'événement",
+    "event_description_invalid": "La description doit comporter au moins 10 caractères",
+    "event_start_date_required": "Veuillez sélectionner la date de début",
+    "event_end_date_required": "Veuillez sélectionner la date de fin",
+    "event_end_date_invalid": "La date de fin doit être après la date de début"
   },
   "field": {
     "full_name": "Nom complet",
@@ -78,7 +89,11 @@
     "wifi_name": "Nom WiFi",
     "wifi_password": "Mot de passe WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Nom du secteur"
+    "industry_name": "Nom du secteur",
+    "event_name": "Nom de l'événement",
+    "event_description": "Description de l'événement",
+    "event_start_date": "Date de début",
+    "event_end_date": "Date de fin"
   },
   "common": {
     "optional": "facultatif",

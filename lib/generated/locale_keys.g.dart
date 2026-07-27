@@ -29,6 +29,10 @@ abstract class  LocaleKeys {
   static const hint_wifi_name = 'hint.wifi_name';
   static const hint_wifi_password = 'hint.wifi_password';
   static const hint_industry_name = 'hint.industry_name';
+  static const hint_event_name = 'hint.event_name';
+  static const hint_event_description = 'hint.event_description';
+  static const hint_event_start_date = 'hint.event_start_date';
+  static const hint_event_end_date = 'hint.event_end_date';
   static const hint = 'hint';
   static const validation_email_invalid = 'validation.email_invalid';
   static const validation_url_invalid = 'validation.url_invalid';
@@ -56,6 +60,13 @@ abstract class  LocaleKeys {
   static const validation_wifi_password_invalid = 'validation.wifi_password_invalid';
   static const validation_industry_name_required = 'validation.industry_name_required';
   static const validation_industry_name_invalid = 'validation.industry_name_invalid';
+  static const validation_event_name_required = 'validation.event_name_required';
+  static const validation_event_name_invalid = 'validation.event_name_invalid';
+  static const validation_event_description_required = 'validation.event_description_required';
+  static const validation_event_description_invalid = 'validation.event_description_invalid';
+  static const validation_event_start_date_required = 'validation.event_start_date_required';
+  static const validation_event_end_date_required = 'validation.event_end_date_required';
+  static const validation_event_end_date_invalid = 'validation.event_end_date_invalid';
   static const validation = 'validation';
   static const field_full_name = 'field.full_name';
   static const field_email = 'field.email';
@@ -80,6 +91,10 @@ abstract class  LocaleKeys {
   static const field_wifi_password = 'field.wifi_password';
   static const field_wifi_ssid = 'field.wifi_ssid';
   static const field_industry_name = 'field.industry_name';
+  static const field_event_name = 'field.event_name';
+  static const field_event_description = 'field.event_description';
+  static const field_event_start_date = 'field.event_start_date';
+  static const field_event_end_date = 'field.event_end_date';
   static const field = 'field';
   static const common_optional = 'common.optional';
   static const common_required = 'common.required';

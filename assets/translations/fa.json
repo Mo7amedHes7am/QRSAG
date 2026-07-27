@@ -25,7 +25,11 @@
     "website": "آدرس وبسایت خود را وارد کنید",
     "wifi_name": "نام شبکه WiFi را وارد کنید (SSID)",
     "wifi_password": "رمز عبور WiFi را وارد کنید",
-    "industry_name": "نام صنعت"
+    "industry_name": "نام صنعت را وارد کنید",
+    "event_name": "نام رویداد را وارد کنید",
+    "event_description": "توضیحات رویداد را وارد کنید",
+    "event_start_date": "تاریخ شروع را انتخاب کنید",
+    "event_end_date": "تاریخ پایان را انتخاب کنید"
   },
   "validation": {
     "email_invalid": "لطفاً یک آدرس ایمیل معتبر وارد کنید",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "نام WiFi باید حداقل ۲ کاراکتر باشد",
     "wifi_password_invalid": "رمز عبور WiFi باید حداقل ۸ کاراکتر باشد",
     "industry_name_required": "لطفاً نام صنعت را وارد کنید",
-    "industry_name_invalid": "نام صنعت باید حداقل ۲ کاراکتر باشد"
+    "industry_name_invalid": "نام صنعت باید حداقل ۲ کاراکتر باشد",
+    "event_name_required": "لطفاً نام رویداد را وارد کنید",
+    "event_name_invalid": "نام رویداد باید حداقل ۲ کاراکتر باشد",
+    "event_description_required": "لطفاً توضیحات رویداد را وارد کنید",
+    "event_description_invalid": "توضیحات باید حداقل ۱۰ کاراکتر باشد",
+    "event_start_date_required": "لطفاً تاریخ شروع را انتخاب کنید",
+    "event_end_date_required": "لطفاً تاریخ پایان را انتخاب کنید",
+    "event_end_date_invalid": "تاریخ پایان باید بعد از تاریخ شروع باشد"
   },
   "field": {
     "full_name": "نام کامل",
@@ -78,7 +89,11 @@
     "wifi_name": "نام WiFi",
     "wifi_password": "رمز عبور WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "نام صنعت"
+    "industry_name": "نام صنعت",
+    "event_name": "نام رویداد",
+    "event_description": "توضیحات رویداد",
+    "event_start_date": "تاریخ شروع",
+    "event_end_date": "تاریخ پایان"
   },
   "common": {
     "optional": "اختیاری",

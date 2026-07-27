@@ -25,7 +25,11 @@
     "website": "输入您的网站地址",
     "wifi_name": "输入WiFi网络名称（SSID）",
     "wifi_password": "输入WiFi密码",
-    "industry_name": "行业名称"
+    "industry_name": "输入行业名称",
+    "event_name": "输入活动名称",
+    "event_description": "输入活动描述",
+    "event_start_date": "选择开始日期",
+    "event_end_date": "选择结束日期"
   },
   "validation": {
     "email_invalid": "请输入有效的电子邮件地址",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "WiFi名称至少需要2个字符",
     "wifi_password_invalid": "WiFi密码至少需要8个字符",
     "industry_name_required": "请输入行业名称",
-    "industry_name_invalid": "行业名称至少需要2个字符"
+    "industry_name_invalid": "行业名称至少需要2个字符",
+    "event_name_required": "请输入活动名称",
+    "event_name_invalid": "活动名称至少需要2个字符",
+    "event_description_required": "请输入活动描述",
+    "event_description_invalid": "描述至少需要10个字符",
+    "event_start_date_required": "请选择开始日期",
+    "event_end_date_required": "请选择结束日期",
+    "event_end_date_invalid": "结束日期必须在开始日期之后"
   },
   "field": {
     "full_name": "全名",
@@ -78,7 +89,11 @@
     "wifi_name": "WiFi名称",
     "wifi_password": "WiFi密码",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "行业名称"
+    "industry_name": "行业名称",
+    "event_name": "活动名称",
+    "event_description": "活动描述",
+    "event_start_date": "开始日期",
+    "event_end_date": "结束日期"
   },
   "common": {
     "optional": "可选",

@@ -25,7 +25,11 @@
     "website": "Introduceți adresa site-ului dvs.",
     "wifi_name": "Introduceți numele rețelei WiFi (SSID)",
     "wifi_password": "Introduceți parola WiFi",
-    "industry_name": "Numele sectorului"
+    "industry_name": "Introduceți numele sectorului",
+    "event_name": "Introduceți numele evenimentului",
+    "event_description": "Introduceți descrierea evenimentului",
+    "event_start_date": "Selectați data de început",
+    "event_end_date": "Selectați data de sfârșit"
   },
   "validation": {
     "email_invalid": "Introduceți o adresă de email validă",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "Numele WiFi trebuie să aibă cel puțin 2 caractere",
     "wifi_password_invalid": "Parola WiFi trebuie să aibă cel puțin 8 caractere",
     "industry_name_required": "Introduceți numele sectorului",
-    "industry_name_invalid": "Numele sectorului trebuie să aibă cel puțin 2 caractere"
+    "industry_name_invalid": "Numele sectorului trebuie să aibă cel puțin 2 caractere",
+    "event_name_required": "Introduceți numele evenimentului",
+    "event_name_invalid": "Numele evenimentului trebuie să aibă cel puțin 2 caractere",
+    "event_description_required": "Introduceți descrierea evenimentului",
+    "event_description_invalid": "Descrierea trebuie să aibă cel puțin 10 caractere",
+    "event_start_date_required": "Selectați data de început",
+    "event_end_date_required": "Selectați data de sfârșit",
+    "event_end_date_invalid": "Data de sfârșit trebuie să fie după data de început"
   },
   "field": {
     "full_name": "Nume Complet",
@@ -78,7 +89,11 @@
     "wifi_name": "Nume WiFi",
     "wifi_password": "Parolă WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Numele sectorului"
+    "industry_name": "Numele sectorului",
+    "event_name": "Numele evenimentului",
+    "event_description": "Descrierea evenimentului",
+    "event_start_date": "Data de început",
+    "event_end_date": "Data de sfârșit"
   },
   "common": {
     "optional": "opțional",

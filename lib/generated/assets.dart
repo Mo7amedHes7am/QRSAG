@@ -46,9 +46,11 @@ class $AssetsImagesGen {
   final AssetGenImage icon = const AssetGenImage('assets/Images/icon.png');
   final AssetGenImage logo = const AssetGenImage('assets/Images/logo.png');
   final AssetGenImage mastercard = const AssetGenImage(
-      'assets/Images/mastercard.png');
+    'assets/Images/mastercard.png',
+  );
   final AssetGenImage qrlogogold = const AssetGenImage(
-      'assets/Images/qrlogogold.png');
+    'assets/Images/qrlogogold.png',
+  );
   final AssetGenImage v1 = const AssetGenImage('assets/Images/v1.png');
   final AssetGenImage v10 = const AssetGenImage('assets/Images/v10.png');
   final AssetGenImage v11 = const AssetGenImage('assets/Images/v11.png');
@@ -62,7 +64,8 @@ class $AssetsImagesGen {
   final AssetGenImage v8 = const AssetGenImage('assets/Images/v8.png');
   final AssetGenImage v9 = const AssetGenImage('assets/Images/v9.png');
   final AssetGenImage vibrates = const AssetGenImage(
-      'assets/Images/vibrates.png');
+    'assets/Images/vibrates.png',
+  );
 }
 
 class $AssetsJsonsGen {
@@ -110,7 +113,8 @@ class $AssetsSvgsGen {
   final SvgGenImage privacy = const SvgGenImage('assets/Svgs/privacy.svg');
   final SvgGenImage pt = const SvgGenImage('assets/Svgs/pt.svg');
   final SvgGenImage qrlogogold = const SvgGenImage(
-      'assets/Svgs/qrlogogold.svg');
+    'assets/Svgs/qrlogogold.svg',
+  );
   final SvgGenImage rateus = const SvgGenImage('assets/Svgs/rateus.svg');
   final SvgGenImage ro = const SvgGenImage('assets/Svgs/ro.svg');
   final SvgGenImage ru = const SvgGenImage('assets/Svgs/ru.svg');
@@ -180,7 +184,6 @@ class AssetGenImage {
 
   final String _assetName;
 
-
   final Size? size;
   final Set<String> flavors;
 
@@ -237,15 +240,8 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider({
-    AssetBundle? bundle,
-    String? package,
-  }) {
-    return AssetImage(
-      _assetName,
-      bundle: bundle,
-      package: package,
-    );
+  ImageProvider provider({AssetBundle? bundle, String? package}) {
+    return AssetImage(_assetName, bundle: bundle, package: package);
   }
 
   Widget custom({
@@ -392,4 +388,3 @@ class LottieGenImage {
 
   String get keyName => _assetName;
 }
-

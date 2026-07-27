@@ -25,7 +25,11 @@
     "website": "Web sitesi adresinizi girin",
     "wifi_name": "WiFi ağ adını girin (SSID)",
     "wifi_password": "WiFi şifresini girin",
-    "industry_name": "Sektör adı"
+    "industry_name": "Sektör adını girin",
+    "event_name": "Etkinlik adını girin",
+    "event_description": "Etkinlik açıklamasını girin",
+    "event_start_date": "Başlangıç tarihi seçin",
+    "event_end_date": "Bitiş tarihi seçin"
   },
   "validation": {
     "email_invalid": "Lütfen geçerli bir e-posta adresi girin",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "WiFi adı en az 2 karakter olmalıdır",
     "wifi_password_invalid": "WiFi şifresi en az 8 karakter olmalıdır",
     "industry_name_required": "Lütfen sektör adını girin",
-    "industry_name_invalid": "Sektör adı en az 2 karakter olmalıdır"
+    "industry_name_invalid": "Sektör adı en az 2 karakter olmalıdır",
+    "event_name_required": "Lütfen etkinlik adını girin",
+    "event_name_invalid": "Etkinlik adı en az 2 karakter olmalıdır",
+    "event_description_required": "Lütfen etkinlik açıklamasını girin",
+    "event_description_invalid": "Açıklama en az 10 karakter olmalıdır",
+    "event_start_date_required": "Lütfen başlangıç tarihi seçin",
+    "event_end_date_required": "Lütfen bitiş tarihi seçin",
+    "event_end_date_invalid": "Bitiş tarihi başlangıç tarihinden sonra olmalıdır"
   },
   "field": {
     "full_name": "Tam Ad",
@@ -78,7 +89,11 @@
     "wifi_name": "WiFi Adı",
     "wifi_password": "WiFi Şifresi",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "Sektör adı"
+    "industry_name": "Sektör Adı",
+    "event_name": "Etkinlik Adı",
+    "event_description": "Etkinlik Açıklaması",
+    "event_start_date": "Başlangıç Tarihi",
+    "event_end_date": "Bitiş Tarihi"
   },
   "common": {
     "optional": "isteğe bağlı",

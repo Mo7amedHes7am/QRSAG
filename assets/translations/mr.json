@@ -25,7 +25,11 @@
     "website": "आपला वेबसाइट पत्ता प्रविष्ट करा",
     "wifi_name": "WiFi नेटवर्क नाव प्रविष्ट करा (SSID)",
     "wifi_password": "WiFi पासवर्ड प्रविष्ट करा",
-    "industry_name": "उद्योगाचे नाव"
+    "industry_name": "उद्योगाचे नाव प्रविष्ट करा",
+    "event_name": "कार्यक्रमाचे नाव प्रविष्ट करा",
+    "event_description": "कार्यक्रमाचे वर्णन प्रविष्ट करा",
+    "event_start_date": "प्रारंभ तारीख निवडा",
+    "event_end_date": "समाप्ती तारीख निवडा"
   },
   "validation": {
     "email_invalid": "कृपया वैध ईमेल पत्ता प्रविष्ट करा",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "WiFi नाव किमान 2 अक्षरांचे असावे",
     "wifi_password_invalid": "WiFi पासवर्ड किमान 8 अक्षरांचा असावा",
     "industry_name_required": "कृपया उद्योगाचे नाव प्रविष्ट करा",
-    "industry_name_invalid": "उद्योगाचे नाव किमान 2 अक्षरांचे असावे"
+    "industry_name_invalid": "उद्योगाचे नाव किमान 2 अक्षरांचे असावे",
+    "event_name_required": "कृपया कार्यक्रमाचे नाव प्रविष्ट करा",
+    "event_name_invalid": "कार्यक्रमाचे नाव किमान 2 अक्षरांचे असावे",
+    "event_description_required": "कृपया कार्यक्रमाचे वर्णन प्रविष्ट करा",
+    "event_description_invalid": "वर्णन किमान 10 अक्षरांचे असावे",
+    "event_start_date_required": "कृपया प्रारंभ तारीख निवडा",
+    "event_end_date_required": "कृपया समाप्ती तारीख निवडा",
+    "event_end_date_invalid": "समाप्ती तारीख प्रारंभ तारीख नंतर असावी"
   },
   "field": {
     "full_name": "पूर्ण नाव",
@@ -78,7 +89,11 @@
     "wifi_name": "WiFi नाव",
     "wifi_password": "WiFi पासवर्ड",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "उद्योगाचे नाव"
+    "industry_name": "उद्योगाचे नाव",
+    "event_name": "कार्यक्रमाचे नाव",
+    "event_description": "कार्यक्रमाचे वर्णन",
+    "event_start_date": "प्रारंभ तारीख",
+    "event_end_date": "समाप्ती तारीख"
   },
   "common": {
     "optional": "ऐच्छिक",

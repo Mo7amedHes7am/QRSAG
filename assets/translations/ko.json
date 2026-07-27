@@ -25,7 +25,11 @@
     "website": "웹사이트 주소 입력",
     "wifi_name": "WiFi 네트워크 이름 입력 (SSID)",
     "wifi_password": "WiFi 비밀번호 입력",
-    "industry_name": "업종명"
+    "industry_name": "업종명 입력",
+    "event_name": "이벤트명 입력",
+    "event_description": "이벤트 설명 입력",
+    "event_start_date": "시작일 선택",
+    "event_end_date": "종료일 선택"
   },
   "validation": {
     "email_invalid": "유효한 이메일 주소를 입력하세요",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "WiFi 이름은 최소 2자 이상이어야 합니다",
     "wifi_password_invalid": "WiFi 비밀번호는 최소 8자 이상이어야 합니다",
     "industry_name_required": "업종명을 입력하세요",
-    "industry_name_invalid": "업종명은 최소 2자 이상이어야 합니다"
+    "industry_name_invalid": "업종명은 최소 2자 이상이어야 합니다",
+    "event_name_required": "이벤트명을 입력하세요",
+    "event_name_invalid": "이벤트명은 최소 2자 이상이어야 합니다",
+    "event_description_required": "이벤트 설명을 입력하세요",
+    "event_description_invalid": "설명은 최소 10자 이상이어야 합니다",
+    "event_start_date_required": "시작일을 선택하세요",
+    "event_end_date_required": "종료일을 선택하세요",
+    "event_end_date_invalid": "종료일은 시작일 이후여야 합니다"
   },
   "field": {
     "full_name": "전체 이름",
@@ -78,7 +89,11 @@
     "wifi_name": "WiFi 이름",
     "wifi_password": "WiFi 비밀번호",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "업종명"
+    "industry_name": "업종명",
+    "event_name": "이벤트명",
+    "event_description": "이벤트 설명",
+    "event_start_date": "시작일",
+    "event_end_date": "종료일"
   },
   "common": {
     "optional": "선택사항",

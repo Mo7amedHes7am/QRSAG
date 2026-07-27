@@ -41,7 +41,11 @@ class CodegenLoader extends AssetLoader{
     "website": "أدخل عنوان موقعك",
     "wifi_name": "أدخل اسم شبكة WiFi (SSID)",
     "wifi_password": "أدخل كلمة مرور WiFi",
-    "industry_name": "اسم القطاع"
+    "industry_name": "أدخل اسم القطاع",
+    "event_name": "أدخل اسم الفعالية",
+    "event_description": "أدخل وصف الفعالية",
+    "event_start_date": "اختر تاريخ البداية",
+    "event_end_date": "اختر تاريخ النهاية"
   },
   "validation": {
     "email_invalid": "الرجاء إدخال بريد إلكتروني صحيح",
@@ -69,7 +73,14 @@ class CodegenLoader extends AssetLoader{
     "wifi_name_invalid": "اسم WiFi يجب أن يكون حرفين على الأقل",
     "wifi_password_invalid": "كلمة مرور WiFi يجب أن تكون 8 أحرف على الأقل",
     "industry_name_required": "الرجاء إدخال اسم القطاع",
-    "industry_name_invalid": "اسم القطاع يجب أن يكون حرفين على الأقل"
+    "industry_name_invalid": "اسم القطاع يجب أن يكون حرفين على الأقل",
+    "event_name_required": "الرجاء إدخال اسم الفعالية",
+    "event_name_invalid": "اسم الفعالية يجب أن يكون حرفين على الأقل",
+    "event_description_required": "الرجاء إدخال وصف الفعالية",
+    "event_description_invalid": "الوصف يجب أن يكون 10 أحرف على الأقل",
+    "event_start_date_required": "الرجاء اختيار تاريخ البداية",
+    "event_end_date_required": "الرجاء اختيار تاريخ النهاية",
+    "event_end_date_invalid": "تاريخ النهاية يجب أن يكون بعد تاريخ البداية"
   },
   "field": {
     "full_name": "الاسم الكامل",
@@ -94,7 +105,11 @@ class CodegenLoader extends AssetLoader{
     "wifi_name": "اسم WiFi",
     "wifi_password": "كلمة مرور WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "اسم القطاع"
+    "industry_name": "اسم القطاع",
+    "event_name": "اسم الفعالية",
+    "event_description": "وصف الفعالية",
+    "event_start_date": "تاريخ البداية",
+    "event_end_date": "تاريخ النهاية"
   },
   "common": {
     "optional": "اختياري",
@@ -262,7 +277,11 @@ static const Map<String,dynamic> _bn = {
     "website": "আপনার ওয়েবসাইটের ঠিকানা লিখুন",
     "wifi_name": "WiFi নেটওয়ার্ক নাম লিখুন (SSID)",
     "wifi_password": "WiFi পাসওয়ার্ড লিখুন",
-    "industry_name": "শিল্পের নাম"
+    "industry_name": "শিল্পের নাম লিখুন",
+    "event_name": "ইভেন্টের নাম লিখুন",
+    "event_description": "ইভেন্টের বিবরণ লিখুন",
+    "event_start_date": "শুরুর তারিখ নির্বাচন করুন",
+    "event_end_date": "শেষের তারিখ নির্বাচন করুন"
   },
   "validation": {
     "email_invalid": "অনুগ্রহ করে একটি বৈধ ইমেইল ঠিকানা লিখুন",
@@ -290,7 +309,14 @@ static const Map<String,dynamic> _bn = {
     "wifi_name_invalid": "WiFi নাম কমপক্ষে ২টি অক্ষরের হতে হবে",
     "wifi_password_invalid": "WiFi পাসওয়ার্ড কমপক্ষে ৮টি অক্ষরের হতে হবে",
     "industry_name_required": "অনুগ্রহ করে শিল্পের নাম লিখুন",
-    "industry_name_invalid": "শিল্পের নাম কমপক্ষে ২টি অক্ষরের হতে হবে"
+    "industry_name_invalid": "শিল্পের নাম কমপক্ষে ২টি অক্ষরের হতে হবে",
+    "event_name_required": "অনুগ্রহ করে ইভেন্টের নাম লিখুন",
+    "event_name_invalid": "ইভেন্টের নাম কমপক্ষে ২টি অক্ষরের হতে হবে",
+    "event_description_required": "অনুগ্রহ করে ইভেন্টের বিবরণ লিখুন",
+    "event_description_invalid": "বিবরণ কমপক্ষে ১০টি অক্ষরের হতে হবে",
+    "event_start_date_required": "অনুগ্রহ করে শুরুর তারিখ নির্বাচন করুন",
+    "event_end_date_required": "অনুগ্রহ করে শেষের তারিখ নির্বাচন করুন",
+    "event_end_date_invalid": "শেষের তারিখ শুরুর তারিখের পরে হতে হবে"
   },
   "field": {
     "full_name": "পূর্ণ নাম",
@@ -315,7 +341,11 @@ static const Map<String,dynamic> _bn = {
     "wifi_name": "WiFi নাম",
     "wifi_password": "WiFi পাসওয়ার্ড",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "শিল্পের নাম"
+    "industry_name": "শিল্পের নাম",
+    "event_name": "ইভেন্টের নাম",
+    "event_description": "ইভেন্টের বিবরণ",
+    "event_start_date": "শুরুর তারিখ",
+    "event_end_date": "শেষের তারিখ"
   },
   "common": {
     "optional": "ঐচ্ছিক",
@@ -483,7 +513,11 @@ static const Map<String,dynamic> _de = {
     "website": "Webseitenadresse eingeben",
     "wifi_name": "WiFi-Netzwerknamen eingeben (SSID)",
     "wifi_password": "WiFi-Passwort eingeben",
-    "industry_name": "Branchenname"
+    "industry_name": "Branchennamen eingeben",
+    "event_name": "Veranstaltungsnamen eingeben",
+    "event_description": "Veranstaltungsbeschreibung eingeben",
+    "event_start_date": "Startdatum wählen",
+    "event_end_date": "Enddatum wählen"
   },
   "validation": {
     "email_invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
@@ -511,7 +545,14 @@ static const Map<String,dynamic> _de = {
     "wifi_name_invalid": "Der WiFi-Name muss mindestens 2 Zeichen lang sein",
     "wifi_password_invalid": "Das WiFi-Passwort muss mindestens 8 Zeichen lang sein",
     "industry_name_required": "Bitte geben Sie den Branchennamen ein",
-    "industry_name_invalid": "Der Branchenname muss mindestens 2 Zeichen lang sein"
+    "industry_name_invalid": "Der Branchenname muss mindestens 2 Zeichen lang sein",
+    "event_name_required": "Bitte geben Sie den Veranstaltungsnamen ein",
+    "event_name_invalid": "Der Veranstaltungsname muss mindestens 2 Zeichen lang sein",
+    "event_description_required": "Bitte geben Sie die Veranstaltungsbeschreibung ein",
+    "event_description_invalid": "Die Beschreibung muss mindestens 10 Zeichen lang sein",
+    "event_start_date_required": "Bitte wählen Sie das Startdatum",
+    "event_end_date_required": "Bitte wählen Sie das Enddatum",
+    "event_end_date_invalid": "Das Enddatum muss nach dem Startdatum liegen"
   },
   "field": {
     "full_name": "Vollständiger Name",
@@ -536,7 +577,11 @@ static const Map<String,dynamic> _de = {
     "wifi_name": "WiFi-Name",
     "wifi_password": "WiFi-Passwort",
     "wifi_ssid": "WiFi-SSID",
-    "industry_name": "Branchenname"
+    "industry_name": "Branchenname",
+    "event_name": "Veranstaltungsname",
+    "event_description": "Veranstaltungsbeschreibung",
+    "event_start_date": "Startdatum",
+    "event_end_date": "Enddatum"
   },
   "common": {
     "optional": "optional",
@@ -704,7 +749,11 @@ static const Map<String,dynamic> _el = {
     "website": "Εισάγετε τη διεύθυνση της ιστοσελίδας σας",
     "wifi_name": "Εισάγετε το όνομα δικτύου WiFi (SSID)",
     "wifi_password": "Εισάγετε τον κωδικό WiFi",
-    "industry_name": "Όνομα κλάδου"
+    "industry_name": "Εισάγετε το όνομα κλάδου",
+    "event_name": "Εισάγετε το όνομα εκδήλωσης",
+    "event_description": "Εισάγετε την περιγραφή εκδήλωσης",
+    "event_start_date": "Επιλέξτε ημερομηνία έναρξης",
+    "event_end_date": "Επιλέξτε ημερομηνία λήξης"
   },
   "validation": {
     "email_invalid": "Εισάγετε έγκυρη διεύθυνση email",
@@ -732,7 +781,14 @@ static const Map<String,dynamic> _el = {
     "wifi_name_invalid": "Το όνομα WiFi πρέπει να έχει τουλάχιστον 2 χαρακτήρες",
     "wifi_password_invalid": "Ο κωδικός WiFi πρέπει να έχει τουλάχιστον 8 χαρακτήρες",
     "industry_name_required": "Εισάγετε το όνομα κλάδου",
-    "industry_name_invalid": "Το όνομα κλάδου πρέπει να έχει τουλάχιστον 2 χαρακτήρες"
+    "industry_name_invalid": "Το όνομα κλάδου πρέπει να έχει τουλάχιστον 2 χαρακτήρες",
+    "event_name_required": "Εισάγετε το όνομα εκδήλωσης",
+    "event_name_invalid": "Το όνομα εκδήλωσης πρέπει να έχει τουλάχιστον 2 χαρακτήρες",
+    "event_description_required": "Εισάγετε την περιγραφή εκδήλωσης",
+    "event_description_invalid": "Η περιγραφή πρέπει να έχει τουλάχιστον 10 χαρακτήρες",
+    "event_start_date_required": "Επιλέξτε ημερομηνία έναρξης",
+    "event_end_date_required": "Επιλέξτε ημερομηνία λήξης",
+    "event_end_date_invalid": "Η ημερομηνία λήξης πρέπει να είναι μετά την ημερομηνία έναρξης"
   },
   "field": {
     "full_name": "Πλήρες Όνομα",
@@ -757,7 +813,11 @@ static const Map<String,dynamic> _el = {
     "wifi_name": "Όνομα WiFi",
     "wifi_password": "Κωδικός WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Όνομα κλάδου"
+    "industry_name": "Όνομα κλάδου",
+    "event_name": "Όνομα εκδήλωσης",
+    "event_description": "Περιγραφή εκδήλωσης",
+    "event_start_date": "Ημερομηνία έναρξης",
+    "event_end_date": "Ημερομηνία λήξης"
   },
   "common": {
     "optional": "προαιρετικό",
@@ -925,7 +985,11 @@ static const Map<String,dynamic> _en = {
     "website": "Enter your website address",
     "wifi_name": "Enter WiFi network name (SSID)",
     "wifi_password": "Enter WiFi password",
-    "industry_name": "Industry Name"
+    "industry_name": "Enter industry name",
+    "event_name": "Enter event name",
+    "event_description": "Enter event description",
+    "event_start_date": "Select start date",
+    "event_end_date": "Select end date"
   },
   "validation": {
     "email_invalid": "Please enter a valid email address",
@@ -953,7 +1017,14 @@ static const Map<String,dynamic> _en = {
     "wifi_name_invalid": "WiFi name must be at least 2 characters",
     "wifi_password_invalid": "WiFi password must be at least 8 characters",
     "industry_name_required": "Please enter industry name",
-    "industry_name_invalid": "Industry name must be at least 2 characters"
+    "industry_name_invalid": "Industry name must be at least 2 characters",
+    "event_name_required": "Please enter event name",
+    "event_name_invalid": "Event name must be at least 2 characters",
+    "event_description_required": "Please enter event description",
+    "event_description_invalid": "Description must be at least 10 characters",
+    "event_start_date_required": "Please select start date",
+    "event_end_date_required": "Please select end date",
+    "event_end_date_invalid": "End date must be after start date"
   },
   "field": {
     "full_name": "Full Name",
@@ -978,7 +1049,11 @@ static const Map<String,dynamic> _en = {
     "wifi_name": "WiFi Name",
     "wifi_password": "WiFi Password",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "Enter industry name"
+    "industry_name": "Industry Name",
+    "event_name": "Event Name",
+    "event_description": "Event Description",
+    "event_start_date": "Start Date",
+    "event_end_date": "End Date"
   },
   "common": {
     "optional": "optional",
@@ -1146,7 +1221,11 @@ static const Map<String,dynamic> _es = {
     "website": "Ingrese su dirección web",
     "wifi_name": "Ingrese nombre de red WiFi (SSID)",
     "wifi_password": "Ingrese contraseña WiFi",
-    "industry_name": "Nombre del sector"
+    "industry_name": "Ingrese nombre del sector",
+    "event_name": "Ingrese nombre del evento",
+    "event_description": "Ingrese descripción del evento",
+    "event_start_date": "Seleccione fecha de inicio",
+    "event_end_date": "Seleccione fecha de fin"
   },
   "validation": {
     "email_invalid": "Ingrese un correo electrónico válido",
@@ -1174,7 +1253,14 @@ static const Map<String,dynamic> _es = {
     "wifi_name_invalid": "El nombre WiFi debe tener al menos 2 caracteres",
     "wifi_password_invalid": "La contraseña WiFi debe tener al menos 8 caracteres",
     "industry_name_required": "Ingrese el nombre del sector",
-    "industry_name_invalid": "El nombre del sector debe tener al menos 2 caracteres"
+    "industry_name_invalid": "El nombre del sector debe tener al menos 2 caracteres",
+    "event_name_required": "Ingrese el nombre del evento",
+    "event_name_invalid": "El nombre del evento debe tener al menos 2 caracteres",
+    "event_description_required": "Ingrese la descripción del evento",
+    "event_description_invalid": "La descripción debe tener al menos 10 caracteres",
+    "event_start_date_required": "Seleccione la fecha de inicio",
+    "event_end_date_required": "Seleccione la fecha de fin",
+    "event_end_date_invalid": "La fecha de fin debe ser después de la fecha de inicio"
   },
   "field": {
     "full_name": "Nombre Completo",
@@ -1199,7 +1285,11 @@ static const Map<String,dynamic> _es = {
     "wifi_name": "Nombre WiFi",
     "wifi_password": "Contraseña WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Nombre del sector"
+    "industry_name": "Nombre del sector",
+    "event_name": "Nombre del evento",
+    "event_description": "Descripción del evento",
+    "event_start_date": "Fecha de inicio",
+    "event_end_date": "Fecha de fin"
   },
   "common": {
     "optional": "opcional",
@@ -1367,7 +1457,11 @@ static const Map<String,dynamic> _fa = {
     "website": "آدرس وبسایت خود را وارد کنید",
     "wifi_name": "نام شبکه WiFi را وارد کنید (SSID)",
     "wifi_password": "رمز عبور WiFi را وارد کنید",
-    "industry_name": "نام صنعت"
+    "industry_name": "نام صنعت را وارد کنید",
+    "event_name": "نام رویداد را وارد کنید",
+    "event_description": "توضیحات رویداد را وارد کنید",
+    "event_start_date": "تاریخ شروع را انتخاب کنید",
+    "event_end_date": "تاریخ پایان را انتخاب کنید"
   },
   "validation": {
     "email_invalid": "لطفاً یک آدرس ایمیل معتبر وارد کنید",
@@ -1395,7 +1489,14 @@ static const Map<String,dynamic> _fa = {
     "wifi_name_invalid": "نام WiFi باید حداقل ۲ کاراکتر باشد",
     "wifi_password_invalid": "رمز عبور WiFi باید حداقل ۸ کاراکتر باشد",
     "industry_name_required": "لطفاً نام صنعت را وارد کنید",
-    "industry_name_invalid": "نام صنعت باید حداقل ۲ کاراکتر باشد"
+    "industry_name_invalid": "نام صنعت باید حداقل ۲ کاراکتر باشد",
+    "event_name_required": "لطفاً نام رویداد را وارد کنید",
+    "event_name_invalid": "نام رویداد باید حداقل ۲ کاراکتر باشد",
+    "event_description_required": "لطفاً توضیحات رویداد را وارد کنید",
+    "event_description_invalid": "توضیحات باید حداقل ۱۰ کاراکتر باشد",
+    "event_start_date_required": "لطفاً تاریخ شروع را انتخاب کنید",
+    "event_end_date_required": "لطفاً تاریخ پایان را انتخاب کنید",
+    "event_end_date_invalid": "تاریخ پایان باید بعد از تاریخ شروع باشد"
   },
   "field": {
     "full_name": "نام کامل",
@@ -1420,7 +1521,11 @@ static const Map<String,dynamic> _fa = {
     "wifi_name": "نام WiFi",
     "wifi_password": "رمز عبور WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "نام صنعت"
+    "industry_name": "نام صنعت",
+    "event_name": "نام رویداد",
+    "event_description": "توضیحات رویداد",
+    "event_start_date": "تاریخ شروع",
+    "event_end_date": "تاریخ پایان"
   },
   "common": {
     "optional": "اختیاری",
@@ -1588,7 +1693,11 @@ static const Map<String,dynamic> _fr = {
     "website": "Entrez l'adresse de votre site web",
     "wifi_name": "Entrez le nom du réseau WiFi (SSID)",
     "wifi_password": "Entrez le mot de passe WiFi",
-    "industry_name": "Nom du secteur"
+    "industry_name": "Entrez le nom du secteur",
+    "event_name": "Entrez le nom de l'événement",
+    "event_description": "Entrez la description de l'événement",
+    "event_start_date": "Sélectionnez la date de début",
+    "event_end_date": "Sélectionnez la date de fin"
   },
   "validation": {
     "email_invalid": "Veuillez entrer une adresse email valide",
@@ -1616,7 +1725,14 @@ static const Map<String,dynamic> _fr = {
     "wifi_name_invalid": "Le nom WiFi doit comporter au moins 2 caractères",
     "wifi_password_invalid": "Le mot de passe WiFi doit comporter au moins 8 caractères",
     "industry_name_required": "Veuillez entrer le nom du secteur",
-    "industry_name_invalid": "Le nom du secteur doit comporter au moins 2 caractères"
+    "industry_name_invalid": "Le nom du secteur doit comporter au moins 2 caractères",
+    "event_name_required": "Veuillez entrer le nom de l'événement",
+    "event_name_invalid": "Le nom de l'événement doit comporter au moins 2 caractères",
+    "event_description_required": "Veuillez entrer la description de l'événement",
+    "event_description_invalid": "La description doit comporter au moins 10 caractères",
+    "event_start_date_required": "Veuillez sélectionner la date de début",
+    "event_end_date_required": "Veuillez sélectionner la date de fin",
+    "event_end_date_invalid": "La date de fin doit être après la date de début"
   },
   "field": {
     "full_name": "Nom complet",
@@ -1641,7 +1757,11 @@ static const Map<String,dynamic> _fr = {
     "wifi_name": "Nom WiFi",
     "wifi_password": "Mot de passe WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Nom du secteur"
+    "industry_name": "Nom du secteur",
+    "event_name": "Nom de l'événement",
+    "event_description": "Description de l'événement",
+    "event_start_date": "Date de début",
+    "event_end_date": "Date de fin"
   },
   "common": {
     "optional": "facultatif",
@@ -1809,7 +1929,11 @@ static const Map<String,dynamic> _hi = {
     "website": "अपनी वेबसाइट का पता दर्ज करें",
     "wifi_name": "WiFi नेटवर्क नाम दर्ज करें (SSID)",
     "wifi_password": "WiFi पासवर्ड दर्ज करें",
-    "industry_name": "उद्योग का नाम"
+    "industry_name": "उद्योग का नाम दर्ज करें",
+    "event_name": "इवेंट का नाम दर्ज करें",
+    "event_description": "इवेंट का विवरण दर्ज करें",
+    "event_start_date": "प्रारंभ तिथि चुनें",
+    "event_end_date": "समाप्ति तिथि चुनें"
   },
   "validation": {
     "email_invalid": "कृपया एक वैध ईमेल पता दर्ज करें",
@@ -1837,7 +1961,14 @@ static const Map<String,dynamic> _hi = {
     "wifi_name_invalid": "WiFi नाम कम से कम 2 अक्षरों का होना चाहिए",
     "wifi_password_invalid": "WiFi पासवर्ड कम से कम 8 अक्षरों का होना चाहिए",
     "industry_name_required": "कृपया उद्योग का नाम दर्ज करें",
-    "industry_name_invalid": "उद्योग का नाम कम से कम 2 अक्षरों का होना चाहिए"
+    "industry_name_invalid": "उद्योग का नाम कम से कम 2 अक्षरों का होना चाहिए",
+    "event_name_required": "कृपया इवेंट का नाम दर्ज करें",
+    "event_name_invalid": "इवेंट का नाम कम से कम 2 अक्षरों का होना चाहिए",
+    "event_description_required": "कृपया इवेंट का विवरण दर्ज करें",
+    "event_description_invalid": "विवरण कम से कम 10 अक्षरों का होना चाहिए",
+    "event_start_date_required": "कृपया प्रारंभ तिथि चुनें",
+    "event_end_date_required": "कृपया समाप्ति तिथि चुनें",
+    "event_end_date_invalid": "समाप्ति तिथि प्रारंभ तिथि के बाद होनी चाहिए"
   },
   "field": {
     "full_name": "पूरा नाम",
@@ -1862,7 +1993,11 @@ static const Map<String,dynamic> _hi = {
     "wifi_name": "WiFi नाम",
     "wifi_password": "WiFi पासवर्ड",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "उद्योग का नाम"
+    "industry_name": "उद्योग का नाम",
+    "event_name": "इवेंट का नाम",
+    "event_description": "इवेंट का विवरण",
+    "event_start_date": "प्रारंभ तिथि",
+    "event_end_date": "समाप्ति तिथि"
   },
   "common": {
     "optional": "वैकल्पिक",
@@ -2030,7 +2165,11 @@ static const Map<String,dynamic> _id = {
     "website": "Masukkan alamat website Anda",
     "wifi_name": "Masukkan nama jaringan WiFi (SSID)",
     "wifi_password": "Masukkan kata sandi WiFi",
-    "industry_name": "Nama industri"
+    "industry_name": "Masukkan nama industri",
+    "event_name": "Masukkan nama acara",
+    "event_description": "Masukkan deskripsi acara",
+    "event_start_date": "Pilih tanggal mulai",
+    "event_end_date": "Pilih tanggal selesai"
   },
   "validation": {
     "email_invalid": "Masukkan alamat email yang valid",
@@ -2058,7 +2197,14 @@ static const Map<String,dynamic> _id = {
     "wifi_name_invalid": "Nama WiFi minimal 2 karakter",
     "wifi_password_invalid": "Kata sandi WiFi minimal 8 karakter",
     "industry_name_required": "Masukkan nama industri",
-    "industry_name_invalid": "Nama industri minimal 2 karakter"
+    "industry_name_invalid": "Nama industri minimal 2 karakter",
+    "event_name_required": "Masukkan nama acara",
+    "event_name_invalid": "Nama acara minimal 2 karakter",
+    "event_description_required": "Masukkan deskripsi acara",
+    "event_description_invalid": "Deskripsi minimal 10 karakter",
+    "event_start_date_required": "Pilih tanggal mulai",
+    "event_end_date_required": "Pilih tanggal selesai",
+    "event_end_date_invalid": "Tanggal selesai harus setelah tanggal mulai"
   },
   "field": {
     "full_name": "Nama Lengkap",
@@ -2083,7 +2229,11 @@ static const Map<String,dynamic> _id = {
     "wifi_name": "Nama WiFi",
     "wifi_password": "Kata Sandi WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Nama industri"
+    "industry_name": "Nama Industri",
+    "event_name": "Nama Acara",
+    "event_description": "Deskripsi Acara",
+    "event_start_date": "Tanggal Mulai",
+    "event_end_date": "Tanggal Selesai"
   },
   "common": {
     "optional": "opsional",
@@ -2251,7 +2401,11 @@ static const Map<String,dynamic> _it = {
     "website": "Inserisci l'indirizzo del tuo sito",
     "wifi_name": "Inserisci il nome della rete WiFi (SSID)",
     "wifi_password": "Inserisci la password WiFi",
-    "industry_name": "Nome del settore"
+    "industry_name": "Inserisci il nome del settore",
+    "event_name": "Inserisci il nome dell'evento",
+    "event_description": "Inserisci la descrizione dell'evento",
+    "event_start_date": "Seleziona la data di inizio",
+    "event_end_date": "Seleziona la data di fine"
   },
   "validation": {
     "email_invalid": "Inserisci un indirizzo email valido",
@@ -2279,7 +2433,14 @@ static const Map<String,dynamic> _it = {
     "wifi_name_invalid": "Il nome WiFi deve avere almeno 2 caratteri",
     "wifi_password_invalid": "La password WiFi deve avere almeno 8 caratteri",
     "industry_name_required": "Inserisci il nome del settore",
-    "industry_name_invalid": "Il nome del settore deve avere almeno 2 caratteri"
+    "industry_name_invalid": "Il nome del settore deve avere almeno 2 caratteri",
+    "event_name_required": "Inserisci il nome dell'evento",
+    "event_name_invalid": "Il nome dell'evento deve avere almeno 2 caratteri",
+    "event_description_required": "Inserisci la descrizione dell'evento",
+    "event_description_invalid": "La descrizione deve avere almeno 10 caratteri",
+    "event_start_date_required": "Seleziona la data di inizio",
+    "event_end_date_required": "Seleziona la data di fine",
+    "event_end_date_invalid": "La data di fine deve essere dopo la data di inizio"
   },
   "field": {
     "full_name": "Nome Completo",
@@ -2304,7 +2465,11 @@ static const Map<String,dynamic> _it = {
     "wifi_name": "Nome WiFi",
     "wifi_password": "Password WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Nome del settore"
+    "industry_name": "Nome del settore",
+    "event_name": "Nome dell'evento",
+    "event_description": "Descrizione dell'evento",
+    "event_start_date": "Data di inizio",
+    "event_end_date": "Data di fine"
   },
   "common": {
     "optional": "opzionale",
@@ -2472,7 +2637,11 @@ static const Map<String,dynamic> _ja = {
     "website": "ウェブサイトのアドレスを入力",
     "wifi_name": "WiFiネットワーク名を入力（SSID）",
     "wifi_password": "WiFiパスワードを入力",
-    "industry_name": "業界名"
+    "industry_name": "業界名を入力",
+    "event_name": "イベント名を入力",
+    "event_description": "イベントの説明を入力",
+    "event_start_date": "開始日を選択",
+    "event_end_date": "終了日を選択"
   },
   "validation": {
     "email_invalid": "有効なメールアドレスを入力してください",
@@ -2500,7 +2669,14 @@ static const Map<String,dynamic> _ja = {
     "wifi_name_invalid": "WiFi名は2文字以上である必要があります",
     "wifi_password_invalid": "WiFiパスワードは8文字以上である必要があります",
     "industry_name_required": "業界名を入力してください",
-    "industry_name_invalid": "業界名は2文字以上である必要があります"
+    "industry_name_invalid": "業界名は2文字以上である必要があります",
+    "event_name_required": "イベント名を入力してください",
+    "event_name_invalid": "イベント名は2文字以上である必要があります",
+    "event_description_required": "イベントの説明を入力してください",
+    "event_description_invalid": "説明は10文字以上である必要があります",
+    "event_start_date_required": "開始日を選択してください",
+    "event_end_date_required": "終了日を選択してください",
+    "event_end_date_invalid": "終了日は開始日より後である必要があります"
   },
   "field": {
     "full_name": "フルネーム",
@@ -2525,7 +2701,11 @@ static const Map<String,dynamic> _ja = {
     "wifi_name": "WiFi名",
     "wifi_password": "WiFiパスワード",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "業界名"
+    "industry_name": "業界名",
+    "event_name": "イベント名",
+    "event_description": "イベントの説明",
+    "event_start_date": "開始日",
+    "event_end_date": "終了日"
   },
   "common": {
     "optional": "任意",
@@ -2693,7 +2873,11 @@ static const Map<String,dynamic> _ko = {
     "website": "웹사이트 주소 입력",
     "wifi_name": "WiFi 네트워크 이름 입력 (SSID)",
     "wifi_password": "WiFi 비밀번호 입력",
-    "industry_name": "업종명"
+    "industry_name": "업종명 입력",
+    "event_name": "이벤트명 입력",
+    "event_description": "이벤트 설명 입력",
+    "event_start_date": "시작일 선택",
+    "event_end_date": "종료일 선택"
   },
   "validation": {
     "email_invalid": "유효한 이메일 주소를 입력하세요",
@@ -2721,7 +2905,14 @@ static const Map<String,dynamic> _ko = {
     "wifi_name_invalid": "WiFi 이름은 최소 2자 이상이어야 합니다",
     "wifi_password_invalid": "WiFi 비밀번호는 최소 8자 이상이어야 합니다",
     "industry_name_required": "업종명을 입력하세요",
-    "industry_name_invalid": "업종명은 최소 2자 이상이어야 합니다"
+    "industry_name_invalid": "업종명은 최소 2자 이상이어야 합니다",
+    "event_name_required": "이벤트명을 입력하세요",
+    "event_name_invalid": "이벤트명은 최소 2자 이상이어야 합니다",
+    "event_description_required": "이벤트 설명을 입력하세요",
+    "event_description_invalid": "설명은 최소 10자 이상이어야 합니다",
+    "event_start_date_required": "시작일을 선택하세요",
+    "event_end_date_required": "종료일을 선택하세요",
+    "event_end_date_invalid": "종료일은 시작일 이후여야 합니다"
   },
   "field": {
     "full_name": "전체 이름",
@@ -2746,7 +2937,11 @@ static const Map<String,dynamic> _ko = {
     "wifi_name": "WiFi 이름",
     "wifi_password": "WiFi 비밀번호",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "업종명"
+    "industry_name": "업종명",
+    "event_name": "이벤트명",
+    "event_description": "이벤트 설명",
+    "event_start_date": "시작일",
+    "event_end_date": "종료일"
   },
   "common": {
     "optional": "선택사항",
@@ -2914,7 +3109,11 @@ static const Map<String,dynamic> _mr = {
     "website": "आपला वेबसाइट पत्ता प्रविष्ट करा",
     "wifi_name": "WiFi नेटवर्क नाव प्रविष्ट करा (SSID)",
     "wifi_password": "WiFi पासवर्ड प्रविष्ट करा",
-    "industry_name": "उद्योगाचे नाव"
+    "industry_name": "उद्योगाचे नाव प्रविष्ट करा",
+    "event_name": "कार्यक्रमाचे नाव प्रविष्ट करा",
+    "event_description": "कार्यक्रमाचे वर्णन प्रविष्ट करा",
+    "event_start_date": "प्रारंभ तारीख निवडा",
+    "event_end_date": "समाप्ती तारीख निवडा"
   },
   "validation": {
     "email_invalid": "कृपया वैध ईमेल पत्ता प्रविष्ट करा",
@@ -2942,7 +3141,14 @@ static const Map<String,dynamic> _mr = {
     "wifi_name_invalid": "WiFi नाव किमान 2 अक्षरांचे असावे",
     "wifi_password_invalid": "WiFi पासवर्ड किमान 8 अक्षरांचा असावा",
     "industry_name_required": "कृपया उद्योगाचे नाव प्रविष्ट करा",
-    "industry_name_invalid": "उद्योगाचे नाव किमान 2 अक्षरांचे असावे"
+    "industry_name_invalid": "उद्योगाचे नाव किमान 2 अक्षरांचे असावे",
+    "event_name_required": "कृपया कार्यक्रमाचे नाव प्रविष्ट करा",
+    "event_name_invalid": "कार्यक्रमाचे नाव किमान 2 अक्षरांचे असावे",
+    "event_description_required": "कृपया कार्यक्रमाचे वर्णन प्रविष्ट करा",
+    "event_description_invalid": "वर्णन किमान 10 अक्षरांचे असावे",
+    "event_start_date_required": "कृपया प्रारंभ तारीख निवडा",
+    "event_end_date_required": "कृपया समाप्ती तारीख निवडा",
+    "event_end_date_invalid": "समाप्ती तारीख प्रारंभ तारीख नंतर असावी"
   },
   "field": {
     "full_name": "पूर्ण नाव",
@@ -2967,7 +3173,11 @@ static const Map<String,dynamic> _mr = {
     "wifi_name": "WiFi नाव",
     "wifi_password": "WiFi पासवर्ड",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "उद्योगाचे नाव"
+    "industry_name": "उद्योगाचे नाव",
+    "event_name": "कार्यक्रमाचे नाव",
+    "event_description": "कार्यक्रमाचे वर्णन",
+    "event_start_date": "प्रारंभ तारीख",
+    "event_end_date": "समाप्ती तारीख"
   },
   "common": {
     "optional": "ऐच्छिक",
@@ -3135,7 +3345,11 @@ static const Map<String,dynamic> _ms = {
     "website": "Masukkan alamat laman web anda",
     "wifi_name": "Masukkan nama rangkaian WiFi (SSID)",
     "wifi_password": "Masukkan kata laluan WiFi",
-    "industry_name": "Nama industri"
+    "industry_name": "Masukkan nama industri",
+    "event_name": "Masukkan nama acara",
+    "event_description": "Masukkan penerangan acara",
+    "event_start_date": "Pilih tarikh mula",
+    "event_end_date": "Pilih tarikh tamat"
   },
   "validation": {
     "email_invalid": "Masukkan alamat e-mel yang sah",
@@ -3163,7 +3377,14 @@ static const Map<String,dynamic> _ms = {
     "wifi_name_invalid": "Nama WiFi mestilah sekurang-kurangnya 2 aksara",
     "wifi_password_invalid": "Kata laluan WiFi mestilah sekurang-kurangnya 8 aksara",
     "industry_name_required": "Masukkan nama industri",
-    "industry_name_invalid": "Nama industri mestilah sekurang-kurangnya 2 aksara"
+    "industry_name_invalid": "Nama industri mestilah sekurang-kurangnya 2 aksara",
+    "event_name_required": "Masukkan nama acara",
+    "event_name_invalid": "Nama acara mestilah sekurang-kurangnya 2 aksara",
+    "event_description_required": "Masukkan penerangan acara",
+    "event_description_invalid": "Penerangan mestilah sekurang-kurangnya 10 aksara",
+    "event_start_date_required": "Pilih tarikh mula",
+    "event_end_date_required": "Pilih tarikh tamat",
+    "event_end_date_invalid": "Tarikh tamat mestilah selepas tarikh mula"
   },
   "field": {
     "full_name": "Nama Penuh",
@@ -3188,7 +3409,11 @@ static const Map<String,dynamic> _ms = {
     "wifi_name": "Nama WiFi",
     "wifi_password": "Kata Laluan WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Nama industri"
+    "industry_name": "Nama Industri",
+    "event_name": "Nama Acara",
+    "event_description": "Penerangan Acara",
+    "event_start_date": "Tarikh Mula",
+    "event_end_date": "Tarikh Tamat"
   },
   "common": {
     "optional": "pilihan",
@@ -3356,7 +3581,11 @@ static const Map<String,dynamic> _nl = {
     "website": "Voer uw website-adres in",
     "wifi_name": "Voer WiFi-netwerknaam in (SSID)",
     "wifi_password": "Voer WiFi-wachtwoord in",
-    "industry_name": "Sector naam"
+    "industry_name": "Voer sector naam in",
+    "event_name": "Voer evenementnaam in",
+    "event_description": "Voer evenementbeschrijving in",
+    "event_start_date": "Selecteer startdatum",
+    "event_end_date": "Selecteer einddatum"
   },
   "validation": {
     "email_invalid": "Voer een geldig e-mailadres in",
@@ -3384,7 +3613,14 @@ static const Map<String,dynamic> _nl = {
     "wifi_name_invalid": "WiFi-naam moet minimaal 2 tekens bevatten",
     "wifi_password_invalid": "WiFi-wachtwoord moet minimaal 8 tekens bevatten",
     "industry_name_required": "Voer de sector naam in",
-    "industry_name_invalid": "Sector naam moet minimaal 2 tekens bevatten"
+    "industry_name_invalid": "Sector naam moet minimaal 2 tekens bevatten",
+    "event_name_required": "Voer evenementnaam in",
+    "event_name_invalid": "Evenementnaam moet minimaal 2 tekens bevatten",
+    "event_description_required": "Voer evenementbeschrijving in",
+    "event_description_invalid": "Beschrijving moet minimaal 10 tekens bevatten",
+    "event_start_date_required": "Selecteer startdatum",
+    "event_end_date_required": "Selecteer einddatum",
+    "event_end_date_invalid": "Einddatum moet na startdatum zijn"
   },
   "field": {
     "full_name": "Volledige Naam",
@@ -3409,7 +3645,11 @@ static const Map<String,dynamic> _nl = {
     "wifi_name": "WiFi-naam",
     "wifi_password": "WiFi-wachtwoord",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "Sector naam"
+    "industry_name": "Sector naam",
+    "event_name": "Evenementnaam",
+    "event_description": "Evenementbeschrijving",
+    "event_start_date": "Startdatum",
+    "event_end_date": "Einddatum"
   },
   "common": {
     "optional": "optioneel",
@@ -3577,7 +3817,11 @@ static const Map<String,dynamic> _pa = {
     "website": "ਆਪਣੀ ਵੈਬਸਾਈਟ ਦਾ ਪਤਾ ਦਾਖਲ ਕਰੋ",
     "wifi_name": "WiFi ਨੈੱਟਵਰਕ ਨਾਮ ਦਾਖਲ ਕਰੋ (SSID)",
     "wifi_password": "WiFi ਪਾਸਵਰਡ ਦਾਖਲ ਕਰੋ",
-    "industry_name": "ਉਦਯੋਗ ਦਾ ਨਾਮ"
+    "industry_name": "ਉਦਯੋਗ ਦਾ ਨਾਮ ਦਾਖਲ ਕਰੋ",
+    "event_name": "ਇਵੈਂਟ ਦਾ ਨਾਮ ਦਾਖਲ ਕਰੋ",
+    "event_description": "ਇਵੈਂਟ ਦਾ ਵੇਰਵਾ ਦਾਖਲ ਕਰੋ",
+    "event_start_date": "ਸ਼ੁਰੂਆਤੀ ਮਿਤੀ ਚੁਣੋ",
+    "event_end_date": "ਅੰਤਿਮ ਮਿਤੀ ਚੁਣੋ"
   },
   "validation": {
     "email_invalid": "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੈਧ ਈਮੇਲ ਪਤਾ ਦਾਖਲ ਕਰੋ",
@@ -3605,7 +3849,14 @@ static const Map<String,dynamic> _pa = {
     "wifi_name_invalid": "WiFi ਨਾਮ ਘੱਟੋ-ਘੱਟ 2 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
     "wifi_password_invalid": "WiFi ਪਾਸਵਰਡ ਘੱਟੋ-ਘੱਟ 8 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
     "industry_name_required": "ਕਿਰਪਾ ਕਰਕੇ ਉਦਯੋਗ ਦਾ ਨਾਮ ਦਾਖਲ ਕਰੋ",
-    "industry_name_invalid": "ਉਦਯੋਗ ਦਾ ਨਾਮ ਘੱਟੋ-ਘੱਟ 2 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ"
+    "industry_name_invalid": "ਉਦਯੋਗ ਦਾ ਨਾਮ ਘੱਟੋ-ਘੱਟ 2 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+    "event_name_required": "ਕਿਰਪਾ ਕਰਕੇ ਇਵੈਂਟ ਦਾ ਨਾਮ ਦਾਖਲ ਕਰੋ",
+    "event_name_invalid": "ਇਵੈਂਟ ਦਾ ਨਾਮ ਘੱਟੋ-ਘੱਟ 2 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+    "event_description_required": "ਕਿਰਪਾ ਕਰਕੇ ਇਵੈਂਟ ਦਾ ਵੇਰਵਾ ਦਾਖਲ ਕਰੋ",
+    "event_description_invalid": "ਵੇਰਵਾ ਘੱਟੋ-ਘੱਟ 10 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+    "event_start_date_required": "ਕਿਰਪਾ ਕਰਕੇ ਸ਼ੁਰੂਆਤੀ ਮਿਤੀ ਚੁਣੋ",
+    "event_end_date_required": "ਕਿਰਪਾ ਕਰਕੇ ਅੰਤਿਮ ਮਿਤੀ ਚੁਣੋ",
+    "event_end_date_invalid": "ਅੰਤਿਮ ਮਿਤੀ ਸ਼ੁਰੂਆਤੀ ਮਿਤੀ ਤੋਂ ਬਾਅਦ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ"
   },
   "field": {
     "full_name": "ਪੂਰਾ ਨਾਮ",
@@ -3630,7 +3881,11 @@ static const Map<String,dynamic> _pa = {
     "wifi_name": "WiFi ਨਾਮ",
     "wifi_password": "WiFi ਪਾਸਵਰਡ",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "ਉਦਯੋਗ ਦਾ ਨਾਮ"
+    "industry_name": "ਉਦਯੋਗ ਦਾ ਨਾਮ",
+    "event_name": "ਇਵੈਂਟ ਦਾ ਨਾਮ",
+    "event_description": "ਇਵੈਂਟ ਦਾ ਵੇਰਵਾ",
+    "event_start_date": "ਸ਼ੁਰੂਆਤੀ ਮਿਤੀ",
+    "event_end_date": "ਅੰਤਿਮ ਮਿਤੀ"
   },
   "common": {
     "optional": "ਵਿਕਲਪਿਕ",
@@ -3798,7 +4053,11 @@ static const Map<String,dynamic> _pl = {
     "website": "Wprowadź adres swojej strony",
     "wifi_name": "Wprowadź nazwę sieci WiFi (SSID)",
     "wifi_password": "Wprowadź hasło WiFi",
-    "industry_name": "Nazwa branży"
+    "industry_name": "Wprowadź nazwę branży",
+    "event_name": "Wprowadź nazwę wydarzenia",
+    "event_description": "Wprowadź opis wydarzenia",
+    "event_start_date": "Wybierz datę rozpoczęcia",
+    "event_end_date": "Wybierz datę zakończenia"
   },
   "validation": {
     "email_invalid": "Wprowadź poprawny adres e-mail",
@@ -3826,7 +4085,14 @@ static const Map<String,dynamic> _pl = {
     "wifi_name_invalid": "Nazwa WiFi musi mieć co najmniej 2 znaki",
     "wifi_password_invalid": "Hasło WiFi musi mieć co najmniej 8 znaków",
     "industry_name_required": "Wprowadź nazwę branży",
-    "industry_name_invalid": "Nazwa branży musi mieć co najmniej 2 znaki"
+    "industry_name_invalid": "Nazwa branży musi mieć co najmniej 2 znaki",
+    "event_name_required": "Wprowadź nazwę wydarzenia",
+    "event_name_invalid": "Nazwa wydarzenia musi mieć co najmniej 2 znaki",
+    "event_description_required": "Wprowadź opis wydarzenia",
+    "event_description_invalid": "Opis musi mieć co najmniej 10 znaków",
+    "event_start_date_required": "Wybierz datę rozpoczęcia",
+    "event_end_date_required": "Wybierz datę zakończenia",
+    "event_end_date_invalid": "Data zakończenia musi być po dacie rozpoczęcia"
   },
   "field": {
     "full_name": "Imię i Nazwisko",
@@ -3851,7 +4117,11 @@ static const Map<String,dynamic> _pl = {
     "wifi_name": "Nazwa WiFi",
     "wifi_password": "Hasło WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Nazwa branży"
+    "industry_name": "Nazwa branży",
+    "event_name": "Nazwa wydarzenia",
+    "event_description": "Opis wydarzenia",
+    "event_start_date": "Data rozpoczęcia",
+    "event_end_date": "Data zakończenia"
   },
   "common": {
     "optional": "opcjonalne",
@@ -4019,7 +4289,11 @@ static const Map<String,dynamic> _pt = {
     "website": "Digite o endereço do seu site",
     "wifi_name": "Digite o nome da rede WiFi (SSID)",
     "wifi_password": "Digite a senha WiFi",
-    "industry_name": "Nome do setor"
+    "industry_name": "Digite o nome do setor",
+    "event_name": "Digite o nome do evento",
+    "event_description": "Digite a descrição do evento",
+    "event_start_date": "Selecione a data de início",
+    "event_end_date": "Selecione a data de fim"
   },
   "validation": {
     "email_invalid": "Digite um e-mail válido",
@@ -4047,7 +4321,14 @@ static const Map<String,dynamic> _pt = {
     "wifi_name_invalid": "O nome WiFi deve ter pelo menos 2 caracteres",
     "wifi_password_invalid": "A senha WiFi deve ter pelo menos 8 caracteres",
     "industry_name_required": "Digite o nome do setor",
-    "industry_name_invalid": "O nome do setor deve ter pelo menos 2 caracteres"
+    "industry_name_invalid": "O nome do setor deve ter pelo menos 2 caracteres",
+    "event_name_required": "Digite o nome do evento",
+    "event_name_invalid": "O nome do evento deve ter pelo menos 2 caracteres",
+    "event_description_required": "Digite a descrição do evento",
+    "event_description_invalid": "A descrição deve ter pelo menos 10 caracteres",
+    "event_start_date_required": "Selecione a data de início",
+    "event_end_date_required": "Selecione a data de fim",
+    "event_end_date_invalid": "A data de fim deve ser após a data de início"
   },
   "field": {
     "full_name": "Nome Completo",
@@ -4072,7 +4353,11 @@ static const Map<String,dynamic> _pt = {
     "wifi_name": "Nome WiFi",
     "wifi_password": "Senha WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Nome do setor"
+    "industry_name": "Nome do setor",
+    "event_name": "Nome do evento",
+    "event_description": "Descrição do evento",
+    "event_start_date": "Data de início",
+    "event_end_date": "Data de fim"
   },
   "common": {
     "optional": "opcional",
@@ -4240,7 +4525,11 @@ static const Map<String,dynamic> _ro = {
     "website": "Introduceți adresa site-ului dvs.",
     "wifi_name": "Introduceți numele rețelei WiFi (SSID)",
     "wifi_password": "Introduceți parola WiFi",
-    "industry_name": "Numele sectorului"
+    "industry_name": "Introduceți numele sectorului",
+    "event_name": "Introduceți numele evenimentului",
+    "event_description": "Introduceți descrierea evenimentului",
+    "event_start_date": "Selectați data de început",
+    "event_end_date": "Selectați data de sfârșit"
   },
   "validation": {
     "email_invalid": "Introduceți o adresă de email validă",
@@ -4268,7 +4557,14 @@ static const Map<String,dynamic> _ro = {
     "wifi_name_invalid": "Numele WiFi trebuie să aibă cel puțin 2 caractere",
     "wifi_password_invalid": "Parola WiFi trebuie să aibă cel puțin 8 caractere",
     "industry_name_required": "Introduceți numele sectorului",
-    "industry_name_invalid": "Numele sectorului trebuie să aibă cel puțin 2 caractere"
+    "industry_name_invalid": "Numele sectorului trebuie să aibă cel puțin 2 caractere",
+    "event_name_required": "Introduceți numele evenimentului",
+    "event_name_invalid": "Numele evenimentului trebuie să aibă cel puțin 2 caractere",
+    "event_description_required": "Introduceți descrierea evenimentului",
+    "event_description_invalid": "Descrierea trebuie să aibă cel puțin 10 caractere",
+    "event_start_date_required": "Selectați data de început",
+    "event_end_date_required": "Selectați data de sfârșit",
+    "event_end_date_invalid": "Data de sfârșit trebuie să fie după data de început"
   },
   "field": {
     "full_name": "Nume Complet",
@@ -4293,7 +4589,11 @@ static const Map<String,dynamic> _ro = {
     "wifi_name": "Nume WiFi",
     "wifi_password": "Parolă WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Numele sectorului"
+    "industry_name": "Numele sectorului",
+    "event_name": "Numele evenimentului",
+    "event_description": "Descrierea evenimentului",
+    "event_start_date": "Data de început",
+    "event_end_date": "Data de sfârșit"
   },
   "common": {
     "optional": "opțional",
@@ -4461,7 +4761,11 @@ static const Map<String,dynamic> _ru = {
     "website": "Введите адрес вашего сайта",
     "wifi_name": "Введите имя сети WiFi (SSID)",
     "wifi_password": "Введите пароль WiFi",
-    "industry_name": "Название отрасли"
+    "industry_name": "Введите название отрасли",
+    "event_name": "Введите название события",
+    "event_description": "Введите описание события",
+    "event_start_date": "Выберите дату начала",
+    "event_end_date": "Выберите дату окончания"
   },
   "validation": {
     "email_invalid": "Введите действительный адрес электронной почты",
@@ -4489,7 +4793,14 @@ static const Map<String,dynamic> _ru = {
     "wifi_name_invalid": "Имя WiFi должно содержать не менее 2 символов",
     "wifi_password_invalid": "Пароль WiFi должен содержать не менее 8 символов",
     "industry_name_required": "Введите название отрасли",
-    "industry_name_invalid": "Название отрасли должно содержать не менее 2 символов"
+    "industry_name_invalid": "Название отрасли должно содержать не менее 2 символов",
+    "event_name_required": "Введите название события",
+    "event_name_invalid": "Название события должно содержать не менее 2 символов",
+    "event_description_required": "Введите описание события",
+    "event_description_invalid": "Описание должно содержать не менее 10 символов",
+    "event_start_date_required": "Выберите дату начала",
+    "event_end_date_required": "Выберите дату окончания",
+    "event_end_date_invalid": "Дата окончания должна быть позже даты начала"
   },
   "field": {
     "full_name": "Полное имя",
@@ -4514,7 +4825,11 @@ static const Map<String,dynamic> _ru = {
     "wifi_name": "Имя WiFi",
     "wifi_password": "Пароль WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Название отрасли"
+    "industry_name": "Название отрасли",
+    "event_name": "Название события",
+    "event_description": "Описание события",
+    "event_start_date": "Дата начала",
+    "event_end_date": "Дата окончания"
   },
   "common": {
     "optional": "необязательно",
@@ -4682,7 +4997,11 @@ static const Map<String,dynamic> _sw = {
     "website": "Ingiza anwani ya tovuti yako",
     "wifi_name": "Ingiza jina la mtandao wa WiFi (SSID)",
     "wifi_password": "Ingiza nenosiri la WiFi",
-    "industry_name": "Jina la sekta"
+    "industry_name": "Ingiza jina la sekta",
+    "event_name": "Ingiza jina la tukio",
+    "event_description": "Ingiza maelezo ya tukio",
+    "event_start_date": "Chagua tarehe ya kuanza",
+    "event_end_date": "Chagua tarehe ya mwisho"
   },
   "validation": {
     "email_invalid": "Tafadhali ingiza barua pepe sahihi",
@@ -4710,7 +5029,14 @@ static const Map<String,dynamic> _sw = {
     "wifi_name_invalid": "Jina la WiFi lazima liwe na angalau herufi 2",
     "wifi_password_invalid": "Nenosiri la WiFi lazima liwe na angalau herufi 8",
     "industry_name_required": "Tafadhali ingiza jina la sekta",
-    "industry_name_invalid": "Jina la sekta lazima liwe na angalau herufi 2"
+    "industry_name_invalid": "Jina la sekta lazima liwe na angalau herufi 2",
+    "event_name_required": "Tafadhali ingiza jina la tukio",
+    "event_name_invalid": "Jina la tukio lazima liwe na angalau herufi 2",
+    "event_description_required": "Tafadhali ingiza maelezo ya tukio",
+    "event_description_invalid": "Maelezo lazima yawe na angalau herufi 10",
+    "event_start_date_required": "Tafadhali chagua tarehe ya kuanza",
+    "event_end_date_required": "Tafadhali chagua tarehe ya mwisho",
+    "event_end_date_invalid": "Tarehe ya mwisho lazima iwe baada ya tarehe ya kuanza"
   },
   "field": {
     "full_name": "Jina Kamili",
@@ -4735,7 +5061,11 @@ static const Map<String,dynamic> _sw = {
     "wifi_name": "Jina la WiFi",
     "wifi_password": "Nenosiri la WiFi",
     "wifi_ssid": "SSID ya WiFi",
-    "industry_name": "Jina la sekta"
+    "industry_name": "Jina la Sekta",
+    "event_name": "Jina la Tukio",
+    "event_description": "Maelezo ya Tukio",
+    "event_start_date": "Tarehe ya Kuanza",
+    "event_end_date": "Tarehe ya Mwisho"
   },
   "common": {
     "optional": "hiari",
@@ -4903,7 +5233,11 @@ static const Map<String,dynamic> _ta = {
     "website": "உங்கள் வலைத்தள முகவரியை உள்ளிடவும்",
     "wifi_name": "WiFi நெட்வொர்க் பெயரை உள்ளிடவும் (SSID)",
     "wifi_password": "WiFi கடவுச்சொல்லை உள்ளிடவும்",
-    "industry_name": "துறையின் பெயர்"
+    "industry_name": "துறையின் பெயரை உள்ளிடவும்",
+    "event_name": "நிகழ்வின் பெயரை உள்ளிடவும்",
+    "event_description": "நிகழ்வின் விளக்கத்தை உள்ளிடவும்",
+    "event_start_date": "தொடக்க தேதியைத் தேர்ந்தெடுக்கவும்",
+    "event_end_date": "முடிவு தேதியைத் தேர்ந்தெடுக்கவும்"
   },
   "validation": {
     "email_invalid": "செல்லுபடியாகும் மின்னஞ்சல் முகவரியை உள்ளிடவும்",
@@ -4931,7 +5265,14 @@ static const Map<String,dynamic> _ta = {
     "wifi_name_invalid": "WiFi பெயர் குறைந்தது 2 எழுத்துகள் இருக்க வேண்டும்",
     "wifi_password_invalid": "WiFi கடவுச்சொல் குறைந்தது 8 எழுத்துகள் இருக்க வேண்டும்",
     "industry_name_required": "துறையின் பெயரை உள்ளிடவும்",
-    "industry_name_invalid": "துறையின் பெயர் குறைந்தது 2 எழுத்துகள் இருக்க வேண்டும்"
+    "industry_name_invalid": "துறையின் பெயர் குறைந்தது 2 எழுத்துகள் இருக்க வேண்டும்",
+    "event_name_required": "நிகழ்வின் பெயரை உள்ளிடவும்",
+    "event_name_invalid": "நிகழ்வின் பெயர் குறைந்தது 2 எழுத்துகள் இருக்க வேண்டும்",
+    "event_description_required": "நிகழ்வின் விளக்கத்தை உள்ளிடவும்",
+    "event_description_invalid": "விளக்கம் குறைந்தது 10 எழுத்துகள் இருக்க வேண்டும்",
+    "event_start_date_required": "தொடக்க தேதியைத் தேர்ந்தெடுக்கவும்",
+    "event_end_date_required": "முடிவு தேதியைத் தேர்ந்தெடுக்கவும்",
+    "event_end_date_invalid": "முடிவு தேதி தொடக்க தேதிக்கு பிறகு இருக்க வேண்டும்"
   },
   "field": {
     "full_name": "முழுப் பெயர்",
@@ -4956,7 +5297,11 @@ static const Map<String,dynamic> _ta = {
     "wifi_name": "WiFi பெயர்",
     "wifi_password": "WiFi கடவுச்சொல்",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "துறையின் பெயர்"
+    "industry_name": "துறையின் பெயர்",
+    "event_name": "நிகழ்வின் பெயர்",
+    "event_description": "நிகழ்வின் விளக்கம்",
+    "event_start_date": "தொடக்க தேதி",
+    "event_end_date": "முடிவு தேதி"
   },
   "common": {
     "optional": "விருப்பத்தேர்வு",
@@ -5124,7 +5469,11 @@ static const Map<String,dynamic> _te = {
     "website": "మీ వెబ్సైట్ చిరునామా నమోదు చేయండి",
     "wifi_name": "WiFi నెట్వర్క్ పేరు నమోదు చేయండి (SSID)",
     "wifi_password": "WiFi పాస్వర్డ్ నమోదు చేయండి",
-    "industry_name": "పరిశ్రమ పేరు"
+    "industry_name": "పరిశ్రమ పేరు నమోదు చేయండి",
+    "event_name": "ఈవెంట్ పేరు నమోదు చేయండి",
+    "event_description": "ఈవెంట్ వివరణ నమోదు చేయండి",
+    "event_start_date": "ప్రారంభ తేదీ ఎంచుకోండి",
+    "event_end_date": "ముగింపు తేదీ ఎంచుకోండి"
   },
   "validation": {
     "email_invalid": "దయచేసి చెల్లుబాటు అయ్యే ఇమెయిల్ చిరునామా నమోదు చేయండి",
@@ -5152,7 +5501,14 @@ static const Map<String,dynamic> _te = {
     "wifi_name_invalid": "WiFi పేరు కనీసం 2 అక్షరాలు ఉండాలి",
     "wifi_password_invalid": "WiFi పాస్వర్డ్ కనీసం 8 అక్షరాలు ఉండాలి",
     "industry_name_required": "దయచేసి పరిశ్రమ పేరు నమోదు చేయండి",
-    "industry_name_invalid": "పరిశ్రమ పేరు కనీసం 2 అక్షరాలు ఉండాలి"
+    "industry_name_invalid": "పరిశ్రమ పేరు కనీసం 2 అక్షరాలు ఉండాలి",
+    "event_name_required": "దయచేసి ఈవెంట్ పేరు నమోదు చేయండి",
+    "event_name_invalid": "ఈవెంట్ పేరు కనీసం 2 అక్షరాలు ఉండాలి",
+    "event_description_required": "దయచేసి ఈవెంట్ వివరణ నమోదు చేయండి",
+    "event_description_invalid": "వివరణ కనీసం 10 అక్షరాలు ఉండాలి",
+    "event_start_date_required": "దయచేసి ప్రారంభ తేదీ ఎంచుకోండి",
+    "event_end_date_required": "దయచేసి ముగింపు తేదీ ఎంచుకోండి",
+    "event_end_date_invalid": "ముగింపు తేదీ ప్రారంభ తేదీ తర్వాత ఉండాలి"
   },
   "field": {
     "full_name": "పూర్తి పేరు",
@@ -5177,7 +5533,11 @@ static const Map<String,dynamic> _te = {
     "wifi_name": "WiFi పేరు",
     "wifi_password": "WiFi పాస్వర్డ్",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "పరిశ్రమ పేరు"
+    "industry_name": "పరిశ్రమ పేరు",
+    "event_name": "ఈవెంట్ పేరు",
+    "event_description": "ఈవెంట్ వివరణ",
+    "event_start_date": "ప్రారంభ తేదీ",
+    "event_end_date": "ముగింపు తేదీ"
   },
   "common": {
     "optional": "ఐచ్ఛికం",
@@ -5345,7 +5705,11 @@ static const Map<String,dynamic> _th = {
     "website": "ป้อนที่อยู่เว็บไซต์ของคุณ",
     "wifi_name": "ป้อนชื่อเครือข่าย WiFi (SSID)",
     "wifi_password": "ป้อนรหัสผ่าน WiFi",
-    "industry_name": "ชื่ออุตสาหกรรม"
+    "industry_name": "ป้อนชื่ออุตสาหกรรม",
+    "event_name": "ป้อนชื่องาน",
+    "event_description": "ป้อนคำอธิบายงาน",
+    "event_start_date": "เลือกวันที่เริ่มต้น",
+    "event_end_date": "เลือกวันที่สิ้นสุด"
   },
   "validation": {
     "email_invalid": "กรุณาป้อนที่อยู่อีเมลที่ถูกต้อง",
@@ -5373,7 +5737,14 @@ static const Map<String,dynamic> _th = {
     "wifi_name_invalid": "ชื่อ WiFi ต้องมีอย่างน้อย 2 ตัวอักษร",
     "wifi_password_invalid": "รหัสผ่าน WiFi ต้องมีอย่างน้อย 8 ตัวอักษร",
     "industry_name_required": "กรุณาป้อนชื่ออุตสาหกรรม",
-    "industry_name_invalid": "ชื่ออุตสาหกรรมต้องมีอย่างน้อย 2 ตัวอักษร"
+    "industry_name_invalid": "ชื่ออุตสาหกรรมต้องมีอย่างน้อย 2 ตัวอักษร",
+    "event_name_required": "กรุณาป้อนชื่องาน",
+    "event_name_invalid": "ชื่องานต้องมีอย่างน้อย 2 ตัวอักษร",
+    "event_description_required": "กรุณาป้อนคำอธิบายงาน",
+    "event_description_invalid": "คำอธิบายต้องมีอย่างน้อย 10 ตัวอักษร",
+    "event_start_date_required": "กรุณาเลือกวันที่เริ่มต้น",
+    "event_end_date_required": "กรุณาเลือกวันที่สิ้นสุด",
+    "event_end_date_invalid": "วันที่สิ้นสุดต้องมาหลังวันที่เริ่มต้น"
   },
   "field": {
     "full_name": "ชื่อ-นามสกุล",
@@ -5398,7 +5769,11 @@ static const Map<String,dynamic> _th = {
     "wifi_name": "ชื่อ WiFi",
     "wifi_password": "รหัสผ่าน WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "ชื่ออุตสาหกรรม"
+    "industry_name": "ชื่ออุตสาหกรรม",
+    "event_name": "ชื่องาน",
+    "event_description": "คำอธิบายงาน",
+    "event_start_date": "วันที่เริ่มต้น",
+    "event_end_date": "วันที่สิ้นสุด"
   },
   "common": {
     "optional": "ไม่บังคับ",
@@ -5566,7 +5941,11 @@ static const Map<String,dynamic> _tr = {
     "website": "Web sitesi adresinizi girin",
     "wifi_name": "WiFi ağ adını girin (SSID)",
     "wifi_password": "WiFi şifresini girin",
-    "industry_name": "Sektör adı"
+    "industry_name": "Sektör adını girin",
+    "event_name": "Etkinlik adını girin",
+    "event_description": "Etkinlik açıklamasını girin",
+    "event_start_date": "Başlangıç tarihi seçin",
+    "event_end_date": "Bitiş tarihi seçin"
   },
   "validation": {
     "email_invalid": "Lütfen geçerli bir e-posta adresi girin",
@@ -5594,7 +5973,14 @@ static const Map<String,dynamic> _tr = {
     "wifi_name_invalid": "WiFi adı en az 2 karakter olmalıdır",
     "wifi_password_invalid": "WiFi şifresi en az 8 karakter olmalıdır",
     "industry_name_required": "Lütfen sektör adını girin",
-    "industry_name_invalid": "Sektör adı en az 2 karakter olmalıdır"
+    "industry_name_invalid": "Sektör adı en az 2 karakter olmalıdır",
+    "event_name_required": "Lütfen etkinlik adını girin",
+    "event_name_invalid": "Etkinlik adı en az 2 karakter olmalıdır",
+    "event_description_required": "Lütfen etkinlik açıklamasını girin",
+    "event_description_invalid": "Açıklama en az 10 karakter olmalıdır",
+    "event_start_date_required": "Lütfen başlangıç tarihi seçin",
+    "event_end_date_required": "Lütfen bitiş tarihi seçin",
+    "event_end_date_invalid": "Bitiş tarihi başlangıç tarihinden sonra olmalıdır"
   },
   "field": {
     "full_name": "Tam Ad",
@@ -5619,7 +6005,11 @@ static const Map<String,dynamic> _tr = {
     "wifi_name": "WiFi Adı",
     "wifi_password": "WiFi Şifresi",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "Sektör adı"
+    "industry_name": "Sektör Adı",
+    "event_name": "Etkinlik Adı",
+    "event_description": "Etkinlik Açıklaması",
+    "event_start_date": "Başlangıç Tarihi",
+    "event_end_date": "Bitiş Tarihi"
   },
   "common": {
     "optional": "isteğe bağlı",
@@ -5787,7 +6177,11 @@ static const Map<String,dynamic> _uk = {
     "website": "Введіть адресу вашого сайту",
     "wifi_name": "Введіть назву мережі WiFi (SSID)",
     "wifi_password": "Введіть пароль WiFi",
-    "industry_name": "Назва галузі"
+    "industry_name": "Введіть назву галузі",
+    "event_name": "Введіть назву події",
+    "event_description": "Введіть опис події",
+    "event_start_date": "Виберіть дату початку",
+    "event_end_date": "Виберіть дату закінчення"
   },
   "validation": {
     "email_invalid": "Введіть дійсну адресу електронної пошти",
@@ -5815,7 +6209,14 @@ static const Map<String,dynamic> _uk = {
     "wifi_name_invalid": "Назва WiFi повинна містити щонайменше 2 символи",
     "wifi_password_invalid": "Пароль WiFi повинен містити щонайменше 8 символів",
     "industry_name_required": "Введіть назву галузі",
-    "industry_name_invalid": "Назва галузі повинна містити щонайменше 2 символи"
+    "industry_name_invalid": "Назва галузі повинна містити щонайменше 2 символи",
+    "event_name_required": "Введіть назву події",
+    "event_name_invalid": "Назва події повинна містити щонайменше 2 символи",
+    "event_description_required": "Введіть опис події",
+    "event_description_invalid": "Опис повинен містити щонайменше 10 символів",
+    "event_start_date_required": "Виберіть дату початку",
+    "event_end_date_required": "Виберіть дату закінчення",
+    "event_end_date_invalid": "Дата закінчення повинна бути після дати початку"
   },
   "field": {
     "full_name": "Повне ім'я",
@@ -5840,7 +6241,11 @@ static const Map<String,dynamic> _uk = {
     "wifi_name": "Назва WiFi",
     "wifi_password": "Пароль WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Назва галузі"
+    "industry_name": "Назва галузі",
+    "event_name": "Назва події",
+    "event_description": "Опис події",
+    "event_start_date": "Дата початку",
+    "event_end_date": "Дата закінчення"
   },
   "common": {
     "optional": "необов'язково",
@@ -6008,7 +6413,11 @@ static const Map<String,dynamic> _ur = {
     "website": "اپنا ویب سائٹ پتہ درج کریں",
     "wifi_name": "WiFi نیٹ ورک کا نام درج کریں (SSID)",
     "wifi_password": "WiFi پاس ورڈ درج کریں",
-    "industry_name": "صنعت کا نام"
+    "industry_name": "صنعت کا نام درج کریں",
+    "event_name": "ایونٹ کا نام درج کریں",
+    "event_description": "ایونٹ کی تفصیل درج کریں",
+    "event_start_date": "شروع کی تاریخ منتخب کریں",
+    "event_end_date": "اختتامی تاریخ منتخب کریں"
   },
   "validation": {
     "email_invalid": "براہ کرم ایک درست ای میل پتہ درج کریں",
@@ -6036,7 +6445,14 @@ static const Map<String,dynamic> _ur = {
     "wifi_name_invalid": "WiFi نام کم از کم 2 حروف کا ہونا چاہیے",
     "wifi_password_invalid": "WiFi پاس ورڈ کم از کم 8 حروف کا ہونا چاہیے",
     "industry_name_required": "براہ کرم صنعت کا نام درج کریں",
-    "industry_name_invalid": "صنعت کا نام کم از کم 2 حروف کا ہونا چاہیے"
+    "industry_name_invalid": "صنعت کا نام کم از کم 2 حروف کا ہونا چاہیے",
+    "event_name_required": "براہ کرم ایونٹ کا نام درج کریں",
+    "event_name_invalid": "ایونٹ کا نام کم از کم 2 حروف کا ہونا چاہیے",
+    "event_description_required": "براہ کرم ایونٹ کی تفصیل درج کریں",
+    "event_description_invalid": "تفصیل کم از کم 10 حروف کی ہونی چاہیے",
+    "event_start_date_required": "براہ کرم شروع کی تاریخ منتخب کریں",
+    "event_end_date_required": "براہ کرم اختتامی تاریخ منتخب کریں",
+    "event_end_date_invalid": "اختتامی تاریخ شروع کی تاریخ کے بعد ہونی چاہیے"
   },
   "field": {
     "full_name": "مکمل نام",
@@ -6061,7 +6477,11 @@ static const Map<String,dynamic> _ur = {
     "wifi_name": "WiFi نام",
     "wifi_password": "WiFi پاس ورڈ",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "صنعت کا نام"
+    "industry_name": "صنعت کا نام",
+    "event_name": "ایونٹ کا نام",
+    "event_description": "ایونٹ کی تفصیل",
+    "event_start_date": "شروع کی تاریخ",
+    "event_end_date": "اختتامی تاریخ"
   },
   "common": {
     "optional": "اختیاری",
@@ -6229,7 +6649,11 @@ static const Map<String,dynamic> _vi = {
     "website": "Nhập địa chỉ website của bạn",
     "wifi_name": "Nhập tên mạng WiFi (SSID)",
     "wifi_password": "Nhập mật khẩu WiFi",
-    "industry_name": "Tên ngành"
+    "industry_name": "Nhập tên ngành",
+    "event_name": "Nhập tên sự kiện",
+    "event_description": "Nhập mô tả sự kiện",
+    "event_start_date": "Chọn ngày bắt đầu",
+    "event_end_date": "Chọn ngày kết thúc"
   },
   "validation": {
     "email_invalid": "Vui lòng nhập địa chỉ email hợp lệ",
@@ -6257,7 +6681,14 @@ static const Map<String,dynamic> _vi = {
     "wifi_name_invalid": "Tên WiFi phải có ít nhất 2 ký tự",
     "wifi_password_invalid": "Mật khẩu WiFi phải có ít nhất 8 ký tự",
     "industry_name_required": "Vui lòng nhập tên ngành",
-    "industry_name_invalid": "Tên ngành phải có ít nhất 2 ký tự"
+    "industry_name_invalid": "Tên ngành phải có ít nhất 2 ký tự",
+    "event_name_required": "Vui lòng nhập tên sự kiện",
+    "event_name_invalid": "Tên sự kiện phải có ít nhất 2 ký tự",
+    "event_description_required": "Vui lòng nhập mô tả sự kiện",
+    "event_description_invalid": "Mô tả phải có ít nhất 10 ký tự",
+    "event_start_date_required": "Vui lòng chọn ngày bắt đầu",
+    "event_end_date_required": "Vui lòng chọn ngày kết thúc",
+    "event_end_date_invalid": "Ngày kết thúc phải sau ngày bắt đầu"
   },
   "field": {
     "full_name": "Họ và Tên",
@@ -6282,7 +6713,11 @@ static const Map<String,dynamic> _vi = {
     "wifi_name": "Tên WiFi",
     "wifi_password": "Mật Khẩu WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Tên ngành"
+    "industry_name": "Tên ngành",
+    "event_name": "Tên sự kiện",
+    "event_description": "Mô tả sự kiện",
+    "event_start_date": "Ngày bắt đầu",
+    "event_end_date": "Ngày kết thúc"
   },
   "common": {
     "optional": "tùy chọn",
@@ -6450,7 +6885,11 @@ static const Map<String,dynamic> _zh = {
     "website": "输入您的网站地址",
     "wifi_name": "输入WiFi网络名称（SSID）",
     "wifi_password": "输入WiFi密码",
-    "industry_name": "行业名称"
+    "industry_name": "输入行业名称",
+    "event_name": "输入活动名称",
+    "event_description": "输入活动描述",
+    "event_start_date": "选择开始日期",
+    "event_end_date": "选择结束日期"
   },
   "validation": {
     "email_invalid": "请输入有效的电子邮件地址",
@@ -6478,7 +6917,14 @@ static const Map<String,dynamic> _zh = {
     "wifi_name_invalid": "WiFi名称至少需要2个字符",
     "wifi_password_invalid": "WiFi密码至少需要8个字符",
     "industry_name_required": "请输入行业名称",
-    "industry_name_invalid": "行业名称至少需要2个字符"
+    "industry_name_invalid": "行业名称至少需要2个字符",
+    "event_name_required": "请输入活动名称",
+    "event_name_invalid": "活动名称至少需要2个字符",
+    "event_description_required": "请输入活动描述",
+    "event_description_invalid": "描述至少需要10个字符",
+    "event_start_date_required": "请选择开始日期",
+    "event_end_date_required": "请选择结束日期",
+    "event_end_date_invalid": "结束日期必须在开始日期之后"
   },
   "field": {
     "full_name": "全名",
@@ -6503,7 +6949,11 @@ static const Map<String,dynamic> _zh = {
     "wifi_name": "WiFi名称",
     "wifi_password": "WiFi密码",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "行业名称"
+    "industry_name": "行业名称",
+    "event_name": "活动名称",
+    "event_description": "活动描述",
+    "event_start_date": "开始日期",
+    "event_end_date": "结束日期"
   },
   "common": {
     "optional": "可选",

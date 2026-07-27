@@ -25,7 +25,11 @@
     "website": "اپنا ویب سائٹ پتہ درج کریں",
     "wifi_name": "WiFi نیٹ ورک کا نام درج کریں (SSID)",
     "wifi_password": "WiFi پاس ورڈ درج کریں",
-    "industry_name": "صنعت کا نام"
+    "industry_name": "صنعت کا نام درج کریں",
+    "event_name": "ایونٹ کا نام درج کریں",
+    "event_description": "ایونٹ کی تفصیل درج کریں",
+    "event_start_date": "شروع کی تاریخ منتخب کریں",
+    "event_end_date": "اختتامی تاریخ منتخب کریں"
   },
   "validation": {
     "email_invalid": "براہ کرم ایک درست ای میل پتہ درج کریں",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "WiFi نام کم از کم 2 حروف کا ہونا چاہیے",
     "wifi_password_invalid": "WiFi پاس ورڈ کم از کم 8 حروف کا ہونا چاہیے",
     "industry_name_required": "براہ کرم صنعت کا نام درج کریں",
-    "industry_name_invalid": "صنعت کا نام کم از کم 2 حروف کا ہونا چاہیے"
+    "industry_name_invalid": "صنعت کا نام کم از کم 2 حروف کا ہونا چاہیے",
+    "event_name_required": "براہ کرم ایونٹ کا نام درج کریں",
+    "event_name_invalid": "ایونٹ کا نام کم از کم 2 حروف کا ہونا چاہیے",
+    "event_description_required": "براہ کرم ایونٹ کی تفصیل درج کریں",
+    "event_description_invalid": "تفصیل کم از کم 10 حروف کی ہونی چاہیے",
+    "event_start_date_required": "براہ کرم شروع کی تاریخ منتخب کریں",
+    "event_end_date_required": "براہ کرم اختتامی تاریخ منتخب کریں",
+    "event_end_date_invalid": "اختتامی تاریخ شروع کی تاریخ کے بعد ہونی چاہیے"
   },
   "field": {
     "full_name": "مکمل نام",
@@ -78,7 +89,11 @@
     "wifi_name": "WiFi نام",
     "wifi_password": "WiFi پاس ورڈ",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "صنعت کا نام"
+    "industry_name": "صنعت کا نام",
+    "event_name": "ایونٹ کا نام",
+    "event_description": "ایونٹ کی تفصیل",
+    "event_start_date": "شروع کی تاریخ",
+    "event_end_date": "اختتامی تاریخ"
   },
   "common": {
     "optional": "اختیاری",

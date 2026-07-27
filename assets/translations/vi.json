@@ -25,7 +25,11 @@
     "website": "Nhập địa chỉ website của bạn",
     "wifi_name": "Nhập tên mạng WiFi (SSID)",
     "wifi_password": "Nhập mật khẩu WiFi",
-    "industry_name": "Tên ngành"
+    "industry_name": "Nhập tên ngành",
+    "event_name": "Nhập tên sự kiện",
+    "event_description": "Nhập mô tả sự kiện",
+    "event_start_date": "Chọn ngày bắt đầu",
+    "event_end_date": "Chọn ngày kết thúc"
   },
   "validation": {
     "email_invalid": "Vui lòng nhập địa chỉ email hợp lệ",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "Tên WiFi phải có ít nhất 2 ký tự",
     "wifi_password_invalid": "Mật khẩu WiFi phải có ít nhất 8 ký tự",
     "industry_name_required": "Vui lòng nhập tên ngành",
-    "industry_name_invalid": "Tên ngành phải có ít nhất 2 ký tự"
+    "industry_name_invalid": "Tên ngành phải có ít nhất 2 ký tự",
+    "event_name_required": "Vui lòng nhập tên sự kiện",
+    "event_name_invalid": "Tên sự kiện phải có ít nhất 2 ký tự",
+    "event_description_required": "Vui lòng nhập mô tả sự kiện",
+    "event_description_invalid": "Mô tả phải có ít nhất 10 ký tự",
+    "event_start_date_required": "Vui lòng chọn ngày bắt đầu",
+    "event_end_date_required": "Vui lòng chọn ngày kết thúc",
+    "event_end_date_invalid": "Ngày kết thúc phải sau ngày bắt đầu"
   },
   "field": {
     "full_name": "Họ và Tên",
@@ -78,7 +89,11 @@
     "wifi_name": "Tên WiFi",
     "wifi_password": "Mật Khẩu WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Tên ngành"
+    "industry_name": "Tên ngành",
+    "event_name": "Tên sự kiện",
+    "event_description": "Mô tả sự kiện",
+    "event_start_date": "Ngày bắt đầu",
+    "event_end_date": "Ngày kết thúc"
   },
   "common": {
     "optional": "tùy chọn",

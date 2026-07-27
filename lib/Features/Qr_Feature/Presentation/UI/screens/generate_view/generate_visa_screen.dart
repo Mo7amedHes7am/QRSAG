@@ -17,14 +17,9 @@ import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
 import 'package:qr_scanner_and_generator/core/utils/app_images.dart';
 import 'package:qr_scanner_and_generator/generated/locale_keys.g.dart';
 
-class GenerateVisaScreen extends StatefulWidget {
+class GenerateVisaScreen extends StatelessWidget {
   const GenerateVisaScreen({super.key});
 
-  @override
-  State<GenerateVisaScreen> createState() => _GenerateVisaScreenState();
-}
-
-class _GenerateVisaScreenState extends State<GenerateVisaScreen> {
   @override
   Widget build(BuildContext context) {
     final cubit = context.read<QrCubit>();

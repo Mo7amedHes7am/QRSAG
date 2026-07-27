@@ -25,7 +25,11 @@
     "website": "ป้อนที่อยู่เว็บไซต์ของคุณ",
     "wifi_name": "ป้อนชื่อเครือข่าย WiFi (SSID)",
     "wifi_password": "ป้อนรหัสผ่าน WiFi",
-    "industry_name": "ชื่ออุตสาหกรรม"
+    "industry_name": "ป้อนชื่ออุตสาหกรรม",
+    "event_name": "ป้อนชื่องาน",
+    "event_description": "ป้อนคำอธิบายงาน",
+    "event_start_date": "เลือกวันที่เริ่มต้น",
+    "event_end_date": "เลือกวันที่สิ้นสุด"
   },
   "validation": {
     "email_invalid": "กรุณาป้อนที่อยู่อีเมลที่ถูกต้อง",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "ชื่อ WiFi ต้องมีอย่างน้อย 2 ตัวอักษร",
     "wifi_password_invalid": "รหัสผ่าน WiFi ต้องมีอย่างน้อย 8 ตัวอักษร",
     "industry_name_required": "กรุณาป้อนชื่ออุตสาหกรรม",
-    "industry_name_invalid": "ชื่ออุตสาหกรรมต้องมีอย่างน้อย 2 ตัวอักษร"
+    "industry_name_invalid": "ชื่ออุตสาหกรรมต้องมีอย่างน้อย 2 ตัวอักษร",
+    "event_name_required": "กรุณาป้อนชื่องาน",
+    "event_name_invalid": "ชื่องานต้องมีอย่างน้อย 2 ตัวอักษร",
+    "event_description_required": "กรุณาป้อนคำอธิบายงาน",
+    "event_description_invalid": "คำอธิบายต้องมีอย่างน้อย 10 ตัวอักษร",
+    "event_start_date_required": "กรุณาเลือกวันที่เริ่มต้น",
+    "event_end_date_required": "กรุณาเลือกวันที่สิ้นสุด",
+    "event_end_date_invalid": "วันที่สิ้นสุดต้องมาหลังวันที่เริ่มต้น"
   },
   "field": {
     "full_name": "ชื่อ-นามสกุล",
@@ -78,7 +89,11 @@
     "wifi_name": "ชื่อ WiFi",
     "wifi_password": "รหัสผ่าน WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "ชื่ออุตสาหกรรม"
+    "industry_name": "ชื่ออุตสาหกรรม",
+    "event_name": "ชื่องาน",
+    "event_description": "คำอธิบายงาน",
+    "event_start_date": "วันที่เริ่มต้น",
+    "event_end_date": "วันที่สิ้นสุด"
   },
   "common": {
     "optional": "ไม่บังคับ",

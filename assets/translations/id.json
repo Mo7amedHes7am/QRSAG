@@ -25,7 +25,11 @@
     "website": "Masukkan alamat website Anda",
     "wifi_name": "Masukkan nama jaringan WiFi (SSID)",
     "wifi_password": "Masukkan kata sandi WiFi",
-    "industry_name": "Nama industri"
+    "industry_name": "Masukkan nama industri",
+    "event_name": "Masukkan nama acara",
+    "event_description": "Masukkan deskripsi acara",
+    "event_start_date": "Pilih tanggal mulai",
+    "event_end_date": "Pilih tanggal selesai"
   },
   "validation": {
     "email_invalid": "Masukkan alamat email yang valid",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "Nama WiFi minimal 2 karakter",
     "wifi_password_invalid": "Kata sandi WiFi minimal 8 karakter",
     "industry_name_required": "Masukkan nama industri",
-    "industry_name_invalid": "Nama industri minimal 2 karakter"
+    "industry_name_invalid": "Nama industri minimal 2 karakter",
+    "event_name_required": "Masukkan nama acara",
+    "event_name_invalid": "Nama acara minimal 2 karakter",
+    "event_description_required": "Masukkan deskripsi acara",
+    "event_description_invalid": "Deskripsi minimal 10 karakter",
+    "event_start_date_required": "Pilih tanggal mulai",
+    "event_end_date_required": "Pilih tanggal selesai",
+    "event_end_date_invalid": "Tanggal selesai harus setelah tanggal mulai"
   },
   "field": {
     "full_name": "Nama Lengkap",
@@ -78,7 +89,11 @@
     "wifi_name": "Nama WiFi",
     "wifi_password": "Kata Sandi WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Nama industri"
+    "industry_name": "Nama Industri",
+    "event_name": "Nama Acara",
+    "event_description": "Deskripsi Acara",
+    "event_start_date": "Tanggal Mulai",
+    "event_end_date": "Tanggal Selesai"
   },
   "common": {
     "optional": "opsional",

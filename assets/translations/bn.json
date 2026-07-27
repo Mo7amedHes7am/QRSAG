@@ -25,7 +25,11 @@
     "website": "আপনার ওয়েবসাইটের ঠিকানা লিখুন",
     "wifi_name": "WiFi নেটওয়ার্ক নাম লিখুন (SSID)",
     "wifi_password": "WiFi পাসওয়ার্ড লিখুন",
-    "industry_name": "শিল্পের নাম"
+    "industry_name": "শিল্পের নাম লিখুন",
+    "event_name": "ইভেন্টের নাম লিখুন",
+    "event_description": "ইভেন্টের বিবরণ লিখুন",
+    "event_start_date": "শুরুর তারিখ নির্বাচন করুন",
+    "event_end_date": "শেষের তারিখ নির্বাচন করুন"
   },
   "validation": {
     "email_invalid": "অনুগ্রহ করে একটি বৈধ ইমেইল ঠিকানা লিখুন",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "WiFi নাম কমপক্ষে ২টি অক্ষরের হতে হবে",
     "wifi_password_invalid": "WiFi পাসওয়ার্ড কমপক্ষে ৮টি অক্ষরের হতে হবে",
     "industry_name_required": "অনুগ্রহ করে শিল্পের নাম লিখুন",
-    "industry_name_invalid": "শিল্পের নাম কমপক্ষে ২টি অক্ষরের হতে হবে"
+    "industry_name_invalid": "শিল্পের নাম কমপক্ষে ২টি অক্ষরের হতে হবে",
+    "event_name_required": "অনুগ্রহ করে ইভেন্টের নাম লিখুন",
+    "event_name_invalid": "ইভেন্টের নাম কমপক্ষে ২টি অক্ষরের হতে হবে",
+    "event_description_required": "অনুগ্রহ করে ইভেন্টের বিবরণ লিখুন",
+    "event_description_invalid": "বিবরণ কমপক্ষে ১০টি অক্ষরের হতে হবে",
+    "event_start_date_required": "অনুগ্রহ করে শুরুর তারিখ নির্বাচন করুন",
+    "event_end_date_required": "অনুগ্রহ করে শেষের তারিখ নির্বাচন করুন",
+    "event_end_date_invalid": "শেষের তারিখ শুরুর তারিখের পরে হতে হবে"
   },
   "field": {
     "full_name": "পূর্ণ নাম",
@@ -78,7 +89,11 @@
     "wifi_name": "WiFi নাম",
     "wifi_password": "WiFi পাসওয়ার্ড",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "শিল্পের নাম"
+    "industry_name": "শিল্পের নাম",
+    "event_name": "ইভেন্টের নাম",
+    "event_description": "ইভেন্টের বিবরণ",
+    "event_start_date": "শুরুর তারিখ",
+    "event_end_date": "শেষের তারিখ"
   },
   "common": {
     "optional": "ঐচ্ছিক",

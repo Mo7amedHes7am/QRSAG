@@ -25,7 +25,11 @@
     "website": "Введіть адресу вашого сайту",
     "wifi_name": "Введіть назву мережі WiFi (SSID)",
     "wifi_password": "Введіть пароль WiFi",
-    "industry_name": "Назва галузі"
+    "industry_name": "Введіть назву галузі",
+    "event_name": "Введіть назву події",
+    "event_description": "Введіть опис події",
+    "event_start_date": "Виберіть дату початку",
+    "event_end_date": "Виберіть дату закінчення"
   },
   "validation": {
     "email_invalid": "Введіть дійсну адресу електронної пошти",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "Назва WiFi повинна містити щонайменше 2 символи",
     "wifi_password_invalid": "Пароль WiFi повинен містити щонайменше 8 символів",
     "industry_name_required": "Введіть назву галузі",
-    "industry_name_invalid": "Назва галузі повинна містити щонайменше 2 символи"
+    "industry_name_invalid": "Назва галузі повинна містити щонайменше 2 символи",
+    "event_name_required": "Введіть назву події",
+    "event_name_invalid": "Назва події повинна містити щонайменше 2 символи",
+    "event_description_required": "Введіть опис події",
+    "event_description_invalid": "Опис повинен містити щонайменше 10 символів",
+    "event_start_date_required": "Виберіть дату початку",
+    "event_end_date_required": "Виберіть дату закінчення",
+    "event_end_date_invalid": "Дата закінчення повинна бути після дати початку"
   },
   "field": {
     "full_name": "Повне ім'я",
@@ -78,7 +89,11 @@
     "wifi_name": "Назва WiFi",
     "wifi_password": "Пароль WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Назва галузі"
+    "industry_name": "Назва галузі",
+    "event_name": "Назва події",
+    "event_description": "Опис події",
+    "event_start_date": "Дата початку",
+    "event_end_date": "Дата закінчення"
   },
   "common": {
     "optional": "необов'язково",

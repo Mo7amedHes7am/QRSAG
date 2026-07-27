@@ -25,7 +25,11 @@
     "website": "Wprowadź adres swojej strony",
     "wifi_name": "Wprowadź nazwę sieci WiFi (SSID)",
     "wifi_password": "Wprowadź hasło WiFi",
-    "industry_name": "Nazwa branży"
+    "industry_name": "Wprowadź nazwę branży",
+    "event_name": "Wprowadź nazwę wydarzenia",
+    "event_description": "Wprowadź opis wydarzenia",
+    "event_start_date": "Wybierz datę rozpoczęcia",
+    "event_end_date": "Wybierz datę zakończenia"
   },
   "validation": {
     "email_invalid": "Wprowadź poprawny adres e-mail",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "Nazwa WiFi musi mieć co najmniej 2 znaki",
     "wifi_password_invalid": "Hasło WiFi musi mieć co najmniej 8 znaków",
     "industry_name_required": "Wprowadź nazwę branży",
-    "industry_name_invalid": "Nazwa branży musi mieć co najmniej 2 znaki"
+    "industry_name_invalid": "Nazwa branży musi mieć co najmniej 2 znaki",
+    "event_name_required": "Wprowadź nazwę wydarzenia",
+    "event_name_invalid": "Nazwa wydarzenia musi mieć co najmniej 2 znaki",
+    "event_description_required": "Wprowadź opis wydarzenia",
+    "event_description_invalid": "Opis musi mieć co najmniej 10 znaków",
+    "event_start_date_required": "Wybierz datę rozpoczęcia",
+    "event_end_date_required": "Wybierz datę zakończenia",
+    "event_end_date_invalid": "Data zakończenia musi być po dacie rozpoczęcia"
   },
   "field": {
     "full_name": "Imię i Nazwisko",
@@ -78,7 +89,11 @@
     "wifi_name": "Nazwa WiFi",
     "wifi_password": "Hasło WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Nazwa branży"
+    "industry_name": "Nazwa branży",
+    "event_name": "Nazwa wydarzenia",
+    "event_description": "Opis wydarzenia",
+    "event_start_date": "Data rozpoczęcia",
+    "event_end_date": "Data zakończenia"
   },
   "common": {
     "optional": "opcjonalne",

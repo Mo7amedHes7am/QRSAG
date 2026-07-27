@@ -25,7 +25,11 @@
     "website": "Voer uw website-adres in",
     "wifi_name": "Voer WiFi-netwerknaam in (SSID)",
     "wifi_password": "Voer WiFi-wachtwoord in",
-    "industry_name": "Sector naam"
+    "industry_name": "Voer sector naam in",
+    "event_name": "Voer evenementnaam in",
+    "event_description": "Voer evenementbeschrijving in",
+    "event_start_date": "Selecteer startdatum",
+    "event_end_date": "Selecteer einddatum"
   },
   "validation": {
     "email_invalid": "Voer een geldig e-mailadres in",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "WiFi-naam moet minimaal 2 tekens bevatten",
     "wifi_password_invalid": "WiFi-wachtwoord moet minimaal 8 tekens bevatten",
     "industry_name_required": "Voer de sector naam in",
-    "industry_name_invalid": "Sector naam moet minimaal 2 tekens bevatten"
+    "industry_name_invalid": "Sector naam moet minimaal 2 tekens bevatten",
+    "event_name_required": "Voer evenementnaam in",
+    "event_name_invalid": "Evenementnaam moet minimaal 2 tekens bevatten",
+    "event_description_required": "Voer evenementbeschrijving in",
+    "event_description_invalid": "Beschrijving moet minimaal 10 tekens bevatten",
+    "event_start_date_required": "Selecteer startdatum",
+    "event_end_date_required": "Selecteer einddatum",
+    "event_end_date_invalid": "Einddatum moet na startdatum zijn"
   },
   "field": {
     "full_name": "Volledige Naam",
@@ -78,7 +89,11 @@
     "wifi_name": "WiFi-naam",
     "wifi_password": "WiFi-wachtwoord",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "Sector naam"
+    "industry_name": "Sector naam",
+    "event_name": "Evenementnaam",
+    "event_description": "Evenementbeschrijving",
+    "event_start_date": "Startdatum",
+    "event_end_date": "Einddatum"
   },
   "common": {
     "optional": "optioneel",

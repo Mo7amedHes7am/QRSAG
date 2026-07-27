@@ -8,11 +8,11 @@ import 'package:qr_scanner_and_generator/core/cache/Models/HistoryModel.dart';
 part 'qr_state.dart';
 
 class QrCubitBase extends Cubit<QrState> {
-  late bool scanLocked;
   MobileScannerController? cameraController;
   late List<QrType> qrs;
-  late TextEditingController generateController;
-  late TextEditingController firstnameController,
+
+  late TextEditingController generateController,
+      firstnameController,
       lastnameController,
       companyController,
       jobController,
@@ -21,26 +21,31 @@ class QrCubitBase extends Cubit<QrState> {
       websiteController,
       addressController,
       cityController,
-      countryController;
-
-  late TextEditingController industryController;
+      countryController,
+      industryController,
+      eventNameController,
+      eventLocationController,
+      eventDescriptionController,
+      cardHolderNameController,
+      cardNumberController,
+      cvvCodeController,
+      expiryDateController,
+      wifiNameController,
+      wifiPasswordController,
+      eventStartDateController,
+      eventEndDateController;
 
   late final GlobalKey<FormState> VisaformKey;
-  late bool isCvvFocused,
+  late bool scanLocked,
+      isCvvFocused,
       useGlassMorphism,
       useBackgroundImage,
       useFloatingAnimation,
-      valid;
-  late TextEditingController cardHolderNameController,
-      cardNumberController,
-      cvvCodeController,
-      expiryDateController;
+      valid,
+      hidden,
+      showPassword;
 
-  late TextEditingController wifiNameController, wifiPasswordController;
-  late bool hidden;
   late int encryption;
-  late bool showPassword;
-
   late String countryCode;
   late QrType currentType;
 

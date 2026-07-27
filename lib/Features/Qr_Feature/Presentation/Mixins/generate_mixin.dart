@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:encrypt_decrypt_plus/encrypt_decrypt/xor.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/controllertype.dart';
@@ -14,7 +15,7 @@ mixin GenerateMixin on QrCubitBase {
     if (!isClosed) emit(QrGenerateLoaded());
   }
 
-  void initGenerateTypePage(QrType type) {
+  void initGenerateTypePage(QrType type, {BuildContext? context}) {
     currentType = type;
 
     switch (type) {
@@ -65,7 +66,25 @@ mixin GenerateMixin on QrCubitBase {
         cardNumberController = TextEditingController();
         cvvCodeController = TextEditingController();
         expiryDateController = TextEditingController();
-      default:
+        break;
+
+      case QrType.event:
+        eventNameController = TextEditingController();
+        eventLocationController = TextEditingController();
+        eventDescriptionController = TextEditingController();
+        eventStartDateController = TextEditingController(
+          text: DateFormat(
+            'yyyy MMMM dd hh:mm aa',
+            context!.locale.languageCode,
+          ).format(DateTime.now()),
+        );
+        eventEndDateController = TextEditingController(
+          text: DateFormat(
+            'yyyy MMMM dd hh:mm aa',
+            context!.locale.languageCode,
+          ).format(DateTime.now()),
+        );
+        break;
     }
     countryCode = "+20";
 
@@ -193,6 +212,58 @@ mixin GenerateMixin on QrCubitBase {
             "A:${addressController.text.trim().isNotEmpty ? addressController.text.toString() : "No Address"};"
             "Ci:${cityController.text.trim().isNotEmpty ? cityController.text.toString() : "No City"};"
             "Co:${countryController.text.trim().isNotEmpty ? countryController.text.toString() : "No Country"};;";
+        break;
+
+      case QrType.event:
+        final eventNameError = AppValidators.validateRequired(
+          eventNameController.text,
+        );
+        final eventStartDateError = AppValidators.validateRequired(
+          eventStartDateController.text,
+        );
+        final eventEndDateError = AppValidators.validateRequired(
+          eventEndDateController.text,
+        );
+        final eventLocationError = AppValidators.validateRequired(
+          eventLocationController.text,
+        );
+
+        if (eventNameError != null) {
+          emit(QrGenerateError(eventNameError));
+          return null;
+        }
+        if (eventStartDateError != null) {
+          emit(QrGenerateError(eventStartDateError));
+          return null;
+        }
+
+        if (eventEndDateError != null) {
+          emit(QrGenerateError(eventEndDateError));
+          return null;
+        }
+
+        if (eventLocationError != null) {
+          emit(QrGenerateError(eventLocationError));
+          return null;
+        }
+
+        String? eventDescriptionError;
+        if (eventDescriptionController.text.trim().isNotEmpty) {
+          eventDescriptionError = AppValidators.validateRequired(
+            eventDescriptionController.text.trim(),
+          );
+          if (eventDescriptionError != null) {
+            emit(QrGenerateError(eventDescriptionError));
+            return null;
+          }
+        }
+
+        data =
+            "EVENT:N:${eventNameController.text.toString()};"
+            "ST:${tryParseDate(eventStartDateController.text)?.millisecondsSinceEpoch};"
+            "ED:${tryParseDate(eventEndDateController.text)?.millisecondsSinceEpoch};"
+            "E:${eventLocationController.text.toString()};"
+            "D:${eventDescriptionController.text.trim().isNotEmpty ? eventDescriptionController.text.toString() : "No Description"};;";
         break;
 
       case QrType.visa:
@@ -352,6 +423,21 @@ mixin GenerateMixin on QrCubitBase {
         break;
       case ControllerType.industry:
         industryController.clear();
+        break;
+      case ControllerType.eventName:
+        eventNameController.clear();
+        break;
+      case ControllerType.eventLocation:
+        eventLocationController.clear();
+        break;
+      case ControllerType.eventDescription:
+        eventDescriptionController.clear();
+        break;
+      case ControllerType.eventStartDate:
+        eventStartDateController.clear();
+        break;
+      case ControllerType.eventEndDate:
+        eventEndDateController.clear();
         break;
     }
     emit(QrGenerateLoaded());

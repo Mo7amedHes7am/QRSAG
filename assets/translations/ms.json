@@ -25,7 +25,11 @@
     "website": "Masukkan alamat laman web anda",
     "wifi_name": "Masukkan nama rangkaian WiFi (SSID)",
     "wifi_password": "Masukkan kata laluan WiFi",
-    "industry_name": "Nama industri"
+    "industry_name": "Masukkan nama industri",
+    "event_name": "Masukkan nama acara",
+    "event_description": "Masukkan penerangan acara",
+    "event_start_date": "Pilih tarikh mula",
+    "event_end_date": "Pilih tarikh tamat"
   },
   "validation": {
     "email_invalid": "Masukkan alamat e-mel yang sah",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "Nama WiFi mestilah sekurang-kurangnya 2 aksara",
     "wifi_password_invalid": "Kata laluan WiFi mestilah sekurang-kurangnya 8 aksara",
     "industry_name_required": "Masukkan nama industri",
-    "industry_name_invalid": "Nama industri mestilah sekurang-kurangnya 2 aksara"
+    "industry_name_invalid": "Nama industri mestilah sekurang-kurangnya 2 aksara",
+    "event_name_required": "Masukkan nama acara",
+    "event_name_invalid": "Nama acara mestilah sekurang-kurangnya 2 aksara",
+    "event_description_required": "Masukkan penerangan acara",
+    "event_description_invalid": "Penerangan mestilah sekurang-kurangnya 10 aksara",
+    "event_start_date_required": "Pilih tarikh mula",
+    "event_end_date_required": "Pilih tarikh tamat",
+    "event_end_date_invalid": "Tarikh tamat mestilah selepas tarikh mula"
   },
   "field": {
     "full_name": "Nama Penuh",
@@ -78,7 +89,11 @@
     "wifi_name": "Nama WiFi",
     "wifi_password": "Kata Laluan WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Nama industri"
+    "industry_name": "Nama Industri",
+    "event_name": "Nama Acara",
+    "event_description": "Penerangan Acara",
+    "event_start_date": "Tarikh Mula",
+    "event_end_date": "Tarikh Tamat"
   },
   "common": {
     "optional": "pilihan",

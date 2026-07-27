@@ -25,7 +25,11 @@
     "website": "ウェブサイトのアドレスを入力",
     "wifi_name": "WiFiネットワーク名を入力（SSID）",
     "wifi_password": "WiFiパスワードを入力",
-    "industry_name": "業界名"
+    "industry_name": "業界名を入力",
+    "event_name": "イベント名を入力",
+    "event_description": "イベントの説明を入力",
+    "event_start_date": "開始日を選択",
+    "event_end_date": "終了日を選択"
   },
   "validation": {
     "email_invalid": "有効なメールアドレスを入力してください",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "WiFi名は2文字以上である必要があります",
     "wifi_password_invalid": "WiFiパスワードは8文字以上である必要があります",
     "industry_name_required": "業界名を入力してください",
-    "industry_name_invalid": "業界名は2文字以上である必要があります"
+    "industry_name_invalid": "業界名は2文字以上である必要があります",
+    "event_name_required": "イベント名を入力してください",
+    "event_name_invalid": "イベント名は2文字以上である必要があります",
+    "event_description_required": "イベントの説明を入力してください",
+    "event_description_invalid": "説明は10文字以上である必要があります",
+    "event_start_date_required": "開始日を選択してください",
+    "event_end_date_required": "終了日を選択してください",
+    "event_end_date_invalid": "終了日は開始日より後である必要があります"
   },
   "field": {
     "full_name": "フルネーム",
@@ -78,7 +89,11 @@
     "wifi_name": "WiFi名",
     "wifi_password": "WiFiパスワード",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "業界名"
+    "industry_name": "業界名",
+    "event_name": "イベント名",
+    "event_description": "イベントの説明",
+    "event_start_date": "開始日",
+    "event_end_date": "終了日"
   },
   "common": {
     "optional": "任意",

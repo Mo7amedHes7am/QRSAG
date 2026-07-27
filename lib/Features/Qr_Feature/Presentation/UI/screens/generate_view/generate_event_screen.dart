@@ -1,6 +1,5 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:qr_scanner_and_generator/app/app_variables.dart';
-import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/controllertype.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
@@ -10,28 +9,26 @@ import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/wid
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/widgets/generate/submit_button.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/widgets/main_app_bar.dart';
 import 'package:qr_scanner_and_generator/Features/Splash_Feature/Presentation/UI/widgets/background_pattern.dart';
+import 'package:qr_scanner_and_generator/app/app_variables.dart';
 import 'package:qr_scanner_and_generator/core/components/global/system_wrapper.dart';
+import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
 
-class GenerateBusinessScreen extends StatelessWidget {
-  const GenerateBusinessScreen({super.key});
+class GenerateEventScreen extends StatelessWidget {
+  const GenerateEventScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final cubit = context.read<QrCubit>();
-    final type = QrType.business;
-
-    cubit.initGenerateTypePage(type);
+    final type = QrType.event;
+    cubit.initGenerateTypePage(type, context: context);
 
     return BlocBuilder<QrCubit, QrState>(
       builder: (context, state) {
-        final industryController = cubit.industryController;
-        final companyController = cubit.companyController;
-        final phoneController = cubit.phoneController;
-        final emailController = cubit.emailController;
-        final websiteController = cubit.websiteController;
-        final addressController = cubit.addressController;
-        final cityController = cubit.cityController;
-        final countryController = cubit.countryController;
+        final eventNameController = cubit.eventNameController;
+        final eventLocationController = cubit.eventLocationController;
+        final eventDescriptionController = cubit.eventDescriptionController;
+        final eventStartDateController = cubit.eventStartDateController;
+        final eventEndDateController = cubit.eventEndDateController;
 
         return SystemWrapper(
           child: Scaffold(
@@ -53,78 +50,50 @@ class GenerateBusinessScreen extends StatelessWidget {
                         InputField(
                           type: type,
                           cubit: cubit,
-                          controller: companyController,
+                          controller: eventNameController,
                           state: state,
-                          controllerType: ControllerType.company,
+                          controllerType: ControllerType.eventName,
                           required: true,
                         ),
                         InputField(
                           type: type,
                           cubit: cubit,
-                          controller: industryController,
+                          controller: eventStartDateController,
                           state: state,
-                          controllerType: ControllerType.industry,
+                          controllerType: ControllerType.eventStartDate,
                           required: true,
                         ),
                         InputField(
                           type: type,
                           cubit: cubit,
-                          controller: phoneController,
+                          controller: eventEndDateController,
                           state: state,
-                          controllerType: ControllerType.phone,
+                          controllerType: ControllerType.eventEndDate,
                           required: true,
                         ),
                         InputField(
                           type: type,
                           cubit: cubit,
-                          controller: emailController,
+                          controller: eventLocationController,
                           state: state,
-                          controllerType: ControllerType.email,
+                          controllerType: ControllerType.eventLocation,
                           required: true,
                         ),
                         InputField(
                           type: type,
                           cubit: cubit,
-                          controller: websiteController,
+                          controller: eventDescriptionController,
                           state: state,
-                          controllerType: ControllerType.website,
-                        ),
-                        InputField(
-                          type: type,
-                          cubit: cubit,
-                          controller: addressController,
-                          state: state,
-                          controllerType: ControllerType.address,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            InputField(
-                              width: 128.w,
-                              type: type,
-                              cubit: cubit,
-                              controller: cityController,
-                              state: state,
-                              controllerType: ControllerType.city,
-                            ),
-                            InputField(
-                              width: 128.w,
-                              type: type,
-                              cubit: cubit,
-                              controller: countryController,
-                              state: state,
-                              controllerType: ControllerType.country,
-                            ),
-                          ],
+                          controllerType: ControllerType.eventDescription,
                         ),
 
                         SizedBox(height: 52.h),
                         SubmitButton(
                           controllers: [
-                            companyController,
-                            industryController,
-                            phoneController,
-                            emailController,
+                            eventNameController,
+                            eventStartDateController,
+                            eventEndDateController,
+                            eventLocationController,
                           ],
                           cubit: cubit,
                           context: context,

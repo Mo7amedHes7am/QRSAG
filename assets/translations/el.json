@@ -25,7 +25,11 @@
     "website": "Εισάγετε τη διεύθυνση της ιστοσελίδας σας",
     "wifi_name": "Εισάγετε το όνομα δικτύου WiFi (SSID)",
     "wifi_password": "Εισάγετε τον κωδικό WiFi",
-    "industry_name": "Όνομα κλάδου"
+    "industry_name": "Εισάγετε το όνομα κλάδου",
+    "event_name": "Εισάγετε το όνομα εκδήλωσης",
+    "event_description": "Εισάγετε την περιγραφή εκδήλωσης",
+    "event_start_date": "Επιλέξτε ημερομηνία έναρξης",
+    "event_end_date": "Επιλέξτε ημερομηνία λήξης"
   },
   "validation": {
     "email_invalid": "Εισάγετε έγκυρη διεύθυνση email",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "Το όνομα WiFi πρέπει να έχει τουλάχιστον 2 χαρακτήρες",
     "wifi_password_invalid": "Ο κωδικός WiFi πρέπει να έχει τουλάχιστον 8 χαρακτήρες",
     "industry_name_required": "Εισάγετε το όνομα κλάδου",
-    "industry_name_invalid": "Το όνομα κλάδου πρέπει να έχει τουλάχιστον 2 χαρακτήρες"
+    "industry_name_invalid": "Το όνομα κλάδου πρέπει να έχει τουλάχιστον 2 χαρακτήρες",
+    "event_name_required": "Εισάγετε το όνομα εκδήλωσης",
+    "event_name_invalid": "Το όνομα εκδήλωσης πρέπει να έχει τουλάχιστον 2 χαρακτήρες",
+    "event_description_required": "Εισάγετε την περιγραφή εκδήλωσης",
+    "event_description_invalid": "Η περιγραφή πρέπει να έχει τουλάχιστον 10 χαρακτήρες",
+    "event_start_date_required": "Επιλέξτε ημερομηνία έναρξης",
+    "event_end_date_required": "Επιλέξτε ημερομηνία λήξης",
+    "event_end_date_invalid": "Η ημερομηνία λήξης πρέπει να είναι μετά την ημερομηνία έναρξης"
   },
   "field": {
     "full_name": "Πλήρες Όνομα",
@@ -78,7 +89,11 @@
     "wifi_name": "Όνομα WiFi",
     "wifi_password": "Κωδικός WiFi",
     "wifi_ssid": "SSID WiFi",
-    "industry_name": "Όνομα κλάδου"
+    "industry_name": "Όνομα κλάδου",
+    "event_name": "Όνομα εκδήλωσης",
+    "event_description": "Περιγραφή εκδήλωσης",
+    "event_start_date": "Ημερομηνία έναρξης",
+    "event_end_date": "Ημερομηνία λήξης"
   },
   "common": {
     "optional": "προαιρετικό",

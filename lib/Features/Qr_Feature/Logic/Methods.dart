@@ -6,6 +6,7 @@ import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/Cubit/qr_cubit.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_business_Screen.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_contact_screen.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_event_screen.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_text_screen.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_visa_screen.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_wifi_screen.dart';
@@ -26,6 +27,7 @@ QrType detectQrType(String qr) {
     ((v) => v.startsWith('mailto:'), QrType.email),
     ((v) => v.startsWith('tel:'), QrType.phone),
     ((v) => v.startsWith('begin:vevent'), QrType.event),
+    ((v) => v.startsWith('event'), QrType.event),
     ((v) => v.startsWith('begin:vcard'), QrType.contact),
     ((v) => v.startsWith('business:'), QrType.business),
     ((v) => v.startsWith('contact:'), QrType.contact),
@@ -48,6 +50,70 @@ String _extractBetween(String data, String startKey, String endKey) {
   return data.substring(start + startKey.length, end);
 }
 
+DateTime? tryParseDate(String dateString) {
+  if (dateString.isEmpty) return null;
+
+  dateString = dateString.trim();
+
+  final numericRegex = RegExp(r'^-?\d+$');
+  if (numericRegex.hasMatch(dateString)) {
+    try {
+      final milliseconds = int.parse(dateString);
+
+      if (dateString.length == 10) {
+        return DateTime.fromMillisecondsSinceEpoch(milliseconds * 1000);
+      } else if (dateString.length == 13) {
+        return DateTime.fromMillisecondsSinceEpoch(milliseconds);
+      } else if (dateString.length >= 16) {
+        return DateTime.fromMillisecondsSinceEpoch(milliseconds ~/ 1000);
+      }
+    } catch (e) {}
+  }
+
+  final List<String> formats = [
+    'yyyy-MM-dd HH:mm:ss',
+    'yyyy-MM-ddTHH:mm:ss',
+    'yyyy-MM-dd HH:mm',
+    'yyyy-MM-ddTHH:mm',
+    'yyyy-MM-dd',
+    'dd/MM/yyyy HH:mm:ss',
+    'dd/MM/yyyy HH:mm',
+    'dd/MM/yyyy',
+    'MM/dd/yyyy HH:mm:ss',
+    'MM/dd/yyyy HH:mm',
+    'MM/dd/yyyy',
+    'yyyy MMMM dd hh:mm aa',
+    'yyyy MMMM dd',
+    'MMMM dd, yyyy',
+    'EEE, MMM d, yyyy HH:mm:ss',
+    'EEE, MMM d, yyyy',
+    'yyyy-MM-dd\'T\'HH:mm:ss.SSS\'Z\'',
+    'yyyy-MM-dd\'T\'HH:mm:ss.SSS',
+  ];
+
+  for (var format in formats) {
+    try {
+      return DateFormat(
+        format,
+        CacheManager.getGlobalData().language,
+      ).parse(dateString);
+    } catch (e) {}
+  }
+
+  try {
+    return DateTime.parse(dateString);
+  } catch (e) {
+    return null;
+  }
+}
+
+String formatDateForDisplay(DateTime date) {
+  return DateFormat(
+    'yyyy MMMM dd hh:mm aa',
+    CacheManager.getGlobalData().language,
+  ).format(date);
+}
+
 String parseQrData(String data) {
   try {
     final type = detectQrType(data);
@@ -60,11 +126,44 @@ String parseQrData(String data) {
             "${LocaleKeys.qr_encryption.tr()}: ${_extractBetween(data, ":t:", ";s:")}\n";
 
       case QrType.event:
-        return "${LocaleKeys.qr_event_name.tr()}: ${_extractBetween(data, ":n:", ";st:")}\n"
-            "${LocaleKeys.qr_starts_at.tr()}: ${_extractBetween(data, ";st:", ";ed:")}\n"
-            "${LocaleKeys.qr_ends_at.tr()}: ${_extractBetween(data, ";ed:", ";e:")}\n"
-            "${LocaleKeys.qr_location.tr()}: ${_extractBetween(data, ";e:", ";d:")}\n"
-            "${LocaleKeys.qr_description.tr()}: ${_extractBetween(data, ";d:", ";;")}";
+        final eventName = _extractBetween(data, ":n:", ";st:");
+        final startDateStr = _extractBetween(data, ";st:", ";ed:");
+        final endDateStr = _extractBetween(data, ";ed:", ";e:");
+        final location = _extractBetween(data, ";e:", ";d:");
+        final description = _extractBetween(data, ";d:", ";;");
+
+        final startDate = tryParseDate(startDateStr);
+        final endDate = tryParseDate(endDateStr);
+
+        String result = "";
+
+        if (eventName.isNotEmpty) {
+          result += "${LocaleKeys.qr_event_name.tr()}: $eventName\n";
+        }
+
+        if (startDate != null) {
+          result +=
+              "${LocaleKeys.qr_starts_at.tr()}: ${formatDateForDisplay(startDate)}\n";
+        } else if (startDateStr.isNotEmpty) {
+          result += "${LocaleKeys.qr_starts_at.tr()}: $startDateStr\n";
+        }
+
+        if (endDate != null) {
+          result +=
+              "${LocaleKeys.qr_ends_at.tr()}: ${formatDateForDisplay(endDate)}\n";
+        } else if (endDateStr.isNotEmpty) {
+          result += "${LocaleKeys.qr_ends_at.tr()}: $endDateStr\n";
+        }
+
+        if (location.isNotEmpty) {
+          result += "${LocaleKeys.qr_location.tr()}: $location\n";
+        }
+
+        if (description.isNotEmpty) {
+          result += "${LocaleKeys.qr_description.tr()}: $description";
+        }
+
+        return result;
 
       case QrType.contact:
         return "${LocaleKeys.qr_name.tr()}: ${_extractBetween(data, ":n:", ";c:")}\n"
@@ -144,7 +243,11 @@ void handle_navigation({required QrType type, required BuildContext context}) {
       );
       break;
     case QrType.event:
-      // Get.to(GenerateEventScreen());
+      AppNavigator.toPageWithCubit(
+        context: context,
+        cubit: context.read<QrCubit>(),
+        screen: GenerateEventScreen(),
+      );
       break;
     case QrType.contact:
       AppNavigator.toPageWithCubit(

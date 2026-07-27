@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart' hide TextDirection;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:omni_datetime_picker/omni_datetime_picker.dart';
+import 'package:qr_scanner_and_generator/core/Colors/dateTime_picker_theme.dart';
 import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
 import 'package:qr_scanner_and_generator/app/app_variables.dart';
 import 'package:qr_scanner_and_generator/core/Methods/Global_Methods.dart';
@@ -53,6 +55,10 @@ class CustomFormField extends StatefulWidget {
   final bool isWifiName;
   final bool isWifiPassword;
   final bool isIndustryName;
+  final bool isEventName;
+  final bool isEventDescription;
+  final bool isEventStartDate;
+  final bool isEventEndDate;
 
   final String? clientNameExample;
   final double? width;
@@ -71,6 +77,10 @@ class CustomFormField extends StatefulWidget {
   final int? minLines;
   final bool showRequiredStar;
   final bool showOptionalLabel;
+  final Function(DateTime)? onEventStartDateSelected;
+  final Function(DateTime)? onEventEndDateSelected;
+  final DateTime? eventStartDate;
+  final DateTime? eventEndDate;
 
   const CustomFormField({
     super.key,
@@ -133,6 +143,14 @@ class CustomFormField extends StatefulWidget {
     this.isWifiName = false,
     this.isWifiPassword = false,
     this.isIndustryName = false,
+    this.isEventName = false,
+    this.isEventDescription = false,
+    this.isEventStartDate = false,
+    this.isEventEndDate = false,
+    this.onEventStartDateSelected,
+    this.onEventEndDateSelected,
+    this.eventStartDate,
+    this.eventEndDate,
   });
 
   final bool? noborder;
@@ -191,11 +209,18 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isEmail) return TextInputType.emailAddress;
     if (widget.isPhoneNumber) return TextInputType.phone;
     if (widget.isNumber) return TextInputType.number;
-    if (widget.isDateTime || widget.isDate) return TextInputType.datetime;
+    if (widget.isDateTime ||
+        widget.isDate ||
+        widget.isEventStartDate ||
+        widget.isEventEndDate) {
+      return TextInputType.datetime;
+    }
     if (widget.isUrl) return TextInputType.url;
     if (widget.isWeb) return TextInputType.url;
     if (widget.isAddress) return TextInputType.streetAddress;
-    if (widget.isMultiline) return TextInputType.multiline;
+    if (widget.isMultiline || widget.isEventDescription) {
+      return TextInputType.multiline;
+    }
     if (widget.isUserName ||
         widget.isClientName ||
         widget.isFirstName ||
@@ -203,7 +228,8 @@ class _CustomFormFeildState extends State<CustomFormField> {
         widget.isCompany ||
         widget.isJobTitle ||
         widget.isWifiName ||
-        widget.isIndustryName) {
+        widget.isIndustryName ||
+        widget.isEventName) {
       return TextInputType.name;
     }
     if (widget.isPlainText) return TextInputType.text;
@@ -300,9 +326,40 @@ class _CustomFormFeildState extends State<CustomFormField> {
           return LocaleKeys.validation_wifi_password_required.tr();
         if (widget.isIndustryName)
           return LocaleKeys.validation_industry_name_required.tr();
+        if (widget.isEventName)
+          return LocaleKeys.validation_event_name_required.tr();
+        if (widget.isEventDescription)
+          return LocaleKeys.validation_event_description_required.tr();
+        if (widget.isEventStartDate)
+          return LocaleKeys.validation_event_start_date_required.tr();
+        if (widget.isEventEndDate)
+          return LocaleKeys.validation_event_end_date_required.tr();
         return LocaleKeys.validation_required.tr();
       }
       return null;
+    }
+
+    if (widget.isEventName && value.isNotEmpty) {
+      if (value.length < 2) {
+        return LocaleKeys.validation_event_name_invalid.tr();
+      }
+    }
+
+    if (widget.isEventDescription && value.isNotEmpty) {
+      if (value.length < 10) {
+        return LocaleKeys.validation_event_description_invalid.tr();
+      }
+    }
+
+    if (widget.isEventEndDate && value.isNotEmpty) {
+      if (widget.eventStartDate != null) {
+        try {
+          final endDate = DateTime.parse(value);
+          if (endDate.isBefore(widget.eventStartDate!)) {
+            return LocaleKeys.validation_event_end_date_invalid.tr();
+          }
+        } catch (e) {}
+      }
     }
 
     if (widget.isIndustryName && value.isNotEmpty) {
@@ -409,6 +466,11 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isWifiName) return LocaleKeys.hint_wifi_name.tr();
     if (widget.isWifiPassword) return LocaleKeys.hint_wifi_password.tr();
     if (widget.isIndustryName) return LocaleKeys.hint_industry_name.tr();
+    if (widget.isEventName) return LocaleKeys.hint_event_name.tr();
+    if (widget.isEventDescription)
+      return LocaleKeys.hint_event_description.tr();
+    if (widget.isEventStartDate) return LocaleKeys.hint_event_start_date.tr();
+    if (widget.isEventEndDate) return LocaleKeys.hint_event_end_date.tr();
     if (widget.isDateTime) return LocaleKeys.hint_date_time.tr();
     if (widget.isEmail) return LocaleKeys.hint_email.tr();
     if (widget.isAddress) return LocaleKeys.hint_address.tr();
@@ -446,6 +508,11 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isWifiName) return LocaleKeys.field_wifi_name.tr();
     if (widget.isWifiPassword) return LocaleKeys.field_wifi_password.tr();
     if (widget.isIndustryName) return LocaleKeys.field_industry_name.tr();
+    if (widget.isEventName) return LocaleKeys.field_event_name.tr();
+    if (widget.isEventDescription)
+      return LocaleKeys.field_event_description.tr();
+    if (widget.isEventStartDate) return LocaleKeys.field_event_start_date.tr();
+    if (widget.isEventEndDate) return LocaleKeys.field_event_end_date.tr();
     if (widget.isMultiline) return LocaleKeys.field_description.tr();
     if (widget.isNotes) return LocaleKeys.field_notes.tr();
     if (widget.isUserName) return LocaleKeys.field_username.tr();
@@ -464,8 +531,12 @@ class _CustomFormFeildState extends State<CustomFormField> {
         context.locale.languageCode == 'fa' ||
         context.locale.languageCode == 'ur';
 
-    int effectiveMaxLines = widget.isMultiline ? (widget.maxLines ?? 5) : 1;
-    int effectiveMinLines = widget.isMultiline ? (widget.minLines ?? 1) : 1;
+    int effectiveMaxLines = widget.isMultiline || widget.isEventDescription
+        ? (widget.maxLines ?? 5)
+        : 1;
+    int effectiveMinLines = widget.isMultiline || widget.isEventDescription
+        ? (widget.minLines ?? 1)
+        : 1;
 
     final String displayTitle = _getDefaultTitle() ?? widget.title ?? '';
 
@@ -484,7 +555,7 @@ class _CustomFormFeildState extends State<CustomFormField> {
                 : 0,
           ),
           SizedBox(
-            height: widget.isMultiline
+            height: widget.isMultiline || widget.isEventDescription
                 ? null
                 : widget.height ?? (widget.isTablet ? (90.h * scale) : 55.h),
             child: _buildTextField(
@@ -600,6 +671,114 @@ class _CustomFormFeildState extends State<CustomFormField> {
     );
   }
 
+  Future<void> _showOmniDateTimePicker(
+    BuildContext context, {
+    required bool isStartDate,
+    DateTime? initialDate,
+    DateTime? firstDate,
+    DateTime? lastDate,
+  }) async {
+    try {
+      final picked = await showOmniDateTimePicker(
+        context: context,
+        initialDate: initialDate ?? DateTime.now(),
+        firstDate: firstDate ?? DateTime(1900),
+        lastDate: lastDate ?? DateTime(2100),
+        is24HourMode: false,
+        isShowSeconds: false,
+        minutesInterval: 1,
+        theme: DateTimePickerTheme.getCurrentTheme(),
+        borderRadius: const BorderRadius.all(Radius.circular(16)),
+        constraints: const BoxConstraints(maxWidth: 350, maxHeight: 650),
+        transitionBuilder: (context, anim1, anim2, child) {
+          return FadeTransition(
+            opacity: anim1,
+            child: ScaleTransition(
+              scale: Tween<double>(begin: 0.9, end: 1.0).animate(
+                CurvedAnimation(parent: anim1, curve: Curves.easeOutCubic),
+              ),
+              child: child,
+            ),
+          );
+        },
+        transitionDuration: const Duration(milliseconds: 300),
+        barrierDismissible: true,
+      );
+
+      if (picked != null && mounted) {
+        if (isStartDate) {
+          widget.onEventStartDateSelected?.call(picked);
+        } else {
+          if (widget.eventStartDate != null &&
+              picked.isBefore(widget.eventStartDate!)) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text(
+                  LocaleKeys.validation_event_end_date_invalid.tr(),
+                ),
+                backgroundColor: appColors.failed,
+                duration: const Duration(seconds: 3),
+              ),
+            );
+            return;
+          }
+          widget.onEventEndDateSelected?.call(picked);
+        }
+
+        if (widget.controller != null && mounted) {
+          widget.controller!.text = DateFormat(
+            'yyyy MMMM dd hh:mm aa',
+            context.locale.languageCode,
+          ).format(picked);
+
+          widget.onChanged?.call(widget.controller!.text);
+        }
+      }
+    } catch (e) {
+      debugPrint('Error showing date picker: $e');
+      _showFallbackDatePicker(context, isStartDate: isStartDate);
+    }
+  }
+
+  Future<void> _showFallbackDatePicker(
+    BuildContext context, {
+    required bool isStartDate,
+  }) async {
+    final picked = await showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(1900),
+      lastDate: DateTime(2100),
+      locale: Locale(context.locale.languageCode),
+    );
+
+    if (picked != null && mounted) {
+      if (isStartDate) {
+        widget.onEventStartDateSelected?.call(picked);
+      } else {
+        if (widget.eventStartDate != null &&
+            picked.isBefore(widget.eventStartDate!)) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(LocaleKeys.validation_event_end_date_invalid.tr()),
+              backgroundColor: appColors.failed,
+            ),
+          );
+          return;
+        }
+        widget.onEventEndDateSelected?.call(picked);
+      }
+
+      if (widget.controller != null && mounted) {
+        widget.controller!.text = DateFormat(
+          'yyyy MMMM dd',
+          context.locale.languageCode,
+        ).format(picked);
+        widget.onChanged?.call(widget.controller!.text);
+      }
+    }
+  }
+
   Widget _buildTextField(
     bool isTablet,
     double scale,
@@ -614,6 +793,9 @@ class _CustomFormFeildState extends State<CustomFormField> {
     final textAlign = (isRTL && !widget.isPhoneNumber && !widget.isNumber)
         ? TextAlign.right
         : TextAlign.start;
+
+    final bool isEventDateField =
+        widget.isEventStartDate || widget.isEventEndDate;
 
     return TextFormField(
       focusNode: widget.focusNode,
@@ -634,7 +816,7 @@ class _CustomFormFeildState extends State<CustomFormField> {
       enabled: widget.enabled,
       onFieldSubmitted: widget.onFieldSubmitted,
       controller: widget.controller,
-      textInputAction: widget.isMultiline
+      textInputAction: widget.isMultiline || widget.isEventDescription
           ? TextInputAction.newline
           : TextInputAction.done,
       style:
@@ -647,13 +829,31 @@ class _CustomFormFeildState extends State<CustomFormField> {
           ),
       keyboardType: _keyboardType,
       maxLength: widget.isPhoneNumber ? 15 : null,
-      maxLines: widget.isMultiline ? maxLines : 1,
-      minLines: widget.isMultiline ? minLines : 1,
+      maxLines: widget.isMultiline || widget.isEventDescription ? maxLines : 1,
+      minLines: widget.isMultiline || widget.isEventDescription ? minLines : 1,
       expands: false,
       obscureText: widget.isPassword || widget.isWifiPassword
           ? isObscured
           : false,
-      decoration: _buildInputDecoration(isTablet, scale),
+      readOnly: isEventDateField,
+      onTap: isEventDateField
+          ? () {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                _showOmniDateTimePicker(
+                  context,
+                  isStartDate: widget.isEventStartDate,
+                  initialDate: widget.isEventStartDate
+                      ? (widget.eventStartDate ?? DateTime.now())
+                      : (widget.eventEndDate ?? DateTime.now()),
+                  firstDate: widget.isEventStartDate
+                      ? DateTime(1900)
+                      : widget.eventStartDate,
+                  lastDate: widget.isEventEndDate ? DateTime(2100) : null,
+                );
+              });
+            }
+          : null,
+      decoration: _buildInputDecoration(isTablet, scale, isEventDateField),
       validator: (value) {
         _hasBeenValidated = true;
 
@@ -695,7 +895,11 @@ class _CustomFormFeildState extends State<CustomFormField> {
     );
   }
 
-  InputDecoration _buildInputDecoration(bool isTablet, double scale) {
+  InputDecoration _buildInputDecoration(
+    bool isTablet,
+    double scale, [
+    bool isEventDateField = false,
+  ]) {
     final bool isRTL =
         context.locale.languageCode == 'ar' ||
         context.locale.languageCode == 'fa' ||
@@ -725,7 +929,7 @@ class _CustomFormFeildState extends State<CustomFormField> {
           ? appColors.failed.withOpacity(0.1)
           : widget.background ?? appColors.textfield,
       filled: true,
-      suffixIcon: _buildSuffixIcon(isTablet, scale),
+      suffixIcon: _buildSuffixIcon(isTablet, scale, isEventDateField),
       prefixIconConstraints: widget.iconSize == null
           ? null
           : BoxConstraints.expand(width: isTablet ? (70.w * scale) : 32.w),
@@ -736,7 +940,7 @@ class _CustomFormFeildState extends State<CustomFormField> {
       focusedBorder: _buildBorder(appColors.primary, isTablet, scale),
       focusedErrorBorder: _buildBorder(appColors.failed, isTablet, scale),
       disabledBorder: _buildBorder(Colors.transparent, isTablet, scale),
-      contentPadding: widget.isMultiline
+      contentPadding: widget.isMultiline || widget.isEventDescription
           ? EdgeInsets.symmetric(
               horizontal: isTablet ? (28.w * scale) : 16.w,
               vertical: isTablet ? (24.h * scale) : 14.h,
@@ -764,7 +968,11 @@ class _CustomFormFeildState extends State<CustomFormField> {
     );
   }
 
-  Widget? _buildSuffixIcon(bool isTablet, double scale) {
+  Widget? _buildSuffixIcon(
+    bool isTablet,
+    double scale, [
+    bool isEventDateField = false,
+  ]) {
     if (widget.suffixText != null) return null;
     if (widget.suffixIcon != null) return widget.suffixIcon;
 
@@ -807,6 +1015,39 @@ class _CustomFormFeildState extends State<CustomFormField> {
               : widget.onDateSelected,
           child: Icon(
             widget.isDateTime ? Icons.calendar_today : Icons.calendar_month,
+            color: appColors.grey,
+            size: isTablet ? (38.sp * scale) : 20.sp,
+          ),
+        ),
+      );
+    }
+
+    if (widget.isEventStartDate || widget.isEventEndDate) {
+      return Padding(
+        padding: EdgeInsets.fromLTRB(
+          isTablet ? (35.w * scale) : 16.w,
+          isTablet ? (28.h * scale) : 16.h,
+          isTablet ? (20.w * scale) : 8.w,
+          isTablet ? (28.h * scale) : 16.h,
+        ),
+        child: InkWell(
+          onTap: () {
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              _showOmniDateTimePicker(
+                context,
+                isStartDate: widget.isEventStartDate,
+                initialDate: widget.isEventStartDate
+                    ? (widget.eventStartDate ?? DateTime.now())
+                    : (widget.eventEndDate ?? DateTime.now()),
+                firstDate: widget.isEventStartDate
+                    ? DateTime(1900)
+                    : widget.eventStartDate,
+                lastDate: widget.isEventEndDate ? DateTime(2100) : null,
+              );
+            });
+          },
+          child: Icon(
+            widget.isEventStartDate ? Icons.event_available : Icons.event_note,
             color: appColors.grey,
             size: isTablet ? (38.sp * scale) : 20.sp,
           ),
@@ -950,6 +1191,50 @@ class _CustomFormFeildState extends State<CustomFormField> {
         padding: _getIconPadding(),
         child: Icon(
           Icons.factory_outlined,
+          color: appColors.grey,
+          size: _getIconSize(),
+        ),
+      );
+    }
+
+    if (widget.isEventName) {
+      return Padding(
+        padding: _getIconPadding(),
+        child: Icon(
+          Icons.event_note_outlined,
+          color: appColors.grey,
+          size: _getIconSize(),
+        ),
+      );
+    }
+
+    if (widget.isEventDescription) {
+      return Padding(
+        padding: _getIconPadding(),
+        child: Icon(
+          Icons.description_outlined,
+          color: appColors.grey,
+          size: _getIconSize(),
+        ),
+      );
+    }
+
+    if (widget.isEventStartDate) {
+      return Padding(
+        padding: _getIconPadding(),
+        child: Icon(
+          Icons.calendar_today_outlined,
+          color: appColors.grey,
+          size: _getIconSize(),
+        ),
+      );
+    }
+
+    if (widget.isEventEndDate) {
+      return Padding(
+        padding: _getIconPadding(),
+        child: Icon(
+          Icons.calendar_view_day_outlined,
           color: appColors.grey,
           size: _getIconSize(),
         ),

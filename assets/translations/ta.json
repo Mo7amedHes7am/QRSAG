@@ -25,7 +25,11 @@
     "website": "உங்கள் வலைத்தள முகவரியை உள்ளிடவும்",
     "wifi_name": "WiFi நெட்வொர்க் பெயரை உள்ளிடவும் (SSID)",
     "wifi_password": "WiFi கடவுச்சொல்லை உள்ளிடவும்",
-    "industry_name": "துறையின் பெயர்"
+    "industry_name": "துறையின் பெயரை உள்ளிடவும்",
+    "event_name": "நிகழ்வின் பெயரை உள்ளிடவும்",
+    "event_description": "நிகழ்வின் விளக்கத்தை உள்ளிடவும்",
+    "event_start_date": "தொடக்க தேதியைத் தேர்ந்தெடுக்கவும்",
+    "event_end_date": "முடிவு தேதியைத் தேர்ந்தெடுக்கவும்"
   },
   "validation": {
     "email_invalid": "செல்லுபடியாகும் மின்னஞ்சல் முகவரியை உள்ளிடவும்",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "WiFi பெயர் குறைந்தது 2 எழுத்துகள் இருக்க வேண்டும்",
     "wifi_password_invalid": "WiFi கடவுச்சொல் குறைந்தது 8 எழுத்துகள் இருக்க வேண்டும்",
     "industry_name_required": "துறையின் பெயரை உள்ளிடவும்",
-    "industry_name_invalid": "துறையின் பெயர் குறைந்தது 2 எழுத்துகள் இருக்க வேண்டும்"
+    "industry_name_invalid": "துறையின் பெயர் குறைந்தது 2 எழுத்துகள் இருக்க வேண்டும்",
+    "event_name_required": "நிகழ்வின் பெயரை உள்ளிடவும்",
+    "event_name_invalid": "நிகழ்வின் பெயர் குறைந்தது 2 எழுத்துகள் இருக்க வேண்டும்",
+    "event_description_required": "நிகழ்வின் விளக்கத்தை உள்ளிடவும்",
+    "event_description_invalid": "விளக்கம் குறைந்தது 10 எழுத்துகள் இருக்க வேண்டும்",
+    "event_start_date_required": "தொடக்க தேதியைத் தேர்ந்தெடுக்கவும்",
+    "event_end_date_required": "முடிவு தேதியைத் தேர்ந்தெடுக்கவும்",
+    "event_end_date_invalid": "முடிவு தேதி தொடக்க தேதிக்கு பிறகு இருக்க வேண்டும்"
   },
   "field": {
     "full_name": "முழுப் பெயர்",
@@ -78,7 +89,11 @@
     "wifi_name": "WiFi பெயர்",
     "wifi_password": "WiFi கடவுச்சொல்",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "துறையின் பெயர்"
+    "industry_name": "துறையின் பெயர்",
+    "event_name": "நிகழ்வின் பெயர்",
+    "event_description": "நிகழ்வின் விளக்கம்",
+    "event_start_date": "தொடக்க தேதி",
+    "event_end_date": "முடிவு தேதி"
   },
   "common": {
     "optional": "விருப்பத்தேர்வு",

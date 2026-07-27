@@ -13,4 +13,9 @@ enum ControllerType {
   wifiName,
   wifiPassword,
   industry,
+  eventName,
+  eventLocation,
+  eventDescription,
+  eventStartDate,
+  eventEndDate,
 }

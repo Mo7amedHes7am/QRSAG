@@ -25,7 +25,11 @@
     "website": "Ingiza anwani ya tovuti yako",
     "wifi_name": "Ingiza jina la mtandao wa WiFi (SSID)",
     "wifi_password": "Ingiza nenosiri la WiFi",
-    "industry_name": "Jina la sekta"
+    "industry_name": "Ingiza jina la sekta",
+    "event_name": "Ingiza jina la tukio",
+    "event_description": "Ingiza maelezo ya tukio",
+    "event_start_date": "Chagua tarehe ya kuanza",
+    "event_end_date": "Chagua tarehe ya mwisho"
   },
   "validation": {
     "email_invalid": "Tafadhali ingiza barua pepe sahihi",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "Jina la WiFi lazima liwe na angalau herufi 2",
     "wifi_password_invalid": "Nenosiri la WiFi lazima liwe na angalau herufi 8",
     "industry_name_required": "Tafadhali ingiza jina la sekta",
-    "industry_name_invalid": "Jina la sekta lazima liwe na angalau herufi 2"
+    "industry_name_invalid": "Jina la sekta lazima liwe na angalau herufi 2",
+    "event_name_required": "Tafadhali ingiza jina la tukio",
+    "event_name_invalid": "Jina la tukio lazima liwe na angalau herufi 2",
+    "event_description_required": "Tafadhali ingiza maelezo ya tukio",
+    "event_description_invalid": "Maelezo lazima yawe na angalau herufi 10",
+    "event_start_date_required": "Tafadhali chagua tarehe ya kuanza",
+    "event_end_date_required": "Tafadhali chagua tarehe ya mwisho",
+    "event_end_date_invalid": "Tarehe ya mwisho lazima iwe baada ya tarehe ya kuanza"
   },
   "field": {
     "full_name": "Jina Kamili",
@@ -78,7 +89,11 @@
     "wifi_name": "Jina la WiFi",
     "wifi_password": "Nenosiri la WiFi",
     "wifi_ssid": "SSID ya WiFi",
-    "industry_name": "Jina la sekta"
+    "industry_name": "Jina la Sekta",
+    "event_name": "Jina la Tukio",
+    "event_description": "Maelezo ya Tukio",
+    "event_start_date": "Tarehe ya Kuanza",
+    "event_end_date": "Tarehe ya Mwisho"
   },
   "common": {
     "optional": "hiari",

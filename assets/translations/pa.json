@@ -25,7 +25,11 @@
     "website": "ਆਪਣੀ ਵੈਬਸਾਈਟ ਦਾ ਪਤਾ ਦਾਖਲ ਕਰੋ",
     "wifi_name": "WiFi ਨੈੱਟਵਰਕ ਨਾਮ ਦਾਖਲ ਕਰੋ (SSID)",
     "wifi_password": "WiFi ਪਾਸਵਰਡ ਦਾਖਲ ਕਰੋ",
-    "industry_name": "ਉਦਯੋਗ ਦਾ ਨਾਮ"
+    "industry_name": "ਉਦਯੋਗ ਦਾ ਨਾਮ ਦਾਖਲ ਕਰੋ",
+    "event_name": "ਇਵੈਂਟ ਦਾ ਨਾਮ ਦਾਖਲ ਕਰੋ",
+    "event_description": "ਇਵੈਂਟ ਦਾ ਵੇਰਵਾ ਦਾਖਲ ਕਰੋ",
+    "event_start_date": "ਸ਼ੁਰੂਆਤੀ ਮਿਤੀ ਚੁਣੋ",
+    "event_end_date": "ਅੰਤਿਮ ਮਿਤੀ ਚੁਣੋ"
   },
   "validation": {
     "email_invalid": "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੈਧ ਈਮੇਲ ਪਤਾ ਦਾਖਲ ਕਰੋ",
@@ -53,7 +57,14 @@
     "wifi_name_invalid": "WiFi ਨਾਮ ਘੱਟੋ-ਘੱਟ 2 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
     "wifi_password_invalid": "WiFi ਪਾਸਵਰਡ ਘੱਟੋ-ਘੱਟ 8 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
     "industry_name_required": "ਕਿਰਪਾ ਕਰਕੇ ਉਦਯੋਗ ਦਾ ਨਾਮ ਦਾਖਲ ਕਰੋ",
-    "industry_name_invalid": "ਉਦਯੋਗ ਦਾ ਨਾਮ ਘੱਟੋ-ਘੱਟ 2 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ"
+    "industry_name_invalid": "ਉਦਯੋਗ ਦਾ ਨਾਮ ਘੱਟੋ-ਘੱਟ 2 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+    "event_name_required": "ਕਿਰਪਾ ਕਰਕੇ ਇਵੈਂਟ ਦਾ ਨਾਮ ਦਾਖਲ ਕਰੋ",
+    "event_name_invalid": "ਇਵੈਂਟ ਦਾ ਨਾਮ ਘੱਟੋ-ਘੱਟ 2 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+    "event_description_required": "ਕਿਰਪਾ ਕਰਕੇ ਇਵੈਂਟ ਦਾ ਵੇਰਵਾ ਦਾਖਲ ਕਰੋ",
+    "event_description_invalid": "ਵੇਰਵਾ ਘੱਟੋ-ਘੱਟ 10 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+    "event_start_date_required": "ਕਿਰਪਾ ਕਰਕੇ ਸ਼ੁਰੂਆਤੀ ਮਿਤੀ ਚੁਣੋ",
+    "event_end_date_required": "ਕਿਰਪਾ ਕਰਕੇ ਅੰਤਿਮ ਮਿਤੀ ਚੁਣੋ",
+    "event_end_date_invalid": "ਅੰਤਿਮ ਮਿਤੀ ਸ਼ੁਰੂਆਤੀ ਮਿਤੀ ਤੋਂ ਬਾਅਦ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ"
   },
   "field": {
     "full_name": "ਪੂਰਾ ਨਾਮ",
@@ -78,7 +89,11 @@
     "wifi_name": "WiFi ਨਾਮ",
     "wifi_password": "WiFi ਪਾਸਵਰਡ",
     "wifi_ssid": "WiFi SSID",
-    "industry_name": "ਉਦਯੋਗ ਦਾ ਨਾਮ"
+    "industry_name": "ਉਦਯੋਗ ਦਾ ਨਾਮ",
+    "event_name": "ਇਵੈਂਟ ਦਾ ਨਾਮ",
+    "event_description": "ਇਵੈਂਟ ਦਾ ਵੇਰਵਾ",
+    "event_start_date": "ਸ਼ੁਰੂਆਤੀ ਮਿਤੀ",
+    "event_end_date": "ਅੰਤਿਮ ਮਿਤੀ"
   },
   "common": {
     "optional": "ਵਿਕਲਪਿਕ",
