@@ -175,12 +175,17 @@
     "title": "إنشاء رمز QR",
     "success": "تم إنشاء رمز QR بنجاح",
     "validation": {
-      "empty": "الحقل لا يمكن أن يكون فارغًا",
+      "empty": "الحقل لا يمكن أن يكون فارغاً",
       "invalid_website": "رابط موقع غير صحيح",
       "invalid_email": "بريد إلكتروني غير صحيح",
       "invalid_phone": "رقم هاتف غير صحيح",
       "invalid_username": "اسم المستخدم لا يجب أن يحتوي على مسافات",
-      "max_length": "لا يمكن أن يتجاوز الحقل {0} أحرف"
+      "max_length": "لا يمكن أن يتجاوز الحقل {0} أحرف",
+      "invalid_card_number": "الرجاء إدخال رقم بطاقة صحيح",
+      "invalid_cvv": "الرجاء إدخال رمز CVV صحيح",
+      "invalid_card_holder_name": "الرجاء إدخال اسم حامل بطاقة صحيح",
+      "invalid_expiry_date": "الرجاء إدخال تاريخ انتهاء صحيح (شهر/سنة)",
+      "card_expired": "هذه البطاقة منتهية الصلاحية"
     },
     "wifi": {
       "hidden": "مخفي",
@@ -206,5 +211,20 @@
     "change_language_subtitle": "اختر لغتك المفضلة أدناه. هذا يساعدنا على خدمتك بشكل أفضل.",
     "change_theme_title": "تغيير السمة",
     "change_theme_subtitle": "اختر السمة المفضلة لديك أدناه. هذا يساعدنا على خدمتك بشكل أفضل."
+  },
+  "visa": {
+    "title": "بطاقة فيزا",
+    "card": {
+      "bank_name": "بنك QRSAG",
+      "number_hint": "رقم البطاقة",
+      "expiry_hint": "تاريخ الانتهاء",
+      "holder_hint": "اسم حامل البطاقة",
+      "cvv_hint": "CVV",
+      "number_label": "رقم البطاقة",
+      "expiry_label": "تاريخ الانتهاء",
+      "holder_label": "اسم حامل البطاقة",
+      "cvv_label": "CVV",
+      "clear_field": "مسح الحقل"
+    }
   }
 }

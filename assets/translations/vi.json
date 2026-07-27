@@ -180,7 +180,12 @@
       "invalid_email": "Địa chỉ email không hợp lệ",
       "invalid_phone": "Số điện thoại không hợp lệ",
       "invalid_username": "Tên người dùng không được chứa khoảng trắng",
-      "max_length": "Trường không được vượt quá {0} ký tự"
+      "max_length": "Trường không được vượt quá {0} ký tự",
+      "invalid_card_number": "Vui lòng nhập số thẻ hợp lệ",
+      "invalid_cvv": "Vui lòng nhập mã CVV hợp lệ",
+      "invalid_card_holder_name": "Vui lòng nhập tên chủ thẻ hợp lệ",
+      "invalid_expiry_date": "Vui lòng nhập ngày hết hạn hợp lệ (MM/YY)",
+      "card_expired": "Thẻ này đã hết hạn"
     },
     "wifi": {
       "hidden": "Ẩn",
@@ -206,5 +211,20 @@
     "change_language_subtitle": "Chọn ngôn ngữ ưa thích của bạn bên dưới. Điều này giúp chúng tôi phục vụ bạn tốt hơn.",
     "change_theme_title": "Thay Đổi Chủ Đề",
     "change_theme_subtitle": "Chọn chủ đề ưa thích của bạn bên dưới. Điều này giúp chúng tôi phục vụ bạn tốt hơn."
+  },
+  "visa": {
+    "title": "Thẻ Visa",
+    "card": {
+      "bank_name": "Ngân hàng QRSAG",
+      "number_hint": "Số thẻ",
+      "expiry_hint": "Ngày hết hạn",
+      "holder_hint": "Tên chủ thẻ",
+      "cvv_hint": "CVV",
+      "number_label": "Số thẻ",
+      "expiry_label": "Ngày hết hạn",
+      "holder_label": "Tên chủ thẻ",
+      "cvv_label": "CVV",
+      "clear_field": "Xóa trường"
+    }
   }
 }

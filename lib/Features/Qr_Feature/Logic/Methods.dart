@@ -1,10 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:encrypt_decrypt_plus/encrypt_decrypt/xor.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/Cubit/qr_cubit.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_contact_screen.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_text_screen.dart';
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_visa_screen.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/screens/generate_view/generate_wifi_screen.dart';
 import 'package:qr_scanner_and_generator/core/Methods/app_Navigation.dart';
 import 'package:qr_scanner_and_generator/core/Methods/app_validators.dart';
@@ -22,11 +24,11 @@ QrType detectQrType(String qr) {
     ((v) => v.startsWith('http') || v.startsWith('www'), QrType.website),
     ((v) => v.startsWith('mailto:'), QrType.email),
     ((v) => v.startsWith('tel:'), QrType.phone),
-    // ((v) => v.startsWith('begin:vevent'), QrType.event),
+    ((v) => v.startsWith('begin:vevent'), QrType.event),
     ((v) => v.startsWith('begin:vcard'), QrType.contact),
-    // ((v) => v.startsWith('business:'), QrType.business),
+    ((v) => v.startsWith('business:'), QrType.business),
     ((v) => v.startsWith('contact:'), QrType.contact),
-    // ((v) => v.startsWith('visa:'), QrType.visa),
+    ((v) => v.startsWith('visa:'), QrType.visa),
   ];
 
   for (final (matcher, type) in matchers) {
@@ -56,12 +58,12 @@ String parseQrData(String data) {
             "${LocaleKeys.qr_hidden.tr()}: ${_extractBetween(data, ";h:", ";;")}\n"
             "${LocaleKeys.qr_encryption.tr()}: ${_extractBetween(data, ":t:", ";s:")}\n";
 
-      // case QrType.event:
-      //   return "${LocaleKeys.qr_event_name.tr()}: ${_extractBetween(data, ":n:", ";st:")}\n"
-      //       "${LocaleKeys.qr_starts_at.tr()}: ${_extractBetween(data, ";st:", ";ed:")}\n"
-      //       "${LocaleKeys.qr_ends_at.tr()}: ${_extractBetween(data, ";ed:", ";e:")}\n"
-      //       "${LocaleKeys.qr_location.tr()}: ${_extractBetween(data, ";e:", ";d:")}\n"
-      //       "${LocaleKeys.qr_description.tr()}: ${_extractBetween(data, ";d:", ";;")}";
+      case QrType.event:
+        return "${LocaleKeys.qr_event_name.tr()}: ${_extractBetween(data, ":n:", ";st:")}\n"
+            "${LocaleKeys.qr_starts_at.tr()}: ${_extractBetween(data, ";st:", ";ed:")}\n"
+            "${LocaleKeys.qr_ends_at.tr()}: ${_extractBetween(data, ";ed:", ";e:")}\n"
+            "${LocaleKeys.qr_location.tr()}: ${_extractBetween(data, ";e:", ";d:")}\n"
+            "${LocaleKeys.qr_description.tr()}: ${_extractBetween(data, ";d:", ";;")}";
 
       case QrType.contact:
         return "${LocaleKeys.qr_name.tr()}: ${_extractBetween(data, ":n:", ";c:")}\n"
@@ -74,27 +76,27 @@ String parseQrData(String data) {
             "${LocaleKeys.qr_city.tr()}: ${_extractBetween(data, ";ci:", ";co:")} "
             "${LocaleKeys.qr_country.tr()}: ${_extractBetween(data, ";co:", ";;")}";
 
-      // case QrType.business:
-      //   return "${LocaleKeys.qr_name.tr()}: ${_extractBetween(data, ":n:", ";i:")}\n"
-      //       "${LocaleKeys.qr_industry.tr()}: ${_extractBetween(data, ";i:", ";p:")}\n"
-      //       "${LocaleKeys.qr_phone_number.tr()}: ${_extractBetween(data, ";p:", ";e:")}\n"
-      //       "${LocaleKeys.qr_email.tr()}: ${_extractBetween(data, ";e:", ";w:")}\n"
-      //       "${LocaleKeys.qr_website.tr()}: ${_extractBetween(data, ";w:", ";a:")}\n"
-      //       "${LocaleKeys.qr_address.tr()}: ${_extractBetween(data, ";a:", ";ci:")} "
-      //       "${LocaleKeys.qr_city.tr()}: ${_extractBetween(data, ";ci:", ";co:")} "
-      //       "${LocaleKeys.qr_country.tr()}: ${_extractBetween(data, ";co:", ";;")}";
+      case QrType.business:
+        return "${LocaleKeys.qr_name.tr()}: ${_extractBetween(data, ":n:", ";i:")}\n"
+            "${LocaleKeys.qr_industry.tr()}: ${_extractBetween(data, ";i:", ";p:")}\n"
+            "${LocaleKeys.qr_phone_number.tr()}: ${_extractBetween(data, ";p:", ";e:")}\n"
+            "${LocaleKeys.qr_email.tr()}: ${_extractBetween(data, ";e:", ";w:")}\n"
+            "${LocaleKeys.qr_website.tr()}: ${_extractBetween(data, ";w:", ";a:")}\n"
+            "${LocaleKeys.qr_address.tr()}: ${_extractBetween(data, ";a:", ";ci:")} "
+            "${LocaleKeys.qr_city.tr()}: ${_extractBetween(data, ";ci:", ";co:")} "
+            "${LocaleKeys.qr_country.tr()}: ${_extractBetween(data, ";co:", ";;")}";
 
-      // case QrType.visa:
-      //   final rawCard = _extractBetween(data, ":n:", ";e:");
-      //   final parts = rawCard.split("-VssEnc-");
-      //   final cardNumber = parts.length == 2
-      //       ? XOR().xorDecode(parts[0], secretKey: parts[1])
-      //       : rawCard;
-      //
-      //   return "${LocaleKeys.qr_holder_name.tr()}: ${_extractBetween(data, ";c:", ";v:")}\n"
-      //       "${LocaleKeys.qr_card_number.tr()}: $cardNumber\n"
-      //       "${LocaleKeys.qr_expiry_date.tr()}: ${_extractBetween(data, ";e:", ";c:")}\n"
-      //       "${LocaleKeys.qr_cvv.tr()}: ${_extractBetween(data, ";v:", ";;")}\n";
+      case QrType.visa:
+        final rawCard = _extractBetween(data, ":n:", ";e:");
+        final parts = rawCard.split("-VssEnc-");
+        final cardNumber = parts.length == 2
+            ? XOR().xorDecode(parts[0], secretKey: parts[1])
+            : rawCard;
+
+        return "${LocaleKeys.qr_holder_name.tr()}: ${_extractBetween(data, ";c:", ";v:")}\n"
+            "${LocaleKeys.qr_card_number.tr()}: $cardNumber\n"
+            "${LocaleKeys.qr_expiry_date.tr()}: ${_extractBetween(data, ";e:", ";c:")}\n"
+            "${LocaleKeys.qr_cvv.tr()}: ${_extractBetween(data, ";v:", ";;")}\n";
 
       default:
         return data;
@@ -140,9 +142,9 @@ void handle_navigation({required QrType type, required BuildContext context}) {
         screen: GenerateWifiScreen(),
       );
       break;
-    // case QrType.event:
-    //   // Get.to(GenerateEventScreen());
-    //   break;
+    case QrType.event:
+      // Get.to(GenerateEventScreen());
+      break;
     case QrType.contact:
       AppNavigator.toPageWithCubit(
         context: context,
@@ -150,12 +152,16 @@ void handle_navigation({required QrType type, required BuildContext context}) {
         screen: GenerateContactScreen(),
       );
       break;
-    // case QrType.business:
-    //   // Get.to(GenerateBusinessScreen());
-    //   break;
-    // case QrType.visa:
-    //   // Get.to(GenerateVisaScreen());
-    //   break;
+    case QrType.business:
+      // Get.to(GenerateBusinessScreen());
+      break;
+    case QrType.visa:
+      AppNavigator.toPageWithCubit(
+        context: context,
+        cubit: context.read<QrCubit>(),
+        screen: GenerateVisaScreen(),
+      );
+      break;
   }
 }
 

@@ -180,7 +180,12 @@
       "invalid_email": "Indirizzo email non valido",
       "invalid_phone": "Numero di telefono non valido",
       "invalid_username": "Il nome utente non deve contenere spazi",
-      "max_length": "Il campo non può superare i {0} caratteri"
+      "max_length": "Il campo non può superare i {0} caratteri",
+      "invalid_card_number": "Inserisci un numero di carta valido",
+      "invalid_cvv": "Inserisci un codice CVV valido",
+      "invalid_card_holder_name": "Inserisci un nome del titolare valido",
+      "invalid_expiry_date": "Inserisci una data di scadenza valida (MM/AA)",
+      "card_expired": "Questa carta è scaduta"
     },
     "wifi": {
       "hidden": "Nascosta",
@@ -206,5 +211,20 @@
     "change_language_subtitle": "Seleziona la tua lingua preferita qui sotto. Questo ci aiuta a servirti meglio.",
     "change_theme_title": "Cambia Tema",
     "change_theme_subtitle": "Seleziona il tuo tema preferito qui sotto. Questo ci aiuta a servirti meglio."
+  },
+  "visa": {
+    "title": "Carta Visa",
+    "card": {
+      "bank_name": "Banca QRSAG",
+      "number_hint": "Numero della carta",
+      "expiry_hint": "Data di scadenza",
+      "holder_hint": "Nome del titolare",
+      "cvv_hint": "CVV",
+      "number_label": "Numero della carta",
+      "expiry_label": "Data di scadenza",
+      "holder_label": "Nome del titolare",
+      "cvv_label": "CVV",
+      "clear_field": "Cancella campo"
+    }
   }
 }

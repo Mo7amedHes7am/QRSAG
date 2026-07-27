@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/controllertype.dart';
@@ -20,7 +19,6 @@ class GenerateTextScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cubit = context.read<QrCubit>();
-    final isArabic = context.locale.languageCode == 'ar';
 
     cubit.initGenerateTypePage(type);
 
@@ -33,7 +31,7 @@ class GenerateTextScreen extends StatelessWidget {
             backgroundColor: appColors.background,
             appBar: MainAppBar(
               context: context,
-              title: isArabic ? type.arlabel : type.enlabel,
+              title: type.getLabelFromContext(context),
               hasBack: true,
               backstyle: 1,
             ),

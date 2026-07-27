@@ -1,0 +1,99 @@
+import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
+
+import 'translations_en.dart';
+import 'translations_ar.dart';
+import 'translations_zh.dart';
+import 'translations_es.dart';
+import 'translations_hi.dart';
+import 'translations_bn.dart';
+import 'translations_pt.dart';
+import 'translations_ru.dart';
+import 'translations_ja.dart';
+import 'translations_pa.dart';
+import 'translations_de.dart';
+import 'translations_ko.dart';
+import 'translations_fr.dart';
+import 'translations_te.dart';
+import 'translations_mr.dart';
+import 'translations_tr.dart';
+import 'translations_ta.dart';
+import 'translations_vi.dart';
+import 'translations_ur.dart';
+import 'translations_fa.dart';
+import 'translations_pl.dart';
+import 'translations_uk.dart';
+import 'translations_ro.dart';
+import 'translations_nl.dart';
+import 'translations_th.dart';
+import 'translations_id.dart';
+import 'translations_ms.dart';
+import 'translations_sw.dart';
+import 'translations_it.dart';
+import 'translations_el.dart';
+
+class QrTypeTranslations {
+  static String getTranslation(QrType type, String languageCode) {
+    switch (languageCode) {
+      case 'ar':
+        return ArabicTranslations.getTranslation(type);
+      case 'zh':
+        return ChineseTranslations.getTranslation(type);
+      case 'es':
+        return SpanishTranslations.getTranslation(type);
+      case 'hi':
+        return HindiTranslations.getTranslation(type);
+      case 'bn':
+        return BengaliTranslations.getTranslation(type);
+      case 'pt':
+        return PortugueseTranslations.getTranslation(type);
+      case 'ru':
+        return RussianTranslations.getTranslation(type);
+      case 'ja':
+        return JapaneseTranslations.getTranslation(type);
+      case 'pa':
+        return PunjabiTranslations.getTranslation(type);
+      case 'de':
+        return GermanTranslations.getTranslation(type);
+      case 'ko':
+        return KoreanTranslations.getTranslation(type);
+      case 'fr':
+        return FrenchTranslations.getTranslation(type);
+      case 'te':
+        return TeluguTranslations.getTranslation(type);
+      case 'mr':
+        return MarathiTranslations.getTranslation(type);
+      case 'tr':
+        return TurkishTranslations.getTranslation(type);
+      case 'ta':
+        return TamilTranslations.getTranslation(type);
+      case 'vi':
+        return VietnameseTranslations.getTranslation(type);
+      case 'ur':
+        return UrduTranslations.getTranslation(type);
+      case 'fa':
+        return PersianTranslations.getTranslation(type);
+      case 'pl':
+        return PolishTranslations.getTranslation(type);
+      case 'uk':
+        return UkrainianTranslations.getTranslation(type);
+      case 'ro':
+        return RomanianTranslations.getTranslation(type);
+      case 'nl':
+        return DutchTranslations.getTranslation(type);
+      case 'th':
+        return ThaiTranslations.getTranslation(type);
+      case 'id':
+        return IndonesianTranslations.getTranslation(type);
+      case 'ms':
+        return MalayTranslations.getTranslation(type);
+      case 'sw':
+        return SwahiliTranslations.getTranslation(type);
+      case 'it':
+        return ItalianTranslations.getTranslation(type);
+      case 'el':
+        return GreekTranslations.getTranslation(type);
+      default:
+        return EnglishTranslations.getTranslation(type);
+    }
+  }
+}

@@ -18,8 +18,6 @@ Supports generating QR codes for:
 - 📞 Phone
 - 📸 Instagram
 - 📧 Email
-
-> 🚀 Upcoming:
 - 💳 Visa QR
 - 🎫 Event QR
 - 🏢 Business QR
@@ -59,7 +57,7 @@ English (en), Chinese (zh), Spanish (es), Arabic (ar), Hindi (hi), Bengali (bn),
 
 ## 🏗️ Tech Stack
 
-- Flutter 3.44.7 (Stable)
+- Flutter 3.44.8 (Stable)
 - Dart 3.12.2
 - State Management: Cubit (Bloc)
 - Local Storage: Hive
@@ -84,9 +82,9 @@ flutter run
 - [x] QR generation (multiple types)
 - [x] Scan & generate history
 - [x] Settings & customization
-- [ ] Visa QR
-- [ ] Event QR
-- [ ] Business QR
+- [x] Visa QR
+- [x] Event QR
+- [x] Business QR
 
 ---
 

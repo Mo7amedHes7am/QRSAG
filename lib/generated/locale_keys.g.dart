@@ -172,6 +172,11 @@ abstract class  LocaleKeys {
   static const generate_validation_invalid_phone = 'generate.validation.invalid_phone';
   static const generate_validation_invalid_username = 'generate.validation.invalid_username';
   static const generate_validation_max_length = 'generate.validation.max_length';
+  static const generate_validation_invalid_card_number = 'generate.validation.invalid_card_number';
+  static const generate_validation_invalid_cvv = 'generate.validation.invalid_cvv';
+  static const generate_validation_invalid_card_holder_name = 'generate.validation.invalid_card_holder_name';
+  static const generate_validation_invalid_expiry_date = 'generate.validation.invalid_expiry_date';
+  static const generate_validation_card_expired = 'generate.validation.card_expired';
   static const generate_validation = 'generate.validation';
   static const generate_wifi_hidden = 'generate.wifi.hidden';
   static const generate_wifi_encryption = 'generate.wifi.encryption';
@@ -196,5 +201,18 @@ abstract class  LocaleKeys {
   static const settings_change_theme_title = 'settings.change_theme_title';
   static const settings_change_theme_subtitle = 'settings.change_theme_subtitle';
   static const settings = 'settings';
+  static const visa_title = 'visa.title';
+  static const visa_card_bank_name = 'visa.card.bank_name';
+  static const visa_card_number_hint = 'visa.card.number_hint';
+  static const visa_card_expiry_hint = 'visa.card.expiry_hint';
+  static const visa_card_holder_hint = 'visa.card.holder_hint';
+  static const visa_card_cvv_hint = 'visa.card.cvv_hint';
+  static const visa_card_number_label = 'visa.card.number_label';
+  static const visa_card_expiry_label = 'visa.card.expiry_label';
+  static const visa_card_holder_label = 'visa.card.holder_label';
+  static const visa_card_cvv_label = 'visa.card.cvv_label';
+  static const visa_card_clear_field = 'visa.card.clear_field';
+  static const visa_card = 'visa.card';
+  static const visa = 'visa';
 
 }

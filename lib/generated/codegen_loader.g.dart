@@ -191,12 +191,17 @@ class CodegenLoader extends AssetLoader{
     "title": "إنشاء رمز QR",
     "success": "تم إنشاء رمز QR بنجاح",
     "validation": {
-      "empty": "الحقل لا يمكن أن يكون فارغًا",
+      "empty": "الحقل لا يمكن أن يكون فارغاً",
       "invalid_website": "رابط موقع غير صحيح",
       "invalid_email": "بريد إلكتروني غير صحيح",
       "invalid_phone": "رقم هاتف غير صحيح",
       "invalid_username": "اسم المستخدم لا يجب أن يحتوي على مسافات",
-      "max_length": "لا يمكن أن يتجاوز الحقل {0} أحرف"
+      "max_length": "لا يمكن أن يتجاوز الحقل {0} أحرف",
+      "invalid_card_number": "الرجاء إدخال رقم بطاقة صحيح",
+      "invalid_cvv": "الرجاء إدخال رمز CVV صحيح",
+      "invalid_card_holder_name": "الرجاء إدخال اسم حامل بطاقة صحيح",
+      "invalid_expiry_date": "الرجاء إدخال تاريخ انتهاء صحيح (شهر/سنة)",
+      "card_expired": "هذه البطاقة منتهية الصلاحية"
     },
     "wifi": {
       "hidden": "مخفي",
@@ -222,6 +227,21 @@ class CodegenLoader extends AssetLoader{
     "change_language_subtitle": "اختر لغتك المفضلة أدناه. هذا يساعدنا على خدمتك بشكل أفضل.",
     "change_theme_title": "تغيير السمة",
     "change_theme_subtitle": "اختر السمة المفضلة لديك أدناه. هذا يساعدنا على خدمتك بشكل أفضل."
+  },
+  "visa": {
+    "title": "بطاقة فيزا",
+    "card": {
+      "bank_name": "بنك QRSAG",
+      "number_hint": "رقم البطاقة",
+      "expiry_hint": "تاريخ الانتهاء",
+      "holder_hint": "اسم حامل البطاقة",
+      "cvv_hint": "CVV",
+      "number_label": "رقم البطاقة",
+      "expiry_label": "تاريخ الانتهاء",
+      "holder_label": "اسم حامل البطاقة",
+      "cvv_label": "CVV",
+      "clear_field": "مسح الحقل"
+    }
   }
 };
 static const Map<String,dynamic> _bn = {
@@ -406,7 +426,12 @@ static const Map<String,dynamic> _bn = {
       "invalid_email": "অবৈধ ইমেইল ঠিকানা",
       "invalid_phone": "অবৈধ ফোন নম্বর",
       "invalid_username": "ব্যবহারকারী নামে স্পেস থাকতে পারবে না",
-      "max_length": "ক্ষেত্রটি {0} অক্ষরের বেশি হতে পারবে না"
+      "max_length": "ক্ষেত্রটি {0} অক্ষরের বেশি হতে পারবে না",
+      "invalid_card_number": "অনুগ্রহ করে একটি বৈধ কার্ড নম্বর লিখুন",
+      "invalid_cvv": "অনুগ্রহ করে একটি বৈধ CVV কোড লিখুন",
+      "invalid_card_holder_name": "অনুগ্রহ করে একটি বৈধ কার্ড ধারকের নাম লিখুন",
+      "invalid_expiry_date": "অনুগ্রহ করে একটি বৈধ মেয়াদ শেষের তারিখ লিখুন (মাস/বছর)",
+      "card_expired": "এই কার্ডের মেয়াদ শেষ হয়েছে"
     },
     "wifi": {
       "hidden": "লুকানো",
@@ -432,6 +457,21 @@ static const Map<String,dynamic> _bn = {
     "change_language_subtitle": "নীচে আপনার পছন্দের ভাষা নির্বাচন করুন। এটি আমাদের আপনাকে আরও ভালভাবে সেবা দিতে সাহায্য করে।",
     "change_theme_title": "থিম পরিবর্তন করুন",
     "change_theme_subtitle": "নীচে আপনার পছন্দের থিম নির্বাচন করুন। এটি আমাদের আপনাকে আরও ভালভাবে সেবা দিতে সাহায্য করে।"
+  },
+  "visa": {
+    "title": "ভিসা কার্ড",
+    "card": {
+      "bank_name": "QRSAG ব্যাংক",
+      "number_hint": "কার্ড নম্বর",
+      "expiry_hint": "মেয়াদ শেষের তারিখ",
+      "holder_hint": "কার্ড ধারকের নাম",
+      "cvv_hint": "CVV",
+      "number_label": "কার্ড নম্বর",
+      "expiry_label": "মেয়াদ শেষের তারিখ",
+      "holder_label": "কার্ড ধারকের নাম",
+      "cvv_label": "CVV",
+      "clear_field": "ক্ষেত্র সাফ করুন"
+    }
   }
 };
 static const Map<String,dynamic> _de = {
@@ -616,7 +656,12 @@ static const Map<String,dynamic> _de = {
       "invalid_email": "Ungültige E-Mail-Adresse",
       "invalid_phone": "Ungültige Telefonnummer",
       "invalid_username": "Benutzername darf keine Leerzeichen enthalten",
-      "max_length": "Feld darf {0} Zeichen nicht überschreiten"
+      "max_length": "Feld darf {0} Zeichen nicht überschreiten",
+      "invalid_card_number": "Bitte geben Sie eine gültige Kartennummer ein",
+      "invalid_cvv": "Bitte geben Sie einen gültigen CVV-Code ein",
+      "invalid_card_holder_name": "Bitte geben Sie einen gültigen Karteninhabernamen ein",
+      "invalid_expiry_date": "Bitte geben Sie ein gültiges Ablaufdatum ein (MM/JJ)",
+      "card_expired": "Diese Karte ist abgelaufen"
     },
     "wifi": {
       "hidden": "Versteckt",
@@ -642,6 +687,21 @@ static const Map<String,dynamic> _de = {
     "change_language_subtitle": "Wählen Sie unten Ihre bevorzugte Sprache. Dies hilft uns, Ihnen besser zu dienen.",
     "change_theme_title": "Theme ändern",
     "change_theme_subtitle": "Wählen Sie unten Ihr bevorzugtes Theme. Dies hilft uns, Ihnen besser zu dienen."
+  },
+  "visa": {
+    "title": "Visa-Karte",
+    "card": {
+      "bank_name": "QRSAG Bank",
+      "number_hint": "Kartennummer",
+      "expiry_hint": "Ablaufdatum",
+      "holder_hint": "Karteninhabername",
+      "cvv_hint": "CVV",
+      "number_label": "Kartennummer",
+      "expiry_label": "Ablaufdatum",
+      "holder_label": "Karteninhabername",
+      "cvv_label": "CVV",
+      "clear_field": "Feld löschen"
+    }
   }
 };
 static const Map<String,dynamic> _el = {
@@ -826,7 +886,12 @@ static const Map<String,dynamic> _el = {
       "invalid_email": "Μη έγκυρη διεύθυνση email",
       "invalid_phone": "Μη έγκυρος αριθμός τηλεφώνου",
       "invalid_username": "Το όνομα χρήστη δεν πρέπει να περιέχει κενά",
-      "max_length": "Το πεδίο δεν μπορεί να υπερβαίνει τους {0} χαρακτήρες"
+      "max_length": "Το πεδίο δεν μπορεί να υπερβαίνει τους {0} χαρακτήρες",
+      "invalid_card_number": "Εισάγετε έγκυρο αριθμό κάρτας",
+      "invalid_cvv": "Εισάγετε έγκυρο κωδικό CVV",
+      "invalid_card_holder_name": "Εισάγετε έγκυρο όνομα κατόχου κάρτας",
+      "invalid_expiry_date": "Εισάγετε έγκυρη ημερομηνία λήξης (MM/YY)",
+      "card_expired": "Αυτή η κάρτα έχει λήξει"
     },
     "wifi": {
       "hidden": "Κρυφό",
@@ -852,6 +917,21 @@ static const Map<String,dynamic> _el = {
     "change_language_subtitle": "Επιλέξτε την προτιμώμενη γλώσσα σας παρακάτω. Αυτό μας βοηθά να σας εξυπηρετούμε καλύτερα.",
     "change_theme_title": "Αλλαγή Θέματος",
     "change_theme_subtitle": "Επιλέξτε το προτιμώμενο θέμα σας παρακάτω. Αυτό μας βοηθά να σας εξυπηρετούμε καλύτερα."
+  },
+  "visa": {
+    "title": "Κάρτα Visa",
+    "card": {
+      "bank_name": "Τράπεζα QRSAG",
+      "number_hint": "Αριθμός Κάρτας",
+      "expiry_hint": "Ημερομηνία Λήξης",
+      "holder_hint": "Όνομα Κατόχου",
+      "cvv_hint": "CVV",
+      "number_label": "Αριθμός Κάρτας",
+      "expiry_label": "Ημερομηνία Λήξης",
+      "holder_label": "Όνομα Κατόχου",
+      "cvv_label": "CVV",
+      "clear_field": "Εκκαθάριση πεδίου"
+    }
   }
 };
 static const Map<String,dynamic> _en = {
@@ -1036,7 +1116,12 @@ static const Map<String,dynamic> _en = {
       "invalid_email": "Invalid email address",
       "invalid_phone": "Invalid phone number",
       "invalid_username": "Username must not contain spaces",
-      "max_length": "Field cannot exceed {0} characters"
+      "max_length": "Field cannot exceed {0} characters",
+      "invalid_card_number": "Please enter a valid card number",
+      "invalid_cvv": "Please enter a valid CVV code",
+      "invalid_card_holder_name": "Please enter a valid card holder name",
+      "invalid_expiry_date": "Please enter a valid expiry date (MM/YY)",
+      "card_expired": "This card has expired"
     },
     "wifi": {
       "hidden": "Hidden",
@@ -1062,6 +1147,21 @@ static const Map<String,dynamic> _en = {
     "change_language_subtitle": "Select your preferred language below. This helps us serve you better.",
     "change_theme_title": "Change Theme",
     "change_theme_subtitle": "Select your preferred theme below. This helps us serve you better."
+  },
+  "visa": {
+    "title": "Visa Card",
+    "card": {
+      "bank_name": "QRSAG Bank",
+      "number_hint": "Card Number",
+      "expiry_hint": "Expiry Date",
+      "holder_hint": "Holder Name",
+      "cvv_hint": "CVV",
+      "number_label": "Card Number",
+      "expiry_label": "Expiry Date",
+      "holder_label": "Holder Name",
+      "cvv_label": "CVV",
+      "clear_field": "Clear field"
+    }
   }
 };
 static const Map<String,dynamic> _es = {
@@ -1245,8 +1345,13 @@ static const Map<String,dynamic> _es = {
       "invalid_website": "URL de sitio web inválida",
       "invalid_email": "Correo electrónico inválido",
       "invalid_phone": "Número de teléfono inválido",
-      "invalid_username": "El usuario no debe contener espacios",
-      "max_length": "El campo no puede exceder {0} caracteres"
+      "invalid_username": "El nombre de usuario no debe contener espacios",
+      "max_length": "El campo no puede exceder {0} caracteres",
+      "invalid_card_number": "Ingrese un número de tarjeta válido",
+      "invalid_cvv": "Ingrese un código CVV válido",
+      "invalid_card_holder_name": "Ingrese un nombre de titular válido",
+      "invalid_expiry_date": "Ingrese una fecha de vencimiento válida (MM/AA)",
+      "card_expired": "Esta tarjeta ha expirado"
     },
     "wifi": {
       "hidden": "Oculta",
@@ -1272,6 +1377,21 @@ static const Map<String,dynamic> _es = {
     "change_language_subtitle": "Seleccione su idioma preferido a continuación. Esto nos ayuda a servirle mejor.",
     "change_theme_title": "Cambiar Tema",
     "change_theme_subtitle": "Seleccione su tema preferido a continuación. Esto nos ayuda a servirle mejor."
+  },
+  "visa": {
+    "title": "Tarjeta Visa",
+    "card": {
+      "bank_name": "Banco QRSAG",
+      "number_hint": "Número de tarjeta",
+      "expiry_hint": "Fecha de vencimiento",
+      "holder_hint": "Nombre del titular",
+      "cvv_hint": "CVV",
+      "number_label": "Número de tarjeta",
+      "expiry_label": "Fecha de vencimiento",
+      "holder_label": "Nombre del titular",
+      "cvv_label": "CVV",
+      "clear_field": "Limpiar campo"
+    }
   }
 };
 static const Map<String,dynamic> _fa = {
@@ -1456,7 +1576,12 @@ static const Map<String,dynamic> _fa = {
       "invalid_email": "آدرس ایمیل نامعتبر",
       "invalid_phone": "شماره تلفن نامعتبر",
       "invalid_username": "نام کاربری نباید حاوی فاصله باشد",
-      "max_length": "فیلد نمی‌تواند بیشتر از {0} کاراکتر باشد"
+      "max_length": "فیلد نمی‌تواند بیشتر از {0} کاراکتر باشد",
+      "invalid_card_number": "لطفاً یک شماره کارت معتبر وارد کنید",
+      "invalid_cvv": "لطفاً یک کد CVV معتبر وارد کنید",
+      "invalid_card_holder_name": "لطفاً یک نام دارنده کارت معتبر وارد کنید",
+      "invalid_expiry_date": "لطفاً یک تاریخ انقضای معتبر وارد کنید (ماه/سال)",
+      "card_expired": "این کارت منقضی شده است"
     },
     "wifi": {
       "hidden": "مخفی",
@@ -1482,6 +1607,21 @@ static const Map<String,dynamic> _fa = {
     "change_language_subtitle": "زبان مورد نظر خود را در زیر انتخاب کنید. این به ما کمک می کند تا بهتر به شما خدمت کنیم.",
     "change_theme_title": "تغییر تم",
     "change_theme_subtitle": "تم مورد نظر خود را در زیر انتخاب کنید. این به ما کمک می کند تا بهتر به شما خدمت کنیم."
+  },
+  "visa": {
+    "title": "کارت ویزا",
+    "card": {
+      "bank_name": "بانک QRSAG",
+      "number_hint": "شماره کارت",
+      "expiry_hint": "تاریخ انقضا",
+      "holder_hint": "نام دارنده کارت",
+      "cvv_hint": "CVV",
+      "number_label": "شماره کارت",
+      "expiry_label": "تاریخ انقضا",
+      "holder_label": "نام دارنده کارت",
+      "cvv_label": "CVV",
+      "clear_field": "پاک کردن فیلد"
+    }
   }
 };
 static const Map<String,dynamic> _fr = {
@@ -1666,7 +1806,12 @@ static const Map<String,dynamic> _fr = {
       "invalid_email": "Adresse email invalide",
       "invalid_phone": "Numéro de téléphone invalide",
       "invalid_username": "Le nom d'utilisateur ne doit pas contenir d'espaces",
-      "max_length": "Le champ ne peut pas dépasser {0} caractères"
+      "max_length": "Le champ ne peut pas dépasser {0} caractères",
+      "invalid_card_number": "Veuillez entrer un numéro de carte valide",
+      "invalid_cvv": "Veuillez entrer un code CVV valide",
+      "invalid_card_holder_name": "Veuillez entrer un nom de titulaire valide",
+      "invalid_expiry_date": "Veuillez entrer une date d'expiration valide (MM/AA)",
+      "card_expired": "Cette carte a expiré"
     },
     "wifi": {
       "hidden": "Caché",
@@ -1692,6 +1837,21 @@ static const Map<String,dynamic> _fr = {
     "change_language_subtitle": "Sélectionnez votre langue préférée ci-dessous. Cela nous aide à mieux vous servir.",
     "change_theme_title": "Changer le thème",
     "change_theme_subtitle": "Sélectionnez votre thème préféré ci-dessous. Cela nous aide à mieux vous servir."
+  },
+  "visa": {
+    "title": "Carte Visa",
+    "card": {
+      "bank_name": "Banque QRSAG",
+      "number_hint": "Numéro de carte",
+      "expiry_hint": "Date d'expiration",
+      "holder_hint": "Nom du titulaire",
+      "cvv_hint": "CVV",
+      "number_label": "Numéro de carte",
+      "expiry_label": "Date d'expiration",
+      "holder_label": "Nom du titulaire",
+      "cvv_label": "CVV",
+      "clear_field": "Effacer le champ"
+    }
   }
 };
 static const Map<String,dynamic> _hi = {
@@ -1876,7 +2036,12 @@ static const Map<String,dynamic> _hi = {
       "invalid_email": "अमान्य ईमेल पता",
       "invalid_phone": "अमान्य फोन नंबर",
       "invalid_username": "उपयोगकर्ता नाम में स्पेस नहीं होना चाहिए",
-      "max_length": "फ़ील्ड {0} अक्षरों से अधिक नहीं हो सकती"
+      "max_length": "फ़ील्ड {0} अक्षरों से अधिक नहीं हो सकती",
+      "invalid_card_number": "कृपया एक वैध कार्ड नंबर दर्ज करें",
+      "invalid_cvv": "कृपया एक वैध CVV कोड दर्ज करें",
+      "invalid_card_holder_name": "कृपया एक वैध कार्ड धारक का नाम दर्ज करें",
+      "invalid_expiry_date": "कृपया एक वैध समाप्ति तिथि दर्ज करें (माह/वर्ष)",
+      "card_expired": "यह कार्ड समाप्त हो गया है"
     },
     "wifi": {
       "hidden": "छिपा हुआ",
@@ -1902,6 +2067,21 @@ static const Map<String,dynamic> _hi = {
     "change_language_subtitle": "नीचे अपनी पसंदीदा भाषा चुनें। इससे हमें आपकी बेहतर सेवा करने में मदद मिलती है।",
     "change_theme_title": "थीम बदलें",
     "change_theme_subtitle": "नीचे अपनी पसंदीदा थीम चुनें। इससे हमें आपकी बेहतर सेवा करने में मदद मिलती है।"
+  },
+  "visa": {
+    "title": "वीज़ा कार्ड",
+    "card": {
+      "bank_name": "QRSAG बैंक",
+      "number_hint": "कार्ड नंबर",
+      "expiry_hint": "समाप्ति तिथि",
+      "holder_hint": "कार्ड धारक का नाम",
+      "cvv_hint": "CVV",
+      "number_label": "कार्ड नंबर",
+      "expiry_label": "समाप्ति तिथि",
+      "holder_label": "कार्ड धारक का नाम",
+      "cvv_label": "CVV",
+      "clear_field": "क्षेत्र साफ़ करें"
+    }
   }
 };
 static const Map<String,dynamic> _id = {
@@ -2086,7 +2266,12 @@ static const Map<String,dynamic> _id = {
       "invalid_email": "Alamat email tidak valid",
       "invalid_phone": "Nomor telepon tidak valid",
       "invalid_username": "Nama pengguna tidak boleh mengandung spasi",
-      "max_length": "Kolom tidak boleh melebihi {0} karakter"
+      "max_length": "Kolom tidak boleh melebihi {0} karakter",
+      "invalid_card_number": "Masukkan nomor kartu yang valid",
+      "invalid_cvv": "Masukkan kode CVV yang valid",
+      "invalid_card_holder_name": "Masukkan nama pemegang kartu yang valid",
+      "invalid_expiry_date": "Masukkan tanggal kadaluarsa yang valid (BB/TT)",
+      "card_expired": "Kartu ini sudah kadaluarsa"
     },
     "wifi": {
       "hidden": "Tersembunyi",
@@ -2112,6 +2297,21 @@ static const Map<String,dynamic> _id = {
     "change_language_subtitle": "Pilih bahasa pilihan Anda di bawah ini. Ini membantu kami melayani Anda lebih baik.",
     "change_theme_title": "Ubah Tema",
     "change_theme_subtitle": "Pilih tema pilihan Anda di bawah ini. Ini membantu kami melayani Anda lebih baik."
+  },
+  "visa": {
+    "title": "Kartu Visa",
+    "card": {
+      "bank_name": "Bank QRSAG",
+      "number_hint": "Nomor Kartu",
+      "expiry_hint": "Tanggal Kadaluarsa",
+      "holder_hint": "Nama Pemegang Kartu",
+      "cvv_hint": "CVV",
+      "number_label": "Nomor Kartu",
+      "expiry_label": "Tanggal Kadaluarsa",
+      "holder_label": "Nama Pemegang Kartu",
+      "cvv_label": "CVV",
+      "clear_field": "Bersihkan kolom"
+    }
   }
 };
 static const Map<String,dynamic> _it = {
@@ -2296,7 +2496,12 @@ static const Map<String,dynamic> _it = {
       "invalid_email": "Indirizzo email non valido",
       "invalid_phone": "Numero di telefono non valido",
       "invalid_username": "Il nome utente non deve contenere spazi",
-      "max_length": "Il campo non può superare i {0} caratteri"
+      "max_length": "Il campo non può superare i {0} caratteri",
+      "invalid_card_number": "Inserisci un numero di carta valido",
+      "invalid_cvv": "Inserisci un codice CVV valido",
+      "invalid_card_holder_name": "Inserisci un nome del titolare valido",
+      "invalid_expiry_date": "Inserisci una data di scadenza valida (MM/AA)",
+      "card_expired": "Questa carta è scaduta"
     },
     "wifi": {
       "hidden": "Nascosta",
@@ -2322,6 +2527,21 @@ static const Map<String,dynamic> _it = {
     "change_language_subtitle": "Seleziona la tua lingua preferita qui sotto. Questo ci aiuta a servirti meglio.",
     "change_theme_title": "Cambia Tema",
     "change_theme_subtitle": "Seleziona il tuo tema preferito qui sotto. Questo ci aiuta a servirti meglio."
+  },
+  "visa": {
+    "title": "Carta Visa",
+    "card": {
+      "bank_name": "Banca QRSAG",
+      "number_hint": "Numero della carta",
+      "expiry_hint": "Data di scadenza",
+      "holder_hint": "Nome del titolare",
+      "cvv_hint": "CVV",
+      "number_label": "Numero della carta",
+      "expiry_label": "Data di scadenza",
+      "holder_label": "Nome del titolare",
+      "cvv_label": "CVV",
+      "clear_field": "Cancella campo"
+    }
   }
 };
 static const Map<String,dynamic> _ja = {
@@ -2506,7 +2726,12 @@ static const Map<String,dynamic> _ja = {
       "invalid_email": "無効なメールアドレス",
       "invalid_phone": "無効な電話番号",
       "invalid_username": "ユーザー名にスペースを含めることはできません",
-      "max_length": "項目は{0}文字を超えることはできません"
+      "max_length": "項目は{0}文字を超えることはできません",
+      "invalid_card_number": "有効なカード番号を入力してください",
+      "invalid_cvv": "有効なCVVコードを入力してください",
+      "invalid_card_holder_name": "有効なカード名義人名を入力してください",
+      "invalid_expiry_date": "有効な有効期限を入力してください（MM/YY）",
+      "card_expired": "このカードは有効期限が切れています"
     },
     "wifi": {
       "hidden": "非表示",
@@ -2532,6 +2757,21 @@ static const Map<String,dynamic> _ja = {
     "change_language_subtitle": "以下から希望の言語を選択してください。より良いサービスを提供するのに役立ちます。",
     "change_theme_title": "テーマを変更",
     "change_theme_subtitle": "以下から希望のテーマを選択してください。より良いサービスを提供するのに役立ちます。"
+  },
+  "visa": {
+    "title": "Visaカード",
+    "card": {
+      "bank_name": "QRSAG銀行",
+      "number_hint": "カード番号",
+      "expiry_hint": "有効期限",
+      "holder_hint": "カード名義人",
+      "cvv_hint": "CVV",
+      "number_label": "カード番号",
+      "expiry_label": "有効期限",
+      "holder_label": "カード名義人",
+      "cvv_label": "CVV",
+      "clear_field": "フィールドをクリア"
+    }
   }
 };
 static const Map<String,dynamic> _ko = {
@@ -2716,7 +2956,12 @@ static const Map<String,dynamic> _ko = {
       "invalid_email": "잘못된 이메일 주소",
       "invalid_phone": "잘못된 전화번호",
       "invalid_username": "사용자명에 공백을 포함할 수 없습니다",
-      "max_length": "필드는 {0}자를 초과할 수 없습니다"
+      "max_length": "필드는 {0}자를 초과할 수 없습니다",
+      "invalid_card_number": "유효한 카드 번호를 입력하세요",
+      "invalid_cvv": "유효한 CVV 코드를 입력하세요",
+      "invalid_card_holder_name": "유효한 카드 소유자 이름을 입력하세요",
+      "invalid_expiry_date": "유효한 만료일을 입력하세요 (MM/YY)",
+      "card_expired": "이 카드는 만료되었습니다"
     },
     "wifi": {
       "hidden": "숨김",
@@ -2742,6 +2987,21 @@ static const Map<String,dynamic> _ko = {
     "change_language_subtitle": "아래에서 선호하는 언어를 선택하세요. 더 나은 서비스를 제공하는 데 도움이 됩니다.",
     "change_theme_title": "테마 변경",
     "change_theme_subtitle": "아래에서 선호하는 테마를 선택하세요. 더 나은 서비스를 제공하는 데 도움이 됩니다."
+  },
+  "visa": {
+    "title": "비자 카드",
+    "card": {
+      "bank_name": "QRSAG 은행",
+      "number_hint": "카드 번호",
+      "expiry_hint": "만료일",
+      "holder_hint": "카드 소유자 이름",
+      "cvv_hint": "CVV",
+      "number_label": "카드 번호",
+      "expiry_label": "만료일",
+      "holder_label": "카드 소유자 이름",
+      "cvv_label": "CVV",
+      "clear_field": "필드 지우기"
+    }
   }
 };
 static const Map<String,dynamic> _mr = {
@@ -2926,7 +3186,12 @@ static const Map<String,dynamic> _mr = {
       "invalid_email": "अवैध ईमेल पत्ता",
       "invalid_phone": "अवैध फोन नंबर",
       "invalid_username": "वापरकर्तानावात स्पेस असू नये",
-      "max_length": "फील्ड {0} अक्षरांपेक्षा जास्त असू शकत नाही"
+      "max_length": "फील्ड {0} अक्षरांपेक्षा जास्त असू शकत नाही",
+      "invalid_card_number": "कृपया एक वैध कार्ड क्रमांक प्रविष्ट करा",
+      "invalid_cvv": "कृपया एक वैध CVV कोड प्रविष्ट करा",
+      "invalid_card_holder_name": "कृपया एक वैध कार्ड धारकाचे नाव प्रविष्ट करा",
+      "invalid_expiry_date": "कृपया एक वैध मुदत संपण्याची तारीख प्रविष्ट करा (महिना/वर्ष)",
+      "card_expired": "या कार्डची मुदत संपली आहे"
     },
     "wifi": {
       "hidden": "लपलेले",
@@ -2952,6 +3217,21 @@ static const Map<String,dynamic> _mr = {
     "change_language_subtitle": "खाली आपली पसंतीची भाषा निवडा. यामुळे आम्हाला आपली चांगली सेवा करण्यास मदत होते.",
     "change_theme_title": "थीम बदला",
     "change_theme_subtitle": "खाली आपली पसंतीची थीम निवडा. यामुळे आम्हाला आपली चांगली सेवा करण्यास मदत होते."
+  },
+  "visa": {
+    "title": "व्हिसा कार्ड",
+    "card": {
+      "bank_name": "QRSAG बँक",
+      "number_hint": "कार्ड क्रमांक",
+      "expiry_hint": "मुदत संपण्याची तारीख",
+      "holder_hint": "कार्ड धारकाचे नाव",
+      "cvv_hint": "CVV",
+      "number_label": "कार्ड क्रमांक",
+      "expiry_label": "मुदत संपण्याची तारीख",
+      "holder_label": "कार्ड धारकाचे नाव",
+      "cvv_label": "CVV",
+      "clear_field": "फील्ड साफ करा"
+    }
   }
 };
 static const Map<String,dynamic> _ms = {
@@ -3136,7 +3416,12 @@ static const Map<String,dynamic> _ms = {
       "invalid_email": "Alamat e-mel tidak sah",
       "invalid_phone": "Nombor telefon tidak sah",
       "invalid_username": "Nama pengguna tidak boleh mengandungi ruang",
-      "max_length": "Medan tidak boleh melebihi {0} aksara"
+      "max_length": "Medan tidak boleh melebihi {0} aksara",
+      "invalid_card_number": "Sila masukkan nombor kad yang sah",
+      "invalid_cvv": "Sila masukkan kod CVV yang sah",
+      "invalid_card_holder_name": "Sila masukkan nama pemegang kad yang sah",
+      "invalid_expiry_date": "Sila masukkan tarikh tamat tempoh yang sah (BB/TT)",
+      "card_expired": "Kad ini telah tamat tempoh"
     },
     "wifi": {
       "hidden": "Tersembunyi",
@@ -3162,6 +3447,21 @@ static const Map<String,dynamic> _ms = {
     "change_language_subtitle": "Pilih bahasa pilihan anda di bawah. Ini membantu kami melayani anda dengan lebih baik.",
     "change_theme_title": "Tukar Tema",
     "change_theme_subtitle": "Pilih tema pilihan anda di bawah. Ini membantu kami melayani anda dengan lebih baik."
+  },
+  "visa": {
+    "title": "Kad Visa",
+    "card": {
+      "bank_name": "Bank QRSAG",
+      "number_hint": "Nombor Kad",
+      "expiry_hint": "Tarikh Tamat Tempoh",
+      "holder_hint": "Nama Pemegang Kad",
+      "cvv_hint": "CVV",
+      "number_label": "Nombor Kad",
+      "expiry_label": "Tarikh Tamat Tempoh",
+      "holder_label": "Nama Pemegang Kad",
+      "cvv_label": "CVV",
+      "clear_field": "Kosongkan medan"
+    }
   }
 };
 static const Map<String,dynamic> _nl = {
@@ -3346,7 +3646,12 @@ static const Map<String,dynamic> _nl = {
       "invalid_email": "Ongeldig e-mailadres",
       "invalid_phone": "Ongeldig telefoonnummer",
       "invalid_username": "Gebruikersnaam mag geen spaties bevatten",
-      "max_length": "Veld mag niet meer dan {0} tekens bevatten"
+      "max_length": "Veld mag niet meer dan {0} tekens bevatten",
+      "invalid_card_number": "Voer een geldig kaartnummer in",
+      "invalid_cvv": "Voer een geldige CVV-code in",
+      "invalid_card_holder_name": "Voer een geldige kaarthoudersnaam in",
+      "invalid_expiry_date": "Voer een geldige vervaldatum in (MM/JJ)",
+      "card_expired": "Deze kaart is verlopen"
     },
     "wifi": {
       "hidden": "Verborgen",
@@ -3372,6 +3677,21 @@ static const Map<String,dynamic> _nl = {
     "change_language_subtitle": "Selecteer hieronder uw voorkeurstaal. Dit helpt ons om u beter van dienst te zijn.",
     "change_theme_title": "Thema wijzigen",
     "change_theme_subtitle": "Selecteer hieronder uw voorkeursthema. Dit helpt ons om u beter van dienst te zijn."
+  },
+  "visa": {
+    "title": "Visa-kaart",
+    "card": {
+      "bank_name": "QRSAG Bank",
+      "number_hint": "Kaartnummer",
+      "expiry_hint": "Vervaldatum",
+      "holder_hint": "Naam kaarthouder",
+      "cvv_hint": "CVV",
+      "number_label": "Kaartnummer",
+      "expiry_label": "Vervaldatum",
+      "holder_label": "Naam kaarthouder",
+      "cvv_label": "CVV",
+      "clear_field": "Veld leegmaken"
+    }
   }
 };
 static const Map<String,dynamic> _pa = {
@@ -3551,12 +3871,17 @@ static const Map<String,dynamic> _pa = {
     "title": "QR ਕੋਡ ਜਨਰੇਟ ਕਰੋ",
     "success": "QR ਸਫਲਤਾਪੂਰਵਕ ਜਨਰੇਟ ਕੀਤਾ ਗਿਆ",
     "validation": {
-      "empty": "ਖੇਤਰ ਖਾਲੀ ਨਹੀਂ ਹੋ ਸਕਦਾ",
+      "empty": "ਫੀਲਡ ਖਾਲੀ ਨਹੀਂ ਹੋ ਸਕਦੀ",
       "invalid_website": "ਅਵੈਧ ਵੈਬਸਾਈਟ URL",
       "invalid_email": "ਅਵੈਧ ਈਮੇਲ ਪਤਾ",
       "invalid_phone": "ਅਵੈਧ ਫ਼ੋਨ ਨੰਬਰ",
       "invalid_username": "ਉਪਭੋਗਤਾ ਨਾਮ ਵਿੱਚ ਸਪੇਸ ਨਹੀਂ ਹੋਣੀ ਚਾਹੀਦੀ",
-      "max_length": "ਖੇਤਰ {0} ਅੱਖਰਾਂ ਤੋਂ ਵੱਧ ਨਹੀਂ ਹੋ ਸਕਦਾ"
+      "max_length": "ਫੀਲਡ {0} ਅੱਖਰਾਂ ਤੋਂ ਵੱਧ ਨਹੀਂ ਹੋ ਸਕਦੀ",
+      "invalid_card_number": "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੈਧ ਕਾਰਡ ਨੰਬਰ ਦਾਖਲ ਕਰੋ",
+      "invalid_cvv": "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੈਧ CVV ਕੋਡ ਦਾਖਲ ਕਰੋ",
+      "invalid_card_holder_name": "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੈਧ ਕਾਰਡ ਧਾਰਕ ਦਾ ਨਾਮ ਦਾਖਲ ਕਰੋ",
+      "invalid_expiry_date": "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੈਧ ਮਿਆਦ ਪੁੱਗਣ ਦੀ ਮਿਤੀ ਦਾਖਲ ਕਰੋ (ਮਹੀਨਾ/ਸਾਲ)",
+      "card_expired": "ਇਹ ਕਾਰਡ ਦੀ ਮਿਆਦ ਪੁੱਗ ਗਈ ਹੈ"
     },
     "wifi": {
       "hidden": "ਲੁਕਿਆ ਹੋਇਆ",
@@ -3582,6 +3907,21 @@ static const Map<String,dynamic> _pa = {
     "change_language_subtitle": "ਹੇਠਾਂ ਆਪਣੀ ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ ਚੁਣੋ। ਇਹ ਸਾਨੂੰ ਤੁਹਾਡੀ ਬਿਹਤਰ ਸੇਵਾ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।",
     "change_theme_title": "ਥੀਮ ਬਦਲੋ",
     "change_theme_subtitle": "ਹੇਠਾਂ ਆਪਣੀ ਪਸੰਦੀਦਾ ਥੀਮ ਚੁਣੋ। ਇਹ ਸਾਨੂੰ ਤੁਹਾਡੀ ਬਿਹਤਰ ਸੇਵਾ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।"
+  },
+  "visa": {
+    "title": "ਵੀਜ਼ਾ ਕਾਰਡ",
+    "card": {
+      "bank_name": "QRSAG ਬੈਂਕ",
+      "number_hint": "ਕਾਰਡ ਨੰਬਰ",
+      "expiry_hint": "ਮਿਆਦ ਪੁੱਗਣ ਦੀ ਮਿਤੀ",
+      "holder_hint": "ਕਾਰਡ ਧਾਰਕ ਦਾ ਨਾਮ",
+      "cvv_hint": "CVV",
+      "number_label": "ਕਾਰਡ ਨੰਬਰ",
+      "expiry_label": "ਮਿਆਦ ਪੁੱਗਣ ਦੀ ਮਿਤੀ",
+      "holder_label": "ਕਾਰਡ ਧਾਰਕ ਦਾ ਨਾਮ",
+      "cvv_label": "CVV",
+      "clear_field": "ਫੀਲਡ ਸਾਫ਼ ਕਰੋ"
+    }
   }
 };
 static const Map<String,dynamic> _pl = {
@@ -3766,7 +4106,12 @@ static const Map<String,dynamic> _pl = {
       "invalid_email": "Nieprawidłowy adres e-mail",
       "invalid_phone": "Nieprawidłowy numer telefonu",
       "invalid_username": "Nazwa użytkownika nie może zawierać spacji",
-      "max_length": "Pole nie może przekraczać {0} znaków"
+      "max_length": "Pole nie może przekraczać {0} znaków",
+      "invalid_card_number": "Wprowadź poprawny numer karty",
+      "invalid_cvv": "Wprowadź poprawny kod CVV",
+      "invalid_card_holder_name": "Wprowadź poprawną nazwę posiadacza karty",
+      "invalid_expiry_date": "Wprowadź poprawną datę ważności (MM/RR)",
+      "card_expired": "Ta karta wygasła"
     },
     "wifi": {
       "hidden": "Ukryta",
@@ -3792,6 +4137,21 @@ static const Map<String,dynamic> _pl = {
     "change_language_subtitle": "Wybierz preferowany język poniżej. Pomaga nam to lepiej Ci służyć.",
     "change_theme_title": "Zmień Motyw",
     "change_theme_subtitle": "Wybierz preferowany motyw poniżej. Pomaga nam to lepiej Ci służyć."
+  },
+  "visa": {
+    "title": "Karta Visa",
+    "card": {
+      "bank_name": "Bank QRSAG",
+      "number_hint": "Numer karty",
+      "expiry_hint": "Data ważności",
+      "holder_hint": "Nazwa posiadacza",
+      "cvv_hint": "CVV",
+      "number_label": "Numer karty",
+      "expiry_label": "Data ważności",
+      "holder_label": "Nazwa posiadacza",
+      "cvv_label": "CVV",
+      "clear_field": "Wyczyść pole"
+    }
   }
 };
 static const Map<String,dynamic> _pt = {
@@ -3973,10 +4333,15 @@ static const Map<String,dynamic> _pt = {
     "validation": {
       "empty": "O campo não pode estar vazio",
       "invalid_website": "URL de site inválida",
-      "invalid_email": "E-mail inválido",
+      "invalid_email": "Endereço de e-mail inválido",
       "invalid_phone": "Número de telefone inválido",
-      "invalid_username": "O nome de usuário não pode conter espaços",
-      "max_length": "O campo não pode exceder {0} caracteres"
+      "invalid_username": "O nome de usuário não deve conter espaços",
+      "max_length": "O campo não pode exceder {0} caracteres",
+      "invalid_card_number": "Digite um número de cartão válido",
+      "invalid_cvv": "Digite um código CVV válido",
+      "invalid_card_holder_name": "Digite um nome de titular válido",
+      "invalid_expiry_date": "Digite uma data de validade válida (MM/AA)",
+      "card_expired": "Este cartão expirou"
     },
     "wifi": {
       "hidden": "Oculta",
@@ -4002,6 +4367,21 @@ static const Map<String,dynamic> _pt = {
     "change_language_subtitle": "Selecione seu idioma preferido abaixo. Isso nos ajuda a atendê-lo melhor.",
     "change_theme_title": "Alterar Tema",
     "change_theme_subtitle": "Selecione seu tema preferido abaixo. Isso nos ajuda a atendê-lo melhor."
+  },
+  "visa": {
+    "title": "Cartão Visa",
+    "card": {
+      "bank_name": "Banco QRSAG",
+      "number_hint": "Número do cartão",
+      "expiry_hint": "Data de validade",
+      "holder_hint": "Nome do titular",
+      "cvv_hint": "CVV",
+      "number_label": "Número do cartão",
+      "expiry_label": "Data de validade",
+      "holder_label": "Nome do titular",
+      "cvv_label": "CVV",
+      "clear_field": "Limpar campo"
+    }
   }
 };
 static const Map<String,dynamic> _ro = {
@@ -4186,7 +4566,12 @@ static const Map<String,dynamic> _ro = {
       "invalid_email": "Adresă email invalidă",
       "invalid_phone": "Număr de telefon invalid",
       "invalid_username": "Numele de utilizator nu trebuie să conțină spații",
-      "max_length": "Câmpul nu poate depăși {0} caractere"
+      "max_length": "Câmpul nu poate depăși {0} caractere",
+      "invalid_card_number": "Introduceți un număr de card valid",
+      "invalid_cvv": "Introduceți un cod CVV valid",
+      "invalid_card_holder_name": "Introduceți un nume de deținător valid",
+      "invalid_expiry_date": "Introduceți o dată de expirare validă (LL/AA)",
+      "card_expired": "Acest card a expirat"
     },
     "wifi": {
       "hidden": "Ascuns",
@@ -4212,6 +4597,21 @@ static const Map<String,dynamic> _ro = {
     "change_language_subtitle": "Selectați limba preferată mai jos. Acest lucru ne ajută să vă servim mai bine.",
     "change_theme_title": "Schimbă Tema",
     "change_theme_subtitle": "Selectați tema preferată mai jos. Acest lucru ne ajută să vă servim mai bine."
+  },
+  "visa": {
+    "title": "Card Visa",
+    "card": {
+      "bank_name": "Banca QRSAG",
+      "number_hint": "Număr card",
+      "expiry_hint": "Data expirării",
+      "holder_hint": "Numele deținătorului",
+      "cvv_hint": "CVV",
+      "number_label": "Număr card",
+      "expiry_label": "Data expirării",
+      "holder_label": "Numele deținătorului",
+      "cvv_label": "CVV",
+      "clear_field": "Golește câmpul"
+    }
   }
 };
 static const Map<String,dynamic> _ru = {
@@ -4396,7 +4796,12 @@ static const Map<String,dynamic> _ru = {
       "invalid_email": "Недействительный адрес электронной почты",
       "invalid_phone": "Недействительный номер телефона",
       "invalid_username": "Имя пользователя не должно содержать пробелов",
-      "max_length": "Поле не может превышать {0} символов"
+      "max_length": "Поле не может превышать {0} символов",
+      "invalid_card_number": "Введите действительный номер карты",
+      "invalid_cvv": "Введите действительный код CVV",
+      "invalid_card_holder_name": "Введите действительное имя держателя карты",
+      "invalid_expiry_date": "Введите действительную дату истечения срока (ММ/ГГ)",
+      "card_expired": "Срок действия этой карты истек"
     },
     "wifi": {
       "hidden": "Скрытая",
@@ -4422,6 +4827,21 @@ static const Map<String,dynamic> _ru = {
     "change_language_subtitle": "Выберите предпочитаемый язык ниже. Это поможет нам лучше обслуживать вас.",
     "change_theme_title": "Изменить тему",
     "change_theme_subtitle": "Выберите предпочитаемую тему ниже. Это поможет нам лучше обслуживать вас."
+  },
+  "visa": {
+    "title": "Карта Visa",
+    "card": {
+      "bank_name": "Банк QRSAG",
+      "number_hint": "Номер карты",
+      "expiry_hint": "Срок действия",
+      "holder_hint": "Имя держателя",
+      "cvv_hint": "CVV",
+      "number_label": "Номер карты",
+      "expiry_label": "Срок действия",
+      "holder_label": "Имя держателя",
+      "cvv_label": "CVV",
+      "clear_field": "Очистить поле"
+    }
   }
 };
 static const Map<String,dynamic> _sw = {
@@ -4606,7 +5026,12 @@ static const Map<String,dynamic> _sw = {
       "invalid_email": "Barua pepe si sahihi",
       "invalid_phone": "Nambari ya simu si sahihi",
       "invalid_username": "Jina la mtumiaji halipaswi kuwa na nafasi",
-      "max_length": "Sehemu haiwezi kuzidi herufi {0}"
+      "max_length": "Sehemu haiwezi kuzidi herufi {0}",
+      "invalid_card_number": "Tafadhali ingiza nambari sahihi ya kadi",
+      "invalid_cvv": "Tafadhali ingiza msimbo sahihi wa CVV",
+      "invalid_card_holder_name": "Tafadhali ingiza jina sahihi la mwenye kadi",
+      "invalid_expiry_date": "Tafadhali ingiza tarehe sahihi ya mwisho (MM/YY)",
+      "card_expired": "Kadi hii imeisha muda wake"
     },
     "wifi": {
       "hidden": "Siri",
@@ -4632,6 +5057,21 @@ static const Map<String,dynamic> _sw = {
     "change_language_subtitle": "Chagua lugha unayopenda hapa chini. Hii inatusaidia kukuhudumia vyema.",
     "change_theme_title": "Badilisha Mandhari",
     "change_theme_subtitle": "Chagua mandhari unayopenda hapa chini. Hii inatusaidia kukuhudumia vyema."
+  },
+  "visa": {
+    "title": "Kadi ya Visa",
+    "card": {
+      "bank_name": "Benki ya QRSAG",
+      "number_hint": "Nambari ya Kadi",
+      "expiry_hint": "Tarehe ya Mwisho",
+      "holder_hint": "Jina la Mwenye Kadi",
+      "cvv_hint": "CVV",
+      "number_label": "Nambari ya Kadi",
+      "expiry_label": "Tarehe ya Mwisho",
+      "holder_label": "Jina la Mwenye Kadi",
+      "cvv_label": "CVV",
+      "clear_field": "Safisha sehemu"
+    }
   }
 };
 static const Map<String,dynamic> _ta = {
@@ -4816,7 +5256,12 @@ static const Map<String,dynamic> _ta = {
       "invalid_email": "செல்லாத மின்னஞ்சல் முகவரி",
       "invalid_phone": "செல்லாத தொலைபேசி எண்",
       "invalid_username": "பயனர்பெயரில் இடைவெளிகள் இருக்கக்கூடாது",
-      "max_length": "புலம் {0} எழுத்துகளுக்கு மேல் இருக்கக்கூடாது"
+      "max_length": "புலம் {0} எழுத்துகளுக்கு மேல் இருக்கக்கூடாது",
+      "invalid_card_number": "தயவுசெய்து செல்லுபடியாகும் அட்டை எண்ணை உள்ளிடவும்",
+      "invalid_cvv": "தயவுசெய்து செல்லுபடியாகும் CVV குறியீட்டை உள்ளிடவும்",
+      "invalid_card_holder_name": "தயவுசெய்து செல்லுபடியாகும் அட்டைதாரர் பெயரை உள்ளிடவும்",
+      "invalid_expiry_date": "தயவுசெய்து செல்லுபடியாகும் காலாவதி தேதியை உள்ளிடவும் (MM/YY)",
+      "card_expired": "இந்த அட்டை காலாவதியானது"
     },
     "wifi": {
       "hidden": "மறைக்கப்பட்டது",
@@ -4842,6 +5287,21 @@ static const Map<String,dynamic> _ta = {
     "change_language_subtitle": "உங்களுக்கு விருப்பமான மொழியை கீழே தேர்ந்தெடுக்கவும். இது உங்களுக்கு சிறந்த சேவையை வழங்க உதவுகிறது.",
     "change_theme_title": "தீமை மாற்றவும்",
     "change_theme_subtitle": "உங்களுக்கு விருப்பமான தீமை கீழே தேர்ந்தெடுக்கவும். இது உங்களுக்கு சிறந்த சேவையை வழங்க உதவுகிறது."
+  },
+  "visa": {
+    "title": "விசா அட்டை",
+    "card": {
+      "bank_name": "QRSAG வங்கி",
+      "number_hint": "அட்டை எண்",
+      "expiry_hint": "காலாவதி தேதி",
+      "holder_hint": "அட்டைதாரர் பெயர்",
+      "cvv_hint": "CVV",
+      "number_label": "அட்டை எண்",
+      "expiry_label": "காலாவதி தேதி",
+      "holder_label": "அட்டைதாரர் பெயர்",
+      "cvv_label": "CVV",
+      "clear_field": "புலத்தை அழிக்கவும்"
+    }
   }
 };
 static const Map<String,dynamic> _te = {
@@ -5026,7 +5486,12 @@ static const Map<String,dynamic> _te = {
       "invalid_email": "చెల్లుబాటు కాని ఇమెయిల్ చిరునామా",
       "invalid_phone": "చెల్లుబాటు కాని ఫోన్ నంబర్",
       "invalid_username": "వినియోగదారు పేరులో ఖాళీలు ఉండకూడదు",
-      "max_length": "ఫీల్డ్ {0} అక్షరాలకు మించకూడదు"
+      "max_length": "ఫీల్డ్ {0} అక్షరాలకు మించకూడదు",
+      "invalid_card_number": "దయచేసి చెల్లుబాటు అయ్యే కార్డ్ నంబర్ నమోదు చేయండి",
+      "invalid_cvv": "దయచేసి చెల్లుబాటు అయ్యే CVV కోడ్ నమోదు చేయండి",
+      "invalid_card_holder_name": "దయచేసి చెల్లుబాటు అయ్యే కార్డ్ హోల్డర్ పేరు నమోదు చేయండి",
+      "invalid_expiry_date": "దయచేసి చెల్లుబాటు అయ్యే గడువు తేదీ నమోదు చేయండి (MM/YY)",
+      "card_expired": "ఈ కార్డ్ గడువు ముగిసింది"
     },
     "wifi": {
       "hidden": "దాచబడింది",
@@ -5052,6 +5517,21 @@ static const Map<String,dynamic> _te = {
     "change_language_subtitle": "దిగువ మీకు నచ్చిన భాషను ఎంచుకోండి. ఇది మాకు మెరుగ్గా సేవ చేయడానికి సహాయపడుతుంది.",
     "change_theme_title": "థీమ్ మార్చండి",
     "change_theme_subtitle": "దిగువ మీకు నచ్చిన థీమ్ను ఎంచుకోండి. ఇది మాకు మెరుగ్గా సేవ చేయడానికి సహాయపడుతుంది."
+  },
+  "visa": {
+    "title": "వీసా కార్డ్",
+    "card": {
+      "bank_name": "QRSAG బ్యాంక్",
+      "number_hint": "కార్డ్ నంబర్",
+      "expiry_hint": "గడువు తేదీ",
+      "holder_hint": "కార్డ్ హోల్డర్ పేరు",
+      "cvv_hint": "CVV",
+      "number_label": "కార్డ్ నంబర్",
+      "expiry_label": "గడువు తేదీ",
+      "holder_label": "కార్డ్ హోల్డర్ పేరు",
+      "cvv_label": "CVV",
+      "clear_field": "ఫీల్డ్ క్లియర్ చేయండి"
+    }
   }
 };
 static const Map<String,dynamic> _th = {
@@ -5236,7 +5716,12 @@ static const Map<String,dynamic> _th = {
       "invalid_email": "ที่อยู่อีเมลไม่ถูกต้อง",
       "invalid_phone": "หมายเลขโทรศัพท์ไม่ถูกต้อง",
       "invalid_username": "ชื่อผู้ใช้ต้องไม่มีช่องว่าง",
-      "max_length": "ช่องนี้ต้องไม่เกิน {0} ตัวอักษร"
+      "max_length": "ช่องนี้ต้องไม่เกิน {0} ตัวอักษร",
+      "invalid_card_number": "กรุณาป้อนหมายเลขบัตรที่ถูกต้อง",
+      "invalid_cvv": "กรุณาป้อนรหัส CVV ที่ถูกต้อง",
+      "invalid_card_holder_name": "กรุณาป้อนชื่อผู้ถือบัตรที่ถูกต้อง",
+      "invalid_expiry_date": "กรุณาป้อนวันที่หมดอายุที่ถูกต้อง (ดด/ปป)",
+      "card_expired": "บัตรนี้หมดอายุแล้ว"
     },
     "wifi": {
       "hidden": "ซ่อน",
@@ -5262,6 +5747,21 @@ static const Map<String,dynamic> _th = {
     "change_language_subtitle": "เลือกภาษาที่คุณต้องการด้านล่าง ซึ่งจะช่วยให้เราสามารถให้บริการคุณได้ดีขึ้น",
     "change_theme_title": "เปลี่ยนธีม",
     "change_theme_subtitle": "เลือกธีมที่คุณต้องการด้านล่าง ซึ่งจะช่วยให้เราสามารถให้บริการคุณได้ดีขึ้น"
+  },
+  "visa": {
+    "title": "บัตรวีซ่า",
+    "card": {
+      "bank_name": "ธนาคาร QRSAG",
+      "number_hint": "หมายเลขบัตร",
+      "expiry_hint": "วันที่หมดอายุ",
+      "holder_hint": "ชื่อผู้ถือบัตร",
+      "cvv_hint": "CVV",
+      "number_label": "หมายเลขบัตร",
+      "expiry_label": "วันที่หมดอายุ",
+      "holder_label": "ชื่อผู้ถือบัตร",
+      "cvv_label": "CVV",
+      "clear_field": "ล้างข้อมูล"
+    }
   }
 };
 static const Map<String,dynamic> _tr = {
@@ -5446,7 +5946,12 @@ static const Map<String,dynamic> _tr = {
       "invalid_email": "Geçersiz e-posta adresi",
       "invalid_phone": "Geçersiz telefon numarası",
       "invalid_username": "Kullanıcı adı boşluk içeremez",
-      "max_length": "Alan {0} karakteri geçemez"
+      "max_length": "Alan {0} karakteri geçemez",
+      "invalid_card_number": "Lütfen geçerli bir kart numarası girin",
+      "invalid_cvv": "Lütfen geçerli bir CVV kodu girin",
+      "invalid_card_holder_name": "Lütfen geçerli bir kart sahibi adı girin",
+      "invalid_expiry_date": "Lütfen geçerli bir son kullanma tarihi girin (AA/YY)",
+      "card_expired": "Bu kartın süresi dolmuştur"
     },
     "wifi": {
       "hidden": "Gizli",
@@ -5472,6 +5977,21 @@ static const Map<String,dynamic> _tr = {
     "change_language_subtitle": "Tercih ettiğiniz dili aşağıdan seçin. Bu, size daha iyi hizmet vermemize yardımcı olur.",
     "change_theme_title": "Temayı Değiştir",
     "change_theme_subtitle": "Tercih ettiğiniz temayı aşağıdan seçin. Bu, size daha iyi hizmet vermemize yardımcı olur."
+  },
+  "visa": {
+    "title": "Visa Kart",
+    "card": {
+      "bank_name": "QRSAG Bankası",
+      "number_hint": "Kart Numarası",
+      "expiry_hint": "Son Kullanma Tarihi",
+      "holder_hint": "Kart Sahibi Adı",
+      "cvv_hint": "CVV",
+      "number_label": "Kart Numarası",
+      "expiry_label": "Son Kullanma Tarihi",
+      "holder_label": "Kart Sahibi Adı",
+      "cvv_label": "CVV",
+      "clear_field": "Alanı Temizle"
+    }
   }
 };
 static const Map<String,dynamic> _uk = {
@@ -5656,7 +6176,12 @@ static const Map<String,dynamic> _uk = {
       "invalid_email": "Недійсна адреса електронної пошти",
       "invalid_phone": "Недійсний номер телефону",
       "invalid_username": "Ім'я користувача не повинно містити пробілів",
-      "max_length": "Поле не може перевищувати {0} символів"
+      "max_length": "Поле не може перевищувати {0} символів",
+      "invalid_card_number": "Введіть дійсний номер картки",
+      "invalid_cvv": "Введіть дійсний код CVV",
+      "invalid_card_holder_name": "Введіть дійсне ім'я власника картки",
+      "invalid_expiry_date": "Введіть дійсну дату закінчення терміну дії (ММ/РР)",
+      "card_expired": "Термін дії цієї картки закінчився"
     },
     "wifi": {
       "hidden": "Прихована",
@@ -5682,6 +6207,21 @@ static const Map<String,dynamic> _uk = {
     "change_language_subtitle": "Виберіть бажану мову нижче. Це допомагає нам краще обслуговувати вас.",
     "change_theme_title": "Змінити тему",
     "change_theme_subtitle": "Виберіть бажану тему нижче. Це допомагає нам краще обслуговувати вас."
+  },
+  "visa": {
+    "title": "Картка Visa",
+    "card": {
+      "bank_name": "Банк QRSAG",
+      "number_hint": "Номер картки",
+      "expiry_hint": "Термін дії",
+      "holder_hint": "Ім'я власника",
+      "cvv_hint": "CVV",
+      "number_label": "Номер картки",
+      "expiry_label": "Термін дії",
+      "holder_label": "Ім'я власника",
+      "cvv_label": "CVV",
+      "clear_field": "Очистити поле"
+    }
   }
 };
 static const Map<String,dynamic> _ur = {
@@ -5866,7 +6406,12 @@ static const Map<String,dynamic> _ur = {
       "invalid_email": "غلط ای میل پتہ",
       "invalid_phone": "غلط فون نمبر",
       "invalid_username": "صارف نام میں خالی جگہیں نہیں ہونی چاہئیں",
-      "max_length": "فیلڈ {0} حروف سے زیادہ نہیں ہو سکتی"
+      "max_length": "فیلڈ {0} حروف سے زیادہ نہیں ہو سکتی",
+      "invalid_card_number": "براہ کرم ایک درست کارڈ نمبر درج کریں",
+      "invalid_cvv": "براہ کرم ایک درست CVV کوڈ درج کریں",
+      "invalid_card_holder_name": "براہ کرم ایک درست کارڈ ہولڈر کا نام درج کریں",
+      "invalid_expiry_date": "براہ کرم ایک درست مختتمی تاریخ درج کریں (مہینہ/سال)",
+      "card_expired": "اس کارڈ کی میعاد ختم ہو چکی ہے"
     },
     "wifi": {
       "hidden": "پوشیدہ",
@@ -5892,6 +6437,21 @@ static const Map<String,dynamic> _ur = {
     "change_language_subtitle": "نیچے اپنی پسندیدہ زبان منتخب کریں۔ اس سے ہمیں آپ کی بہتر خدمت کرنے میں مدد ملتی ہے۔",
     "change_theme_title": "تھیم تبدیل کریں",
     "change_theme_subtitle": "نیچے اپنی پسندیدہ تھیم منتخب کریں۔ اس سے ہمیں آپ کی بہتر خدمت کرنے میں مدد ملتی ہے۔"
+  },
+  "visa": {
+    "title": "ویزا کارڈ",
+    "card": {
+      "bank_name": "QRSAG بینک",
+      "number_hint": "کارڈ نمبر",
+      "expiry_hint": "مختتمی تاریخ",
+      "holder_hint": "کارڈ ہولڈر کا نام",
+      "cvv_hint": "CVV",
+      "number_label": "کارڈ نمبر",
+      "expiry_label": "مختتمی تاریخ",
+      "holder_label": "کارڈ ہولڈر کا نام",
+      "cvv_label": "CVV",
+      "clear_field": "فیلڈ صاف کریں"
+    }
   }
 };
 static const Map<String,dynamic> _vi = {
@@ -6076,7 +6636,12 @@ static const Map<String,dynamic> _vi = {
       "invalid_email": "Địa chỉ email không hợp lệ",
       "invalid_phone": "Số điện thoại không hợp lệ",
       "invalid_username": "Tên người dùng không được chứa khoảng trắng",
-      "max_length": "Trường không được vượt quá {0} ký tự"
+      "max_length": "Trường không được vượt quá {0} ký tự",
+      "invalid_card_number": "Vui lòng nhập số thẻ hợp lệ",
+      "invalid_cvv": "Vui lòng nhập mã CVV hợp lệ",
+      "invalid_card_holder_name": "Vui lòng nhập tên chủ thẻ hợp lệ",
+      "invalid_expiry_date": "Vui lòng nhập ngày hết hạn hợp lệ (MM/YY)",
+      "card_expired": "Thẻ này đã hết hạn"
     },
     "wifi": {
       "hidden": "Ẩn",
@@ -6102,6 +6667,21 @@ static const Map<String,dynamic> _vi = {
     "change_language_subtitle": "Chọn ngôn ngữ ưa thích của bạn bên dưới. Điều này giúp chúng tôi phục vụ bạn tốt hơn.",
     "change_theme_title": "Thay Đổi Chủ Đề",
     "change_theme_subtitle": "Chọn chủ đề ưa thích của bạn bên dưới. Điều này giúp chúng tôi phục vụ bạn tốt hơn."
+  },
+  "visa": {
+    "title": "Thẻ Visa",
+    "card": {
+      "bank_name": "Ngân hàng QRSAG",
+      "number_hint": "Số thẻ",
+      "expiry_hint": "Ngày hết hạn",
+      "holder_hint": "Tên chủ thẻ",
+      "cvv_hint": "CVV",
+      "number_label": "Số thẻ",
+      "expiry_label": "Ngày hết hạn",
+      "holder_label": "Tên chủ thẻ",
+      "cvv_label": "CVV",
+      "clear_field": "Xóa trường"
+    }
   }
 };
 static const Map<String,dynamic> _zh = {
@@ -6286,7 +6866,12 @@ static const Map<String,dynamic> _zh = {
       "invalid_email": "无效的电子邮件地址",
       "invalid_phone": "无效的电话号码",
       "invalid_username": "用户名不能包含空格",
-      "max_length": "字段不能超过{0}个字符"
+      "max_length": "字段不能超过{0}个字符",
+      "invalid_card_number": "请输入有效的卡号",
+      "invalid_cvv": "请输入有效的CVV码",
+      "invalid_card_holder_name": "请输入有效的持卡人姓名",
+      "invalid_expiry_date": "请输入有效的有效期（月/年）",
+      "card_expired": "此卡已过期"
     },
     "wifi": {
       "hidden": "隐藏",
@@ -6312,6 +6897,21 @@ static const Map<String,dynamic> _zh = {
     "change_language_subtitle": "在下方选择您偏好的语言。这有助于我们更好地为您服务。",
     "change_theme_title": "更改主题",
     "change_theme_subtitle": "在下方选择您偏好的主题。这有助于我们更好地为您服务。"
+  },
+  "visa": {
+    "title": "Visa卡",
+    "card": {
+      "bank_name": "QRSAG银行",
+      "number_hint": "卡号",
+      "expiry_hint": "有效期",
+      "holder_hint": "持卡人姓名",
+      "cvv_hint": "CVV",
+      "number_label": "卡号",
+      "expiry_label": "有效期",
+      "holder_label": "持卡人姓名",
+      "cvv_label": "CVV",
+      "clear_field": "清除字段"
+    }
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": _ar, "bn": _bn, "de": _de, "el": _el, "en": _en, "es": _es, "fa": _fa, "fr": _fr, "hi": _hi, "id": _id, "it": _it, "ja": _ja, "ko": _ko, "mr": _mr, "ms": _ms, "nl": _nl, "pa": _pa, "pl": _pl, "pt": _pt, "ro": _ro, "ru": _ru, "sw": _sw, "ta": _ta, "te": _te, "th": _th, "tr": _tr, "uk": _uk, "ur": _ur, "vi": _vi, "zh": _zh};

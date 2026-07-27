@@ -180,7 +180,12 @@
       "invalid_email": "无效的电子邮件地址",
       "invalid_phone": "无效的电话号码",
       "invalid_username": "用户名不能包含空格",
-      "max_length": "字段不能超过{0}个字符"
+      "max_length": "字段不能超过{0}个字符",
+      "invalid_card_number": "请输入有效的卡号",
+      "invalid_cvv": "请输入有效的CVV码",
+      "invalid_card_holder_name": "请输入有效的持卡人姓名",
+      "invalid_expiry_date": "请输入有效的有效期（月/年）",
+      "card_expired": "此卡已过期"
     },
     "wifi": {
       "hidden": "隐藏",
@@ -206,5 +211,20 @@
     "change_language_subtitle": "在下方选择您偏好的语言。这有助于我们更好地为您服务。",
     "change_theme_title": "更改主题",
     "change_theme_subtitle": "在下方选择您偏好的主题。这有助于我们更好地为您服务。"
+  },
+  "visa": {
+    "title": "Visa卡",
+    "card": {
+      "bank_name": "QRSAG银行",
+      "number_hint": "卡号",
+      "expiry_hint": "有效期",
+      "holder_hint": "持卡人姓名",
+      "cvv_hint": "CVV",
+      "number_label": "卡号",
+      "expiry_label": "有效期",
+      "holder_label": "持卡人姓名",
+      "cvv_label": "CVV",
+      "clear_field": "清除字段"
+    }
   }
 }

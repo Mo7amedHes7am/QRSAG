@@ -23,7 +23,6 @@ class GenerateWifiScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = context.read<QrCubit>();
     final type = QrType.wifi;
-    final isArabic = context.locale.languageCode == 'ar';
 
     cubit.initGenerateTypePage(type);
 
@@ -40,7 +39,7 @@ class GenerateWifiScreen extends StatelessWidget {
             backgroundColor: appColors.background,
             appBar: MainAppBar(
               context: context,
-              title: isArabic ? type.arlabel : type.enlabel,
+              title: type.getLabelFromContext(context),
               hasBack: true,
               backstyle: 1,
             ),

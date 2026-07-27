@@ -180,7 +180,12 @@
       "invalid_email": "Ongeldig e-mailadres",
       "invalid_phone": "Ongeldig telefoonnummer",
       "invalid_username": "Gebruikersnaam mag geen spaties bevatten",
-      "max_length": "Veld mag niet meer dan {0} tekens bevatten"
+      "max_length": "Veld mag niet meer dan {0} tekens bevatten",
+      "invalid_card_number": "Voer een geldig kaartnummer in",
+      "invalid_cvv": "Voer een geldige CVV-code in",
+      "invalid_card_holder_name": "Voer een geldige kaarthoudersnaam in",
+      "invalid_expiry_date": "Voer een geldige vervaldatum in (MM/JJ)",
+      "card_expired": "Deze kaart is verlopen"
     },
     "wifi": {
       "hidden": "Verborgen",
@@ -206,5 +211,20 @@
     "change_language_subtitle": "Selecteer hieronder uw voorkeurstaal. Dit helpt ons om u beter van dienst te zijn.",
     "change_theme_title": "Thema wijzigen",
     "change_theme_subtitle": "Selecteer hieronder uw voorkeursthema. Dit helpt ons om u beter van dienst te zijn."
+  },
+  "visa": {
+    "title": "Visa-kaart",
+    "card": {
+      "bank_name": "QRSAG Bank",
+      "number_hint": "Kaartnummer",
+      "expiry_hint": "Vervaldatum",
+      "holder_hint": "Naam kaarthouder",
+      "cvv_hint": "CVV",
+      "number_label": "Kaartnummer",
+      "expiry_label": "Vervaldatum",
+      "holder_label": "Naam kaarthouder",
+      "cvv_label": "CVV",
+      "clear_field": "Veld leegmaken"
+    }
   }
 }

@@ -3,6 +3,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Logic/Methods.dart';
 import 'package:qr_scanner_and_generator/app/app_variables.dart';
+import 'package:qr_scanner_and_generator/core/Methods/history_label_helper.dart';
 import 'package:qr_scanner_and_generator/core/cache/Adapters/GlobalCacheAdapter.dart';
 import 'package:qr_scanner_and_generator/core/cache/Models/GlobalCacheModel.dart';
 import 'package:qr_scanner_and_generator/core/cache/Models/HistoryModel.dart';
@@ -90,10 +91,12 @@ class CacheManager {
     required bool isScanned,
     required String data,
     required QrType type,
+    String? id,
   }) async {
     var uuid = Uuid();
     final type = detectQrType(data.toLowerCase());
     late HistoryModel historyData;
+    final labels = type.getAllLabels();
 
     switch (type) {
       case QrType.contact:
@@ -103,23 +106,122 @@ class CacheManager {
           datesubmitted: DateTime.now().millisecondsSinceEpoch,
           type: type.name,
           img: type.image,
-          arlabel: type.arlabel,
-          enlabel: type.enlabel,
+          labels: HistoryLabelHelper.createLabels(
+            english: labels['english']!,
+            arabic: labels['arabic']!,
+            chinese: labels['chinese']!,
+            spanish: labels['spanish']!,
+            hindi: labels['hindi']!,
+            bengali: labels['bengali']!,
+            portuguese: labels['portuguese']!,
+            russian: labels['russian']!,
+            japanese: labels['japanese']!,
+            punjabi: labels['punjabi']!,
+            german: labels['german']!,
+            korean: labels['korean']!,
+            french: labels['french']!,
+            telugu: labels['telugu']!,
+            marathi: labels['marathi']!,
+            turkish: labels['turkish']!,
+            tamil: labels['tamil']!,
+            vietnamese: labels['vietnamese']!,
+            urdu: labels['urdu']!,
+            persian: labels['persian']!,
+            polish: labels['polish']!,
+            ukrainian: labels['ukrainian']!,
+            romanian: labels['romanian']!,
+            dutch: labels['dutch']!,
+            thai: labels['thai']!,
+            indonesian: labels['indonesian']!,
+            malay: labels['malay']!,
+            swahili: labels['swahili']!,
+            italian: labels['italian']!,
+            greek: labels['greek']!,
+          ),
           wifi: "",
-          // wifi: type == QrType.visa ? data.split("-VssEnc-")[1] : "",
         );
         break;
+      case QrType.visa:
+        historyData = HistoryModel(
+          data: data,
+          id: id!,
+          datesubmitted: DateTime.now().millisecondsSinceEpoch,
+          type: type.name,
+          labels: HistoryLabelHelper.createLabels(
+            english: labels['english']!,
+            arabic: labels['arabic']!,
+            chinese: labels['chinese']!,
+            spanish: labels['spanish']!,
+            hindi: labels['hindi']!,
+            bengali: labels['bengali']!,
+            portuguese: labels['portuguese']!,
+            russian: labels['russian']!,
+            japanese: labels['japanese']!,
+            punjabi: labels['punjabi']!,
+            german: labels['german']!,
+            korean: labels['korean']!,
+            french: labels['french']!,
+            telugu: labels['telugu']!,
+            marathi: labels['marathi']!,
+            turkish: labels['turkish']!,
+            tamil: labels['tamil']!,
+            vietnamese: labels['vietnamese']!,
+            urdu: labels['urdu']!,
+            persian: labels['persian']!,
+            polish: labels['polish']!,
+            ukrainian: labels['ukrainian']!,
+            romanian: labels['romanian']!,
+            dutch: labels['dutch']!,
+            thai: labels['thai']!,
+            indonesian: labels['indonesian']!,
+            malay: labels['malay']!,
+            swahili: labels['swahili']!,
+            italian: labels['italian']!,
+            greek: labels['greek']!,
+          ),
+          img: type.image,
+          wifi: data.split("-VssEnc-")[1],
+        );
       default:
         historyData = HistoryModel(
           data: data,
           id: uuid.v1().replaceAll("-", ""),
           datesubmitted: DateTime.now().millisecondsSinceEpoch,
           type: type.name,
-          arlabel: type.arlabel,
-          enlabel: type.enlabel,
+          labels: HistoryLabelHelper.createLabels(
+            english: labels['english']!,
+            arabic: labels['arabic']!,
+            chinese: labels['chinese']!,
+            spanish: labels['spanish']!,
+            hindi: labels['hindi']!,
+            bengali: labels['bengali']!,
+            portuguese: labels['portuguese']!,
+            russian: labels['russian']!,
+            japanese: labels['japanese']!,
+            punjabi: labels['punjabi']!,
+            german: labels['german']!,
+            korean: labels['korean']!,
+            french: labels['french']!,
+            telugu: labels['telugu']!,
+            marathi: labels['marathi']!,
+            turkish: labels['turkish']!,
+            tamil: labels['tamil']!,
+            vietnamese: labels['vietnamese']!,
+            urdu: labels['urdu']!,
+            persian: labels['persian']!,
+            polish: labels['polish']!,
+            ukrainian: labels['ukrainian']!,
+            romanian: labels['romanian']!,
+            dutch: labels['dutch']!,
+            thai: labels['thai']!,
+            indonesian: labels['indonesian']!,
+            malay: labels['malay']!,
+            swahili: labels['swahili']!,
+            italian: labels['italian']!,
+            greek: labels['greek']!,
+          ),
           img: type.image,
           wifi: "",
-          // wifi: type == QrType.visa ? data.split("-VssEnc-")[1] : "",
         );
         break;
     }

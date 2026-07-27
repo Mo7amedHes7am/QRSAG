@@ -180,7 +180,12 @@
       "invalid_email": "Nieprawidłowy adres e-mail",
       "invalid_phone": "Nieprawidłowy numer telefonu",
       "invalid_username": "Nazwa użytkownika nie może zawierać spacji",
-      "max_length": "Pole nie może przekraczać {0} znaków"
+      "max_length": "Pole nie może przekraczać {0} znaków",
+      "invalid_card_number": "Wprowadź poprawny numer karty",
+      "invalid_cvv": "Wprowadź poprawny kod CVV",
+      "invalid_card_holder_name": "Wprowadź poprawną nazwę posiadacza karty",
+      "invalid_expiry_date": "Wprowadź poprawną datę ważności (MM/RR)",
+      "card_expired": "Ta karta wygasła"
     },
     "wifi": {
       "hidden": "Ukryta",
@@ -206,5 +211,20 @@
     "change_language_subtitle": "Wybierz preferowany język poniżej. Pomaga nam to lepiej Ci służyć.",
     "change_theme_title": "Zmień Motyw",
     "change_theme_subtitle": "Wybierz preferowany motyw poniżej. Pomaga nam to lepiej Ci służyć."
+  },
+  "visa": {
+    "title": "Karta Visa",
+    "card": {
+      "bank_name": "Bank QRSAG",
+      "number_hint": "Numer karty",
+      "expiry_hint": "Data ważności",
+      "holder_hint": "Nazwa posiadacza",
+      "cvv_hint": "CVV",
+      "number_label": "Numer karty",
+      "expiry_label": "Data ważności",
+      "holder_label": "Nazwa posiadacza",
+      "cvv_label": "CVV",
+      "clear_field": "Wyczyść pole"
+    }
   }
 }

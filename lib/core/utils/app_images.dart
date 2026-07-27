@@ -14,6 +14,9 @@ class AppLogos {
 
 class AppImagesAssets {
   const AppImagesAssets._();
+
+  static const String mastercard = "assets/Images/mastercard.png";
+  static const String cardBg = "assets/Images/card_bg.png";
 }
 
 class AppSvgs {

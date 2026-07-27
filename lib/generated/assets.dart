@@ -46,11 +46,9 @@ class $AssetsImagesGen {
   final AssetGenImage icon = const AssetGenImage('assets/Images/icon.png');
   final AssetGenImage logo = const AssetGenImage('assets/Images/logo.png');
   final AssetGenImage mastercard = const AssetGenImage(
-    'assets/Images/mastercard.png',
-  );
+      'assets/Images/mastercard.png');
   final AssetGenImage qrlogogold = const AssetGenImage(
-    'assets/Images/qrlogogold.png',
-  );
+      'assets/Images/qrlogogold.png');
   final AssetGenImage v1 = const AssetGenImage('assets/Images/v1.png');
   final AssetGenImage v10 = const AssetGenImage('assets/Images/v10.png');
   final AssetGenImage v11 = const AssetGenImage('assets/Images/v11.png');
@@ -64,8 +62,7 @@ class $AssetsImagesGen {
   final AssetGenImage v8 = const AssetGenImage('assets/Images/v8.png');
   final AssetGenImage v9 = const AssetGenImage('assets/Images/v9.png');
   final AssetGenImage vibrates = const AssetGenImage(
-    'assets/Images/vibrates.png',
-  );
+      'assets/Images/vibrates.png');
 }
 
 class $AssetsJsonsGen {
@@ -78,8 +75,15 @@ class $AssetsJsonsGen {
 class $AssetsSvgsGen {
   const $AssetsSvgsGen();
 
+  final SvgGenImage ar = const SvgGenImage('assets/Svgs/ar.svg');
   final SvgGenImage bepp = const SvgGenImage('assets/Svgs/bepp.svg');
+  final SvgGenImage bn = const SvgGenImage('assets/Svgs/bn.svg');
+  final SvgGenImage de = const SvgGenImage('assets/Svgs/de.svg');
+  final SvgGenImage el = const SvgGenImage('assets/Svgs/el.svg');
   final SvgGenImage en = const SvgGenImage('assets/Svgs/en.svg');
+  final SvgGenImage es = const SvgGenImage('assets/Svgs/es.svg');
+  final SvgGenImage fa = const SvgGenImage('assets/Svgs/fa.svg');
+  final SvgGenImage fr = const SvgGenImage('assets/Svgs/fr.svg');
   final SvgGenImage g1 = const SvgGenImage('assets/Svgs/g1.svg');
   final SvgGenImage g10 = const SvgGenImage('assets/Svgs/g10.svg');
   final SvgGenImage g11 = const SvgGenImage('assets/Svgs/g11.svg');
@@ -92,15 +96,32 @@ class $AssetsSvgsGen {
   final SvgGenImage g7 = const SvgGenImage('assets/Svgs/g7.svg');
   final SvgGenImage g8 = const SvgGenImage('assets/Svgs/g8.svg');
   final SvgGenImage g9 = const SvgGenImage('assets/Svgs/g9.svg');
+  final SvgGenImage hi = const SvgGenImage('assets/Svgs/hi.svg');
   final SvgGenImage icon = const SvgGenImage('assets/Svgs/icon.svg');
+  final SvgGenImage id = const SvgGenImage('assets/Svgs/id.svg');
+  final SvgGenImage it = const SvgGenImage('assets/Svgs/it.svg');
+  final SvgGenImage ja = const SvgGenImage('assets/Svgs/ja.svg');
+  final SvgGenImage ko = const SvgGenImage('assets/Svgs/ko.svg');
   final SvgGenImage logo = const SvgGenImage('assets/Svgs/logo.svg');
+  final SvgGenImage ms = const SvgGenImage('assets/Svgs/ms.svg');
+  final SvgGenImage nl = const SvgGenImage('assets/Svgs/nl.svg');
   final SvgGenImage nodata = const SvgGenImage('assets/Svgs/nodata.svg');
+  final SvgGenImage pl = const SvgGenImage('assets/Svgs/pl.svg');
   final SvgGenImage privacy = const SvgGenImage('assets/Svgs/privacy.svg');
+  final SvgGenImage pt = const SvgGenImage('assets/Svgs/pt.svg');
   final SvgGenImage qrlogogold = const SvgGenImage(
-    'assets/Svgs/qrlogogold.svg',
-  );
+      'assets/Svgs/qrlogogold.svg');
   final SvgGenImage rateus = const SvgGenImage('assets/Svgs/rateus.svg');
+  final SvgGenImage ro = const SvgGenImage('assets/Svgs/ro.svg');
+  final SvgGenImage ru = const SvgGenImage('assets/Svgs/ru.svg');
+  final SvgGenImage sw = const SvgGenImage('assets/Svgs/sw.svg');
+  final SvgGenImage th = const SvgGenImage('assets/Svgs/th.svg');
+  final SvgGenImage tr = const SvgGenImage('assets/Svgs/tr.svg');
+  final SvgGenImage uk = const SvgGenImage('assets/Svgs/uk.svg');
+  final SvgGenImage ur = const SvgGenImage('assets/Svgs/ur.svg');
+  final SvgGenImage vi = const SvgGenImage('assets/Svgs/vi.svg');
   final SvgGenImage vibrates = const SvgGenImage('assets/Svgs/vibrates.svg');
+  final SvgGenImage zh = const SvgGenImage('assets/Svgs/zh.svg');
 }
 
 class $AssetsTranslationsGen {
@@ -159,6 +180,7 @@ class AssetGenImage {
 
   final String _assetName;
 
+
   final Size? size;
   final Set<String> flavors;
 
@@ -215,8 +237,15 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider({AssetBundle? bundle, String? package}) {
-    return AssetImage(_assetName, bundle: bundle, package: package);
+  ImageProvider provider({
+    AssetBundle? bundle,
+    String? package,
+  }) {
+    return AssetImage(
+      _assetName,
+      bundle: bundle,
+      package: package,
+    );
   }
 
   Widget custom({
@@ -363,3 +392,4 @@ class LottieGenImage {
 
   String get keyName => _assetName;
 }
+

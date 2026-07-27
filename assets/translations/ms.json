@@ -180,7 +180,12 @@
       "invalid_email": "Alamat e-mel tidak sah",
       "invalid_phone": "Nombor telefon tidak sah",
       "invalid_username": "Nama pengguna tidak boleh mengandungi ruang",
-      "max_length": "Medan tidak boleh melebihi {0} aksara"
+      "max_length": "Medan tidak boleh melebihi {0} aksara",
+      "invalid_card_number": "Sila masukkan nombor kad yang sah",
+      "invalid_cvv": "Sila masukkan kod CVV yang sah",
+      "invalid_card_holder_name": "Sila masukkan nama pemegang kad yang sah",
+      "invalid_expiry_date": "Sila masukkan tarikh tamat tempoh yang sah (BB/TT)",
+      "card_expired": "Kad ini telah tamat tempoh"
     },
     "wifi": {
       "hidden": "Tersembunyi",
@@ -206,5 +211,20 @@
     "change_language_subtitle": "Pilih bahasa pilihan anda di bawah. Ini membantu kami melayani anda dengan lebih baik.",
     "change_theme_title": "Tukar Tema",
     "change_theme_subtitle": "Pilih tema pilihan anda di bawah. Ini membantu kami melayani anda dengan lebih baik."
+  },
+  "visa": {
+    "title": "Kad Visa",
+    "card": {
+      "bank_name": "Bank QRSAG",
+      "number_hint": "Nombor Kad",
+      "expiry_hint": "Tarikh Tamat Tempoh",
+      "holder_hint": "Nama Pemegang Kad",
+      "cvv_hint": "CVV",
+      "number_label": "Nombor Kad",
+      "expiry_label": "Tarikh Tamat Tempoh",
+      "holder_label": "Nama Pemegang Kad",
+      "cvv_label": "CVV",
+      "clear_field": "Kosongkan medan"
+    }
   }
 }

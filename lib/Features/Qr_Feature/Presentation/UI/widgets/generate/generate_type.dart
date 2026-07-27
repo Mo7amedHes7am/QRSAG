@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
@@ -8,7 +7,6 @@ import 'package:qr_scanner_and_generator/core/components/widgets/CustomText.dart
 import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
 
 Widget Generatetype({required QrType type, required BuildContext context}) {
-  final isArabic = context.locale.languageCode == 'ar';
   return InkWell(
     onTap: () => handle_navigation(type: type, context: context),
     child: Container(
@@ -38,9 +36,7 @@ Widget Generatetype({required QrType type, required BuildContext context}) {
               color: appColors.background,
               fit: BoxFit.cover,
             ),
-            CustomText.x12
-                .medium(isArabic ? type.arlabel : type.enlabel)
-                .background,
+            CustomText.x12.medium(type.getLabelFromContext(context)).background,
           ],
         ),
       ),

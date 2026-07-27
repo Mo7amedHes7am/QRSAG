@@ -180,7 +180,12 @@
       "invalid_email": "Geçersiz e-posta adresi",
       "invalid_phone": "Geçersiz telefon numarası",
       "invalid_username": "Kullanıcı adı boşluk içeremez",
-      "max_length": "Alan {0} karakteri geçemez"
+      "max_length": "Alan {0} karakteri geçemez",
+      "invalid_card_number": "Lütfen geçerli bir kart numarası girin",
+      "invalid_cvv": "Lütfen geçerli bir CVV kodu girin",
+      "invalid_card_holder_name": "Lütfen geçerli bir kart sahibi adı girin",
+      "invalid_expiry_date": "Lütfen geçerli bir son kullanma tarihi girin (AA/YY)",
+      "card_expired": "Bu kartın süresi dolmuştur"
     },
     "wifi": {
       "hidden": "Gizli",
@@ -206,5 +211,20 @@
     "change_language_subtitle": "Tercih ettiğiniz dili aşağıdan seçin. Bu, size daha iyi hizmet vermemize yardımcı olur.",
     "change_theme_title": "Temayı Değiştir",
     "change_theme_subtitle": "Tercih ettiğiniz temayı aşağıdan seçin. Bu, size daha iyi hizmet vermemize yardımcı olur."
+  },
+  "visa": {
+    "title": "Visa Kart",
+    "card": {
+      "bank_name": "QRSAG Bankası",
+      "number_hint": "Kart Numarası",
+      "expiry_hint": "Son Kullanma Tarihi",
+      "holder_hint": "Kart Sahibi Adı",
+      "cvv_hint": "CVV",
+      "number_label": "Kart Numarası",
+      "expiry_label": "Son Kullanma Tarihi",
+      "holder_label": "Kart Sahibi Adı",
+      "cvv_label": "CVV",
+      "clear_field": "Alanı Temizle"
+    }
   }
 }

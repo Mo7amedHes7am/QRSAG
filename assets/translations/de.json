@@ -180,7 +180,12 @@
       "invalid_email": "Ungültige E-Mail-Adresse",
       "invalid_phone": "Ungültige Telefonnummer",
       "invalid_username": "Benutzername darf keine Leerzeichen enthalten",
-      "max_length": "Feld darf {0} Zeichen nicht überschreiten"
+      "max_length": "Feld darf {0} Zeichen nicht überschreiten",
+      "invalid_card_number": "Bitte geben Sie eine gültige Kartennummer ein",
+      "invalid_cvv": "Bitte geben Sie einen gültigen CVV-Code ein",
+      "invalid_card_holder_name": "Bitte geben Sie einen gültigen Karteninhabernamen ein",
+      "invalid_expiry_date": "Bitte geben Sie ein gültiges Ablaufdatum ein (MM/JJ)",
+      "card_expired": "Diese Karte ist abgelaufen"
     },
     "wifi": {
       "hidden": "Versteckt",
@@ -206,5 +211,20 @@
     "change_language_subtitle": "Wählen Sie unten Ihre bevorzugte Sprache. Dies hilft uns, Ihnen besser zu dienen.",
     "change_theme_title": "Theme ändern",
     "change_theme_subtitle": "Wählen Sie unten Ihr bevorzugtes Theme. Dies hilft uns, Ihnen besser zu dienen."
+  },
+  "visa": {
+    "title": "Visa-Karte",
+    "card": {
+      "bank_name": "QRSAG Bank",
+      "number_hint": "Kartennummer",
+      "expiry_hint": "Ablaufdatum",
+      "holder_hint": "Karteninhabername",
+      "cvv_hint": "CVV",
+      "number_label": "Kartennummer",
+      "expiry_label": "Ablaufdatum",
+      "holder_label": "Karteninhabername",
+      "cvv_label": "CVV",
+      "clear_field": "Feld löschen"
+    }
   }
 }

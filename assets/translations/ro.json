@@ -180,7 +180,12 @@
       "invalid_email": "Adresă email invalidă",
       "invalid_phone": "Număr de telefon invalid",
       "invalid_username": "Numele de utilizator nu trebuie să conțină spații",
-      "max_length": "Câmpul nu poate depăși {0} caractere"
+      "max_length": "Câmpul nu poate depăși {0} caractere",
+      "invalid_card_number": "Introduceți un număr de card valid",
+      "invalid_cvv": "Introduceți un cod CVV valid",
+      "invalid_card_holder_name": "Introduceți un nume de deținător valid",
+      "invalid_expiry_date": "Introduceți o dată de expirare validă (LL/AA)",
+      "card_expired": "Acest card a expirat"
     },
     "wifi": {
       "hidden": "Ascuns",
@@ -206,5 +211,20 @@
     "change_language_subtitle": "Selectați limba preferată mai jos. Acest lucru ne ajută să vă servim mai bine.",
     "change_theme_title": "Schimbă Tema",
     "change_theme_subtitle": "Selectați tema preferată mai jos. Acest lucru ne ajută să vă servim mai bine."
+  },
+  "visa": {
+    "title": "Card Visa",
+    "card": {
+      "bank_name": "Banca QRSAG",
+      "number_hint": "Număr card",
+      "expiry_hint": "Data expirării",
+      "holder_hint": "Numele deținătorului",
+      "cvv_hint": "CVV",
+      "number_label": "Număr card",
+      "expiry_label": "Data expirării",
+      "holder_label": "Numele deținătorului",
+      "cvv_label": "CVV",
+      "clear_field": "Golește câmpul"
+    }
   }
 }

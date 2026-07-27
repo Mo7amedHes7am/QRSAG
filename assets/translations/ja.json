@@ -180,7 +180,12 @@
       "invalid_email": "無効なメールアドレス",
       "invalid_phone": "無効な電話番号",
       "invalid_username": "ユーザー名にスペースを含めることはできません",
-      "max_length": "項目は{0}文字を超えることはできません"
+      "max_length": "項目は{0}文字を超えることはできません",
+      "invalid_card_number": "有効なカード番号を入力してください",
+      "invalid_cvv": "有効なCVVコードを入力してください",
+      "invalid_card_holder_name": "有効なカード名義人名を入力してください",
+      "invalid_expiry_date": "有効な有効期限を入力してください（MM/YY）",
+      "card_expired": "このカードは有効期限が切れています"
     },
     "wifi": {
       "hidden": "非表示",
@@ -206,5 +211,20 @@
     "change_language_subtitle": "以下から希望の言語を選択してください。より良いサービスを提供するのに役立ちます。",
     "change_theme_title": "テーマを変更",
     "change_theme_subtitle": "以下から希望のテーマを選択してください。より良いサービスを提供するのに役立ちます。"
+  },
+  "visa": {
+    "title": "Visaカード",
+    "card": {
+      "bank_name": "QRSAG銀行",
+      "number_hint": "カード番号",
+      "expiry_hint": "有効期限",
+      "holder_hint": "カード名義人",
+      "cvv_hint": "CVV",
+      "number_label": "カード番号",
+      "expiry_label": "有効期限",
+      "holder_label": "カード名義人",
+      "cvv_label": "CVV",
+      "clear_field": "フィールドをクリア"
+    }
   }
 }

@@ -1,3 +1,4 @@
+import 'package:encrypt_decrypt_plus/encrypt_decrypt/xor.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/controllertype.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
@@ -5,6 +6,7 @@ import 'package:qr_scanner_and_generator/Features/Qr_Feature/Logic/Methods.dart'
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/Cubit/qr_cubit_base.dart';
 import 'package:qr_scanner_and_generator/core/Methods/app_validators.dart';
 import 'package:qr_scanner_and_generator/core/cache/cache_manager.dart';
+import 'package:uuid/uuid.dart';
 
 mixin GenerateMixin on QrCubitBase {
   initGeneratePage() {
@@ -14,6 +16,7 @@ mixin GenerateMixin on QrCubitBase {
 
   void initGenerateTypePage(QrType type) {
     currentType = type;
+
     switch (type) {
       case QrType.text:
       case QrType.website:
@@ -25,6 +28,7 @@ mixin GenerateMixin on QrCubitBase {
       case QrType.phone:
         generateController = TextEditingController();
         break;
+
       case QrType.contact:
         firstnameController = TextEditingController();
         lastnameController = TextEditingController();
@@ -37,12 +41,28 @@ mixin GenerateMixin on QrCubitBase {
         cityController = TextEditingController();
         countryController = TextEditingController();
         break;
+
       case QrType.wifi:
         wifiNameController = TextEditingController();
         wifiPasswordController = TextEditingController();
         hidden = false;
         encryption = 0;
         showPassword = false;
+        break;
+
+      case QrType.visa:
+        try {
+          VisaformKey = GlobalKey<FormState>();
+        } catch (e) {}
+        isCvvFocused = false;
+        valid = false;
+        useGlassMorphism = true;
+        useBackgroundImage = false;
+        useFloatingAnimation = true;
+        cardHolderNameController = TextEditingController();
+        cardNumberController = TextEditingController();
+        cvvCodeController = TextEditingController();
+        expiryDateController = TextEditingController();
       default:
     }
     countryCode = "+20";
@@ -63,6 +83,7 @@ mixin GenerateMixin on QrCubitBase {
 
   Future<dynamic> generateQr() async {
     late String data;
+    String? id;
 
     switch (currentType) {
       case QrType.contact:
@@ -119,6 +140,55 @@ mixin GenerateMixin on QrCubitBase {
             "A:${addressController.text.trim().isNotEmpty ? addressController.text.trim() : "No Address"};"
             "Ci:${cityController.text.trim().isNotEmpty ? cityController.text.trim() : "No City"};"
             "Co:${countryController.text.trim().isNotEmpty ? countryController.text.trim() : "No Country"};;";
+        break;
+
+      case QrType.visa:
+        final cardNumberError = AppValidators.validateVisaCardNumber(
+          cardNumberController.text,
+        );
+        final cvvCodeError = AppValidators.validateCvvCode(
+          cvvCodeController.text,
+        );
+        final cardHolderNameError = AppValidators.validateVisaCardHolderName(
+          cardHolderNameController.text,
+        );
+        final expiryDateError = AppValidators.validateVisaCardExpireDate(
+          expiryDateController.text,
+        );
+
+        if (cardNumberError != null) {
+          emit(QrGenerateError(cardNumberError));
+          return null;
+        }
+
+        if (cvvCodeError != null) {
+          emit(QrGenerateError(cvvCodeError));
+          return null;
+        }
+
+        if (cardHolderNameError != null) {
+          emit(QrGenerateError(cardHolderNameError));
+          return null;
+        }
+        if (expiryDateError != null) {
+          emit(QrGenerateError(expiryDateError));
+          return null;
+        }
+
+        XOR xor = XOR();
+
+        var uuid = Uuid();
+        id = uuid.v1().replaceAll("-", "");
+        var encrypted = xor.xorEncode(
+          cardNumberController.text.toString(),
+          secretKey: id,
+        );
+
+        data =
+            "VISA:N:${encrypted + '-VssEnc-' + id};"
+            "E:${expiryDateController.text};"
+            "C:${cardHolderNameController.text};"
+            "V:${cvvCodeController.text};;";
         break;
 
       case QrType.wifi:
@@ -180,6 +250,7 @@ mixin GenerateMixin on QrCubitBase {
       data: data,
       isScanned: false,
       type: currentType,
+      id: id,
     );
 
     return result;
@@ -225,6 +296,18 @@ mixin GenerateMixin on QrCubitBase {
         break;
       case ControllerType.wifiPassword:
         wifiPasswordController.clear();
+        break;
+      case ControllerType.cvvCode:
+        cvvCodeController.clear();
+        break;
+      case ControllerType.cardHolderName:
+        cardHolderNameController.clear();
+        break;
+      case ControllerType.cardNumber:
+        cardNumberController.clear();
+        break;
+      case ControllerType.expiryDate:
+        expiryDateController.clear();
         break;
     }
     emit(QrGenerateLoaded());

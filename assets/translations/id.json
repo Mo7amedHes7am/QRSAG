@@ -180,7 +180,12 @@
       "invalid_email": "Alamat email tidak valid",
       "invalid_phone": "Nomor telepon tidak valid",
       "invalid_username": "Nama pengguna tidak boleh mengandung spasi",
-      "max_length": "Kolom tidak boleh melebihi {0} karakter"
+      "max_length": "Kolom tidak boleh melebihi {0} karakter",
+      "invalid_card_number": "Masukkan nomor kartu yang valid",
+      "invalid_cvv": "Masukkan kode CVV yang valid",
+      "invalid_card_holder_name": "Masukkan nama pemegang kartu yang valid",
+      "invalid_expiry_date": "Masukkan tanggal kadaluarsa yang valid (BB/TT)",
+      "card_expired": "Kartu ini sudah kadaluarsa"
     },
     "wifi": {
       "hidden": "Tersembunyi",
@@ -206,5 +211,20 @@
     "change_language_subtitle": "Pilih bahasa pilihan Anda di bawah ini. Ini membantu kami melayani Anda lebih baik.",
     "change_theme_title": "Ubah Tema",
     "change_theme_subtitle": "Pilih tema pilihan Anda di bawah ini. Ini membantu kami melayani Anda lebih baik."
+  },
+  "visa": {
+    "title": "Kartu Visa",
+    "card": {
+      "bank_name": "Bank QRSAG",
+      "number_hint": "Nomor Kartu",
+      "expiry_hint": "Tanggal Kadaluarsa",
+      "holder_hint": "Nama Pemegang Kartu",
+      "cvv_hint": "CVV",
+      "number_label": "Nomor Kartu",
+      "expiry_label": "Tanggal Kadaluarsa",
+      "holder_label": "Nama Pemegang Kartu",
+      "cvv_label": "CVV",
+      "clear_field": "Bersihkan kolom"
+    }
   }
 }

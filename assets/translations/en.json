@@ -180,7 +180,12 @@
       "invalid_email": "Invalid email address",
       "invalid_phone": "Invalid phone number",
       "invalid_username": "Username must not contain spaces",
-      "max_length": "Field cannot exceed {0} characters"
+      "max_length": "Field cannot exceed {0} characters",
+      "invalid_card_number": "Please enter a valid card number",
+      "invalid_cvv": "Please enter a valid CVV code",
+      "invalid_card_holder_name": "Please enter a valid card holder name",
+      "invalid_expiry_date": "Please enter a valid expiry date (MM/YY)",
+      "card_expired": "This card has expired"
     },
     "wifi": {
       "hidden": "Hidden",
@@ -206,5 +211,19 @@
     "change_language_subtitle": "Select your preferred language below. This helps us serve you better.",
     "change_theme_title": "Change Theme",
     "change_theme_subtitle": "Select your preferred theme below. This helps us serve you better."
-  }
-}
+  },
+  "visa": {
+    "title": "Visa Card",
+    "card": {
+      "bank_name": "QRSAG Bank",
+      "number_hint": "Card Number",
+      "expiry_hint": "Expiry Date",
+      "holder_hint": "Holder Name",
+      "cvv_hint": "CVV",
+      "number_label": "Card Number",
+      "expiry_label": "Expiry Date",
+      "holder_label": "Holder Name",
+      "cvv_label": "CVV",
+      "clear_field": "Clear field"
+    }
+  }}

@@ -19,7 +19,6 @@ class GenerateScreen extends StatelessWidget {
       create: (context) => getIt<QrCubit>()..initGeneratePage(),
       child: BlocBuilder<QrCubit, QrState>(
         builder: (context, state) {
-          final bool isArabic = context.locale.languageCode == 'ar';
           final qrs = context.read<QrCubit>().qrs;
           return SystemWrapper(
             child: Scaffold(

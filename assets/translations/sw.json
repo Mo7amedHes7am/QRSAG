@@ -180,7 +180,12 @@
       "invalid_email": "Barua pepe si sahihi",
       "invalid_phone": "Nambari ya simu si sahihi",
       "invalid_username": "Jina la mtumiaji halipaswi kuwa na nafasi",
-      "max_length": "Sehemu haiwezi kuzidi herufi {0}"
+      "max_length": "Sehemu haiwezi kuzidi herufi {0}",
+      "invalid_card_number": "Tafadhali ingiza nambari sahihi ya kadi",
+      "invalid_cvv": "Tafadhali ingiza msimbo sahihi wa CVV",
+      "invalid_card_holder_name": "Tafadhali ingiza jina sahihi la mwenye kadi",
+      "invalid_expiry_date": "Tafadhali ingiza tarehe sahihi ya mwisho (MM/YY)",
+      "card_expired": "Kadi hii imeisha muda wake"
     },
     "wifi": {
       "hidden": "Siri",
@@ -206,5 +211,20 @@
     "change_language_subtitle": "Chagua lugha unayopenda hapa chini. Hii inatusaidia kukuhudumia vyema.",
     "change_theme_title": "Badilisha Mandhari",
     "change_theme_subtitle": "Chagua mandhari unayopenda hapa chini. Hii inatusaidia kukuhudumia vyema."
+  },
+  "visa": {
+    "title": "Kadi ya Visa",
+    "card": {
+      "bank_name": "Benki ya QRSAG",
+      "number_hint": "Nambari ya Kadi",
+      "expiry_hint": "Tarehe ya Mwisho",
+      "holder_hint": "Jina la Mwenye Kadi",
+      "cvv_hint": "CVV",
+      "number_label": "Nambari ya Kadi",
+      "expiry_label": "Tarehe ya Mwisho",
+      "holder_label": "Jina la Mwenye Kadi",
+      "cvv_label": "CVV",
+      "clear_field": "Safisha sehemu"
+    }
   }
 }

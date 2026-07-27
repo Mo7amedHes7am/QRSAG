@@ -180,7 +180,12 @@
       "invalid_email": "آدرس ایمیل نامعتبر",
       "invalid_phone": "شماره تلفن نامعتبر",
       "invalid_username": "نام کاربری نباید حاوی فاصله باشد",
-      "max_length": "فیلد نمی‌تواند بیشتر از {0} کاراکتر باشد"
+      "max_length": "فیلد نمی‌تواند بیشتر از {0} کاراکتر باشد",
+      "invalid_card_number": "لطفاً یک شماره کارت معتبر وارد کنید",
+      "invalid_cvv": "لطفاً یک کد CVV معتبر وارد کنید",
+      "invalid_card_holder_name": "لطفاً یک نام دارنده کارت معتبر وارد کنید",
+      "invalid_expiry_date": "لطفاً یک تاریخ انقضای معتبر وارد کنید (ماه/سال)",
+      "card_expired": "این کارت منقضی شده است"
     },
     "wifi": {
       "hidden": "مخفی",
@@ -206,5 +211,20 @@
     "change_language_subtitle": "زبان مورد نظر خود را در زیر انتخاب کنید. این به ما کمک می کند تا بهتر به شما خدمت کنیم.",
     "change_theme_title": "تغییر تم",
     "change_theme_subtitle": "تم مورد نظر خود را در زیر انتخاب کنید. این به ما کمک می کند تا بهتر به شما خدمت کنیم."
+  },
+  "visa": {
+    "title": "کارت ویزا",
+    "card": {
+      "bank_name": "بانک QRSAG",
+      "number_hint": "شماره کارت",
+      "expiry_hint": "تاریخ انقضا",
+      "holder_hint": "نام دارنده کارت",
+      "cvv_hint": "CVV",
+      "number_label": "شماره کارت",
+      "expiry_label": "تاریخ انقضا",
+      "holder_label": "نام دارنده کارت",
+      "cvv_label": "CVV",
+      "clear_field": "پاک کردن فیلد"
+    }
   }
 }

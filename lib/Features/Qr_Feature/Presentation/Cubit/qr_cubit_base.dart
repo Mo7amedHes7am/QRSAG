@@ -23,6 +23,17 @@ class QrCubitBase extends Cubit<QrState> {
       cityController,
       countryController;
 
+  late final GlobalKey<FormState> VisaformKey;
+  late bool isCvvFocused,
+      useGlassMorphism,
+      useBackgroundImage,
+      useFloatingAnimation,
+      valid;
+  late TextEditingController cardHolderNameController,
+      cardNumberController,
+      cvvCodeController,
+      expiryDateController;
+
   late TextEditingController wifiNameController, wifiPasswordController;
   late bool hidden;
   late int encryption;

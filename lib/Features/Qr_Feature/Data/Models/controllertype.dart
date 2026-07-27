@@ -12,4 +12,8 @@ enum ControllerType {
   country,
   wifiName,
   wifiPassword,
+  cardHolderName,
+  cardNumber,
+  cvvCode,
+  expiryDate,
 }
