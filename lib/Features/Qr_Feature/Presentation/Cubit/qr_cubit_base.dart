@@ -23,6 +23,8 @@ class QrCubitBase extends Cubit<QrState> {
       cityController,
       countryController;
 
+  late TextEditingController industryController;
+
   late final GlobalKey<FormState> VisaformKey;
   late bool isCvvFocused,
       useGlassMorphism,

@@ -7,16 +7,12 @@
     "date_time": "เลือกวันที่และเวลา",
     "email": "ป้อนที่อยู่อีเมล",
     "address": "ป้อนที่อยู่ของคุณ",
-    "card_number": "1234 5678 9012 3456",
     "password": "ป้อนรหัสผ่าน",
-    "expiry_date": "ดด/ปป",
     "username": "ป้อนชื่อผู้ใช้",
     "client_name": "ป้อนชื่อลูกค้า",
     "date": "เลือกวันที่",
     "multiline": "ป้อนคำอธิบาย",
     "text": "ป้อนข้อความ",
-    "cvv": "CVV",
-    "card_holder_name": "ชื่อผู้ถือบัตร",
     "zip_code": "ป้อนรหัสไปรษณีย์",
     "city": "ป้อนเมือง",
     "country": "ป้อนประเทศ",
@@ -28,14 +24,12 @@
     "web": "ป้อน URL เว็บไซต์ของคุณ",
     "website": "ป้อนที่อยู่เว็บไซต์ของคุณ",
     "wifi_name": "ป้อนชื่อเครือข่าย WiFi (SSID)",
-    "wifi_password": "ป้อนรหัสผ่าน WiFi"
+    "wifi_password": "ป้อนรหัสผ่าน WiFi",
+    "industry_name": "ชื่ออุตสาหกรรม"
   },
   "validation": {
     "email_invalid": "กรุณาป้อนที่อยู่อีเมลที่ถูกต้อง",
     "url_invalid": "กรุณาป้อน URL ที่ถูกต้อง",
-    "card_invalid": "กรุณาป้อนหมายเลขบัตร 16 หลักที่ถูกต้อง",
-    "expiry_invalid": "กรุณาใช้รูปแบบ ดด/ปป และป้อนเดือนที่ถูกต้อง",
-    "expiry_expired": "บัตรหมดอายุแล้ว",
     "phone_invalid": "กรุณาป้อนหมายเลขโทรศัพท์ที่ถูกต้อง",
     "required": "กรุณากรอกข้อมูลในช่องนี้",
     "username_invalid": "ชื่อผู้ใช้ต้องมีอย่างน้อย 3 ตัวอักษร",
@@ -43,8 +37,6 @@
     "password_mismatch": "รหัสผ่านไม่ตรงกัน",
     "confirm_password": "กรุณายืนยันรหัสผ่านของคุณ",
     "date_invalid": "กรุณาป้อนวันที่ที่ถูกต้อง",
-    "card_name_invalid": "กรุณาป้อนชื่อผู้ถือบัตรที่ถูกต้อง",
-    "cvv_invalid": "กรุณาป้อน CVV ที่ถูกต้อง (3-4 หลัก)",
     "address_invalid": "กรุณาป้อนที่อยู่ที่ถูกต้อง (อย่างน้อย 5 ตัวอักษร)",
     "first_name_required": "กรุณาป้อนชื่อของคุณ",
     "last_name_required": "กรุณาป้อนนามสกุลของคุณ",
@@ -59,7 +51,9 @@
     "wifi_name_required": "กรุณาป้อนชื่อเครือข่าย WiFi",
     "wifi_password_required": "กรุณาป้อนรหัสผ่าน WiFi",
     "wifi_name_invalid": "ชื่อ WiFi ต้องมีอย่างน้อย 2 ตัวอักษร",
-    "wifi_password_invalid": "รหัสผ่าน WiFi ต้องมีอย่างน้อย 8 ตัวอักษร"
+    "wifi_password_invalid": "รหัสผ่าน WiFi ต้องมีอย่างน้อย 8 ตัวอักษร",
+    "industry_name_required": "กรุณาป้อนชื่ออุตสาหกรรม",
+    "industry_name_invalid": "ชื่ออุตสาหกรรมต้องมีอย่างน้อย 2 ตัวอักษร"
   },
   "field": {
     "full_name": "ชื่อ-นามสกุล",
@@ -67,10 +61,6 @@
     "phone": "หมายเลขโทรศัพท์",
     "password": "รหัสผ่าน",
     "confirm_password": "ยืนยันรหัสผ่าน",
-    "card_number": "หมายเลขบัตร",
-    "card_name": "ชื่อผู้ถือบัตร",
-    "expiry_date": "วันที่หมดอายุ",
-    "cvv": "CVV",
     "address": "ที่อยู่",
     "city": "เมือง",
     "country": "ประเทศ",
@@ -87,7 +77,8 @@
     "web": "เว็บไซต์",
     "wifi_name": "ชื่อ WiFi",
     "wifi_password": "รหัสผ่าน WiFi",
-    "wifi_ssid": "SSID WiFi"
+    "wifi_ssid": "SSID WiFi",
+    "industry_name": "ชื่ออุตสาหกรรม"
   },
   "common": {
     "optional": "ไม่บังคับ",

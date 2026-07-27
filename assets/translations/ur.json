@@ -7,16 +7,12 @@
     "date_time": "تاریخ اور وقت منتخب کریں",
     "email": "ای میل پتہ درج کریں",
     "address": "اپنا پتہ درج کریں",
-    "card_number": "1234 5678 9012 3456",
     "password": "پاس ورڈ درج کریں",
-    "expiry_date": "مہینہ/سال",
     "username": "صارف نام درج کریں",
     "client_name": "کلائنٹ کا نام درج کریں",
     "date": "تاریخ منتخب کریں",
     "multiline": "تفصیل درج کریں",
     "text": "متن درج کریں",
-    "cvv": "CVV",
-    "card_holder_name": "کارڈ ہولڈر کا نام",
     "zip_code": "زپ کوڈ درج کریں",
     "city": "شہر درج کریں",
     "country": "ملک درج کریں",
@@ -28,14 +24,12 @@
     "web": "اپنی ویب سائٹ URL درج کریں",
     "website": "اپنا ویب سائٹ پتہ درج کریں",
     "wifi_name": "WiFi نیٹ ورک کا نام درج کریں (SSID)",
-    "wifi_password": "WiFi پاس ورڈ درج کریں"
+    "wifi_password": "WiFi پاس ورڈ درج کریں",
+    "industry_name": "صنعت کا نام"
   },
   "validation": {
     "email_invalid": "براہ کرم ایک درست ای میل پتہ درج کریں",
     "url_invalid": "براہ کرم ایک درست URL درج کریں",
-    "card_invalid": "براہ کرم ایک درست 16 ہندسوں کا کارڈ نمبر درج کریں",
-    "expiry_invalid": "براہ کرم مہینہ/سال کی شکل استعمال کریں اور ایک درست مہینہ درج کریں",
-    "expiry_expired": "کارڈ کی میعاد ختم ہو چکی ہے",
     "phone_invalid": "براہ کرم ایک درست فون نمبر درج کریں",
     "required": "یہ فیلڈ ضروری ہے",
     "username_invalid": "صارف نام کم از کم 3 حروف کا ہونا چاہیے",
@@ -43,8 +37,6 @@
     "password_mismatch": "پاس ورڈز مماثل نہیں ہیں",
     "confirm_password": "براہ کرم اپنا پاس ورڈ تصدیق کریں",
     "date_invalid": "براہ کرم ایک درست تاریخ درج کریں",
-    "card_name_invalid": "براہ کرم ایک درست کارڈ ہولڈر کا نام درج کریں",
-    "cvv_invalid": "براہ کرم ایک درست CVV درج کریں (3-4 ہندسے)",
     "address_invalid": "براہ کرم ایک درست پتہ درج کریں (کم از کم 5 حروف)",
     "first_name_required": "براہ کرم اپنا پہلا نام درج کریں",
     "last_name_required": "براہ کرم اپنا آخری نام درج کریں",
@@ -59,7 +51,9 @@
     "wifi_name_required": "براہ کرم WiFi نیٹ ورک کا نام درج کریں",
     "wifi_password_required": "براہ کرم WiFi پاس ورڈ درج کریں",
     "wifi_name_invalid": "WiFi نام کم از کم 2 حروف کا ہونا چاہیے",
-    "wifi_password_invalid": "WiFi پاس ورڈ کم از کم 8 حروف کا ہونا چاہیے"
+    "wifi_password_invalid": "WiFi پاس ورڈ کم از کم 8 حروف کا ہونا چاہیے",
+    "industry_name_required": "براہ کرم صنعت کا نام درج کریں",
+    "industry_name_invalid": "صنعت کا نام کم از کم 2 حروف کا ہونا چاہیے"
   },
   "field": {
     "full_name": "مکمل نام",
@@ -67,10 +61,6 @@
     "phone": "فون نمبر",
     "password": "پاس ورڈ",
     "confirm_password": "پاس ورڈ تصدیق کریں",
-    "card_number": "کارڈ نمبر",
-    "card_name": "کارڈ ہولڈر کا نام",
-    "expiry_date": "مختتمی تاریخ",
-    "cvv": "CVV",
     "address": "پتہ",
     "city": "شہر",
     "country": "ملک",
@@ -87,7 +77,8 @@
     "web": "ویب سائٹ",
     "wifi_name": "WiFi نام",
     "wifi_password": "WiFi پاس ورڈ",
-    "wifi_ssid": "WiFi SSID"
+    "wifi_ssid": "WiFi SSID",
+    "industry_name": "صنعت کا نام"
   },
   "common": {
     "optional": "اختیاری",

@@ -7,16 +7,12 @@
     "date_time": "Pilih tarikh & masa",
     "email": "Masukkan alamat e-mel",
     "address": "Masukkan alamat anda",
-    "card_number": "1234 5678 9012 3456",
     "password": "Masukkan kata laluan",
-    "expiry_date": "BB/TT",
     "username": "Masukkan nama pengguna",
     "client_name": "Masukkan nama klien",
     "date": "Pilih tarikh",
     "multiline": "Masukkan penerangan",
     "text": "Masukkan teks",
-    "cvv": "CVV",
-    "card_holder_name": "Nama pemegang kad",
     "zip_code": "Masukkan poskod",
     "city": "Masukkan bandar",
     "country": "Masukkan negara",
@@ -28,14 +24,12 @@
     "web": "Masukkan URL laman web anda",
     "website": "Masukkan alamat laman web anda",
     "wifi_name": "Masukkan nama rangkaian WiFi (SSID)",
-    "wifi_password": "Masukkan kata laluan WiFi"
+    "wifi_password": "Masukkan kata laluan WiFi",
+    "industry_name": "Nama industri"
   },
   "validation": {
     "email_invalid": "Masukkan alamat e-mel yang sah",
     "url_invalid": "Masukkan URL yang sah",
-    "card_invalid": "Masukkan nombor kad 16 digit yang sah",
-    "expiry_invalid": "Gunakan format BB/TT dan masukkan bulan yang sah",
-    "expiry_expired": "Kad telah tamat tempoh",
     "phone_invalid": "Masukkan nombor telefon yang sah",
     "required": "Medan ini wajib diisi",
     "username_invalid": "Nama pengguna mestilah sekurang-kurangnya 3 aksara",
@@ -43,8 +37,6 @@
     "password_mismatch": "Kata laluan tidak sepadan",
     "confirm_password": "Sahkan kata laluan anda",
     "date_invalid": "Masukkan tarikh yang sah",
-    "card_name_invalid": "Masukkan nama pemegang kad yang sah",
-    "cvv_invalid": "Masukkan CVV yang sah (3-4 digit)",
     "address_invalid": "Masukkan alamat yang sah (sekurang-kurangnya 5 aksara)",
     "first_name_required": "Masukkan nama pertama anda",
     "last_name_required": "Masukkan nama keluarga anda",
@@ -59,7 +51,9 @@
     "wifi_name_required": "Masukkan nama rangkaian WiFi",
     "wifi_password_required": "Masukkan kata laluan WiFi",
     "wifi_name_invalid": "Nama WiFi mestilah sekurang-kurangnya 2 aksara",
-    "wifi_password_invalid": "Kata laluan WiFi mestilah sekurang-kurangnya 8 aksara"
+    "wifi_password_invalid": "Kata laluan WiFi mestilah sekurang-kurangnya 8 aksara",
+    "industry_name_required": "Masukkan nama industri",
+    "industry_name_invalid": "Nama industri mestilah sekurang-kurangnya 2 aksara"
   },
   "field": {
     "full_name": "Nama Penuh",
@@ -67,10 +61,6 @@
     "phone": "Nombor Telefon",
     "password": "Kata Laluan",
     "confirm_password": "Sahkan Kata Laluan",
-    "card_number": "Nombor Kad",
-    "card_name": "Nama Pemegang Kad",
-    "expiry_date": "Tarikh Tamat Tempoh",
-    "cvv": "CVV",
     "address": "Alamat",
     "city": "Bandar",
     "country": "Negara",
@@ -87,7 +77,8 @@
     "web": "Laman Web",
     "wifi_name": "Nama WiFi",
     "wifi_password": "Kata Laluan WiFi",
-    "wifi_ssid": "SSID WiFi"
+    "wifi_ssid": "SSID WiFi",
+    "industry_name": "Nama industri"
   },
   "common": {
     "optional": "pilihan",

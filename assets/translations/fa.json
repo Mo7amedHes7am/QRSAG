@@ -7,16 +7,12 @@
     "date_time": "تاریخ و زمان را انتخاب کنید",
     "email": "آدرس ایمیل را وارد کنید",
     "address": "آدرس خود را وارد کنید",
-    "card_number": "1234 5678 9012 3456",
     "password": "رمز عبور را وارد کنید",
-    "expiry_date": "ماه/سال",
     "username": "نام کاربری را وارد کنید",
     "client_name": "نام مشتری را وارد کنید",
     "date": "تاریخ را انتخاب کنید",
     "multiline": "توضیحات را وارد کنید",
     "text": "متن را وارد کنید",
-    "cvv": "CVV",
-    "card_holder_name": "نام دارنده کارت",
     "zip_code": "کد پستی را وارد کنید",
     "city": "شهر را وارد کنید",
     "country": "کشور را وارد کنید",
@@ -28,14 +24,12 @@
     "web": "URL وبسایت خود را وارد کنید",
     "website": "آدرس وبسایت خود را وارد کنید",
     "wifi_name": "نام شبکه WiFi را وارد کنید (SSID)",
-    "wifi_password": "رمز عبور WiFi را وارد کنید"
+    "wifi_password": "رمز عبور WiFi را وارد کنید",
+    "industry_name": "نام صنعت"
   },
   "validation": {
     "email_invalid": "لطفاً یک آدرس ایمیل معتبر وارد کنید",
     "url_invalid": "لطفاً یک URL معتبر وارد کنید",
-    "card_invalid": "لطفاً یک شماره کارت ۱۶ رقمی معتبر وارد کنید",
-    "expiry_invalid": "لطفاً از فرمت ماه/سال استفاده کنید و یک ماه معتبر وارد کنید",
-    "expiry_expired": "کارت منقضی شده است",
     "phone_invalid": "لطفاً یک شماره تلفن معتبر وارد کنید",
     "required": "این فیلد اجباری است",
     "username_invalid": "نام کاربری باید حداقل ۳ کاراکتر باشد",
@@ -43,8 +37,6 @@
     "password_mismatch": "رمزهای عبور مطابقت ندارند",
     "confirm_password": "لطفاً رمز عبور خود را تأیید کنید",
     "date_invalid": "لطفاً یک تاریخ معتبر وارد کنید",
-    "card_name_invalid": "لطفاً یک نام دارنده کارت معتبر وارد کنید",
-    "cvv_invalid": "لطفاً یک CVV معتبر وارد کنید (۳-۴ رقم)",
     "address_invalid": "لطفاً یک آدرس معتبر وارد کنید (حداقل ۵ کاراکتر)",
     "first_name_required": "لطفاً نام خود را وارد کنید",
     "last_name_required": "لطفاً نام خانوادگی خود را وارد کنید",
@@ -59,7 +51,9 @@
     "wifi_name_required": "لطفاً نام شبکه WiFi را وارد کنید",
     "wifi_password_required": "لطفاً رمز عبور WiFi را وارد کنید",
     "wifi_name_invalid": "نام WiFi باید حداقل ۲ کاراکتر باشد",
-    "wifi_password_invalid": "رمز عبور WiFi باید حداقل ۸ کاراکتر باشد"
+    "wifi_password_invalid": "رمز عبور WiFi باید حداقل ۸ کاراکتر باشد",
+    "industry_name_required": "لطفاً نام صنعت را وارد کنید",
+    "industry_name_invalid": "نام صنعت باید حداقل ۲ کاراکتر باشد"
   },
   "field": {
     "full_name": "نام کامل",
@@ -67,10 +61,6 @@
     "phone": "شماره تلفن",
     "password": "رمز عبور",
     "confirm_password": "تأیید رمز عبور",
-    "card_number": "شماره کارت",
-    "card_name": "نام دارنده کارت",
-    "expiry_date": "تاریخ انقضا",
-    "cvv": "CVV",
     "address": "آدرس",
     "city": "شهر",
     "country": "کشور",
@@ -87,7 +77,8 @@
     "web": "وبسایت",
     "wifi_name": "نام WiFi",
     "wifi_password": "رمز عبور WiFi",
-    "wifi_ssid": "SSID WiFi"
+    "wifi_ssid": "SSID WiFi",
+    "industry_name": "نام صنعت"
   },
   "common": {
     "optional": "اختیاری",

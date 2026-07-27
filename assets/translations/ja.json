@@ -7,16 +7,12 @@
     "date_time": "日時を選択",
     "email": "メールアドレスを入力",
     "address": "住所を入力",
-    "card_number": "1234 5678 9012 3456",
     "password": "パスワードを入力",
-    "expiry_date": "MM/YY",
     "username": "ユーザー名を入力",
     "client_name": "クライアント名を入力",
     "date": "日付を選択",
     "multiline": "説明を入力",
     "text": "テキストを入力",
-    "cvv": "CVV",
-    "card_holder_name": "カード名義人",
     "zip_code": "郵便番号を入力",
     "city": "都市を入力",
     "country": "国を入力",
@@ -28,14 +24,12 @@
     "web": "ウェブサイトのURLを入力",
     "website": "ウェブサイトのアドレスを入力",
     "wifi_name": "WiFiネットワーク名を入力（SSID）",
-    "wifi_password": "WiFiパスワードを入力"
+    "wifi_password": "WiFiパスワードを入力",
+    "industry_name": "業界名"
   },
   "validation": {
     "email_invalid": "有効なメールアドレスを入力してください",
     "url_invalid": "有効なURLを入力してください",
-    "card_invalid": "有効な16桁のカード番号を入力してください",
-    "expiry_invalid": "MM/YY形式で有効な月を入力してください",
-    "expiry_expired": "カードの有効期限が切れています",
     "phone_invalid": "有効な電話番号を入力してください",
     "required": "この項目は必須です",
     "username_invalid": "ユーザー名は3文字以上である必要があります",
@@ -43,8 +37,6 @@
     "password_mismatch": "パスワードが一致しません",
     "confirm_password": "パスワードを確認してください",
     "date_invalid": "有効な日付を入力してください",
-    "card_name_invalid": "有効なカード名義人名を入力してください",
-    "cvv_invalid": "有効なCVV（3〜4桁）を入力してください",
     "address_invalid": "有効な住所を入力してください（5文字以上）",
     "first_name_required": "名を入力してください",
     "last_name_required": "姓を入力してください",
@@ -59,7 +51,9 @@
     "wifi_name_required": "WiFiネットワーク名を入力してください",
     "wifi_password_required": "WiFiパスワードを入力してください",
     "wifi_name_invalid": "WiFi名は2文字以上である必要があります",
-    "wifi_password_invalid": "WiFiパスワードは8文字以上である必要があります"
+    "wifi_password_invalid": "WiFiパスワードは8文字以上である必要があります",
+    "industry_name_required": "業界名を入力してください",
+    "industry_name_invalid": "業界名は2文字以上である必要があります"
   },
   "field": {
     "full_name": "フルネーム",
@@ -67,10 +61,6 @@
     "phone": "電話番号",
     "password": "パスワード",
     "confirm_password": "パスワード確認",
-    "card_number": "カード番号",
-    "card_name": "カード名義人名",
-    "expiry_date": "有効期限",
-    "cvv": "CVV",
     "address": "住所",
     "city": "都市",
     "country": "国",
@@ -87,7 +77,8 @@
     "web": "ウェブサイト",
     "wifi_name": "WiFi名",
     "wifi_password": "WiFiパスワード",
-    "wifi_ssid": "WiFi SSID"
+    "wifi_ssid": "WiFi SSID",
+    "industry_name": "業界名"
   },
   "common": {
     "optional": "任意",

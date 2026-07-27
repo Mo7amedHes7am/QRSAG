@@ -7,16 +7,12 @@
     "date_time": "Datum und Uhrzeit wählen",
     "email": "E-Mail-Adresse eingeben",
     "address": "Adresse eingeben",
-    "card_number": "1234 5678 9012 3456",
     "password": "Passwort eingeben",
-    "expiry_date": "MM/JJ",
     "username": "Benutzername eingeben",
     "client_name": "Kundenname eingeben",
     "date": "Datum wählen",
     "multiline": "Beschreibung eingeben",
     "text": "Text eingeben",
-    "cvv": "CVV",
-    "card_holder_name": "Karteninhabername",
     "zip_code": "PLZ eingeben",
     "city": "Stadt eingeben",
     "country": "Land eingeben",
@@ -28,14 +24,12 @@
     "web": "Website-URL eingeben",
     "website": "Webseitenadresse eingeben",
     "wifi_name": "WiFi-Netzwerknamen eingeben (SSID)",
-    "wifi_password": "WiFi-Passwort eingeben"
+    "wifi_password": "WiFi-Passwort eingeben",
+    "industry_name": "Branchenname"
   },
   "validation": {
     "email_invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
     "url_invalid": "Bitte geben Sie eine gültige URL ein",
-    "card_invalid": "Bitte geben Sie eine gültige 16-stellige Kartennummer ein",
-    "expiry_invalid": "Bitte verwenden Sie das MM/JJ-Format und geben Sie einen gültigen Monat ein",
-    "expiry_expired": "Die Karte ist abgelaufen",
     "phone_invalid": "Bitte geben Sie eine gültige Telefonnummer ein",
     "required": "Dieses Feld ist erforderlich",
     "username_invalid": "Der Benutzername muss mindestens 3 Zeichen lang sein",
@@ -43,8 +37,6 @@
     "password_mismatch": "Die Passwörter stimmen nicht überein",
     "confirm_password": "Bitte bestätigen Sie Ihr Passwort",
     "date_invalid": "Bitte geben Sie ein gültiges Datum ein",
-    "card_name_invalid": "Bitte geben Sie einen gültigen Karteninhabernamen ein",
-    "cvv_invalid": "Bitte geben Sie eine gültige CVV ein (3-4 Ziffern)",
     "address_invalid": "Bitte geben Sie eine gültige Adresse ein (mindestens 5 Zeichen)",
     "first_name_required": "Bitte geben Sie Ihren Vornamen ein",
     "last_name_required": "Bitte geben Sie Ihren Nachnamen ein",
@@ -59,7 +51,9 @@
     "wifi_name_required": "Bitte geben Sie den WiFi-Netzwerknamen ein",
     "wifi_password_required": "Bitte geben Sie das WiFi-Passwort ein",
     "wifi_name_invalid": "Der WiFi-Name muss mindestens 2 Zeichen lang sein",
-    "wifi_password_invalid": "Das WiFi-Passwort muss mindestens 8 Zeichen lang sein"
+    "wifi_password_invalid": "Das WiFi-Passwort muss mindestens 8 Zeichen lang sein",
+    "industry_name_required": "Bitte geben Sie den Branchennamen ein",
+    "industry_name_invalid": "Der Branchenname muss mindestens 2 Zeichen lang sein"
   },
   "field": {
     "full_name": "Vollständiger Name",
@@ -67,10 +61,6 @@
     "phone": "Telefonnummer",
     "password": "Passwort",
     "confirm_password": "Passwort bestätigen",
-    "card_number": "Kartennummer",
-    "card_name": "Karteninhabername",
-    "expiry_date": "Ablaufdatum",
-    "cvv": "CVV",
     "address": "Adresse",
     "city": "Stadt",
     "country": "Land",
@@ -87,7 +77,8 @@
     "web": "Website",
     "wifi_name": "WiFi-Name",
     "wifi_password": "WiFi-Passwort",
-    "wifi_ssid": "WiFi-SSID"
+    "wifi_ssid": "WiFi-SSID",
+    "industry_name": "Branchenname"
   },
   "common": {
     "optional": "optional",

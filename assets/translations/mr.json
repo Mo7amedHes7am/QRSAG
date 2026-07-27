@@ -7,16 +7,12 @@
     "date_time": "तारीख आणि वेळ निवडा",
     "email": "ईमेल पत्ता प्रविष्ट करा",
     "address": "आपला पत्ता प्रविष्ट करा",
-    "card_number": "1234 5678 9012 3456",
     "password": "पासवर्ड प्रविष्ट करा",
-    "expiry_date": "महिना/वर्ष",
     "username": "वापरकर्तानाव प्रविष्ट करा",
     "client_name": "क्लायंटचे नाव प्रविष्ट करा",
     "date": "तारीख निवडा",
     "multiline": "वर्णन प्रविष्ट करा",
     "text": "मजकूर प्रविष्ट करा",
-    "cvv": "CVV",
-    "card_holder_name": "कार्ड धारकाचे नाव",
     "zip_code": "झिप कोड प्रविष्ट करा",
     "city": "शहर प्रविष्ट करा",
     "country": "देश प्रविष्ट करा",
@@ -28,14 +24,12 @@
     "web": "आपली वेबसाइट URL प्रविष्ट करा",
     "website": "आपला वेबसाइट पत्ता प्रविष्ट करा",
     "wifi_name": "WiFi नेटवर्क नाव प्रविष्ट करा (SSID)",
-    "wifi_password": "WiFi पासवर्ड प्रविष्ट करा"
+    "wifi_password": "WiFi पासवर्ड प्रविष्ट करा",
+    "industry_name": "उद्योगाचे नाव"
   },
   "validation": {
     "email_invalid": "कृपया वैध ईमेल पत्ता प्रविष्ट करा",
     "url_invalid": "कृपया वैध URL प्रविष्ट करा",
-    "card_invalid": "कृपया वैध 16-अंकी कार्ड क्रमांक प्रविष्ट करा",
-    "expiry_invalid": "कृपया महिना/वर्ष स्वरूप वापरा आणि वैध महिना प्रविष्ट करा",
-    "expiry_expired": "कार्डची मुदत संपली आहे",
     "phone_invalid": "कृपया वैध फोन नंबर प्रविष्ट करा",
     "required": "हे फील्ड आवश्यक आहे",
     "username_invalid": "वापरकर्तानाव किमान 3 अक्षरांचे असावे",
@@ -43,8 +37,6 @@
     "password_mismatch": "पासवर्ड जुळत नाहीत",
     "confirm_password": "कृपया आपला पासवर्ड पुष्टी करा",
     "date_invalid": "कृपया वैध तारीख प्रविष्ट करा",
-    "card_name_invalid": "कृपया वैध कार्ड धारकाचे नाव प्रविष्ट करा",
-    "cvv_invalid": "कृपया वैध CVV प्रविष्ट करा (3-4 अंक)",
     "address_invalid": "कृपया वैध पत्ता प्रविष्ट करा (किमान 5 अक्षरे)",
     "first_name_required": "कृपया आपले पहिले नाव प्रविष्ट करा",
     "last_name_required": "कृपया आपले आडनाव प्रविष्ट करा",
@@ -59,7 +51,9 @@
     "wifi_name_required": "कृपया WiFi नेटवर्क नाव प्रविष्ट करा",
     "wifi_password_required": "कृपया WiFi पासवर्ड प्रविष्ट करा",
     "wifi_name_invalid": "WiFi नाव किमान 2 अक्षरांचे असावे",
-    "wifi_password_invalid": "WiFi पासवर्ड किमान 8 अक्षरांचा असावा"
+    "wifi_password_invalid": "WiFi पासवर्ड किमान 8 अक्षरांचा असावा",
+    "industry_name_required": "कृपया उद्योगाचे नाव प्रविष्ट करा",
+    "industry_name_invalid": "उद्योगाचे नाव किमान 2 अक्षरांचे असावे"
   },
   "field": {
     "full_name": "पूर्ण नाव",
@@ -67,10 +61,6 @@
     "phone": "फोन नंबर",
     "password": "पासवर्ड",
     "confirm_password": "पासवर्ड पुष्टी करा",
-    "card_number": "कार्ड क्रमांक",
-    "card_name": "कार्ड धारकाचे नाव",
-    "expiry_date": "मुदत संपण्याची तारीख",
-    "cvv": "CVV",
     "address": "पत्ता",
     "city": "शहर",
     "country": "देश",
@@ -87,7 +77,8 @@
     "web": "वेबसाइट",
     "wifi_name": "WiFi नाव",
     "wifi_password": "WiFi पासवर्ड",
-    "wifi_ssid": "WiFi SSID"
+    "wifi_ssid": "WiFi SSID",
+    "industry_name": "उद्योगाचे नाव"
   },
   "common": {
     "optional": "ऐच्छिक",

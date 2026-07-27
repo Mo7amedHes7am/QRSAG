@@ -7,16 +7,12 @@
     "date_time": "তারিখ ও সময় নির্বাচন করুন",
     "email": "ইমেইল ঠিকানা লিখুন",
     "address": "আপনার ঠিকানা লিখুন",
-    "card_number": "১২৩৪ ৫৬৭৮ ৯০১২ ৩৪৫৬",
     "password": "পাসওয়ার্ড লিখুন",
-    "expiry_date": "মাস/বছর",
     "username": "ব্যবহারকারী নাম লিখুন",
     "client_name": "ক্লায়েন্টের নাম লিখুন",
     "date": "তারিখ নির্বাচন করুন",
     "multiline": "বিবরণ লিখুন",
     "text": "টেক্সট লিখুন",
-    "cvv": "CVV",
-    "card_holder_name": "কার্ড ধারকের নাম",
     "zip_code": "জিপ কোড লিখুন",
     "city": "শহর লিখুন",
     "country": "দেশ লিখুন",
@@ -28,14 +24,12 @@
     "web": "আপনার ওয়েবসাইট URL লিখুন",
     "website": "আপনার ওয়েবসাইটের ঠিকানা লিখুন",
     "wifi_name": "WiFi নেটওয়ার্ক নাম লিখুন (SSID)",
-    "wifi_password": "WiFi পাসওয়ার্ড লিখুন"
+    "wifi_password": "WiFi পাসওয়ার্ড লিখুন",
+    "industry_name": "শিল্পের নাম"
   },
   "validation": {
     "email_invalid": "অনুগ্রহ করে একটি বৈধ ইমেইল ঠিকানা লিখুন",
     "url_invalid": "অনুগ্রহ করে একটি বৈধ URL লিখুন",
-    "card_invalid": "অনুগ্রহ করে একটি বৈধ ১৬-অঙ্কের কার্ড নম্বর লিখুন",
-    "expiry_invalid": "অনুগ্রহ করে মাস/বছর ফরম্যাট ব্যবহার করুন এবং একটি বৈধ মাস লিখুন",
-    "expiry_expired": "কার্ডের মেয়াদ শেষ হয়েছে",
     "phone_invalid": "অনুগ্রহ করে একটি বৈধ ফোন নম্বর লিখুন",
     "required": "এই ক্ষেত্রটি প্রয়োজনীয়",
     "username_invalid": "ব্যবহারকারী নাম কমপক্ষে ৩টি অক্ষরের হতে হবে",
@@ -43,8 +37,6 @@
     "password_mismatch": "পাসওয়ার্ড মেলে না",
     "confirm_password": "অনুগ্রহ করে আপনার পাসওয়ার্ড নিশ্চিত করুন",
     "date_invalid": "অনুগ্রহ করে একটি বৈধ তারিখ লিখুন",
-    "card_name_invalid": "অনুগ্রহ করে একটি বৈধ কার্ড ধারকের নাম লিখুন",
-    "cvv_invalid": "অনুগ্রহ করে একটি বৈধ CVV লিখুন (৩-৪ অঙ্ক)",
     "address_invalid": "অনুগ্রহ করে একটি বৈধ ঠিকানা লিখুন (কমপক্ষে ৫টি অক্ষর)",
     "first_name_required": "অনুগ্রহ করে আপনার প্রথম নাম লিখুন",
     "last_name_required": "অনুগ্রহ করে আপনার শেষ নাম লিখুন",
@@ -59,7 +51,9 @@
     "wifi_name_required": "অনুগ্রহ করে WiFi নেটওয়ার্ক নাম লিখুন",
     "wifi_password_required": "অনুগ্রহ করে WiFi পাসওয়ার্ড লিখুন",
     "wifi_name_invalid": "WiFi নাম কমপক্ষে ২টি অক্ষরের হতে হবে",
-    "wifi_password_invalid": "WiFi পাসওয়ার্ড কমপক্ষে ৮টি অক্ষরের হতে হবে"
+    "wifi_password_invalid": "WiFi পাসওয়ার্ড কমপক্ষে ৮টি অক্ষরের হতে হবে",
+    "industry_name_required": "অনুগ্রহ করে শিল্পের নাম লিখুন",
+    "industry_name_invalid": "শিল্পের নাম কমপক্ষে ২টি অক্ষরের হতে হবে"
   },
   "field": {
     "full_name": "পূর্ণ নাম",
@@ -67,10 +61,6 @@
     "phone": "ফোন নম্বর",
     "password": "পাসওয়ার্ড",
     "confirm_password": "পাসওয়ার্ড নিশ্চিত করুন",
-    "card_number": "কার্ড নম্বর",
-    "card_name": "কার্ড ধারকের নাম",
-    "expiry_date": "মেয়াদ শেষের তারিখ",
-    "cvv": "CVV",
     "address": "ঠিকানা",
     "city": "শহর",
     "country": "দেশ",
@@ -87,7 +77,8 @@
     "web": "ওয়েবসাইট",
     "wifi_name": "WiFi নাম",
     "wifi_password": "WiFi পাসওয়ার্ড",
-    "wifi_ssid": "WiFi SSID"
+    "wifi_ssid": "WiFi SSID",
+    "industry_name": "শিল্পের নাম"
   },
   "common": {
     "optional": "ঐচ্ছিক",

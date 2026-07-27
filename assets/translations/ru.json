@@ -7,16 +7,12 @@
     "date_time": "Выберите дату и время",
     "email": "Введите адрес электронной почты",
     "address": "Введите ваш адрес",
-    "card_number": "1234 5678 9012 3456",
     "password": "Введите пароль",
-    "expiry_date": "ММ/ГГ",
     "username": "Введите имя пользователя",
     "client_name": "Введите имя клиента",
     "date": "Выберите дату",
     "multiline": "Введите описание",
     "text": "Введите текст",
-    "cvv": "CVV",
-    "card_holder_name": "Имя держателя карты",
     "zip_code": "Введите почтовый индекс",
     "city": "Введите город",
     "country": "Введите страну",
@@ -28,14 +24,12 @@
     "web": "Введите URL вашего сайта",
     "website": "Введите адрес вашего сайта",
     "wifi_name": "Введите имя сети WiFi (SSID)",
-    "wifi_password": "Введите пароль WiFi"
+    "wifi_password": "Введите пароль WiFi",
+    "industry_name": "Название отрасли"
   },
   "validation": {
     "email_invalid": "Введите действительный адрес электронной почты",
     "url_invalid": "Введите действительный URL",
-    "card_invalid": "Введите действительный 16-значный номер карты",
-    "expiry_invalid": "Используйте формат ММ/ГГ и введите действительный месяц",
-    "expiry_expired": "Срок действия карты истек",
     "phone_invalid": "Введите действительный номер телефона",
     "required": "Это поле обязательно",
     "username_invalid": "Имя пользователя должно содержать не менее 3 символов",
@@ -43,8 +37,6 @@
     "password_mismatch": "Пароли не совпадают",
     "confirm_password": "Подтвердите ваш пароль",
     "date_invalid": "Введите действительную дату",
-    "card_name_invalid": "Введите действительное имя держателя карты",
-    "cvv_invalid": "Введите действительный CVV (3-4 цифры)",
     "address_invalid": "Введите действительный адрес (не менее 5 символов)",
     "first_name_required": "Введите ваше имя",
     "last_name_required": "Введите вашу фамилию",
@@ -59,7 +51,9 @@
     "wifi_name_required": "Введите имя сети WiFi",
     "wifi_password_required": "Введите пароль WiFi",
     "wifi_name_invalid": "Имя WiFi должно содержать не менее 2 символов",
-    "wifi_password_invalid": "Пароль WiFi должен содержать не менее 8 символов"
+    "wifi_password_invalid": "Пароль WiFi должен содержать не менее 8 символов",
+    "industry_name_required": "Введите название отрасли",
+    "industry_name_invalid": "Название отрасли должно содержать не менее 2 символов"
   },
   "field": {
     "full_name": "Полное имя",
@@ -67,10 +61,6 @@
     "phone": "Номер телефона",
     "password": "Пароль",
     "confirm_password": "Подтверждение пароля",
-    "card_number": "Номер карты",
-    "card_name": "Имя держателя карты",
-    "expiry_date": "Срок действия",
-    "cvv": "CVV",
     "address": "Адрес",
     "city": "Город",
     "country": "Страна",
@@ -87,7 +77,8 @@
     "web": "Сайт",
     "wifi_name": "Имя WiFi",
     "wifi_password": "Пароль WiFi",
-    "wifi_ssid": "SSID WiFi"
+    "wifi_ssid": "SSID WiFi",
+    "industry_name": "Название отрасли"
   },
   "common": {
     "optional": "необязательно",

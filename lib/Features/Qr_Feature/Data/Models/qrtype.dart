@@ -105,7 +105,6 @@ enum QrType {
     QrType.email,
     QrType.instagram,
     QrType.phone,
-    QrType.data,
   ];
 
   static List<Map<String, dynamic>> getAllWithLabels(String languageCode) {

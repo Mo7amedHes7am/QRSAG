@@ -57,7 +57,7 @@ class GenerateWifiScreen extends StatelessWidget {
                           cubit: cubit,
                           controller: wifiNameController,
                           state: state,
-                          controllertype: ControllerType.wifiName,
+                          controllerType: ControllerType.wifiName,
                         ),
 
                         Row(
@@ -96,7 +96,7 @@ class GenerateWifiScreen extends StatelessWidget {
                             cubit: cubit,
                             controller: wifiPasswordController,
                             state: state,
-                            controllertype: ControllerType.wifiPassword,
+                            controllerType: ControllerType.wifiPassword,
                           ),
                         ],
 

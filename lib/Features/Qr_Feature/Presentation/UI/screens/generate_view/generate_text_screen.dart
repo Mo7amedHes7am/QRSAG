@@ -48,7 +48,7 @@ class GenerateTextScreen extends StatelessWidget {
                           cubit: cubit,
                           controller: controller,
                           state: state,
-                          controllertype: ControllerType.generate,
+                          controllerType: ControllerType.generate,
                         ),
                         SizedBox(height: 52.h),
                         SubmitButton(

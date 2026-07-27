@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:qr_scanner_and_generator/app/app_variables.dart';
+import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/controllertype.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
@@ -8,26 +10,27 @@ import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/wid
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/widgets/generate/submit_button.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/UI/widgets/main_app_bar.dart';
 import 'package:qr_scanner_and_generator/Features/Splash_Feature/Presentation/UI/widgets/background_pattern.dart';
-import 'package:qr_scanner_and_generator/app/app_variables.dart';
 import 'package:qr_scanner_and_generator/core/components/global/system_wrapper.dart';
-import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
 
-class GenerateContactScreen extends StatelessWidget {
-  const GenerateContactScreen({super.key});
+class GenerateBusinessScreen extends StatefulWidget {
+  const GenerateBusinessScreen({super.key});
 
+  @override
+  State<GenerateBusinessScreen> createState() => _GenerateBusinessScreenState();
+}
+
+class _GenerateBusinessScreenState extends State<GenerateBusinessScreen> {
   @override
   Widget build(BuildContext context) {
     final cubit = context.read<QrCubit>();
-    final type = QrType.contact;
+    final type = QrType.business;
 
     cubit.initGenerateTypePage(type);
 
     return BlocBuilder<QrCubit, QrState>(
       builder: (context, state) {
-        final firstnameController = cubit.firstnameController;
-        final lastnameController = cubit.lastnameController;
+        final industryController = cubit.industryController;
         final companyController = cubit.companyController;
-        final jobController = cubit.jobController;
         final phoneController = cubit.phoneController;
         final emailController = cubit.emailController;
         final websiteController = cubit.websiteController;
@@ -52,47 +55,21 @@ class GenerateContactScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         SizedBox(height: 18.h),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            InputField(
-                              type: type,
-                              cubit: cubit,
-                              controller: firstnameController,
-                              state: state,
-                              width: 128,
-                              controllerType: ControllerType.firstname,
-                            ),
-                            InputField(
-                              type: type,
-                              cubit: cubit,
-                              controller: lastnameController,
-                              state: state,
-                              width: 128,
-                              controllerType: ControllerType.lastname,
-                            ),
-                          ],
+                        InputField(
+                          type: type,
+                          cubit: cubit,
+                          controller: companyController,
+                          state: state,
+                          controllerType: ControllerType.company,
+                          required: true,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            InputField(
-                              type: type,
-                              cubit: cubit,
-                              controller: companyController,
-                              state: state,
-                              width: 128,
-                              controllerType: ControllerType.company,
-                            ),
-                            InputField(
-                              type: type,
-                              cubit: cubit,
-                              controller: jobController,
-                              state: state,
-                              width: 128,
-                              controllerType: ControllerType.job,
-                            ),
-                          ],
+                        InputField(
+                          type: type,
+                          cubit: cubit,
+                          controller: industryController,
+                          state: state,
+                          controllerType: ControllerType.industry,
+                          required: true,
                         ),
                         InputField(
                           type: type,
@@ -100,6 +77,7 @@ class GenerateContactScreen extends StatelessWidget {
                           controller: phoneController,
                           state: state,
                           controllerType: ControllerType.phone,
+                          required: true,
                         ),
                         InputField(
                           type: type,
@@ -107,6 +85,7 @@ class GenerateContactScreen extends StatelessWidget {
                           controller: emailController,
                           state: state,
                           controllerType: ControllerType.email,
+                          required: true,
                         ),
                         InputField(
                           type: type,
@@ -126,19 +105,19 @@ class GenerateContactScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             InputField(
+                              width: 128.w,
                               type: type,
                               cubit: cubit,
                               controller: cityController,
                               state: state,
-                              width: 128,
                               controllerType: ControllerType.city,
                             ),
                             InputField(
+                              width: 128.w,
                               type: type,
                               cubit: cubit,
                               controller: countryController,
                               state: state,
-                              width: 128,
                               controllerType: ControllerType.country,
                             ),
                           ],
@@ -147,9 +126,10 @@ class GenerateContactScreen extends StatelessWidget {
                         SizedBox(height: 52.h),
                         SubmitButton(
                           controllers: [
-                            firstnameController,
-                            lastnameController,
+                            companyController,
+                            industryController,
                             phoneController,
+                            emailController,
                           ],
                           cubit: cubit,
                           context: context,

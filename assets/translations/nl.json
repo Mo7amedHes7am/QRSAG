@@ -7,16 +7,12 @@
     "date_time": "Selecteer datum en tijd",
     "email": "Voer e-mailadres in",
     "address": "Voer uw adres in",
-    "card_number": "1234 5678 9012 3456",
     "password": "Voer wachtwoord in",
-    "expiry_date": "MM/JJ",
     "username": "Voer gebruikersnaam in",
     "client_name": "Voer klantnaam in",
     "date": "Selecteer datum",
     "multiline": "Voer beschrijving in",
     "text": "Voer tekst in",
-    "cvv": "CVV",
-    "card_holder_name": "Naam kaarthouder",
     "zip_code": "Voer postcode in",
     "city": "Voer stad in",
     "country": "Voer land in",
@@ -28,14 +24,12 @@
     "web": "Voer uw website-URL in",
     "website": "Voer uw website-adres in",
     "wifi_name": "Voer WiFi-netwerknaam in (SSID)",
-    "wifi_password": "Voer WiFi-wachtwoord in"
+    "wifi_password": "Voer WiFi-wachtwoord in",
+    "industry_name": "Sector naam"
   },
   "validation": {
     "email_invalid": "Voer een geldig e-mailadres in",
     "url_invalid": "Voer een geldige URL in",
-    "card_invalid": "Voer een geldig 16-cijferig kaartnummer in",
-    "expiry_invalid": "Gebruik MM/JJ-formaat en voer een geldige maand in",
-    "expiry_expired": "Kaart is verlopen",
     "phone_invalid": "Voer een geldig telefoonnummer in",
     "required": "Dit veld is verplicht",
     "username_invalid": "Gebruikersnaam moet minimaal 3 tekens bevatten",
@@ -43,8 +37,6 @@
     "password_mismatch": "Wachtwoorden komen niet overeen",
     "confirm_password": "Bevestig uw wachtwoord",
     "date_invalid": "Voer een geldige datum in",
-    "card_name_invalid": "Voer een geldige kaarthoudersnaam in",
-    "cvv_invalid": "Voer een geldige CVV in (3-4 cijfers)",
     "address_invalid": "Voer een geldig adres in (minimaal 5 tekens)",
     "first_name_required": "Voer uw voornaam in",
     "last_name_required": "Voer uw achternaam in",
@@ -59,7 +51,9 @@
     "wifi_name_required": "Voer WiFi-netwerknaam in",
     "wifi_password_required": "Voer WiFi-wachtwoord in",
     "wifi_name_invalid": "WiFi-naam moet minimaal 2 tekens bevatten",
-    "wifi_password_invalid": "WiFi-wachtwoord moet minimaal 8 tekens bevatten"
+    "wifi_password_invalid": "WiFi-wachtwoord moet minimaal 8 tekens bevatten",
+    "industry_name_required": "Voer de sector naam in",
+    "industry_name_invalid": "Sector naam moet minimaal 2 tekens bevatten"
   },
   "field": {
     "full_name": "Volledige Naam",
@@ -67,10 +61,6 @@
     "phone": "Telefoonnummer",
     "password": "Wachtwoord",
     "confirm_password": "Bevestig Wachtwoord",
-    "card_number": "Kaartnummer",
-    "card_name": "Naam Kaarthouder",
-    "expiry_date": "Vervaldatum",
-    "cvv": "CVV",
     "address": "Adres",
     "city": "Stad",
     "country": "Land",
@@ -87,7 +77,8 @@
     "web": "Website",
     "wifi_name": "WiFi-naam",
     "wifi_password": "WiFi-wachtwoord",
-    "wifi_ssid": "WiFi SSID"
+    "wifi_ssid": "WiFi SSID",
+    "industry_name": "Sector naam"
   },
   "common": {
     "optional": "optioneel",

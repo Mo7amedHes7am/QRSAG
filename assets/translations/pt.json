@@ -7,16 +7,12 @@
     "date_time": "Selecione data e hora",
     "email": "Digite o e-mail",
     "address": "Digite seu endereço",
-    "card_number": "1234 5678 9012 3456",
     "password": "Digite a senha",
-    "expiry_date": "MM/AA",
     "username": "Digite o usuário",
     "client_name": "Digite o nome do cliente",
     "date": "Selecione a data",
     "multiline": "Digite a descrição",
     "text": "Digite o texto",
-    "cvv": "CVV",
-    "card_holder_name": "Nome do titular",
     "zip_code": "Digite o CEP",
     "city": "Digite a cidade",
     "country": "Digite o país",
@@ -28,14 +24,12 @@
     "web": "Digite a URL do seu site",
     "website": "Digite o endereço do seu site",
     "wifi_name": "Digite o nome da rede WiFi (SSID)",
-    "wifi_password": "Digite a senha WiFi"
+    "wifi_password": "Digite a senha WiFi",
+    "industry_name": "Nome do setor"
   },
   "validation": {
     "email_invalid": "Digite um e-mail válido",
     "url_invalid": "Digite uma URL válida",
-    "card_invalid": "Digite um número de cartão válido de 16 dígitos",
-    "expiry_invalid": "Use o formato MM/AA e digite um mês válido",
-    "expiry_expired": "Cartão expirado",
     "phone_invalid": "Digite um número de telefone válido",
     "required": "Este campo é obrigatório",
     "username_invalid": "O usuário deve ter pelo menos 3 caracteres",
@@ -43,8 +37,6 @@
     "password_mismatch": "As senhas não coincidem",
     "confirm_password": "Confirme sua senha",
     "date_invalid": "Digite uma data válida",
-    "card_name_invalid": "Digite um nome de titular válido",
-    "cvv_invalid": "Digite um CVV válido (3-4 dígitos)",
     "address_invalid": "Digite um endereço válido (pelo menos 5 caracteres)",
     "first_name_required": "Digite seu nome",
     "last_name_required": "Digite seu sobrenome",
@@ -59,7 +51,9 @@
     "wifi_name_required": "Digite o nome da rede WiFi",
     "wifi_password_required": "Digite a senha WiFi",
     "wifi_name_invalid": "O nome WiFi deve ter pelo menos 2 caracteres",
-    "wifi_password_invalid": "A senha WiFi deve ter pelo menos 8 caracteres"
+    "wifi_password_invalid": "A senha WiFi deve ter pelo menos 8 caracteres",
+    "industry_name_required": "Digite o nome do setor",
+    "industry_name_invalid": "O nome do setor deve ter pelo menos 2 caracteres"
   },
   "field": {
     "full_name": "Nome Completo",
@@ -67,10 +61,6 @@
     "phone": "Telefone",
     "password": "Senha",
     "confirm_password": "Confirmar Senha",
-    "card_number": "Número do Cartão",
-    "card_name": "Nome do Titular",
-    "expiry_date": "Data de Validade",
-    "cvv": "CVV",
     "address": "Endereço",
     "city": "Cidade",
     "country": "País",
@@ -87,7 +77,8 @@
     "web": "Site",
     "wifi_name": "Nome WiFi",
     "wifi_password": "Senha WiFi",
-    "wifi_ssid": "SSID WiFi"
+    "wifi_ssid": "SSID WiFi",
+    "industry_name": "Nome do setor"
   },
   "common": {
     "optional": "opcional",

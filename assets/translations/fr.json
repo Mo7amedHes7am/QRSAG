@@ -7,16 +7,12 @@
     "date_time": "Sélectionnez la date et l'heure",
     "email": "Entrez l'adresse email",
     "address": "Entrez votre adresse",
-    "card_number": "1234 5678 9012 3456",
     "password": "Entrez le mot de passe",
-    "expiry_date": "MM/AA",
     "username": "Entrez le nom d'utilisateur",
     "client_name": "Entrez le nom du client",
     "date": "Sélectionnez la date",
     "multiline": "Entrez la description",
     "text": "Entrez le texte",
-    "cvv": "CVV",
-    "card_holder_name": "Nom du titulaire",
     "zip_code": "Entrez le code postal",
     "city": "Entrez la ville",
     "country": "Entrez le pays",
@@ -28,14 +24,12 @@
     "web": "Entrez l'URL de votre site web",
     "website": "Entrez l'adresse de votre site web",
     "wifi_name": "Entrez le nom du réseau WiFi (SSID)",
-    "wifi_password": "Entrez le mot de passe WiFi"
+    "wifi_password": "Entrez le mot de passe WiFi",
+    "industry_name": "Nom du secteur"
   },
   "validation": {
     "email_invalid": "Veuillez entrer une adresse email valide",
     "url_invalid": "Veuillez entrer une URL valide",
-    "card_invalid": "Veuillez entrer un numéro de carte valide à 16 chiffres",
-    "expiry_invalid": "Veuillez utiliser le format MM/AA et entrer un mois valide",
-    "expiry_expired": "La carte est expirée",
     "phone_invalid": "Veuillez entrer un numéro de téléphone valide",
     "required": "Ce champ est obligatoire",
     "username_invalid": "Le nom d'utilisateur doit comporter au moins 3 caractères",
@@ -43,8 +37,6 @@
     "password_mismatch": "Les mots de passe ne correspondent pas",
     "confirm_password": "Veuillez confirmer votre mot de passe",
     "date_invalid": "Veuillez entrer une date valide",
-    "card_name_invalid": "Veuillez entrer un nom de titulaire valide",
-    "cvv_invalid": "Veuillez entrer un CVV valide (3-4 chiffres)",
     "address_invalid": "Veuillez entrer une adresse valide (au moins 5 caractères)",
     "first_name_required": "Veuillez entrer votre prénom",
     "last_name_required": "Veuillez entrer votre nom",
@@ -59,7 +51,9 @@
     "wifi_name_required": "Veuillez entrer le nom du réseau WiFi",
     "wifi_password_required": "Veuillez entrer le mot de passe WiFi",
     "wifi_name_invalid": "Le nom WiFi doit comporter au moins 2 caractères",
-    "wifi_password_invalid": "Le mot de passe WiFi doit comporter au moins 8 caractères"
+    "wifi_password_invalid": "Le mot de passe WiFi doit comporter au moins 8 caractères",
+    "industry_name_required": "Veuillez entrer le nom du secteur",
+    "industry_name_invalid": "Le nom du secteur doit comporter au moins 2 caractères"
   },
   "field": {
     "full_name": "Nom complet",
@@ -67,10 +61,6 @@
     "phone": "Numéro de téléphone",
     "password": "Mot de passe",
     "confirm_password": "Confirmer le mot de passe",
-    "card_number": "Numéro de carte",
-    "card_name": "Nom du titulaire",
-    "expiry_date": "Date d'expiration",
-    "cvv": "CVV",
     "address": "Adresse",
     "city": "Ville",
     "country": "Pays",
@@ -87,7 +77,8 @@
     "web": "Site web",
     "wifi_name": "Nom WiFi",
     "wifi_password": "Mot de passe WiFi",
-    "wifi_ssid": "SSID WiFi"
+    "wifi_ssid": "SSID WiFi",
+    "industry_name": "Nom du secteur"
   },
   "common": {
     "optional": "facultatif",

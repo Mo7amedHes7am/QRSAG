@@ -7,16 +7,12 @@
     "date_time": "Pilih tanggal & waktu",
     "email": "Masukkan alamat email",
     "address": "Masukkan alamat Anda",
-    "card_number": "1234 5678 9012 3456",
     "password": "Masukkan kata sandi",
-    "expiry_date": "BB/TT",
     "username": "Masukkan nama pengguna",
     "client_name": "Masukkan nama klien",
     "date": "Pilih tanggal",
     "multiline": "Masukkan deskripsi",
     "text": "Masukkan teks",
-    "cvv": "CVV",
-    "card_holder_name": "Nama pemegang kartu",
     "zip_code": "Masukkan kode pos",
     "city": "Masukkan kota",
     "country": "Masukkan negara",
@@ -28,14 +24,12 @@
     "web": "Masukkan URL website Anda",
     "website": "Masukkan alamat website Anda",
     "wifi_name": "Masukkan nama jaringan WiFi (SSID)",
-    "wifi_password": "Masukkan kata sandi WiFi"
+    "wifi_password": "Masukkan kata sandi WiFi",
+    "industry_name": "Nama industri"
   },
   "validation": {
     "email_invalid": "Masukkan alamat email yang valid",
     "url_invalid": "Masukkan URL yang valid",
-    "card_invalid": "Masukkan nomor kartu 16 digit yang valid",
-    "expiry_invalid": "Gunakan format BB/TT dan masukkan bulan yang valid",
-    "expiry_expired": "Kartu sudah kadaluarsa",
     "phone_invalid": "Masukkan nomor telepon yang valid",
     "required": "Kolom ini wajib diisi",
     "username_invalid": "Nama pengguna minimal 3 karakter",
@@ -43,8 +37,6 @@
     "password_mismatch": "Kata sandi tidak cocok",
     "confirm_password": "Konfirmasi kata sandi Anda",
     "date_invalid": "Masukkan tanggal yang valid",
-    "card_name_invalid": "Masukkan nama pemegang kartu yang valid",
-    "cvv_invalid": "Masukkan CVV yang valid (3-4 digit)",
     "address_invalid": "Masukkan alamat yang valid (minimal 5 karakter)",
     "first_name_required": "Masukkan nama depan Anda",
     "last_name_required": "Masukkan nama belakang Anda",
@@ -59,7 +51,9 @@
     "wifi_name_required": "Masukkan nama jaringan WiFi",
     "wifi_password_required": "Masukkan kata sandi WiFi",
     "wifi_name_invalid": "Nama WiFi minimal 2 karakter",
-    "wifi_password_invalid": "Kata sandi WiFi minimal 8 karakter"
+    "wifi_password_invalid": "Kata sandi WiFi minimal 8 karakter",
+    "industry_name_required": "Masukkan nama industri",
+    "industry_name_invalid": "Nama industri minimal 2 karakter"
   },
   "field": {
     "full_name": "Nama Lengkap",
@@ -67,10 +61,6 @@
     "phone": "Nomor Telepon",
     "password": "Kata Sandi",
     "confirm_password": "Konfirmasi Kata Sandi",
-    "card_number": "Nomor Kartu",
-    "card_name": "Nama Pemegang Kartu",
-    "expiry_date": "Tanggal Kadaluarsa",
-    "cvv": "CVV",
     "address": "Alamat",
     "city": "Kota",
     "country": "Negara",
@@ -87,7 +77,8 @@
     "web": "Website",
     "wifi_name": "Nama WiFi",
     "wifi_password": "Kata Sandi WiFi",
-    "wifi_ssid": "SSID WiFi"
+    "wifi_ssid": "SSID WiFi",
+    "industry_name": "Nama industri"
   },
   "common": {
     "optional": "opsional",

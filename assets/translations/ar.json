@@ -7,16 +7,12 @@
     "date_time": "اختر التاريخ والوقت",
     "email": "أدخل البريد الإلكتروني",
     "address": "أدخل عنوانك",
-    "card_number": "1234 5678 9012 3456",
     "password": "أدخل كلمة المرور",
-    "expiry_date": "شهر/سنة",
     "username": "أدخل اسم المستخدم",
     "client_name": "أدخل اسم العميل",
     "date": "اختر التاريخ",
     "multiline": "أدخل الوصف",
     "text": "أدخل النص",
-    "cvv": "CVV",
-    "card_holder_name": "اسم حامل البطاقة",
     "zip_code": "أدخل الرمز البريدي",
     "city": "أدخل المدينة",
     "country": "أدخل الدولة",
@@ -28,14 +24,12 @@
     "web": "أدخل رابط موقعك",
     "website": "أدخل عنوان موقعك",
     "wifi_name": "أدخل اسم شبكة WiFi (SSID)",
-    "wifi_password": "أدخل كلمة مرور WiFi"
+    "wifi_password": "أدخل كلمة مرور WiFi",
+    "industry_name": "اسم القطاع"
   },
   "validation": {
     "email_invalid": "الرجاء إدخال بريد إلكتروني صحيح",
     "url_invalid": "الرجاء إدخال رابط صحيح",
-    "card_invalid": "الرجاء إدخال رقم بطاقة صحيح من 16 رقمًا",
-    "expiry_invalid": "استخدم صيغة شهر/سنة وأدخل شهرًا صحيحًا",
-    "expiry_expired": "البطاقة منتهية الصلاحية",
     "phone_invalid": "الرجاء إدخال رقم هاتف صحيح",
     "required": "هذا الحقل مطلوب",
     "username_invalid": "اسم المستخدم يجب أن يكون 3 أحرف على الأقل",
@@ -43,8 +37,6 @@
     "password_mismatch": "كلمات المرور غير متطابقة",
     "confirm_password": "الرجاء تأكيد كلمة المرور",
     "date_invalid": "الرجاء إدخال تاريخ صحيح",
-    "card_name_invalid": "الرجاء إدخال اسم حامل بطاقة صحيح",
-    "cvv_invalid": "الرجاء إدخال CVV صحيح (3-4 أرقام)",
     "address_invalid": "الرجاء إدخال عنوان صحيح (5 أحرف على الأقل)",
     "first_name_required": "الرجاء إدخال اسمك الأول",
     "last_name_required": "الرجاء إدخال اسمك الأخير",
@@ -59,7 +51,9 @@
     "wifi_name_required": "الرجاء إدخال اسم شبكة WiFi",
     "wifi_password_required": "الرجاء إدخال كلمة مرور WiFi",
     "wifi_name_invalid": "اسم WiFi يجب أن يكون حرفين على الأقل",
-    "wifi_password_invalid": "كلمة مرور WiFi يجب أن تكون 8 أحرف على الأقل"
+    "wifi_password_invalid": "كلمة مرور WiFi يجب أن تكون 8 أحرف على الأقل",
+    "industry_name_required": "الرجاء إدخال اسم القطاع",
+    "industry_name_invalid": "اسم القطاع يجب أن يكون حرفين على الأقل"
   },
   "field": {
     "full_name": "الاسم الكامل",
@@ -67,10 +61,6 @@
     "phone": "رقم الهاتف",
     "password": "كلمة المرور",
     "confirm_password": "تأكيد كلمة المرور",
-    "card_number": "رقم البطاقة",
-    "card_name": "اسم حامل البطاقة",
-    "expiry_date": "تاريخ الانتهاء",
-    "cvv": "CVV",
     "address": "العنوان",
     "city": "المدينة",
     "country": "الدولة",
@@ -87,7 +77,8 @@
     "web": "الموقع",
     "wifi_name": "اسم WiFi",
     "wifi_password": "كلمة مرور WiFi",
-    "wifi_ssid": "SSID WiFi"
+    "wifi_ssid": "SSID WiFi",
+    "industry_name": "اسم القطاع"
   },
   "common": {
     "optional": "اختياري",

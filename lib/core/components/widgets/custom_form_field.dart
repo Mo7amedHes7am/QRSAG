@@ -37,13 +37,9 @@ class CustomFormField extends StatefulWidget {
   final bool isMultiline;
   final bool isEmail;
   final bool isAddress;
-  final bool isVisaCardNumber;
   final bool isPassword;
-  final bool isExpiryDate;
   final bool isUserName;
   final bool isClientName;
-  final bool isCvv;
-  final bool isCardHolderName;
   final bool isZipCode;
   final bool isCity;
   final bool isCountry;
@@ -56,6 +52,7 @@ class CustomFormField extends StatefulWidget {
   final bool isJobTitle;
   final bool isWifiName;
   final bool isWifiPassword;
+  final bool isIndustryName;
 
   final String? clientNameExample;
   final double? width;
@@ -100,13 +97,9 @@ class CustomFormField extends StatefulWidget {
     this.isMultiline = false,
     this.isEmail = false,
     this.isAddress = false,
-    this.isVisaCardNumber = false,
     this.isPassword = false,
-    this.isExpiryDate = false,
     this.isUserName = false,
     this.isClientName = false,
-    this.isCvv = false,
-    this.isCardHolderName = false,
     this.isZipCode = false,
     this.isCity = false,
     this.isCountry = false,
@@ -139,6 +132,7 @@ class CustomFormField extends StatefulWidget {
     this.isWeb = false,
     this.isWifiName = false,
     this.isWifiPassword = false,
+    this.isIndustryName = false,
   });
 
   final bool? noborder;
@@ -156,22 +150,15 @@ class _CustomFormFeildState extends State<CustomFormField> {
   @override
   void initState() {
     super.initState();
-    isObscured = widget.isPassword;
+    isObscured = widget.isPassword || widget.isWifiPassword;
 
     _controller = widget.controller;
     _controller?.addListener(_onTextChanged);
-
-    if (widget.isVisaCardNumber && _controller != null) {
-      _controller!.addListener(_formatVisaCard);
-    }
   }
 
   @override
   void dispose() {
     _controller?.removeListener(_onTextChanged);
-    if (widget.isVisaCardNumber && _controller != null) {
-      _controller!.removeListener(_formatVisaCard);
-    }
     super.dispose();
   }
 
@@ -182,27 +169,6 @@ class _CustomFormFeildState extends State<CustomFormField> {
           _validateField(_controller?.text);
         }
       });
-    }
-  }
-
-  void _formatVisaCard() {
-    if (_controller == null) return;
-    String text = _controller!.text.replaceAll(RegExp(r'\s'), '');
-    if (text.length > 16) {
-      text = text.substring(0, 16);
-    }
-    String formatted = '';
-    for (int i = 0; i < text.length; i++) {
-      if (i > 0 && i % 4 == 0) {
-        formatted += ' ';
-      }
-      formatted += text[i];
-    }
-    if (_controller!.text != formatted) {
-      _controller!.value = TextEditingValue(
-        text: formatted,
-        selection: TextSelection.collapsed(offset: formatted.length),
-      );
     }
   }
 
@@ -220,7 +186,8 @@ class _CustomFormFeildState extends State<CustomFormField> {
   }
 
   TextInputType get _keyboardType {
-    if (widget.isPassword) return TextInputType.visiblePassword;
+    if (widget.isPassword || widget.isWifiPassword)
+      return TextInputType.visiblePassword;
     if (widget.isEmail) return TextInputType.emailAddress;
     if (widget.isPhoneNumber) return TextInputType.phone;
     if (widget.isNumber) return TextInputType.number;
@@ -231,18 +198,16 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isMultiline) return TextInputType.multiline;
     if (widget.isUserName ||
         widget.isClientName ||
-        widget.isCardHolderName ||
         widget.isFirstName ||
         widget.isLastName ||
         widget.isCompany ||
         widget.isJobTitle ||
-        widget.isWifiName) {
+        widget.isWifiName ||
+        widget.isIndustryName) {
       return TextInputType.name;
     }
     if (widget.isPlainText) return TextInputType.text;
-    if (widget.isVisaCardNumber || widget.isCvv) return TextInputType.number;
     if (widget.isZipCode) return TextInputType.number;
-    if (widget.isExpiryDate) return TextInputType.datetime;
     if (widget.isCity || widget.isCountry || widget.isNotes) {
       return TextInputType.text;
     }
@@ -310,42 +275,6 @@ class _CustomFormFeildState extends State<CustomFormField> {
       ];
     }
 
-    if (widget.isVisaCardNumber) {
-      return [
-        FilteringTextInputFormatter.digitsOnly,
-        LengthLimitingTextInputFormatter(19),
-      ];
-    }
-
-    if (widget.isCvv) {
-      return [
-        FilteringTextInputFormatter.digitsOnly,
-        LengthLimitingTextInputFormatter(4),
-      ];
-    }
-
-    if (widget.isExpiryDate) {
-      return [
-        TextInputFormatter.withFunction((oldValue, newValue) {
-          String text = newValue.text.replaceAll(RegExp(r'[^0-9]'), '');
-          if (text.length > 4) text = text.substring(0, 4);
-          if (text.length > 2) {
-            text = text.substring(0, 2) + '/' + text.substring(2);
-          }
-          return TextEditingValue(
-            text: text,
-            selection: TextSelection.collapsed(offset: text.length),
-          );
-        }),
-      ];
-    }
-
-    if (widget.isUrl) {
-      return [
-        FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z0-9\-_.:/?&=#%@+]')),
-      ];
-    }
-
     if (widget.isPlainText) {
       return [FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z0-9 ]'))];
     }
@@ -369,9 +298,17 @@ class _CustomFormFeildState extends State<CustomFormField> {
           return LocaleKeys.validation_wifi_name_required.tr();
         if (widget.isWifiPassword)
           return LocaleKeys.validation_wifi_password_required.tr();
+        if (widget.isIndustryName)
+          return LocaleKeys.validation_industry_name_required.tr();
         return LocaleKeys.validation_required.tr();
       }
       return null;
+    }
+
+    if (widget.isIndustryName && value.isNotEmpty) {
+      if (value.length < 2) {
+        return LocaleKeys.validation_industry_name_invalid.tr();
+      }
     }
 
     if (widget.isWifiName && value.isNotEmpty) {
@@ -434,49 +371,6 @@ class _CustomFormFeildState extends State<CustomFormField> {
       }
     }
 
-    if (widget.isVisaCardNumber) {
-      final cleanNumber = value.replaceAll(RegExp(r'\s'), '');
-      if (cleanNumber.length != 16) {
-        return LocaleKeys.validation_card_invalid.tr();
-      }
-      if (!_isValidLuhn(cleanNumber)) {
-        return LocaleKeys.validation_card_invalid.tr();
-      }
-    }
-
-    if (widget.isCvv) {
-      final cleanNumber = value.replaceAll(RegExp(r'\s'), '');
-      if (cleanNumber.length < 3 || cleanNumber.length > 4) {
-        return LocaleKeys.validation_cvv_invalid.tr();
-      }
-    }
-
-    if (widget.isCardHolderName) {
-      if (value.length < 3) {
-        return LocaleKeys.validation_card_name_invalid.tr();
-      }
-    }
-
-    if (widget.isExpiryDate) {
-      final parts = value.split('/');
-      if (parts.length != 2) {
-        return LocaleKeys.validation_expiry_invalid.tr();
-      }
-      final month = int.tryParse(parts[0]);
-      final year = int.tryParse(parts[1]);
-      if (month == null || year == null || month < 1 || month > 12) {
-        return LocaleKeys.validation_expiry_invalid.tr();
-      }
-      final now = DateTime.now();
-      final currentYear = now.year % 100;
-      if (year! < currentYear) {
-        return LocaleKeys.validation_expiry_expired.tr();
-      }
-      if (year == currentYear && month! < now.month) {
-        return LocaleKeys.validation_expiry_expired.tr();
-      }
-    }
-
     if (widget.isPhoneNumber && value.isNotEmpty) {
       if (value.length < 6) {
         return LocaleKeys.validation_phone_invalid.tr();
@@ -504,21 +398,6 @@ class _CustomFormFeildState extends State<CustomFormField> {
     return null;
   }
 
-  bool _isValidLuhn(String cardNumber) {
-    int sum = 0;
-    bool alternate = false;
-    for (int i = cardNumber.length - 1; i >= 0; i--) {
-      int n = int.parse(cardNumber[i]);
-      if (alternate) {
-        n *= 2;
-        if (n > 9) n -= 9;
-      }
-      sum += n;
-      alternate = !alternate;
-    }
-    return sum % 10 == 0;
-  }
-
   String _getDefaultHint() {
     if (widget.hint != null) return widget.hint!;
 
@@ -529,18 +408,15 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isWeb) return LocaleKeys.hint_web.tr();
     if (widget.isWifiName) return LocaleKeys.hint_wifi_name.tr();
     if (widget.isWifiPassword) return LocaleKeys.hint_wifi_password.tr();
+    if (widget.isIndustryName) return LocaleKeys.hint_industry_name.tr();
     if (widget.isDateTime) return LocaleKeys.hint_date_time.tr();
     if (widget.isEmail) return LocaleKeys.hint_email.tr();
     if (widget.isAddress) return LocaleKeys.hint_address.tr();
-    if (widget.isVisaCardNumber) return LocaleKeys.hint_card_number.tr();
     if (widget.isPassword) return LocaleKeys.hint_password.tr();
-    if (widget.isExpiryDate) return LocaleKeys.hint_expiry_date.tr();
     if (widget.isUserName) return LocaleKeys.hint_username.tr();
     if (widget.isClientName) return LocaleKeys.hint_client_name.tr();
     if (widget.isDate) return LocaleKeys.hint_date.tr();
     if (widget.isMultiline) return LocaleKeys.hint_multiline.tr();
-    if (widget.isCvv) return LocaleKeys.hint_cvv.tr();
-    if (widget.isCardHolderName) return LocaleKeys.hint_card_holder_name.tr();
     if (widget.isZipCode) return LocaleKeys.hint_zip_code.tr();
     if (widget.isCity) return LocaleKeys.hint_city.tr();
     if (widget.isCountry) return LocaleKeys.hint_country.tr();
@@ -559,10 +435,6 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isPhoneNumber) return LocaleKeys.field_phone.tr();
     if (widget.isEmail) return LocaleKeys.field_email.tr();
     if (widget.isPassword) return LocaleKeys.field_password.tr();
-    if (widget.isVisaCardNumber) return LocaleKeys.field_card_number.tr();
-    if (widget.isExpiryDate) return LocaleKeys.field_expiry_date.tr();
-    if (widget.isCvv) return LocaleKeys.field_cvv.tr();
-    if (widget.isCardHolderName) return LocaleKeys.field_card_name.tr();
     if (widget.isAddress) return LocaleKeys.field_address.tr();
     if (widget.isCity) return LocaleKeys.field_city.tr();
     if (widget.isCountry) return LocaleKeys.field_country.tr();
@@ -573,6 +445,7 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.isWeb) return LocaleKeys.field_web.tr();
     if (widget.isWifiName) return LocaleKeys.field_wifi_name.tr();
     if (widget.isWifiPassword) return LocaleKeys.field_wifi_password.tr();
+    if (widget.isIndustryName) return LocaleKeys.field_industry_name.tr();
     if (widget.isMultiline) return LocaleKeys.field_description.tr();
     if (widget.isNotes) return LocaleKeys.field_notes.tr();
     if (widget.isUserName) return LocaleKeys.field_username.tr();
@@ -777,7 +650,9 @@ class _CustomFormFeildState extends State<CustomFormField> {
       maxLines: widget.isMultiline ? maxLines : 1,
       minLines: widget.isMultiline ? minLines : 1,
       expands: false,
-      obscureText: isObscured,
+      obscureText: widget.isPassword || widget.isWifiPassword
+          ? isObscured
+          : false,
       decoration: _buildInputDecoration(isTablet, scale),
       validator: (value) {
         _hasBeenValidated = true;
@@ -893,7 +768,7 @@ class _CustomFormFeildState extends State<CustomFormField> {
     if (widget.suffixText != null) return null;
     if (widget.suffixIcon != null) return widget.suffixIcon;
 
-    if (widget.isPassword) {
+    if (widget.isPassword || widget.isWifiPassword) {
       return Padding(
         padding: EdgeInsets.fromLTRB(
           isTablet ? (35.w * scale) : 16.w,
@@ -935,38 +810,6 @@ class _CustomFormFeildState extends State<CustomFormField> {
             color: appColors.grey,
             size: isTablet ? (38.sp * scale) : 20.sp,
           ),
-        ),
-      );
-    }
-
-    if (widget.isVisaCardNumber) {
-      return Padding(
-        padding: EdgeInsets.fromLTRB(
-          isTablet ? (35.w * scale) : 16.w,
-          isTablet ? (28.h * scale) : 16.h,
-          isTablet ? (20.w * scale) : 8.w,
-          isTablet ? (28.h * scale) : 16.h,
-        ),
-        child: Icon(
-          Icons.credit_card,
-          color: appColors.grey,
-          size: isTablet ? (38.sp * scale) : 20.sp,
-        ),
-      );
-    }
-
-    if (widget.isUrl) {
-      return Padding(
-        padding: EdgeInsets.fromLTRB(
-          isTablet ? (35.w * scale) : 16.w,
-          isTablet ? (28.h * scale) : 16.h,
-          isTablet ? (20.w * scale) : 8.w,
-          isTablet ? (28.h * scale) : 16.h,
-        ),
-        child: Icon(
-          Icons.link,
-          color: appColors.grey,
-          size: isTablet ? (38.sp * scale) : 20.sp,
         ),
       );
     }
@@ -1047,11 +890,11 @@ class _CustomFormFeildState extends State<CustomFormField> {
       return isTablet ? (38.sp * scale) : 22.sp;
     }
 
-    if (widget.isPassword) {
+    if (widget.isPassword || widget.isWifiPassword) {
       return Padding(
         padding: _getIconPadding(),
         child: Icon(
-          Icons.lock_outline,
+          widget.isWifiPassword ? Icons.wifi_lock_outlined : Icons.lock_outline,
           color: appColors.grey,
           size: _getIconSize(),
         ),
@@ -1069,33 +912,11 @@ class _CustomFormFeildState extends State<CustomFormField> {
       );
     }
 
-    if (widget.isVisaCardNumber) {
-      return Padding(
-        padding: _getIconPadding(),
-        child: Icon(
-          Icons.credit_card_outlined,
-          color: appColors.grey,
-          size: _getIconSize(),
-        ),
-      );
-    }
-
     if (widget.isAddress) {
       return Padding(
         padding: _getIconPadding(),
         child: Icon(
           Icons.location_on_outlined,
-          color: appColors.grey,
-          size: _getIconSize(),
-        ),
-      );
-    }
-
-    if (widget.isCardHolderName) {
-      return Padding(
-        padding: _getIconPadding(),
-        child: Icon(
-          Icons.person_outline,
           color: appColors.grey,
           size: _getIconSize(),
         ),
@@ -1124,11 +945,33 @@ class _CustomFormFeildState extends State<CustomFormField> {
       );
     }
 
+    if (widget.isIndustryName) {
+      return Padding(
+        padding: _getIconPadding(),
+        child: Icon(
+          Icons.factory_outlined,
+          color: appColors.grey,
+          size: _getIconSize(),
+        ),
+      );
+    }
+
     if (widget.isWeb) {
       return Padding(
         padding: _getIconPadding(),
         child: Icon(
           Icons.public_outlined,
+          color: appColors.grey,
+          size: _getIconSize(),
+        ),
+      );
+    }
+
+    if (widget.isWifiName) {
+      return Padding(
+        padding: _getIconPadding(),
+        child: Icon(
+          Icons.wifi_outlined,
           color: appColors.grey,
           size: _getIconSize(),
         ),
@@ -1151,6 +994,17 @@ class _CustomFormFeildState extends State<CustomFormField> {
         padding: _getIconPadding(),
         child: Icon(
           widget.isCity ? Icons.location_city_outlined : Icons.public_outlined,
+          color: appColors.grey,
+          size: _getIconSize(),
+        ),
+      );
+    }
+
+    if (widget.isClientName) {
+      return Padding(
+        padding: _getIconPadding(),
+        child: Icon(
+          Icons.person_outline,
           color: appColors.grey,
           size: _getIconSize(),
         ),

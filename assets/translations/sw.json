@@ -7,16 +7,12 @@
     "date_time": "Chagua tarehe na muda",
     "email": "Ingiza barua pepe",
     "address": "Ingiza anwani yako",
-    "card_number": "1234 5678 9012 3456",
     "password": "Ingiza nenosiri",
-    "expiry_date": "MM/YY",
     "username": "Ingiza jina la mtumiaji",
     "client_name": "Ingiza jina la mteja",
     "date": "Chagua tarehe",
     "multiline": "Ingiza maelezo",
     "text": "Ingiza maandishi",
-    "cvv": "CVV",
-    "card_holder_name": "Jina la mwenye kadi",
     "zip_code": "Ingiza msimbo wa zipu",
     "city": "Ingiza mji",
     "country": "Ingiza nchi",
@@ -28,14 +24,12 @@
     "web": "Ingiza URL ya tovuti yako",
     "website": "Ingiza anwani ya tovuti yako",
     "wifi_name": "Ingiza jina la mtandao wa WiFi (SSID)",
-    "wifi_password": "Ingiza nenosiri la WiFi"
+    "wifi_password": "Ingiza nenosiri la WiFi",
+    "industry_name": "Jina la sekta"
   },
   "validation": {
     "email_invalid": "Tafadhali ingiza barua pepe sahihi",
     "url_invalid": "Tafadhali ingiza URL sahihi",
-    "card_invalid": "Tafadhali ingiza nambari sahihi ya kadi yenye tarakimu 16",
-    "expiry_invalid": "Tumia muundo wa MM/YY na ingiza mwezi sahihi",
-    "expiry_expired": "Kadi imeisha muda wake",
     "phone_invalid": "Tafadhali ingiza nambari sahihi ya simu",
     "required": "Sehemu hii inahitajika",
     "username_invalid": "Jina la mtumiaji lazima liwe na angalau herufi 3",
@@ -43,8 +37,6 @@
     "password_mismatch": "Manenosiri hayafanani",
     "confirm_password": "Tafadhali thibitisha nenosiri lako",
     "date_invalid": "Tafadhali ingiza tarehe sahihi",
-    "card_name_invalid": "Tafadhali ingiza jina sahihi la mwenye kadi",
-    "cvv_invalid": "Tafadhali ingiza CVV sahihi (tarakimu 3-4)",
     "address_invalid": "Tafadhali ingiza anwani sahihi (angalau herufi 5)",
     "first_name_required": "Tafadhali ingiza jina lako la kwanza",
     "last_name_required": "Tafadhali ingiza jina lako la mwisho",
@@ -59,7 +51,9 @@
     "wifi_name_required": "Tafadhali ingiza jina la mtandao wa WiFi",
     "wifi_password_required": "Tafadhali ingiza nenosiri la WiFi",
     "wifi_name_invalid": "Jina la WiFi lazima liwe na angalau herufi 2",
-    "wifi_password_invalid": "Nenosiri la WiFi lazima liwe na angalau herufi 8"
+    "wifi_password_invalid": "Nenosiri la WiFi lazima liwe na angalau herufi 8",
+    "industry_name_required": "Tafadhali ingiza jina la sekta",
+    "industry_name_invalid": "Jina la sekta lazima liwe na angalau herufi 2"
   },
   "field": {
     "full_name": "Jina Kamili",
@@ -67,10 +61,6 @@
     "phone": "Nambari ya Simu",
     "password": "Nenosiri",
     "confirm_password": "Thibitisha Nenosiri",
-    "card_number": "Nambari ya Kadi",
-    "card_name": "Jina la Mwenye Kadi",
-    "expiry_date": "Tarehe ya Mwisho",
-    "cvv": "CVV",
     "address": "Anwani",
     "city": "Mji",
     "country": "Nchi",
@@ -87,7 +77,8 @@
     "web": "Tovuti",
     "wifi_name": "Jina la WiFi",
     "wifi_password": "Nenosiri la WiFi",
-    "wifi_ssid": "SSID ya WiFi"
+    "wifi_ssid": "SSID ya WiFi",
+    "industry_name": "Jina la sekta"
   },
   "common": {
     "optional": "hiari",

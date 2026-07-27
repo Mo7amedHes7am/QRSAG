@@ -7,16 +7,12 @@
     "date_time": "选择日期和时间",
     "email": "输入电子邮件地址",
     "address": "输入您的地址",
-    "card_number": "1234 5678 9012 3456",
     "password": "输入密码",
-    "expiry_date": "月/年",
     "username": "输入用户名",
     "client_name": "输入客户名称",
     "date": "选择日期",
     "multiline": "输入描述",
     "text": "输入文本",
-    "cvv": "CVV",
-    "card_holder_name": "持卡人姓名",
     "zip_code": "输入邮政编码",
     "city": "输入城市",
     "country": "输入国家",
@@ -28,14 +24,12 @@
     "web": "输入您的网站网址",
     "website": "输入您的网站地址",
     "wifi_name": "输入WiFi网络名称（SSID）",
-    "wifi_password": "输入WiFi密码"
+    "wifi_password": "输入WiFi密码",
+    "industry_name": "行业名称"
   },
   "validation": {
     "email_invalid": "请输入有效的电子邮件地址",
     "url_invalid": "请输入有效的网址",
-    "card_invalid": "请输入有效的16位卡号",
-    "expiry_invalid": "请使用月/年格式并输入有效月份",
-    "expiry_expired": "卡片已过期",
     "phone_invalid": "请输入有效的电话号码",
     "required": "此字段为必填",
     "username_invalid": "用户名至少需要3个字符",
@@ -43,8 +37,6 @@
     "password_mismatch": "密码不匹配",
     "confirm_password": "请确认您的密码",
     "date_invalid": "请输入有效日期",
-    "card_name_invalid": "请输入有效的持卡人姓名",
-    "cvv_invalid": "请输入有效的CVV（3-4位数字）",
     "address_invalid": "请输入有效地址（至少5个字符）",
     "first_name_required": "请输入您的名字",
     "last_name_required": "请输入您的姓氏",
@@ -59,7 +51,9 @@
     "wifi_name_required": "请输入WiFi网络名称",
     "wifi_password_required": "请输入WiFi密码",
     "wifi_name_invalid": "WiFi名称至少需要2个字符",
-    "wifi_password_invalid": "WiFi密码至少需要8个字符"
+    "wifi_password_invalid": "WiFi密码至少需要8个字符",
+    "industry_name_required": "请输入行业名称",
+    "industry_name_invalid": "行业名称至少需要2个字符"
   },
   "field": {
     "full_name": "全名",
@@ -67,10 +61,6 @@
     "phone": "电话号码",
     "password": "密码",
     "confirm_password": "确认密码",
-    "card_number": "卡号",
-    "card_name": "持卡人姓名",
-    "expiry_date": "有效期",
-    "cvv": "CVV",
     "address": "地址",
     "city": "城市",
     "country": "国家",
@@ -87,7 +77,8 @@
     "web": "网站",
     "wifi_name": "WiFi名称",
     "wifi_password": "WiFi密码",
-    "wifi_ssid": "WiFi SSID"
+    "wifi_ssid": "WiFi SSID",
+    "industry_name": "行业名称"
   },
   "common": {
     "optional": "可选",

@@ -7,16 +7,12 @@
     "date_time": "Selectați data și ora",
     "email": "Introduceți adresa de email",
     "address": "Introduceți adresa dvs.",
-    "card_number": "1234 5678 9012 3456",
     "password": "Introduceți parola",
-    "expiry_date": "LL/AA",
     "username": "Introduceți numele de utilizator",
     "client_name": "Introduceți numele clientului",
     "date": "Selectați data",
     "multiline": "Introduceți descrierea",
     "text": "Introduceți textul",
-    "cvv": "CVV",
-    "card_holder_name": "Numele deținătorului cardului",
     "zip_code": "Introduceți codul poștal",
     "city": "Introduceți orașul",
     "country": "Introduceți țara",
@@ -28,14 +24,12 @@
     "web": "Introduceți URL-ul site-ului dvs.",
     "website": "Introduceți adresa site-ului dvs.",
     "wifi_name": "Introduceți numele rețelei WiFi (SSID)",
-    "wifi_password": "Introduceți parola WiFi"
+    "wifi_password": "Introduceți parola WiFi",
+    "industry_name": "Numele sectorului"
   },
   "validation": {
     "email_invalid": "Introduceți o adresă de email validă",
     "url_invalid": "Introduceți un URL valid",
-    "card_invalid": "Introduceți un număr de card valid de 16 cifre",
-    "expiry_invalid": "Folosiți formatul LL/AA și introduceți o lună validă",
-    "expiry_expired": "Cardul a expirat",
     "phone_invalid": "Introduceți un număr de telefon valid",
     "required": "Acest câmp este obligatoriu",
     "username_invalid": "Numele de utilizator trebuie să aibă cel puțin 3 caractere",
@@ -43,8 +37,6 @@
     "password_mismatch": "Parolele nu se potrivesc",
     "confirm_password": "Confirmați parola",
     "date_invalid": "Introduceți o dată validă",
-    "card_name_invalid": "Introduceți un nume de deținător valid",
-    "cvv_invalid": "Introduceți un CVV valid (3-4 cifre)",
     "address_invalid": "Introduceți o adresă validă (cel puțin 5 caractere)",
     "first_name_required": "Introduceți prenumele dvs.",
     "last_name_required": "Introduceți numele dvs. de familie",
@@ -59,7 +51,9 @@
     "wifi_name_required": "Introduceți numele rețelei WiFi",
     "wifi_password_required": "Introduceți parola WiFi",
     "wifi_name_invalid": "Numele WiFi trebuie să aibă cel puțin 2 caractere",
-    "wifi_password_invalid": "Parola WiFi trebuie să aibă cel puțin 8 caractere"
+    "wifi_password_invalid": "Parola WiFi trebuie să aibă cel puțin 8 caractere",
+    "industry_name_required": "Introduceți numele sectorului",
+    "industry_name_invalid": "Numele sectorului trebuie să aibă cel puțin 2 caractere"
   },
   "field": {
     "full_name": "Nume Complet",
@@ -67,10 +61,6 @@
     "phone": "Număr Telefon",
     "password": "Parolă",
     "confirm_password": "Confirmă Parola",
-    "card_number": "Număr Card",
-    "card_name": "Nume Deținător Card",
-    "expiry_date": "Data Expirării",
-    "cvv": "CVV",
     "address": "Adresă",
     "city": "Oraș",
     "country": "Țară",
@@ -87,7 +77,8 @@
     "web": "Site Web",
     "wifi_name": "Nume WiFi",
     "wifi_password": "Parolă WiFi",
-    "wifi_ssid": "SSID WiFi"
+    "wifi_ssid": "SSID WiFi",
+    "industry_name": "Numele sectorului"
   },
   "common": {
     "optional": "opțional",

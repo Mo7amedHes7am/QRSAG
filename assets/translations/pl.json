@@ -7,16 +7,12 @@
     "date_time": "Wybierz datę i godzinę",
     "email": "Wprowadź adres e-mail",
     "address": "Wprowadź swój adres",
-    "card_number": "1234 5678 9012 3456",
     "password": "Wprowadź hasło",
-    "expiry_date": "MM/RR",
     "username": "Wprowadź nazwę użytkownika",
     "client_name": "Wprowadź nazwę klienta",
     "date": "Wybierz datę",
     "multiline": "Wprowadź opis",
     "text": "Wprowadź tekst",
-    "cvv": "CVV",
-    "card_holder_name": "Nazwa posiadacza karty",
     "zip_code": "Wprowadź kod pocztowy",
     "city": "Wprowadź miasto",
     "country": "Wprowadź kraj",
@@ -28,14 +24,12 @@
     "web": "Wprowadź URL swojej strony",
     "website": "Wprowadź adres swojej strony",
     "wifi_name": "Wprowadź nazwę sieci WiFi (SSID)",
-    "wifi_password": "Wprowadź hasło WiFi"
+    "wifi_password": "Wprowadź hasło WiFi",
+    "industry_name": "Nazwa branży"
   },
   "validation": {
     "email_invalid": "Wprowadź poprawny adres e-mail",
     "url_invalid": "Wprowadź poprawny URL",
-    "card_invalid": "Wprowadź poprawny 16-cyfrowy numer karty",
-    "expiry_invalid": "Użyj formatu MM/RR i wprowadź poprawny miesiąc",
-    "expiry_expired": "Karta wygasła",
     "phone_invalid": "Wprowadź poprawny numer telefonu",
     "required": "To pole jest wymagane",
     "username_invalid": "Nazwa użytkownika musi mieć co najmniej 3 znaki",
@@ -43,8 +37,6 @@
     "password_mismatch": "Hasła nie są zgodne",
     "confirm_password": "Potwierdź swoje hasło",
     "date_invalid": "Wprowadź poprawną datę",
-    "card_name_invalid": "Wprowadź poprawną nazwę posiadacza karty",
-    "cvv_invalid": "Wprowadź poprawny CVV (3-4 cyfry)",
     "address_invalid": "Wprowadź poprawny adres (co najmniej 5 znaków)",
     "first_name_required": "Wprowadź swoje imię",
     "last_name_required": "Wprowadź swoje nazwisko",
@@ -59,7 +51,9 @@
     "wifi_name_required": "Wprowadź nazwę sieci WiFi",
     "wifi_password_required": "Wprowadź hasło WiFi",
     "wifi_name_invalid": "Nazwa WiFi musi mieć co najmniej 2 znaki",
-    "wifi_password_invalid": "Hasło WiFi musi mieć co najmniej 8 znaków"
+    "wifi_password_invalid": "Hasło WiFi musi mieć co najmniej 8 znaków",
+    "industry_name_required": "Wprowadź nazwę branży",
+    "industry_name_invalid": "Nazwa branży musi mieć co najmniej 2 znaki"
   },
   "field": {
     "full_name": "Imię i Nazwisko",
@@ -67,10 +61,6 @@
     "phone": "Numer Telefonu",
     "password": "Hasło",
     "confirm_password": "Potwierdź Hasło",
-    "card_number": "Numer Karty",
-    "card_name": "Nazwa Posiadacza Karty",
-    "expiry_date": "Data Ważności",
-    "cvv": "CVV",
     "address": "Adres",
     "city": "Miasto",
     "country": "Kraj",
@@ -87,7 +77,8 @@
     "web": "Strona",
     "wifi_name": "Nazwa WiFi",
     "wifi_password": "Hasło WiFi",
-    "wifi_ssid": "SSID WiFi"
+    "wifi_ssid": "SSID WiFi",
+    "industry_name": "Nazwa branży"
   },
   "common": {
     "optional": "opcjonalne",

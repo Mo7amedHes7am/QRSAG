@@ -7,16 +7,12 @@
     "date_time": "Chọn ngày và giờ",
     "email": "Nhập địa chỉ email",
     "address": "Nhập địa chỉ của bạn",
-    "card_number": "1234 5678 9012 3456",
     "password": "Nhập mật khẩu",
-    "expiry_date": "MM/YY",
     "username": "Nhập tên người dùng",
     "client_name": "Nhập tên khách hàng",
     "date": "Chọn ngày",
     "multiline": "Nhập mô tả",
     "text": "Nhập văn bản",
-    "cvv": "CVV",
-    "card_holder_name": "Tên chủ thẻ",
     "zip_code": "Nhập mã ZIP",
     "city": "Nhập thành phố",
     "country": "Nhập quốc gia",
@@ -28,14 +24,12 @@
     "web": "Nhập URL website của bạn",
     "website": "Nhập địa chỉ website của bạn",
     "wifi_name": "Nhập tên mạng WiFi (SSID)",
-    "wifi_password": "Nhập mật khẩu WiFi"
+    "wifi_password": "Nhập mật khẩu WiFi",
+    "industry_name": "Tên ngành"
   },
   "validation": {
     "email_invalid": "Vui lòng nhập địa chỉ email hợp lệ",
     "url_invalid": "Vui lòng nhập URL hợp lệ",
-    "card_invalid": "Vui lòng nhập số thẻ 16 chữ số hợp lệ",
-    "expiry_invalid": "Vui lòng sử dụng định dạng MM/YY và nhập tháng hợp lệ",
-    "expiry_expired": "Thẻ đã hết hạn",
     "phone_invalid": "Vui lòng nhập số điện thoại hợp lệ",
     "required": "Trường này là bắt buộc",
     "username_invalid": "Tên người dùng phải có ít nhất 3 ký tự",
@@ -43,8 +37,6 @@
     "password_mismatch": "Mật khẩu không khớp",
     "confirm_password": "Vui lòng xác nhận mật khẩu của bạn",
     "date_invalid": "Vui lòng nhập ngày hợp lệ",
-    "card_name_invalid": "Vui lòng nhập tên chủ thẻ hợp lệ",
-    "cvv_invalid": "Vui lòng nhập CVV hợp lệ (3-4 chữ số)",
     "address_invalid": "Vui lòng nhập địa chỉ hợp lệ (ít nhất 5 ký tự)",
     "first_name_required": "Vui lòng nhập tên của bạn",
     "last_name_required": "Vui lòng nhập họ của bạn",
@@ -59,7 +51,9 @@
     "wifi_name_required": "Vui lòng nhập tên mạng WiFi",
     "wifi_password_required": "Vui lòng nhập mật khẩu WiFi",
     "wifi_name_invalid": "Tên WiFi phải có ít nhất 2 ký tự",
-    "wifi_password_invalid": "Mật khẩu WiFi phải có ít nhất 8 ký tự"
+    "wifi_password_invalid": "Mật khẩu WiFi phải có ít nhất 8 ký tự",
+    "industry_name_required": "Vui lòng nhập tên ngành",
+    "industry_name_invalid": "Tên ngành phải có ít nhất 2 ký tự"
   },
   "field": {
     "full_name": "Họ và Tên",
@@ -67,10 +61,6 @@
     "phone": "Số Điện Thoại",
     "password": "Mật Khẩu",
     "confirm_password": "Xác Nhận Mật Khẩu",
-    "card_number": "Số Thẻ",
-    "card_name": "Tên Chủ Thẻ",
-    "expiry_date": "Ngày Hết Hạn",
-    "cvv": "CVV",
     "address": "Địa Chỉ",
     "city": "Thành Phố",
     "country": "Quốc Gia",
@@ -87,7 +77,8 @@
     "web": "Website",
     "wifi_name": "Tên WiFi",
     "wifi_password": "Mật Khẩu WiFi",
-    "wifi_ssid": "SSID WiFi"
+    "wifi_ssid": "SSID WiFi",
+    "industry_name": "Tên ngành"
   },
   "common": {
     "optional": "tùy chọn",

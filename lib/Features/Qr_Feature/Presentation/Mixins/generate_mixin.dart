@@ -30,6 +30,7 @@ mixin GenerateMixin on QrCubitBase {
         break;
 
       case QrType.contact:
+      case QrType.business:
         firstnameController = TextEditingController();
         lastnameController = TextEditingController();
         companyController = TextEditingController();
@@ -40,6 +41,7 @@ mixin GenerateMixin on QrCubitBase {
         addressController = TextEditingController();
         cityController = TextEditingController();
         countryController = TextEditingController();
+        industryController = TextEditingController();
         break;
 
       case QrType.wifi:
@@ -140,6 +142,57 @@ mixin GenerateMixin on QrCubitBase {
             "A:${addressController.text.trim().isNotEmpty ? addressController.text.trim() : "No Address"};"
             "Ci:${cityController.text.trim().isNotEmpty ? cityController.text.trim() : "No City"};"
             "Co:${countryController.text.trim().isNotEmpty ? countryController.text.trim() : "No Country"};;";
+        break;
+
+      case QrType.business:
+        final companyError = AppValidators.validateRequired(
+          companyController.text,
+        );
+        final industryError = AppValidators.validateRequired(
+          industryController.text,
+        );
+        final phoneError = AppValidators.validatePhone(phoneController.text);
+        final emailError = AppValidators.validateEmail(emailController.text);
+
+        if (companyError != null) {
+          emit(QrGenerateError(companyError));
+          return null;
+        }
+        if (industryError != null) {
+          emit(QrGenerateError(industryError));
+          return null;
+        }
+
+        if (phoneError != null) {
+          emit(QrGenerateError(phoneError));
+          return null;
+        }
+
+        if (emailError != null) {
+          emit(QrGenerateError(emailError));
+          return null;
+        }
+
+        String? websiteError;
+        if (websiteController.text.trim().isNotEmpty) {
+          websiteError = AppValidators.validateWebsite(
+            websiteController.text.trim(),
+          );
+          if (websiteError != null) {
+            emit(QrGenerateError(websiteError));
+            return null;
+          }
+        }
+
+        data =
+            "BUSINESS:N:${companyController.text.toString()};"
+            "I:${industryController.text.toString()};"
+            "P:${phoneController.text.toString()};"
+            "E:${emailController.text.toString()};"
+            "W:${websiteController.text.trim().isNotEmpty ? websiteController.text.toString() : "No Website"};"
+            "A:${addressController.text.trim().isNotEmpty ? addressController.text.toString() : "No Address"};"
+            "Ci:${cityController.text.trim().isNotEmpty ? cityController.text.toString() : "No City"};"
+            "Co:${countryController.text.trim().isNotEmpty ? countryController.text.toString() : "No Country"};;";
         break;
 
       case QrType.visa:
@@ -297,17 +350,8 @@ mixin GenerateMixin on QrCubitBase {
       case ControllerType.wifiPassword:
         wifiPasswordController.clear();
         break;
-      case ControllerType.cvvCode:
-        cvvCodeController.clear();
-        break;
-      case ControllerType.cardHolderName:
-        cardHolderNameController.clear();
-        break;
-      case ControllerType.cardNumber:
-        cardNumberController.clear();
-        break;
-      case ControllerType.expiryDate:
-        expiryDateController.clear();
+      case ControllerType.industry:
+        industryController.clear();
         break;
     }
     emit(QrGenerateLoaded());
