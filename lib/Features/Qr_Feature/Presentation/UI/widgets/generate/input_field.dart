@@ -1,13 +1,10 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/controllertype.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Data/Models/qrtype.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Logic/Methods.dart';
 import 'package:qr_scanner_and_generator/Features/Qr_Feature/Presentation/Cubit/qr_cubit.dart';
 import 'package:qr_scanner_and_generator/core/components/widgets/custom_form_field.dart';
 import 'package:qr_scanner_and_generator/core/responsive/responsive_core.dart';
-import 'package:qr_scanner_and_generator/generated/locale_keys.g.dart';
 
 class InputField extends StatelessWidget {
   final TextEditingController controller;
