@@ -23,7 +23,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace = "com.example.template"
+    namespace = "com.mhapplications.qr_scanner_and_generator"
     compileSdk = 36
     ndkVersion = "29.0.13113456 rc1"
 
@@ -36,20 +36,20 @@ android {
         versionName = flutterVersionName
     }
 
-//    signingConfigs {
-//        create("release") {
-//            keyAlias = keystoreProperties["keyAlias"] as String
-//            keyPassword = keystoreProperties["keyPassword"] as String
-//            storeFile = keystoreProperties["storeFile"]?.let { file(it) }
-//            storePassword = keystoreProperties["storePassword"] as String
-//        }
-//    }
+    signingConfigs {
+        create("release") {
+            keyAlias = keystoreProperties["keyAlias"] as String
+            keyPassword = keystoreProperties["keyPassword"] as String
+            storeFile = keystoreProperties["storeFile"]?.let { file(it) }
+            storePassword = keystoreProperties["storePassword"] as String
+        }
+    }
 
-//    buildTypes {
-//        release {
-//            signingConfig = signingConfigs.getByName("release")
-//        }
-//    }
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.getByName("release")
+        }
+    }
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.toString()
